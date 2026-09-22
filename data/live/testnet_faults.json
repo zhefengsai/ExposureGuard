@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "kind": "public_testnet_over_budget_sequence",
+  "chain_origin": "sepolia",
+  "chain_destination": "basesepolia",
+  "guard": "0x3c6c8d6ac90ca7491af7381e8a9ccd755cf29a81",
+  "budget_wei": "1000000000000000000000",
+  "window_seconds": 3600,
+  "pre_state": {
+    "surplus_available": 191000000000000000000,
+    "floor_available": 764444444444444444444,
+    "available_for_route": 955555555555555555555,
+    "at": "2026-09-17T01:13:00.244578+00:00"
+  },
+  "steps": [
+    {
+      "amount_wei": "955555555555555555555",
+      "amount_tokens": 955.5555555555555,
+      "dispatch_tx": "0x907a3b5a79c37603f801ee3647f132a8f2274bdd102fe308545f0f5a68256a5d",
+      "message_id": "0xab12c0a1325d79c0630627bacbd517bd369b75995beb42e63231399514646251",
+      "message": "0x03000d568e00aa36a7000000000000000000000000dec7ba3037f639bb307672a2d365dc6c8e2e3e9300014a34000000000000000000000000a88e45709f717c546667c650526b34c54c7c0f4f000000000000000000000000dec7ba3037f639bb307672a2d365dc6c8e2e3e93000000000000000000000000000000000000000000000033ccff4b0707ee38e3",
+      "step": "drain",
+      "process_ok": true,
+      "observed": {
+        "delivered": true,
+        "metered": true
+      },
+      "guard_after": {
+        "surplus_available": 4555555555555555556,
+        "floor_available": 444444444444444444,
+        "available_for_route": 5000000000000000000,
+        "at": "2026-09-17T01:13:18.545505+00:00"
+      },
+      "process_tx": "0x1e2d88c979418603563b13d54158a8330215d782443e5a19d4aad0a3c551da30"
+    },
+    {
+      "amount_wei": "200000000000000000000",
+      "amount_tokens": 200.0,
+      "dispatch_tx": "0x3eb9d45678623c185ffd652f47091f0a27d048ff9d922109e6b267f4ecf5e645",
+      "message_id": "0x19ae3e1750dd6d88794369a9ea5c93e3909f292ee8e2974ed0851a027b272ea7",
+      "message": "0x03000d568f00aa36a7000000000000000000000000dec7ba3037f639bb307672a2d365dc6c8e2e3e9300014a34000000000000000000000000a88e45709f717c546667c650526b34c54c7c0f4f000000000000000000000000dec7ba3037f639bb307672a2d365dc6c8e2e3e9300000000000000000000000000000000000000000000000ad78ebc5ac6200000",
+      "step": "reject",
+      "process_ok": false,
+      "reverted_tx": "0x1a892674adf93161580b093120d8966c6124cc2db4f5ef843189eb67f370bba2",
+      "process_error": "{\"type\":\"0x2\",\"status\":\"0x0\",\"cumulativeGasUsed\":\"0x34fe63\",\"logs\":[],\"logsBloom\":\"0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "observed": {
+        "delivered": false,
+        "metered": false
+      },
+      "guard_after": {
+        "surplus_available": 5000000000000000000,
+        "floor_available": 2222222222222222222,
+        "available_for_route": 7222222222222222222,
+        "at": "2026-09-17T01:13:27.812382+00:00"
+      }
+    },
+    {
+      "step": "redeliver",
+      "message_id": "0x19ae3e1750dd6d88794369a9ea5c93e3909f292ee8e2974ed0851a027b272ea7",
+      "amount_tokens": 200.0,
+      "waited_s": 813,
+      "guard_before": {
+        "surplus_available": 50222222222222222222,
+        "floor_available": 183111111111111111111,
+        "available_for_route": 233333333333333333333,
+        "at": "2026-09-17T01:27:01.498617+00:00"
+      },
+      "process_ok": true,
+      "process_tx": "0x0c42ea9c825a7dd402b76da20c54017262f77d09d5fa7b8fb84a3cd2b682f55d",
+      "process_error": null,
+      "observed": {
+        "delivered": true,
+        "metered": true
+      },
+      "guard_after": {
+        "surplus_available": 34555555555555555556,
+        "floor_available": 444444444444444444,
+        "available_for_route": 35000000000000000000,
+        "at": "2026-09-17T01:27:06.560755+00:00"
+      }
+    }
+  ],
+  "sequence_holds": true
+}

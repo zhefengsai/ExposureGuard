@@ -1,0 +1,816 @@
+{
+  "generated_at": "2026-08-23T13:34:23Z",
+  "stacks": [
+    {
+      "stack": "hyperlane",
+      "chain": "ethereum",
+      "chain_id": 1,
+      "block": 25811875,
+      "generated_at": "2026-08-23T13:34:23Z",
+      "measurement_depth": "imported",
+      "population": {
+        "type": "warp_route_router",
+        "count": 152,
+        "source": "data/hl_ism_ethereum.json",
+        "note": "Unique routers from hyperlane registry; ISM via interchainSecurityModule()"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "default_inheritance",
+        "roots": [
+          {
+            "id": "mailbox_default_ism",
+            "label": "Mailbox defaultIsm (0x10cf42691db303ff44f35c9ced2cd1283a93e046)",
+            "members": 116,
+            "share": 0.7837837837837838
+          },
+          {
+            "id": "0xee3a7cbf5a28faa173d346a4b7dd4904218710d4",
+            "label": "0xee3a7cbf5a28faa173d346a4b7dd4904218710d4",
+            "members": 5,
+            "share": 0.033783783783783786
+          },
+          {
+            "id": "0xcb0407ec7004e9017ead0975d2358c7acb862a08",
+            "label": "0xcb0407ec7004e9017ead0975d2358c7acb862a08",
+            "members": 2,
+            "share": 0.013513513513513514
+          },
+          {
+            "id": "0xe5072fc58d92adc51f966961bc193a3c06f8df9d",
+            "label": "0xe5072fc58d92adc51f966961bc193a3c06f8df9d",
+            "members": 2,
+            "share": 0.013513513513513514
+          },
+          {
+            "id": "0xd26e884f265f2b692cdfaf5ad42f37036b0d0b7e",
+            "label": "0xd26e884f265f2b692cdfaf5ad42f37036b0d0b7e",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x3299285f78c0f3223c2ca016ae496210c3fb78ab",
+            "label": "0x3299285f78c0f3223c2ca016ae496210c3fb78ab",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x02ec3649bb81ce42879ecf98c68f3ae9015124b8",
+            "label": "0x02ec3649bb81ce42879ecf98c68f3ae9015124b8",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x640887a9ba3a9c53ed27d0f7e8246a4f933f3424",
+            "label": "0x640887a9ba3a9c53ed27d0f7e8246a4f933f3424",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0xf2044cf2cf21cc0213201bc1e6a031c71c425971",
+            "label": "0xf2044cf2cf21cc0213201bc1e6a031c71c425971",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x3883cfdba5458475440da5968a564e4bdea86f78",
+            "label": "0x3883cfdba5458475440da5968a564e4bdea86f78",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x6912d467fb123425045f9e967efd7ade19695739",
+            "label": "0x6912d467fb123425045f9e967efd7ade19695739",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x3dc99b9a3803a39b1f8689b2acc7187580c0d78f",
+            "label": "0x3dc99b9a3803a39b1f8689b2acc7187580c0d78f",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x45d883250de9d510ee2d674e621bf5636d90fe7d",
+            "label": "0x45d883250de9d510ee2d674e621bf5636d90fe7d",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0xa09c22474a13b5299050b92d489fbc930954678c",
+            "label": "0xa09c22474a13b5299050b92d489fbc930954678c",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x84f19416c7e73983406bf23d2958118a99ae412a",
+            "label": "0x84f19416c7e73983406bf23d2958118a99ae412a",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x69d39cd0b60d47460f30f0bd5200f9c46e924ce1",
+            "label": "0x69d39cd0b60d47460f30f0bd5200f9c46e924ce1",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x9c764df6bdd6b716cfadeaa348e1db146694f67f",
+            "label": "0x9c764df6bdd6b716cfadeaa348e1db146694f67f",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0xa23b481b609cbb4c2589d32c4d3080a90926d95f",
+            "label": "0xa23b481b609cbb4c2589d32c4d3080a90926d95f",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0xedcbaa585fd0f80f20073f9958246476466205b8",
+            "label": "0xedcbaa585fd0f80f20073f9958246476466205b8",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x7a576bb5291567cfdbb4585b1911cf7c9891ea07",
+            "label": "0x7a576bb5291567cfdbb4585b1911cf7c9891ea07",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x8c8d831e1e879604b4b304a2c951b8aee3ab3a23",
+            "label": "0x8c8d831e1e879604b4b304a2c951b8aee3ab3a23",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x103f0364b4b397808003eff122e1003eb850a357",
+            "label": "0x103f0364b4b397808003eff122e1003eb850a357",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x331f7e25c43be7705535e9784360ac900870938e",
+            "label": "0x331f7e25c43be7705535e9784360ac900870938e",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x02f02a24dd6135d7d4ad15f42b16d7f5f3a16421",
+            "label": "0x02f02a24dd6135d7d4ad15f42b16d7f5f3a16421",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x10eddcdde26c705b3d79b60286836485b8df9d8c",
+            "label": "0x10eddcdde26c705b3d79b60286836485b8df9d8c",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0xa4854a28039ea176fbe80158ab400e717c36539c",
+            "label": "0xa4854a28039ea176fbe80158ab400e717c36539c",
+            "members": 1,
+            "share": 0.006756756756756757
+          },
+          {
+            "id": "0x2dbe8ac257192a3bc72c448ba434ce11dde8c83a",
+            "label": "0x2dbe8ac257192a3bc72c448ba434ce11dde8c83a",
+            "members": 1,
+            "share": 0.006756756756756757
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": true,
+        "predicate": "interchainSecurityModule() == address(0)",
+        "count": 116,
+        "share": 0.7837837837837838,
+        "note": "4 RPC failures excluded from denominator"
+      },
+      "controls": [
+        {
+          "name": "PausableIsm",
+          "placement": "destination",
+          "scope": "per_root",
+          "automatic": false,
+          "on_path_under_Fs": true,
+          "active": true,
+          "note": "Binary manual pause on default ISM aggregation"
+        },
+        {
+          "name": "HyperlaneRateLimitIsm",
+          "placement": "destination",
+          "scope": "per_route",
+          "automatic": true,
+          "on_path_under_Fs": true,
+          "active": false,
+          "note": "0/89 ISMs with token bucket on ethereum"
+        }
+      ],
+      "detection_gap": {
+        "bound": "unbounded",
+        "dest_auto_per_root_bound": false,
+        "pause_only": true,
+        "formula": "Under default ISM: admit = full stock during [t0,t1] if operator does not pause",
+        "note": "Per-route automatic limits do not compose to per-root bound"
+      },
+      "separability": "SEPARABLE",
+      "value_at_risk_usd": {
+        "strict": 14551184.85012184,
+        "source": "data/stock_multi.json (4-chain collateral on default ISM routes)",
+        "note": "ethereum slice $9,868,142"
+      },
+      "evidence": [
+        "data/hl_ism_ethereum.json",
+        "data/stock_multi.json",
+        "exp/separability.json"
+      ],
+      "coverage": {
+        "queried": 152,
+        "resolved": 148,
+        "failed": 4,
+        "failed_share": 0.02631578947368421
+      },
+      "extras": {
+        "chains_measured": [
+          "ethereum",
+          "base",
+          "arbitrum",
+          "bsc"
+        ],
+        "default_ism": "0x10cf42691db303ff44f35c9ced2cd1283a93e046",
+        "distinct_custom_isms": 26,
+        "ism_cluster_top5": [
+          {
+            "ism": "0xee3a7cbf5a28faa173d346a4b7dd4904218710d4",
+            "routes": 5
+          },
+          {
+            "ism": "0xcb0407ec7004e9017ead0975d2358c7acb862a08",
+            "routes": 2
+          },
+          {
+            "ism": "0xe5072fc58d92adc51f966961bc193a3c06f8df9d",
+            "routes": 2
+          },
+          {
+            "ism": "0xd26e884f265f2b692cdfaf5ad42f37036b0d0b7e",
+            "routes": 1
+          },
+          {
+            "ism": "0x3299285f78c0f3223c2ca016ae496210c3fb78ab",
+            "routes": 1
+          }
+        ]
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    },
+    {
+      "stack": "wormhole",
+      "chain": "multi",
+      "chain_id": 1,
+      "block": 25811875,
+      "generated_at": "2026-08-23T13:34:23Z",
+      "measurement_depth": "imported",
+      "population": {
+        "type": "token_bridge_transfer",
+        "count": 4628,
+        "source": "data/wh_custody_multi.json (5 EVM chains enumerated)",
+        "note": "Population count = distinct ERC-20 holdings across bridge contracts"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "mandatory_stack_wide",
+        "roots": [
+          {
+            "id": "canonical_guardian_set",
+            "label": "13-of-19 guardian quorum (hash 885b7752ebedd5e3)",
+            "members": 1,
+            "share": 1.0
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": false,
+        "predicate": "N/A \u2014 all transfers verify same guardian set by architecture",
+        "count": null,
+        "share": null,
+        "note": "Counts as mandatory sharing for pattern P"
+      },
+      "controls": [
+        {
+          "name": "GuardianGovernor",
+          "placement": "root_side",
+          "scope": "per_lane",
+          "automatic": true,
+          "on_path_under_Fs": false,
+          "active": true,
+          "note": "Off-path at guardian; destination accepts any quorum VAA"
+        },
+        {
+          "name": "ManualPause",
+          "placement": "destination",
+          "scope": "stack_wide",
+          "automatic": false,
+          "on_path_under_Fs": true,
+          "active": false,
+          "note": "No always-on destination automatic per-root meter in measurement"
+        }
+      ],
+      "detection_gap": {
+        "bound": "unbounded",
+        "dest_auto_per_root_bound": false,
+        "pause_only": true,
+        "formula": "Under quorum compromise: Governor bypassed; admit \u2264 verified custody",
+        "note": "Governor threshold is root-side and off the destination path after guardian-root compromise"
+      },
+      "separability": "NON-SEPARABLE",
+      "value_at_risk_usd": {
+        "strict": 1165342488.9103632,
+        "loose": 1168098714.4450898,
+        "source": "data/wh_custody_multi.json",
+        "note": "DefiLlama cross-check total $1,365,321,124"
+      },
+      "evidence": [
+        "data/wh_custody_multi.json",
+        "exp/census/data/census_wormhole.json",
+        "data/wh_custody_multi.json"
+      ],
+      "coverage": {
+        "queried": 5,
+        "resolved": 5,
+        "failed": 0,
+        "failed_share": 0.0
+      },
+      "extras": {
+        "chains_verified": [
+          "ethereum",
+          "base",
+          "arbitrum",
+          "polygon",
+          "optimism"
+        ],
+        "unverified_usd": 356992914.61793995
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    },
+    {
+      "stack": "axelar",
+      "chain": "ethereum",
+      "chain_id": 1,
+      "block": 25811875,
+      "generated_at": "2026-08-23T13:34:23Z",
+      "measurement_depth": "architectural",
+      "population": {
+        "type": "gateway_gmp",
+        "count": 1,
+        "source": "architecture"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "gateway_inline",
+        "roots": [
+          {
+            "id": "axelar_validator_set",
+            "label": "Gateway inline validator multisig",
+            "members": 1,
+            "share": 1.0
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": false,
+        "predicate": "N/A \u2014 inline gateway verification",
+        "count": null,
+        "share": null
+      },
+      "controls": [
+        {
+          "name": "GatewayPause",
+          "placement": "destination",
+          "scope": "stack_wide",
+          "automatic": false,
+          "on_path_under_Fs": true,
+          "active": true
+        }
+      ],
+      "detection_gap": {
+        "bound": "unbounded",
+        "dest_auto_per_root_bound": false,
+        "pause_only": true,
+        "formula": "Manual pause only; no per-root automatic meter"
+      },
+      "separability": "NON-SEPARABLE",
+      "value_at_risk_usd": null,
+      "evidence": [
+        "https://github.com/axelarnetwork/axelar-cgp-solidity/blob/43ec407499434448c91da71f031e618d3ed7578a/contracts/AxelarGateway.sol",
+        "https://docs.axelar.dev/dev/general-message-passing/overview/"
+      ],
+      "coverage": {
+        "queried": 1,
+        "resolved": 1,
+        "failed": 0,
+        "failed_share": 0.0
+      },
+      "extras": {
+        "contract": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+        "contract_label": "Gateway"
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    },
+    {
+      "stack": "across",
+      "chain": "ethereum",
+      "chain_id": 1,
+      "block": 25811875,
+      "generated_at": "2026-08-23T13:34:23Z",
+      "measurement_depth": "architectural",
+      "population": {
+        "type": "spoke_pool_intent",
+        "count": 1,
+        "source": "architecture"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "don_shared",
+        "roots": [
+          {
+            "id": "hubpool_merkle",
+            "label": "HubPool merkle root + relayer network",
+            "members": 1,
+            "share": 1.0
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": false,
+        "predicate": "N/A",
+        "count": null,
+        "share": null
+      },
+      "controls": [
+        {
+          "name": "UMA/dispute_window",
+          "placement": "destination",
+          "scope": "stack_wide",
+          "automatic": true,
+          "on_path_under_Fs": false,
+          "active": true,
+          "note": "Optimistic model \u2014 not ISM-class per-root bound"
+        }
+      ],
+      "detection_gap": {
+        "bound": "partial",
+        "dest_auto_per_root_bound": false,
+        "pause_only": false,
+        "note": "NO-POSITION for ExposureGuard hook"
+      },
+      "separability": "NO-POSITION",
+      "value_at_risk_usd": null,
+      "evidence": [
+        "https://github.com/across-protocol/contracts/blob/8be96575b0d4a6bb12decffffd7ff1023b5b2e66/contracts/SpokePool.sol",
+        "https://docs.across.to/concepts/intent-system"
+      ],
+      "coverage": {
+        "queried": 1,
+        "resolved": 1,
+        "failed": 0,
+        "failed_share": 0.0
+      },
+      "extras": {
+        "contract": "0xFBc81a18EcDa8E6A91275cFDF5FC6d91A7C5AE80",
+        "contract_label": "Ethereum_SpokePool"
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    },
+    {
+      "stack": "connext",
+      "chain": "ethereum",
+      "chain_id": 1,
+      "block": 25811875,
+      "generated_at": "2026-08-23T13:34:23Z",
+      "measurement_depth": "architectural",
+      "population": {
+        "type": "connext_diamond",
+        "count": 1,
+        "source": "architecture"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "don_shared",
+        "roots": [
+          {
+            "id": "router_watcher_set",
+            "label": "Router network + watchers",
+            "members": 1,
+            "share": 1.0
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": false,
+        "predicate": "N/A",
+        "count": null,
+        "share": null
+      },
+      "controls": [],
+      "detection_gap": {
+        "bound": "unbounded",
+        "dest_auto_per_root_bound": false,
+        "pause_only": true,
+        "note": "NO-POSITION for ExposureGuard hook"
+      },
+      "separability": "NO-POSITION",
+      "value_at_risk_usd": null,
+      "evidence": [
+        "https://github.com/connext/monorepo/blob/7758e62037bba281b8844c37831bde0b838edd36/packages/contracts/contracts/core/connext/facets/DiamondCutFacet.sol",
+        "https://docs.connext.network/concepts/how-it-works"
+      ],
+      "coverage": {
+        "queried": 1,
+        "resolved": 1,
+        "failed": 0,
+        "failed_share": 0.0
+      },
+      "extras": {
+        "contract": "0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6",
+        "contract_label": "ConnextDiamond"
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    },
+    {
+      "stack": "layerzero",
+      "chain": "ethereum",
+      "chain_id": 1,
+      "block": 25818187,
+      "generated_at": "2026-08-23T13:55:32Z",
+      "measurement_depth": "on_chain_census",
+      "population": {
+        "type": "oapp",
+        "count": 1036,
+        "source": "metadata.layerzero-api.com addressToOApp (ethereum v2)",
+        "note": "Probed 4 remote EIDs per OApp"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "dvn_set_cluster",
+        "roots": [
+          {
+            "id": "e7a9ae2efb1669a9",
+            "label": "ULN302 config fingerprint e7a9ae2efb1669a9",
+            "members": 1852,
+            "share": 0.44777562862669246
+          },
+          {
+            "id": "0409d263f2733218",
+            "label": "ULN302 config fingerprint 0409d263f2733218",
+            "members": 963,
+            "share": 0.23283365570599612
+          },
+          {
+            "id": "9249d3a0eb5192d5",
+            "label": "ULN302 config fingerprint 9249d3a0eb5192d5",
+            "members": 840,
+            "share": 0.20309477756286268
+          },
+          {
+            "id": "98bbb61d19a76bb6",
+            "label": "ULN302 config fingerprint 98bbb61d19a76bb6",
+            "members": 33,
+            "share": 0.007978723404255319
+          },
+          {
+            "id": "7d49aac8bb730274",
+            "label": "ULN302 config fingerprint 7d49aac8bb730274",
+            "members": 20,
+            "share": 0.004835589941972921
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": true,
+        "predicate": "getReceiveLibrary(oapp,eid).isDefault == true",
+        "count": 3711,
+        "share": 0.8972437137330754,
+        "note": "path-level: 3711/4136 (oapp,eid) pairs; oapp-all-default: 817/1034 (79%); 186 mixed"
+      },
+      "controls": [
+        {
+          "name": "OAppOwnerPause/Config",
+          "placement": "destination",
+          "scope": "per_oapp",
+          "automatic": false,
+          "on_path_under_Fs": true,
+          "active": true,
+          "note": "OApp can change DVN set; no protocol-wide automatic per-root meter"
+        }
+      ],
+      "detection_gap": {
+        "bound": "unbounded",
+        "dest_auto_per_root_bound": false,
+        "pause_only": true,
+        "formula": "No destination-side automatic cap shared across OApps on same DVN cluster",
+        "note": "DVN compromise affects all OApps sharing config fingerprint"
+      },
+      "separability": "SEPARABLE",
+      "value_at_risk_usd": null,
+      "evidence": [
+        "https://metadata.layerzero-api.com/v1/metadata",
+        "EndpointV2 0x1a44076050125825900e736c501f859c50fE728c",
+        "receiveUln302 0xc02ab410f0734efa3f14628780e6e695156024c2"
+      ],
+      "coverage": {
+        "queried": 4144,
+        "resolved": 4136,
+        "failed": 8,
+        "failed_share": 0.0019305019305019305
+      },
+      "extras": {
+        "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+        "receive_uln302": "0xc02ab410f0734efa3f14628780e6e695156024c2",
+        "probe_eids": {
+          "30110": "arbitrum",
+          "30184": "base",
+          "30111": "optimism",
+          "30109": "polygon"
+        },
+        "default_oapps_all_eids": 817,
+        "oapp_all_default_share": 0.7901353965183753,
+        "default_path_pairs": 3711,
+        "path_default_share": 0.8972437137330754,
+        "custom_oapps": 31,
+        "partial_default_oapps": 186,
+        "distinct_config_fingerprints": 186,
+        "largest_cluster_pairs": 1852
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    },
+    {
+      "stack": "ccip",
+      "chain": "ethereum",
+      "chain_id": 1,
+      "block": 25818293,
+      "generated_at": "2026-08-23T13:57:18Z",
+      "measurement_depth": "on_chain_census",
+      "population": {
+        "type": "token_pool",
+        "count": 203,
+        "source": "https://docs.chain.link/api/ccip/v1/tokens?environment=mainnet&chainId=1",
+        "note": "91 inbound lanes + 92 outbound lanes (directory v1)"
+      },
+      "shared_verification_root": {
+        "present": true,
+        "mode": "don_shared",
+        "roots": [
+          {
+            "id": "ccip_don",
+            "label": "CCIP DON message attestation (all lanes)",
+            "members": 203,
+            "share": 1.0
+          }
+        ]
+      },
+      "silent_inheritance": {
+        "applicable": false,
+        "predicate": "N/A \u2014 verification infrastructure is stack-mandatory",
+        "count": null,
+        "share": null,
+        "note": "Apps inherit DON trust by using CCIP Router"
+      },
+      "controls": [
+        {
+          "name": "TokenPoolInboundRateLimiter",
+          "placement": "destination",
+          "scope": "per_lane",
+          "automatic": true,
+          "on_path_under_Fs": true,
+          "active": true,
+          "note": "206/414 probed (pool\u00d7remote) pairs enabled"
+        },
+        {
+          "name": "RMN/TimelockPause",
+          "placement": "destination",
+          "scope": "stack_wide",
+          "automatic": false,
+          "on_path_under_Fs": true,
+          "active": true,
+          "note": "Router owner timelock 0x80226fc0Ee2b096224EeAc085Bb9a8cba1146f7D"
+        }
+      ],
+      "detection_gap": {
+        "bound": "partial",
+        "dest_auto_per_root_bound": false,
+        "pause_only": false,
+        "formula": "Bound per (token pool, remote chain); \u03a3 lane caps not root-coordinated",
+        "note": "Compromised DON: attacker can fan out across lanes/pools; no single per-root meter"
+      },
+      "separability": "SEPARABLE",
+      "value_at_risk_usd": null,
+      "evidence": [
+        "https://docs.chain.link/api/ccip/v1/chains?environment=mainnet&chainId=1",
+        "https://docs.chain.link/api/ccip/v1/tokens?environment=mainnet&chainId=1",
+        "https://docs.chain.link/api/ccip/v1/lanes?environment=mainnet&destinationChainId=1",
+        "exp/separability.json"
+      ],
+      "coverage": {
+        "queried": 420,
+        "resolved": 414,
+        "failed": 6,
+        "failed_share": 0.014285714285714285
+      },
+      "extras": {
+        "router": "0x80226fc0Ee2b096224EeAc085Bb9a8cba1146f7D",
+        "rmn": "0x411dE17f12D1A34ecC7F45f49844626267c75e81",
+        "inbound_lanes_to_eth": 91,
+        "outbound_lanes_from_eth": 92,
+        "pools_on_eth": 203,
+        "rate_limit_probes": 420,
+        "inbound_enabled_pairs": 206,
+        "inbound_disabled_pairs": 208,
+        "sample_enabled": [
+          {
+            "symbol": "LINK",
+            "pool": "0x1b7492c3bd23a4adb448710e4275ff14a5288932",
+            "remote_selector": 18240105181246962294,
+            "ok": true,
+            "inbound_enabled": true,
+            "inbound_capacity": 55000000000000002097152,
+            "inbound_rate": 15268000000000002048,
+            "inbound_tokens": 55000000000000002097152
+          },
+          {
+            "symbol": "LINK",
+            "pool": "0x1b7492c3bd23a4adb448710e4275ff14a5288932",
+            "remote_selector": 8805746078405598895,
+            "ok": true,
+            "inbound_enabled": true,
+            "inbound_capacity": 50000000000000000000000,
+            "inbound_rate": 13880000000000000000,
+            "inbound_tokens": 50000000000000000000000
+          },
+          {
+            "symbol": "LINK",
+            "pool": "0x1b7492c3bd23a4adb448710e4275ff14a5288932",
+            "remote_selector": 5142893604156789321,
+            "ok": true,
+            "inbound_enabled": true,
+            "inbound_capacity": 50000000000000000000000,
+            "inbound_rate": 4630000000000000000,
+            "inbound_tokens": 50000000000000000000000
+          },
+          {
+            "symbol": "USDT",
+            "pool": "0xa3532633401abffbd15e6be825a45fb7f141469b",
+            "remote_selector": 3734403246176062136,
+            "ok": true,
+            "inbound_enabled": true,
+            "inbound_capacity": 10000000000000,
+            "inbound_rate": 5000000000,
+            "inbound_tokens": 10000000000000
+          },
+          {
+            "symbol": "USDT",
+            "pool": "0xa3532633401abffbd15e6be825a45fb7f141469b",
+            "remote_selector": 1673871237479749969,
+            "ok": true,
+            "inbound_enabled": true,
+            "inbound_capacity": 10000000000000,
+            "inbound_rate": 5000000000,
+            "inbound_tokens": 10000000000000
+          }
+        ]
+      },
+      "pattern_match": {
+        "SR": true,
+        "SI_or_mandatory": true,
+        "no_dest_auto_per_root_bound": true
+      }
+    }
+  ]
+}

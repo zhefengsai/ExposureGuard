@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-08-24T15:45:00Z",
+  "stack": "debridge",
+  "chain_id": 1,
+  "contracts": {
+    "DeBridgeGate": {
+      "addr": "0x43dE2d77BF8027e25dBD179B491e8d64f38398aA",
+      "code_len": 4285,
+      "erc1967_proxy": true,
+      "implementation": "0x797161bCc625155D2302251404ccB93c2632658E",
+      "proxy_admin": "0xe4427af3555Cd9303d728c491364FADfDd7494Fe",
+      "signatureVerifier": "0x949b3B3c098348b879C9e4F15cecc8046d9C8A8c",
+      "excessConfirmations": 3,
+      "paused": false
+    },
+    "SignatureVerifier": {
+      "addr": "0x949b3B3c098348b879C9e4F15cecc8046d9C8A8c",
+      "erc1967_proxy": true,
+      "proxy_admin": "0xe4427af3555Cd9303d728c491364FADfDd7494Fe",
+      "minConfirmations": 8,
+      "confirmationThreshold": 3,
+      "excessConfirmations": 3
+    },
+    "ProxyAdmin_owner": {
+      "addr": "0x6bec1faF33183e1Bc316984202eCc09d46AC92D5",
+      "kind": "Safe",
+      "threshold": 5,
+      "owners_n": 8,
+      "owners": [
+        "0xbA7cE717928A6C51ab530aD9AdB69bA6E76D09B5",
+        "0xC351f905d810Cb33c54fE771e1bE4ec5A5048c2D",
+        "0xD4Aa80C7a35B2C996Ef3F83baf91D5721c86dA2C",
+        "0x874B1d14bF4FE455C9eCAcDf66b629e10664c6E1",
+        "0xE9666D80e5617bA1470E2cA09F2D9B0C8CCd56B7",
+        "0x6f572a24c5C009fC8C844Fab5352edf79F132FBD",
+        "0xd725E456D5beD8275E297C4Dd11135e3C5cDe544",
+        "0x24C0E1C19c8eC997b781dF4B4A0f812aE9667c96"
+      ]
+    }
+  },
+  "measured_findings": [
+    "DeBridgeGate and SignatureVerifier share one ERC1967 ProxyAdmin; its owner is a Safe 5-of-8.",
+    "None of the eight Safe signers returns isValid on SignatureVerifier.getOracleInfo — address-level upgrade authority is disjoint from the oracle set.",
+    "excessConfirmations/minConfirmations are signature thresholds, not value meters. No pluggable per-message admission module is exposed on the Gate.",
+    "Wrong address 0x43dE2d77…0AaADb (checklist typo) has no code; canonical Gate is 0x43dE2d77…f38398aA."
+  ],
+  "verdict": "NO-POSITION",
+  "verdict_reasoning": "There is nowhere to install a graduated per-message bound without redeployment. Separability of the upgrade Safe from oracles would matter if a position existed; under the fixed census definition this is no position.",
+  "curated_still_todo": []
+}

@@ -1,0 +1,80 @@
+{
+  "B_wei": 1233331752968037000000000,
+  "B_usd": 1233331.752968037,
+  "B_source": "sim3.json Bc.ethereum",
+  "forge_exit": 0,
+  "tests": [
+    {
+      "test": "test_F1_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F1_SameBlockSurplusRace",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F2_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F2_RefillBoundary",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F3_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F3_ReplayAlreadyMetered",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F4_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F4_ReorgConsistency",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F5_LowerBudgetMidTraffic",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F5_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F6_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F6_RaiseTimelock",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F7_NegativeControl",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "test": "test_F7_PauseMidRefill",
+      "status": "PASS",
+      "reason": null
+    }
+  ],
+  "required_ok": true,
+  "hardcode_hits": []
+}

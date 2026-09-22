@@ -1,0 +1,29 @@
+{
+  "mode": "official_source_checked_integration_feasibility",
+  "prototype_shipped": true,
+  "prototype_sha256": "6d47bd89fea1f7bdf11dbe202377611ed11cceb73141ffffcbcda5be114cdada",
+  "checks": {
+    "endpoint_owner_sets_default_receive_library": true,
+    "receive_library_resolves_per_receiver_then_default": true,
+    "oapp_or_delegate_can_override_receive_library": true,
+    "endpoint_executes_receiver_directly": true,
+    "oapp_hook_is_internal_application_logic": true
+  },
+  "source_sha256": {
+    "endpoint": "9702083ea7e0873510bd562095a6028dab5fad5e9be30e452908e6178bd51b6c",
+    "manager": "aa074a24bd2f7b5e91f7b5cb60d647ae3c8d2ff44c3bf62e925d6ce661cf799b",
+    "receiver": "8d1dd4a6a74c3d9704a078e6404dcf7aab688b750ea64e8331f873e253862bc0"
+  },
+  "sources": {
+    "endpoint": "https://raw.githubusercontent.com/LayerZero-Labs/LayerZero-v2/9c741e7f9790639537b1710a203bcdfd73b0b9ac/packages/layerzero-v2/evm/protocol/contracts/EndpointV2.sol",
+    "manager": "https://raw.githubusercontent.com/LayerZero-Labs/LayerZero-v2/9c741e7f9790639537b1710a203bcdfd73b0b9ac/packages/layerzero-v2/evm/protocol/contracts/MessageLibManager.sol",
+    "receiver": "https://raw.githubusercontent.com/LayerZero-Labs/LayerZero-v2/9c741e7f9790639537b1710a203bcdfd73b0b9ac/packages/layerzero-v2/evm/oapp/contracts/oapp/OAppReceiver.sol"
+  },
+  "result": {
+    "matched_scope_candidate": "Endpoint-owner-installed default receive MessageLib wrapper",
+    "authority": "Endpoint owner, distinct at address level from DVN operators",
+    "coverage_limit": "Each OApp/delegate can select a non-default receive library",
+    "rejected_shortcut": "An OApp _lzReceive guard is per-application, not per-root",
+    "implementation_status": "An interface-complete Receive MessageLib existence prototype meters the plaintext PacketV1 payload before Endpoint.verify. It is not a transparent ULN302 wrapper: ULN302 exposes only payloadHash at commit time, so a wrapper cannot recover the declared value. Endpoint-owner registration and default selection are still required, and OApps may override the default."
+  }
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run ExposureGuard shadow collection hourly for %i
+
+[Timer]
+OnCalendar=hourly
+RandomizedDelaySec=5min
+Persistent=true
+Unit=exposureguard-shadow-chain@%i.service
+
+[Install]
+WantedBy=timers.target

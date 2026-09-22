@@ -1,0 +1,85 @@
+{
+ "schema": 1,
+ "stock_usd": 9857090.0,
+ "B_usd": 1233331.752968037,
+ "D_days": 1.0,
+ "block_seconds": 12.0,
+ "block_gas_assumed": 36000000,
+ "routes": 116,
+ "gas_per_delivery": 156641,
+ "gas_to_drain": 18170356,
+ "blockspace": [
+  {
+   "block_share": 1.0,
+   "blocks": 1.0,
+   "drain_seconds": 12.0,
+   "rate_usd_per_day": 70971048000.0,
+   "crossover_days": 1.7378258048627095e-05,
+   "crossover": "1.5 s"
+  },
+  {
+   "block_share": 0.5,
+   "blocks": 1.0094642222222223,
+   "drain_seconds": 12.113570666666668,
+   "rate_usd_per_day": 70305659613.9338,
+   "crossover_days": 1.754273262991741e-05,
+   "crossover": "1.5 s"
+  },
+  {
+   "block_share": 0.25,
+   "blocks": 2.0189284444444446,
+   "drain_seconds": 24.227141333333336,
+   "rate_usd_per_day": 35152829806.9669,
+   "crossover_days": 3.508608076556872e-05,
+   "crossover": "3.0 s"
+  },
+  {
+   "block_share": 0.1,
+   "blocks": 5.047321111111111,
+   "drain_seconds": 60.56785333333333,
+   "rate_usd_per_day": 14061131922.786764,
+   "crossover_days": 8.771981853087836e-05,
+   "crossover": "7.6 s"
+  },
+  {
+   "block_share": 0.05,
+   "blocks": 10.094642222222221,
+   "drain_seconds": 121.13570666666666,
+   "rate_usd_per_day": 7030565961.393382,
+   "crossover_days": 0.0001754550279449684,
+   "crossover": "15.2 s"
+  }
+ ],
+ "incidents": [
+  {
+   "incident": "Wormhole",
+   "loss_usd": 326000000.0,
+   "gap_hours": 0.5,
+   "rate_usd_per_day": 15648000000.0,
+   "crossover_days_lo": 0.0002573578827052377,
+   "crossover_days_hi": 0.00030300845297721434,
+   "crossover_lo": "22.2 s",
+   "crossover_hi": "26.2 s"
+  },
+  {
+   "incident": "Nomad",
+   "loss_usd": 190000000.0,
+   "gap_hours": 8.28,
+   "rate_usd_per_day": 550724637.6811595,
+   "crossover_days_lo": 0.004278981671155375,
+   "crossover_days_hi": 0.0050415901285619045,
+   "crossover_lo": "6.2 min",
+   "crossover_hi": "7.3 min"
+  },
+  {
+   "incident": "Ronin",
+   "loss_usd": 625000000.0,
+   "gap_hours": 144.0,
+   "rate_usd_per_day": 104166666.66666667,
+   "crossover_days_lo": 0.0800302408467437,
+   "crossover_days_hi": 0.09557824619834349,
+   "crossover_lo": "1.92 h",
+   "crossover_hi": "2.29 h"
+  }
+ ]
+}

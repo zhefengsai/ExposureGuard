@@ -1,0 +1,12 @@
+[Unit]
+Description=ExposureGuard public-testnet controlled workload
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/exposureguard/ExposureGuard/control
+EnvironmentFile=/opt/exposureguard/.env
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/python3 testnet_workload.py
+User=exposureguard

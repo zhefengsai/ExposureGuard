@@ -1,0 +1,6 @@
+ExposureGuard
+Copyright 2026 The ExposureGuard Authors
+
+This product includes third-party Solidity dependencies under their own
+licenses. See the license files distributed with those dependencies under
+ExposureGuard/contracts/lib/.

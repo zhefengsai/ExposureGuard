@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://exposureguard.local/census/stack-record.json",
+  "title": "CrossStackCensusRecord",
+  "description": "Unified census record for one interoperability stack (ExposureGuard pilot).",
+  "type": "object",
+  "required": [
+    "stack",
+    "chain",
+    "chain_id",
+    "generated_at",
+    "measurement_depth",
+    "population",
+    "shared_verification_root",
+    "silent_inheritance",
+    "controls",
+    "detection_gap",
+    "separability",
+    "value_at_risk_usd",
+    "evidence",
+    "coverage"
+  ],
+  "properties": {
+    "stack": { "type": "string" },
+    "chain": { "type": "string" },
+    "chain_id": { "type": "integer" },
+    "block": { "type": ["integer", "null"] },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "measurement_depth": {
+      "enum": ["on_chain_census", "architectural", "imported"]
+    },
+    "population": {
+      "type": "object",
+      "required": ["type", "count", "source"],
+      "properties": {
+        "type": { "type": "string" },
+        "count": { "type": "integer" },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "shared_verification_root": {
+      "type": "object",
+      "required": ["present", "mode"],
+      "properties": {
+        "present": { "type": "boolean" },
+        "mode": {
+          "enum": [
+            "default_inheritance",
+            "mandatory_stack_wide",
+            "dvn_set_cluster",
+            "don_shared",
+            "gateway_inline",
+            "none"
+          ]
+        },
+        "roots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "members": { "type": "integer" },
+              "share": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "silent_inheritance": {
+      "type": "object",
+      "required": ["applicable", "predicate"],
+      "properties": {
+        "applicable": { "type": "boolean" },
+        "predicate": { "type": "string" },
+        "count": { "type": ["integer", "null"] },
+        "share": { "type": ["number", "null"] },
+        "note": { "type": "string" }
+      }
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "placement",
+          "scope",
+          "automatic",
+          "on_path_under_Fs",
+          "active"
+        ],
+        "properties": {
+          "name": { "type": "string" },
+          "placement": {
+            "enum": ["destination", "root_side", "source", "off_path", "none"]
+          },
+          "scope": {
+            "enum": ["per_root", "per_route", "per_lane", "per_oapp", "stack_wide"]
+          },
+          "automatic": { "type": "boolean" },
+          "on_path_under_Fs": { "type": "boolean" },
+          "active": { "type": "boolean" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "detection_gap": {
+      "type": "object",
+      "required": ["bound", "dest_auto_per_root_bound"],
+      "properties": {
+        "bound": { "enum": ["unbounded", "bounded", "partial"] },
+        "dest_auto_per_root_bound": { "type": "boolean" },
+        "pause_only": { "type": "boolean" },
+        "formula": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "separability": {
+      "enum": ["SEPARABLE", "NON-SEPARABLE", "NO-POSITION"]
+    },
+    "value_at_risk_usd": {
+      "type": ["object", "null"],
+      "properties": {
+        "strict": { "type": "number" },
+        "loose": { "type": "number" },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "pattern_match": {
+      "type": "object",
+      "properties": {
+        "SR": { "type": "boolean" },
+        "SI_or_mandatory": { "type": "boolean" },
+        "no_dest_auto_per_root_bound": { "type": "boolean" }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "queried": { "type": "integer" },
+        "resolved": { "type": "integer" },
+        "failed": { "type": "integer" },
+        "failed_share": { "type": "number" }
+      }
+    },
+    "extras": { "type": "object" }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "stack": "layerzero",
+  "chain": "ethereum",
+  "chain_id": 1,
+  "block": 25818187,
+  "generated_at": "2026-08-23T13:55:32Z",
+  "measurement_depth": "on_chain_census",
+  "population": {
+    "type": "oapp",
+    "count": 1036,
+    "source": "metadata.layerzero-api.com addressToOApp (ethereum v2)",
+    "note": "Probed 4 remote EIDs per OApp"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "dvn_set_cluster",
+    "roots": [
+      {
+        "id": "e7a9ae2efb1669a9",
+        "label": "ULN302 config fingerprint e7a9ae2efb1669a9",
+        "members": 1852,
+        "share": 0.44777562862669246
+      },
+      {
+        "id": "0409d263f2733218",
+        "label": "ULN302 config fingerprint 0409d263f2733218",
+        "members": 963,
+        "share": 0.23283365570599612
+      },
+      {
+        "id": "9249d3a0eb5192d5",
+        "label": "ULN302 config fingerprint 9249d3a0eb5192d5",
+        "members": 840,
+        "share": 0.20309477756286268
+      },
+      {
+        "id": "98bbb61d19a76bb6",
+        "label": "ULN302 config fingerprint 98bbb61d19a76bb6",
+        "members": 33,
+        "share": 0.007978723404255319
+      },
+      {
+        "id": "7d49aac8bb730274",
+        "label": "ULN302 config fingerprint 7d49aac8bb730274",
+        "members": 20,
+        "share": 0.004835589941972921
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": true,
+    "predicate": "getReceiveLibrary(oapp,eid).isDefault == true",
+    "count": 3711,
+    "share": 0.8972437137330754,
+    "note": "path-level: 3711/4136 (oapp,eid) pairs; oapp-all-default: 817/1034 (79%); 186 mixed"
+  },
+  "controls": [
+    {
+      "name": "OAppOwnerPause/Config",
+      "placement": "destination",
+      "scope": "per_oapp",
+      "automatic": false,
+      "on_path_under_Fs": true,
+      "active": true,
+      "note": "OApp can change DVN set; no protocol-wide automatic per-root meter"
+    }
+  ],
+  "detection_gap": {
+    "bound": "unbounded",
+    "dest_auto_per_root_bound": false,
+    "pause_only": true,
+    "formula": "No destination-side automatic cap shared across OApps on same DVN cluster",
+    "note": "DVN compromise affects all OApps sharing config fingerprint"
+  },
+  "separability": "SEPARABLE",
+  "value_at_risk_usd": null,
+  "evidence": [
+    "https://metadata.layerzero-api.com/v1/metadata",
+    "EndpointV2 0x1a44076050125825900e736c501f859c50fE728c",
+    "receiveUln302 0xc02ab410f0734efa3f14628780e6e695156024c2"
+  ],
+  "coverage": {
+    "queried": 4144,
+    "resolved": 4136,
+    "failed": 8,
+    "failed_share": 0.0019305019305019305
+  },
+  "extras": {
+    "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+    "receive_uln302": "0xc02ab410f0734efa3f14628780e6e695156024c2",
+    "probe_eids": {
+      "30110": "arbitrum",
+      "30184": "base",
+      "30111": "optimism",
+      "30109": "polygon"
+    },
+    "default_oapps_all_eids": 817,
+    "oapp_all_default_share": 0.7901353965183753,
+    "default_path_pairs": 3711,
+    "path_default_share": 0.8972437137330754,
+    "custom_oapps": 31,
+    "partial_default_oapps": 186,
+    "distinct_config_fingerprints": 186,
+    "largest_cluster_pairs": 1852
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}

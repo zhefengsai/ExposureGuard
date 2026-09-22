@@ -1,0 +1,193 @@
+{
+  "mode": "held_out_trace_and_analytical_stress",
+  "train_days": 60,
+  "train_messages": 4422,
+  "test_messages": 2055,
+  "budget_usd_per_day": 1233000.0,
+  "alpha": 0.8,
+  "demand_growth": [
+    {
+      "scale": 1.0,
+      "messages": 2055,
+      "delivered_within_7d": 2054,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 1,
+      "delivery_fraction_7d": 0.9995133819951338
+    },
+    {
+      "scale": 1.25,
+      "messages": 2055,
+      "delivered_within_7d": 2054,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 1,
+      "delivery_fraction_7d": 0.9995133819951338
+    },
+    {
+      "scale": 1.5,
+      "messages": 2055,
+      "delivered_within_7d": 2054,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 1,
+      "delivery_fraction_7d": 0.9995133819951338
+    },
+    {
+      "scale": 2.0,
+      "messages": 2055,
+      "delivered_within_7d": 2052,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 3,
+      "delivery_fraction_7d": 0.9985401459854014
+    },
+    {
+      "scale": 3.0,
+      "messages": 2055,
+      "delivered_within_7d": 2052,
+      "deferred": 14,
+      "deferral_rate": 0.006812652068126521,
+      "undelivered_7d": 3,
+      "delivery_fraction_7d": 0.9985401459854014
+    }
+  ],
+  "conservative_price_overestimate": [
+    {
+      "scale": 1.0,
+      "messages": 2055,
+      "delivered_within_7d": 2054,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 1,
+      "delivery_fraction_7d": 0.9995133819951338
+    },
+    {
+      "scale": 1.25,
+      "messages": 2055,
+      "delivered_within_7d": 2054,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 1,
+      "delivery_fraction_7d": 0.9995133819951338
+    },
+    {
+      "scale": 1.5,
+      "messages": 2055,
+      "delivered_within_7d": 2054,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 1,
+      "delivery_fraction_7d": 0.9995133819951338
+    },
+    {
+      "scale": 2.0,
+      "messages": 2055,
+      "delivered_within_7d": 2052,
+      "deferred": 0,
+      "deferral_rate": 0.0,
+      "undelivered_7d": 3,
+      "delivery_fraction_7d": 0.9985401459854014
+    }
+  ],
+  "price_underestimate_real_envelope": [
+    {
+      "max_underpricing_factor_P": 1.0,
+      "accounted_envelope_usd": 1541250.0,
+      "real_value_envelope_usd": 1541250.0,
+      "reduction_vs_collateral": 6.397404703974047
+    },
+    {
+      "max_underpricing_factor_P": 1.25,
+      "accounted_envelope_usd": 1541250.0,
+      "real_value_envelope_usd": 1926562.5,
+      "reduction_vs_collateral": 5.117923763179237
+    },
+    {
+      "max_underpricing_factor_P": 2.0,
+      "accounted_envelope_usd": 1541250.0,
+      "real_value_envelope_usd": 3082500.0,
+      "reduction_vs_collateral": 3.1987023519870235
+    },
+    {
+      "max_underpricing_factor_P": 5.0,
+      "accounted_envelope_usd": 1541250.0,
+      "real_value_envelope_usd": 7706250.0,
+      "reduction_vs_collateral": 1.2794809407948093
+    },
+    {
+      "max_underpricing_factor_P": 10.0,
+      "accounted_envelope_usd": 1541250.0,
+      "real_value_envelope_usd": 15412500.0,
+      "reduction_vs_collateral": 0.6397404703974047
+    }
+  ],
+  "history_poisoning": [
+    {
+      "adversarial_training_usage_fraction": 0.0,
+      "earned_floor_weight": 0.0,
+      "post_failure_budget_capture_fraction": 0.19999999999999996
+    },
+    {
+      "adversarial_training_usage_fraction": 0.001,
+      "earned_floor_weight": 0.0009990009990009992,
+      "post_failure_budget_capture_fraction": 0.20079920079920074
+    },
+    {
+      "adversarial_training_usage_fraction": 0.01,
+      "earned_floor_weight": 0.009900990099009901,
+      "post_failure_budget_capture_fraction": 0.20792079207920788
+    },
+    {
+      "adversarial_training_usage_fraction": 0.05,
+      "earned_floor_weight": 0.047619047619047616,
+      "post_failure_budget_capture_fraction": 0.23809523809523805
+    },
+    {
+      "adversarial_training_usage_fraction": 0.1,
+      "earned_floor_weight": 0.09090909090909091,
+      "post_failure_budget_capture_fraction": 0.2727272727272727
+    },
+    {
+      "adversarial_training_usage_fraction": 0.5,
+      "earned_floor_weight": 0.3333333333333333,
+      "post_failure_budget_capture_fraction": 0.4666666666666666
+    },
+    {
+      "adversarial_training_usage_fraction": 1.0,
+      "earned_floor_weight": 0.5,
+      "post_failure_budget_capture_fraction": 0.6
+    }
+  ],
+  "perfect_capital_recycling": [
+    {
+      "round_trip_hours": 0.25,
+      "sustainable_drain_usd_per_day": 246599.99999999994,
+      "minimum_capital_in_flight_usd": 2568.7499999999995,
+      "capital_as_fraction_of_budget": 0.002083333333333333
+    },
+    {
+      "round_trip_hours": 1,
+      "sustainable_drain_usd_per_day": 246599.99999999994,
+      "minimum_capital_in_flight_usd": 10274.999999999998,
+      "capital_as_fraction_of_budget": 0.008333333333333331
+    },
+    {
+      "round_trip_hours": 6,
+      "sustainable_drain_usd_per_day": 246599.99999999994,
+      "minimum_capital_in_flight_usd": 61649.99999999998,
+      "capital_as_fraction_of_budget": 0.04999999999999998
+    },
+    {
+      "round_trip_hours": 24,
+      "sustainable_drain_usd_per_day": 246599.99999999994,
+      "minimum_capital_in_flight_usd": 246599.9999999999,
+      "capital_as_fraction_of_budget": 0.19999999999999993
+    }
+  ],
+  "notes": [
+    "Demand and conservative-price rows replay held-out traffic with frozen train parameters.",
+    "Underpricing, history poisoning, and recycling rows are analytical stress cases.",
+    "Capital in flight is not capital lost; fees and latency are omitted, favoring the attacker."
+  ]
+}

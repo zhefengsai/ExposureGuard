@@ -1,0 +1,11 @@
+[Unit]
+Description=Exercise ExposureGuard local devnet hourly
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=1h
+Persistent=true
+Unit=exposureguard-devnet-traffic.service
+
+[Install]
+WantedBy=timers.target

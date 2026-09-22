@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "files": {
+    "events_multi.json": "226818b71daa53edd60feaf6f95069e9f3bd241fcbb22491acea07235093320f",
+    "sim3.json": "eb0da6af99fcbb7d2a58a149e1412c50da5677bbe0471a3e2c0c2ca2be574148",
+    "sim_results.json": "589c5035078c30df37289583d558b1c2d568a149aa2351478b5036c194190a28",
+    "oos_calibrate.json": "ba7a9088de400a2da716f6cf76b9cf92868c9174082c33aea5a4f6057c8647a0",
+    "controller_config.json": "bf052084c262bb73134b1287cf7fae422751e715b595effdce35b49111ca782b",
+    "shadow_controller.json": "7cdc250b96d8ccb8ca3a62c826072cb458008343209788c6d7bb25aba40fd4be",
+    "robustness_sensitivity.json": "317b16b93dc1b95276ca8c34879bf75b03beda18b00b00f17f7b2a2ce3448384",
+    "calibration_compare.json": "f478c015f6fb4e87272b5e2e9ecc64d2bbd9533a944a6e72edf0094579809660",
+    "pricing_coverage.json": "cec6390f099ede3c10da8d300ca292eb35221fea925c607eb9026dbd20ce4aa2",
+    "gas_deployed.json": "b54fdeb067a4373e54ba52127909abe928cc74d507e7926c8ddca64c1d7a0643",
+    "scaling.json": "7038960bc8874b340def2c9c332fb5413ed7425515a158f2b0a50136b60850f5",
+    "fault_matrix.json": "d15947fa54cb8de9d3d03f835ec71f92fb84d6391c8cea2eadb5b95ed217866d",
+    "baselines.json": "bddb7fdeea48fb69024dad751e93cc17fec7f84363a6f51563ad43b496e1ea7e",
+    "partition_cost.json": "458c1c880a566fab9e2205d7260ea5351c1f8758bcd6cefb90880acf7ad6bcb8",
+    "owner_independence.json": "05c7caf0c506477562fa3ce92ed1460970bdc83f362a94338dfc7fa98d4e1023",
+    "audit.json": "d33ca143dd0f3102b16dc10f56b9e6ec4be6f93132eee2d5a9bc8f3e3eb38e31",
+    "layerzero_feasibility.json": "c409c9cdcf2647f1e2189c593bf9ce976b7687424e04349f61688a79b908e605",
+    "testnet_deployment.json": "693dfc9d7576c441da4f53a316c97d0d42e90fc19c3d8b9663f8b9ca0d326c0b",
+    "testnet_fault_sequence.json": "efc4de18cc3b7cfaae17cd04bd118032af6659ed8e34c9d55d6ce74488ac6063",
+    "detector_baseline.json": "98056941da1c7cd916f0d604cb076a29b37ff0bab3bcaf866f5a5b4b55099b2f",
+    "synth_generalization.json": "7feaf1933e9b0795002f81ede0f429491a0a5c691b852e49f78ac0160033acbd",
+    "bootstrap_policy.json": "e30b3028f01a9ad0f81e49d62dd040cc7139ef3858465b7ce8fd476459afcd16",
+    "capacity_recovery.json": "37309277fe0ed80d070c2f869e7d70df4c33c9a0740903002c0ca93e8dc1582e",
+    "peak_bootstrap.json": "1295b061bfe9cf7a6e184e470c99d8c4c9a5570df8ec96430d3bf8a9050d5f6f",
+    "census_evidence.json": "1c23214264b06e072c54901ba43a7404acd06ea438d055d18917fdeec56eb2f6",
+    "price_coverage_curve.json": "c846c9cfbabda6d10fabc153f8dbfdeecd01af503600a58513b2334228fdc2b2",
+    "burst_envelope.json": "a0197ffeceaaa79b98ae877a4e6277ae0860375390647f7ca7f390723897bc96"
+  }
+}

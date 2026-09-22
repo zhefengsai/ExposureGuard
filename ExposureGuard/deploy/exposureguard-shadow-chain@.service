@@ -1,0 +1,18 @@
+[Unit]
+Description=ExposureGuard prospective shadow collector for %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/exposureguard/ExposureGuard/control
+Environment=PYTHONUNBUFFERED=1
+Environment=EXPOSUREGUARD_RPC_ATTEMPTS=3
+Environment=EXPOSUREGUARD_RPC_TIMEOUT_SECONDS=20
+Environment=BSC_RPC_URL=https://rpc-bnb.blockmachine.io
+Environment=BSC_FALLBACK_RPC_URL=https://bsc.rpc.blxrbdn.com
+ExecStart=/usr/bin/python3 prospective_shadow.py collect --chain %i --shard 5000
+TimeoutStartSec=3h
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true

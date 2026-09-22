@@ -1,0 +1,13 @@
+[Unit]
+Description=Freeze daily ExposureGuard prospective shadow recommendation
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/exposureguard/ExposureGuard/control
+ExecStart=/usr/bin/python3 prospective_shadow.py recommend --max-chain-age-hours 3
+TimeoutStartSec=10min
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true

@@ -1,0 +1,141 @@
+{
+  "stack": "ccip",
+  "chain": "ethereum",
+  "chain_id": 1,
+  "block": 25818293,
+  "generated_at": "2026-08-23T13:57:18Z",
+  "measurement_depth": "on_chain_census",
+  "population": {
+    "type": "token_pool",
+    "count": 203,
+    "source": "https://docs.chain.link/api/ccip/v1/tokens?environment=mainnet&chainId=1",
+    "note": "91 inbound lanes + 92 outbound lanes (directory v1)"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "don_shared",
+    "roots": [
+      {
+        "id": "ccip_don",
+        "label": "CCIP DON message attestation (all lanes)",
+        "members": 203,
+        "share": 1.0
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": false,
+    "predicate": "N/A \u2014 verification infrastructure is stack-mandatory",
+    "count": null,
+    "share": null,
+    "note": "Apps inherit DON trust by using CCIP Router"
+  },
+  "controls": [
+    {
+      "name": "TokenPoolInboundRateLimiter",
+      "placement": "destination",
+      "scope": "per_lane",
+      "automatic": true,
+      "on_path_under_Fs": true,
+      "active": true,
+      "note": "206/414 probed (pool\u00d7remote) pairs enabled"
+    },
+    {
+      "name": "RMN/TimelockPause",
+      "placement": "destination",
+      "scope": "stack_wide",
+      "automatic": false,
+      "on_path_under_Fs": true,
+      "active": true,
+      "note": "Router owner timelock 0x80226fc0Ee2b096224EeAc085Bb9a8cba1146f7D"
+    }
+  ],
+  "detection_gap": {
+    "bound": "partial",
+    "dest_auto_per_root_bound": false,
+    "pause_only": false,
+    "formula": "Bound per (token pool, remote chain); \u03a3 lane caps not root-coordinated",
+    "note": "Compromised DON: attacker can fan out across lanes/pools; no single per-root meter"
+  },
+  "separability": "SEPARABLE",
+  "value_at_risk_usd": null,
+  "evidence": [
+    "https://docs.chain.link/api/ccip/v1/chains?environment=mainnet&chainId=1",
+    "https://docs.chain.link/api/ccip/v1/tokens?environment=mainnet&chainId=1",
+    "https://docs.chain.link/api/ccip/v1/lanes?environment=mainnet&destinationChainId=1",
+    "exp/separability.json"
+  ],
+  "coverage": {
+    "queried": 420,
+    "resolved": 414,
+    "failed": 6,
+    "failed_share": 0.014285714285714285
+  },
+  "extras": {
+    "router": "0x80226fc0Ee2b096224EeAc085Bb9a8cba1146f7D",
+    "rmn": "0x411dE17f12D1A34ecC7F45f49844626267c75e81",
+    "inbound_lanes_to_eth": 91,
+    "outbound_lanes_from_eth": 92,
+    "pools_on_eth": 203,
+    "rate_limit_probes": 420,
+    "inbound_enabled_pairs": 206,
+    "inbound_disabled_pairs": 208,
+    "sample_enabled": [
+      {
+        "symbol": "LINK",
+        "pool": "0x1b7492c3bd23a4adb448710e4275ff14a5288932",
+        "remote_selector": 18240105181246962294,
+        "ok": true,
+        "inbound_enabled": true,
+        "inbound_capacity": 55000000000000002097152,
+        "inbound_rate": 15268000000000002048,
+        "inbound_tokens": 55000000000000002097152
+      },
+      {
+        "symbol": "LINK",
+        "pool": "0x1b7492c3bd23a4adb448710e4275ff14a5288932",
+        "remote_selector": 8805746078405598895,
+        "ok": true,
+        "inbound_enabled": true,
+        "inbound_capacity": 50000000000000000000000,
+        "inbound_rate": 13880000000000000000,
+        "inbound_tokens": 50000000000000000000000
+      },
+      {
+        "symbol": "LINK",
+        "pool": "0x1b7492c3bd23a4adb448710e4275ff14a5288932",
+        "remote_selector": 5142893604156789321,
+        "ok": true,
+        "inbound_enabled": true,
+        "inbound_capacity": 50000000000000000000000,
+        "inbound_rate": 4630000000000000000,
+        "inbound_tokens": 50000000000000000000000
+      },
+      {
+        "symbol": "USDT",
+        "pool": "0xa3532633401abffbd15e6be825a45fb7f141469b",
+        "remote_selector": 3734403246176062136,
+        "ok": true,
+        "inbound_enabled": true,
+        "inbound_capacity": 10000000000000,
+        "inbound_rate": 5000000000,
+        "inbound_tokens": 10000000000000
+      },
+      {
+        "symbol": "USDT",
+        "pool": "0xa3532633401abffbd15e6be825a45fb7f141469b",
+        "remote_selector": 1673871237479749969,
+        "ok": true,
+        "inbound_enabled": true,
+        "inbound_capacity": 10000000000000,
+        "inbound_rate": 5000000000,
+        "inbound_tokens": 10000000000000
+      }
+    ]
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}

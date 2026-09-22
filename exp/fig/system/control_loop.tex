@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+  node distance=3mm and 3mm,
+  ctl/.style={draw,rounded corners=1.2pt,align=center,minimum height=7mm,
+              text width=0.19\columnwidth,font=\small},
+  state/.style={draw,rounded corners=1.2pt,align=center,minimum height=7mm,
+                text width=0.17\columnwidth,font=\normalsize},
+  data/.style={draw,rounded corners=1.2pt,align=center,minimum height=8mm,
+               font=\footnotesize},
+  arr/.style={-{Latex[length=1.5mm]},semithick},
+  read/.style={-{Latex[length=1.5mm]},semithick,dashed},
+  note/.style={font=\normalsize,align=center,fill=white,inner sep=1pt},
+  lane/.style={font=\normalsize\bfseries,anchor=west}
+]
+
+% Off-chain control plane.
+\node[ctl] (measure) {Chain-log\\scan};
+\node[ctl,right=of measure] (control) {Policy\\proposal};
+\node[ctl,right=of control] (govern) {Governance\\+ timelock};
+\node[state,below=5mm of measure] (audit) {Read-only\\auditor + alerts};
+\node[state,below=5mm of govern] (policy) {Deployed\\policy state};
+\node[lane] at ([yshift=1.2mm]measure.north west) {OFF-CHAIN CONTROL PLANE};
+\draw[arr] (measure) -- (control);
+\draw[arr] (control) -- (govern);
+\draw[arr] (govern) -- node[right,note]{write} (policy);
+\draw[read] (policy) -- node[above,note]{read} (audit);
+
+% On-chain enforcement path.
+  \node[data,text width=0.13\columnwidth,below=12mm of audit] (message)
+  {Inbound\\message};
+\node[data,text width=0.14\columnwidth,right=of message] (mailbox) {Mailbox};
+\node[data,text width=0.29\columnwidth,right=of mailbox] (gate)
+  {Existing verifier\\$\wedge$\\\textbf{\sys{}}};
+\node[data,text width=0.12\columnwidth,right=of gate] (route) {Deliver\\or defer};
+\coordinate (onchainnorth) at (message.west |- gate.north);
+\node[lane,anchor=south west] at ([yshift=1mm]onchainnorth)
+  {ON-CHAIN ENFORCEMENT};
+\draw[arr] (message) -- (mailbox);
+\draw[arr] (mailbox) -- (gate);
+\draw[arr] (gate) -- (route);
+\draw[arr] (policy.south) |- node[right,note,pos=.32]{policy} (gate.north);
+\end{tikzpicture}

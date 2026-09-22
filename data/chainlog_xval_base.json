@@ -1,0 +1,733 @@
+{
+  "generated_at": "2026-08-23T10:49:32Z",
+  "chain": "base",
+  "rpc": "https://mainnet.base.org",
+  "mailbox": "0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D",
+  "mailbox_verify": {
+    "address": "0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D",
+    "expected_domain": 8453,
+    "source": "hyperlane-registry chains/<chain>/addresses.yaml mailbox",
+    "code_len": 5112,
+    "code_ok": true,
+    "localDomain_raw": "[\n  8453\n]",
+    "defaultIsm_raw": "[\n  \"0x5e74186Fe59701a050Bc9eaa6e536aC661C418D3\"\n]",
+    "localDomain": 8453,
+    "defaultIsm": "0x5e74186Fe59701a050Bc9eaa6e536aC661C418D3",
+    "domain_ok": true,
+    "ism_ok": true,
+    "ok": true
+  },
+  "window": {
+    "t_min": "2026-04-24T14:43:00",
+    "t_max": "2026-08-22T12:58:18",
+    "start_block": 45126217,
+    "end_block": 50307376
+  },
+  "process_discovery": {
+    "signature": "Process(uint32,bytes32,address)",
+    "topic0": "0x0d381c2a574ae8f04e213db7cfb4df8df712cdbd427d9868ffef380660ca6574",
+    "confirmed_via": "eth_getLogs Mailbox last 500 blocks, n=6",
+    "sample_tx": "0xedce447f58d0a5b8b0a747cde1750670c3e3278ac367c3efd0ccfe29ae747d83",
+    "sample_recipient": "0xec004ab4870c4e177c66949329dcdb503ce41022",
+    "sample_block": 50337122
+  },
+  "coverage": {
+    "blocks_ok": 5181160,
+    "blocks_total": 5181160,
+    "fraction": 1.0,
+    "unresolved_ranges": 0,
+    "unresolved_span": 0
+  },
+  "unresolved": [],
+  "totals": {
+    "routes_default": 57,
+    "chain_msgs_default_routes": 9328,
+    "indexer_priced_msgs": 970,
+    "indexer_summary_messages": 1329,
+    "indexer_peak_daily": 55165.186787179446,
+    "indexer_mean_daily": 6334.299812023107,
+    "process_logs_other_recipients": 60383,
+    "ratio_indexer_priced_over_chain": 0.10398799313893653
+  },
+  "indexer_miss_routes": [
+    {
+      "route": "01efc19badcac4edae0d75c5f344acd0f7311722",
+      "symbol": "GPS",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 160,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "155c68274c5c7729c64cf6b0f21f1e6110fa00d4",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 2,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "1c3d50450ffa80bcae435ef6e362d507a86924f2",
+      "symbol": "FLT",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "306acd0c07c430abbbb2e74ef7bde94f32a898c0",
+      "symbol": "SEDA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 519,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "3eba6644819546c44eb3e7c3a92f034f921dca80",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 172,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "53c0499e7e4abd3e7994ca161523fd50a12bb8c8",
+      "symbol": "TRUMP",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "574134917e3d78705ed865b6ec58fa67f95f9a7e",
+      "symbol": "eXRD",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 279,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "5d27225a5d8a756e5655617b22cc03616c3b26c3",
+      "symbol": "TIA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 12,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "87ea09fe8d9dc6115086f5e0a30ca6750a997f1c",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 42,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "885598858b68562fe5001f8ee022522313257c7a",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "chain_msgs": 88,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "9d132d5678253fd88f7db51ac2ac13fc40a63547",
+      "symbol": "LITKEY",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 2998,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "ad13bce42394add02e6c215a40e582309b7975c7",
+      "symbol": "KYVE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 254,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "b46930ca998587a95d9ee000fa73a071add56b64",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 11,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 332,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "cc5053691ed540c031a725eb03c25c57f5be7117",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    }
+  ],
+  "per_route": [
+    {
+      "route": "01348f639d6e418a5a9673c08c0ddf6eccb80f37",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "01efc19badcac4edae0d75c5f344acd0f7311722",
+      "symbol": "GPS",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 160,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "0ba30bdd7d3c510de16c47385102c0b7068f4f33",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 500,
+      "indexer_msgs": 100,
+      "ratio": 0.2
+    },
+    {
+      "route": "0fcf8dae34efb101e7df535550370da4e53ab960",
+      "symbol": "oXAUT",
+      "standard": "EvmHypXERC20",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "0fea4be161fda8fbf24bbcd66a77f53e29f784a3",
+      "symbol": "TOSHI",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 642,
+      "indexer_msgs": 100,
+      "ratio": 0.1557632398753894
+    },
+    {
+      "route": "103c9cf52bbf6a6815a6c7e07c5fb376de016c7d",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "146fb3fcc2c9f547ee4f85a5b0497274cbd380d0",
+      "symbol": "USDC",
+      "standard": "EvmHypCrossCollateralRouter",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "151b328ca752c67c9a4c6e0ca329be0c00b12a24",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 68,
+      "indexer_msgs": 68,
+      "ratio": 1.0
+    },
+    {
+      "route": "1547b13bd71126d92e93092cad07807eedb6fc26",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 2,
+      "indexer_msgs": 2,
+      "ratio": 1.0
+    },
+    {
+      "route": "155c68274c5c7729c64cf6b0f21f1e6110fa00d4",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 2,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "1c3d50450ffa80bcae435ef6e362d507a86924f2",
+      "symbol": "FLT",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "1d73ab379902f71d8f1652b136f3717c085c2233",
+      "symbol": "wpFLT",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "1f36ecf13394712c944805f38d1463cf54c0c2c8",
+      "symbol": "TAIKO",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "228c5101b2c63b9d620a3e8fea7ec14263f82569",
+      "symbol": "ART",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "22fd11f93f0303346c9b9070cc67c4bc7ab2dabb",
+      "symbol": "CDX",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 2,
+      "indexer_msgs": 2,
+      "ratio": 1.0
+    },
+    {
+      "route": "23ee98fd566ebae12296d1b111064921143ad6a7",
+      "symbol": "USDCSTAGE",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "26af973a5b256f9b9bc0b1a3c566de1566568a87",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 172,
+      "indexer_msgs": 100,
+      "ratio": 0.5813953488372093
+    },
+    {
+      "route": "2a872ae01375a5ca7e044cb0e75cb97621ca954a",
+      "symbol": "cbBTC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "2d88dbbab372eac7f78c3566b0742864deaf984d",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "306acd0c07c430abbbb2e74ef7bde94f32a898c0",
+      "symbol": "SEDA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 519,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "3131f6b80c26936ab03f7d9d29eb4ddf36ac3fb5",
+      "symbol": "TIBBIR",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 1,
+      "indexer_msgs": 1,
+      "ratio": 1.0
+    },
+    {
+      "route": "32ab2fcca30864027056a41b329e0195f2f7e250",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 223,
+      "indexer_msgs": 100,
+      "ratio": 0.4484304932735426
+    },
+    {
+      "route": "33fbc08bd84e61e04e51ea0f32885aa77f7d5eca",
+      "symbol": "ALEO",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "37e637891a558b5b621723cbf8fc771525f280c1",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 1674,
+      "indexer_msgs": 100,
+      "ratio": 0.05973715651135006
+    },
+    {
+      "route": "3a669c00f7a041330646ac8ae89d74e104bd1363",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "3eba6644819546c44eb3e7c3a92f034f921dca80",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 172,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "458bddd0793fe4f70912535f172466a5473f2e77",
+      "symbol": "SUPR",
+      "standard": "EvmHypXERC20",
+      "chain_msgs": 14,
+      "indexer_msgs": 14,
+      "ratio": 1.0
+    },
+    {
+      "route": "53c0499e7e4abd3e7994ca161523fd50a12bb8c8",
+      "symbol": "TRUMP",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "574134917e3d78705ed865b6ec58fa67f95f9a7e",
+      "symbol": "eXRD",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 279,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "5a0e13290ec57f5e9031d01d03c6a40029cc24ea",
+      "symbol": "USDCSTAGE",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "5b4d7fd7e6cb11170137df1a0db24645533ec0b5",
+      "symbol": "WETH",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "5d27225a5d8a756e5655617b22cc03616c3b26c3",
+      "symbol": "TIA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 12,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "66477f84bd21697c7781fc3992b3163463e3b224",
+      "symbol": "cbBTC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 7,
+      "indexer_msgs": 7,
+      "ratio": 1.0
+    },
+    {
+      "route": "6a5579abece07b73d4d92a8bbff51af827bb21f1",
+      "symbol": "GAME",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "830b15a1986c75eaf8e048442a13715693cbd8bd",
+      "symbol": "HYPERSTAGE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "84e1df3553b16452aed7060a4266e4e434f418cc",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 354,
+      "indexer_msgs": 100,
+      "ratio": 0.2824858757062147
+    },
+    {
+      "route": "87ea09fe8d9dc6115086f5e0a30ca6750a997f1c",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 42,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "885598858b68562fe5001f8ee022522313257c7a",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "chain_msgs": 88,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "8de75a8a9ee436390429eefd343926b28768eab7",
+      "symbol": "cbBTC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 30,
+      "indexer_msgs": 30,
+      "ratio": 1.0
+    },
+    {
+      "route": "94620098a0af6fbeb3edd2bc6f52d1aa228e9077",
+      "symbol": "ETHSTAGE",
+      "standard": "EvmHypNative",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "955132016f9b6376b1392aa7bff50538d21ababc",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 621,
+      "indexer_msgs": 100,
+      "ratio": 0.1610305958132045
+    },
+    {
+      "route": "9c417d68de6acb6a9b0fbed56767f1f3548a48a1",
+      "symbol": "MIGGLES",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "9d132d5678253fd88f7db51ac2ac13fc40a63547",
+      "symbol": "LITKEY",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 2998,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "9fe693789e93319cc0f8a00fb4597ea4fd4b08ca",
+      "symbol": "BRETT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "a6536c88a7f86d2b189c58a5a19bf5f03241d6a0",
+      "symbol": "AIXBT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "a66a9c0112a428d407388db87659e9c66f3ef29c",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 5,
+      "indexer_msgs": 5,
+      "ratio": 1.0
+    },
+    {
+      "route": "a7ec41980e9871e1fca7131d05427b15a8c95e9f",
+      "symbol": "JC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "aadf9558cf103d394b22b18ffbaa0d1c0778ccfa",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 35,
+      "indexer_msgs": 35,
+      "ratio": 1.0
+    },
+    {
+      "route": "ad13bce42394add02e6c215a40e582309b7975c7",
+      "symbol": "KYVE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 254,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "b46930ca998587a95d9ee000fa73a071add56b64",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 11,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "c898fb26eb0bb3144964e15f544f3c68495b00d6",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 62,
+      "indexer_msgs": 62,
+      "ratio": 1.0
+    },
+    {
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 332,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "cc5053691ed540c031a725eb03c25c57f5be7117",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "cc9ece816641c8350db06af375811107b1aa0b9d",
+      "symbol": "TONY",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "f147aae190f01aab67152d97ad3b157c3957bd77",
+      "symbol": "USDT",
+      "standard": "EvmHypCrossCollateralRouter",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "f6b933267d0ac9e08c4904fb39fa047ed7b6a814",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 44,
+      "indexer_msgs": 44,
+      "ratio": 1.0
+    },
+    {
+      "route": "fdedbefec262fe0eeaa2bbde1afa2ef09aab6634",
+      "symbol": "FUEL",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    }
+  ],
+  "negative_control": {
+    "n": 5,
+    "passed": 5,
+    "results": [
+      {
+        "tx": "0x9400daaaf217ac88dd508936ca2da41c21ac7eb887ce8e8edd5ddae22d3ac5a0",
+        "ok": true,
+        "block": 45126264,
+        "recipient": "0x0ba30bdd7d3c510de16c47385102c0b7068f4f33"
+      },
+      {
+        "tx": "0x0efd9c5a0de2fe907b9f376de59b3c2b0796a63c81d38d5a771cef298284099c",
+        "ok": true,
+        "block": 47039046,
+        "recipient": "0x37e637891a558b5b621723cbf8fc771525f280c1"
+      },
+      {
+        "tx": "0xeb62b285cd195cd380a47bf31bd51c58e2173e18cc709c9bf2a7c79357924f8d",
+        "ok": true,
+        "block": 47374022,
+        "recipient": "0x26af973a5b256f9b9bc0b1a3c566de1566568a87"
+      },
+      {
+        "tx": "0x8435848edfbbbb76ce6672ee1acbcea1224f73614c78b45bd4442c1bf544aa0f",
+        "ok": true,
+        "block": 47150351,
+        "recipient": "0x955132016f9b6376b1392aa7bff50538d21ababc"
+      },
+      {
+        "tx": "0x11ecd4496ddd0aa5f6d38df769f3a7e341224207b4eef5fe20e76ef3f2005909",
+        "ok": true,
+        "block": 48576301,
+        "recipient": "0x1547b13bd71126d92e93092cad07807eedb6fc26"
+      }
+    ]
+  },
+  "stage2": {
+    "attempted": true,
+    "ok": true,
+    "discovery": {
+      "signature": "ReceivedTransferRemote(uint32,bytes32,uint256)",
+      "topic0": "0xba20947a325f450d232530e5f5fce293e7963499d5309a07cee84a269f2f15a6",
+      "confirmed_via": "eth_getLogs 0x9D132d5678253FD88f7DB51Ac2AC13FC40a63547 n=7 sample_tx=0xa9e51991dce2eac1878846b2720e8b471b10fa17db4249414a66c8fbbb0a20b7",
+      "sample_standard": "EvmHypCollateral"
+    },
+    "n_transfer_events": 9328,
+    "n_priced": 7614,
+    "peak_daily": 149319.29373487493,
+    "mean_daily": 24231.407463042036,
+    "indexer_peak_daily": 55165.186787179446,
+    "indexer_mean_daily": 6334.299812023107,
+    "peak_ratio_chain_over_indexer": 2.706766756921,
+    "unresolved_routes": [],
+    "top_routes_usd": [
+      [
+        "37e637891a558b5b621723cbf8fc771525f280c1",
+        1091549.8087669678
+      ],
+      [
+        "0ba30bdd7d3c510de16c47385102c0b7068f4f33",
+        738376.5317262099
+      ],
+      [
+        "0fea4be161fda8fbf24bbcd66a77f53e29f784a3",
+        306613.3274290553
+      ],
+      [
+        "32ab2fcca30864027056a41b329e0195f2f7e250",
+        245472.45984069086
+      ],
+      [
+        "9d132d5678253fd88f7db51ac2ac13fc40a63547",
+        111900.56766915674
+      ],
+      [
+        "26af973a5b256f9b9bc0b1a3c566de1566568a87",
+        111550.98151179432
+      ],
+      [
+        "84e1df3553b16452aed7060a4266e4e434f418cc",
+        94068.0785570433
+      ],
+      [
+        "c898fb26eb0bb3144964e15f544f3c68495b00d6",
+        90933.35755264449
+      ],
+      [
+        "01efc19badcac4edae0d75c5f344acd0f7311722",
+        48965.915882165216
+      ],
+      [
+        "8de75a8a9ee436390429eefd343926b28768eab7",
+        32657.856512494756
+      ]
+    ],
+    "stage2_top_n": 33,
+    "routes_with_process": 33,
+    "routes_scanned": 33,
+    "routes_uncovered": [],
+    "coverage_routes": 1.0
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "schema": 1,
+ "stock_usd": 9857090.0,
+ "headroom": 1.07,
+ "gap_hours": 6.0,
+ "reps": 20000,
+ "seed": 20260921,
+ "observed_days": 121,
+ "peak_usd": 1155169.4258914888,
+ "second_peak_usd": 747586.9474250107,
+ "peak_over_second": 1.5451974246879987,
+ "observed_ratio": 6.379832040828385,
+ "resample_min_ratio": 6.379832040828385,
+ "resample_median_ratio": 6.379832040828385,
+ "resample_p95_ratio": 11.513788571401351,
+ "share_resamples_missing_peak": 0.36745
+}

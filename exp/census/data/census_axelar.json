@@ -1,0 +1,68 @@
+{
+  "stack": "axelar",
+  "chain": "ethereum",
+  "chain_id": 1,
+  "block": 25811875,
+  "generated_at": "2026-08-23T13:34:23Z",
+  "measurement_depth": "architectural",
+  "population": {
+    "type": "gateway_gmp",
+    "count": 1,
+    "source": "architecture"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "gateway_inline",
+    "roots": [
+      {
+        "id": "axelar_validator_set",
+        "label": "Gateway inline validator multisig",
+        "members": 1,
+        "share": 1.0
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": false,
+    "predicate": "N/A \u2014 inline gateway verification",
+    "count": null,
+    "share": null
+  },
+  "controls": [
+    {
+      "name": "GatewayPause",
+      "placement": "destination",
+      "scope": "stack_wide",
+      "automatic": false,
+      "on_path_under_Fs": true,
+      "active": true
+    }
+  ],
+  "detection_gap": {
+    "bound": "unbounded",
+    "dest_auto_per_root_bound": false,
+    "pause_only": true,
+    "formula": "Manual pause only; no per-root automatic meter"
+  },
+  "separability": "NON-SEPARABLE",
+  "value_at_risk_usd": null,
+  "evidence": [
+    "https://github.com/axelarnetwork/axelar-cgp-solidity/blob/43ec407499434448c91da71f031e618d3ed7578a/contracts/AxelarGateway.sol",
+    "https://docs.axelar.dev/dev/general-message-passing/overview/"
+  ],
+  "coverage": {
+    "queried": 1,
+    "resolved": 1,
+    "failed": 0,
+    "failed_share": 0.0
+  },
+  "extras": {
+    "contract": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+    "contract_label": "Gateway"
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}

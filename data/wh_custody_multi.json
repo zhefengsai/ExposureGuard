@@ -1,0 +1,123 @@
+{
+ "verified": {
+  "ethereum": {
+   "holdings": 1326,
+   "priced_strict": 494,
+   "priced_loose": 605,
+   "unpriced": 721,
+   "usd_strict": 1153178007.0065851,
+   "usd_loose": 1154644471.179346,
+   "top": [
+    [
+     "RENDER",
+     568325635.3822268
+    ],
+    [
+     "WBTC",
+     171202959.79617366
+    ],
+    [
+     "PORT3",
+     114779804.2052059
+    ]
+   ],
+   "defillama": 1000746135.7563
+  },
+  "base": {
+   "holdings": 2057,
+   "priced_strict": 190,
+   "priced_loose": 258,
+   "unpriced": 1799,
+   "usd_strict": 2127884.549951672,
+   "usd_loose": 2165224.045446148,
+   "top": [
+    [
+     "LUNA",
+     1051444.3350209065
+    ],
+    [
+     "AIXBT",
+     229449.54519212703
+    ],
+    [
+     "GAME",
+     96695.77382753324
+    ]
+   ],
+   "defillama": 1964805.14104
+  },
+  "arbitrum": {
+   "holdings": 301,
+   "priced_strict": 83,
+   "priced_loose": 94,
+   "unpriced": 207,
+   "usd_strict": 766208.1639307542,
+   "usd_loose": 2013062.1140874848,
+   "top": [
+    [
+     "USDC",
+     215243.73594934487
+    ],
+    [
+     "WETH",
+     191310.60331507205
+    ],
+    [
+     "WINR",
+     79449.07073214764
+    ]
+   ],
+   "defillama": 660686.44682
+  },
+  "polygon": {
+   "holdings": 850,
+   "priced_strict": 128,
+   "priced_loose": 144,
+   "unpriced": 706,
+   "usd_strict": 9044516.548416836,
+   "usd_loose": 9050081.748309972,
+   "top": [
+    [
+     "USDC.E",
+     7904998.039148182
+    ],
+    [
+     "IXS",
+     381697.86866666697
+    ],
+    [
+     "USDT0",
+     365029.2884786479
+    ]
+   ],
+   "defillama": 4810757.87401
+  },
+  "optimism": {
+   "holdings": 94,
+   "priced_strict": 40,
+   "priced_loose": 44,
+   "unpriced": 50,
+   "usd_strict": 225872.6414791269,
+   "usd_loose": 225875.3578998768,
+   "top": [
+    [
+     "USDC",
+     60585.98030469249
+    ],
+    [
+     "USDC",
+     53255.9279113502
+    ],
+    [
+     "50WETH-50OLAS",
+     33666.4350383591
+    ]
+   ],
+   "defillama": 145824.25769
+  }
+ },
+ "unverified_usd": 356992914.61793995,
+ "verified_usd_strict": 1165342488.9103632,
+ "verified_usd_loose": 1168098714.4450898,
+ "llama_total": 1365321124.0938
+}

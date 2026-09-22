@@ -1,0 +1,93 @@
+{
+  "stack": "wormhole",
+  "chain": "multi",
+  "chain_id": 1,
+  "block": 25811875,
+  "generated_at": "2026-08-23T13:34:23Z",
+  "measurement_depth": "imported",
+  "population": {
+    "type": "token_bridge_transfer",
+    "count": 4628,
+    "source": "data/wh_custody_multi.json (5 EVM chains enumerated)",
+    "note": "Population count = distinct ERC-20 holdings across bridge contracts"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "mandatory_stack_wide",
+    "roots": [
+      {
+        "id": "canonical_guardian_set",
+        "label": "13-of-19 guardian quorum (hash 885b7752ebedd5e3)",
+        "members": 1,
+        "share": 1.0
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": false,
+    "predicate": "N/A \u2014 all transfers verify same guardian set by architecture",
+    "count": null,
+    "share": null,
+    "note": "Counts as mandatory sharing for pattern P"
+  },
+  "controls": [
+    {
+      "name": "GuardianGovernor",
+      "placement": "root_side",
+      "scope": "per_lane",
+      "automatic": true,
+      "on_path_under_Fs": false,
+      "active": true,
+      "note": "Off-path at guardian; destination accepts any quorum VAA"
+    },
+    {
+      "name": "ManualPause",
+      "placement": "destination",
+      "scope": "stack_wide",
+      "automatic": false,
+      "on_path_under_Fs": true,
+      "active": false,
+      "note": "No always-on destination automatic per-root meter in measurement"
+    }
+  ],
+  "detection_gap": {
+    "bound": "unbounded",
+    "dest_auto_per_root_bound": false,
+    "pause_only": true,
+    "formula": "Under quorum compromise: Governor bypassed; admit \u2264 verified custody",
+    "note": "Governor threshold is root-side and off the destination path after guardian-root compromise"
+  },
+  "separability": "NON-SEPARABLE",
+  "value_at_risk_usd": {
+    "strict": 1165342488.9103632,
+    "loose": 1168098714.4450898,
+    "source": "data/wh_custody_multi.json",
+    "note": "DefiLlama cross-check total $1,365,321,124"
+  },
+  "evidence": [
+    "data/wh_custody_multi.json",
+    "exp/census/data/census_wormhole.json",
+    "data/wh_custody_multi.json"
+  ],
+  "coverage": {
+    "queried": 5,
+    "resolved": 5,
+    "failed": 0,
+    "failed_share": 0.0
+  },
+  "extras": {
+    "chains_verified": [
+      "ethereum",
+      "base",
+      "arbitrum",
+      "polygon",
+      "optimism"
+    ],
+    "unverified_usd": 356992914.61793995
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}

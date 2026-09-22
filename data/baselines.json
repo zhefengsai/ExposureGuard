@@ -1,0 +1,58 @@
+{
+ "stock": 9857090.0,
+ "B_per_root": 1233331.752968037,
+ "per_route_cap_sum": 7710963.611762072,
+ "per_route_over_B": 6.25214066953639,
+ "rows": [
+  {
+   "gap": "30 min",
+   "delta_days": 0.020833333333333332,
+   "none": 9857090.0,
+   "pause": 9857090.0,
+   "per_route": 7871608.687007114,
+   "exposureguard": 1259026.1644882043,
+   "reduction_vs_pause": 7.8291383277224575,
+   "reduction_vs_per_route": 6.25214066953639
+  },
+  {
+   "gap": "1 h",
+   "delta_days": 0.041666666666666664,
+   "none": 9857090.0,
+   "pause": 9857090.0,
+   "per_route": 8032253.7622521585,
+   "exposureguard": 1284720.576008372,
+   "reduction_vs_pause": 7.672555561168007,
+   "reduction_vs_per_route": 6.252140669536389
+  },
+  {
+   "gap": "6 h",
+   "delta_days": 0.25,
+   "none": 9857090.0,
+   "pause": 9857090.0,
+   "per_route": 9638704.51470259,
+   "exposureguard": 1541664.6912100464,
+   "reduction_vs_pause": 6.39379630097334,
+   "reduction_vs_per_route": 6.252140669536389
+  },
+  {
+   "gap": "1 day",
+   "delta_days": 1.0,
+   "none": 9857090.0,
+   "pause": 9857090.0,
+   "per_route": 9857090.0,
+   "exposureguard": 2466663.505936074,
+   "reduction_vs_pause": 3.996122688108337,
+   "reduction_vs_per_route": 3.996122688108337
+  },
+  {
+   "gap": "7 days",
+   "delta_days": 7.0,
+   "none": 9857090.0,
+   "pause": 9857090.0,
+   "per_route": 9857090.0,
+   "exposureguard": 9857090.0,
+   "reduction_vs_pause": 1.0,
+   "reduction_vs_per_route": 1.0
+  }
+ ]
+}

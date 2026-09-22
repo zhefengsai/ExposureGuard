@@ -1,0 +1,20 @@
+{
+ "verify_gas_by_routes": {
+  "10": 31147,
+  "100": 31147,
+  "500": 31147,
+  "1000": 31147
+ },
+ "lower_budget_gas_by_routes": {
+  "10": 4465,
+  "500": 4465,
+  "1000": 4465
+ },
+ "set_floors_gas_by_batch": {
+  "10": 290718,
+  "100": 2690155,
+  "1000": 26729556
+ },
+ "set_floors_marginal_gas_per_route": 26706,
+ "note": "verify and lowerBudget are constant in |R(S)|; setFloors is linear in batch size and must be split across transactions for large route sets."
+}

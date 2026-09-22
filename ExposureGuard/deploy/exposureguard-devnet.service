@@ -1,0 +1,14 @@
+[Unit]
+Description=Persistent local Anvil chain for ExposureGuard operational testing
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/anvil --host 127.0.0.1 --port 8545 --chain-id 31337 --state /opt/exposureguard/data/devnet/anvil-state.json --state-interval 60
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

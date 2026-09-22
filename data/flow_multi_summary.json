@@ -1,0 +1,83 @@
+{
+ "ethereum": {
+  "routes_on_default": 116,
+  "failed_routes": 9,
+  "messages": 2120,
+  "priced_events": 6477,
+  "active_routes": 39,
+  "total_usd": 17336607.886329908,
+  "mean_daily": 143277.75112669345,
+  "peak_daily": 1152559.2667991025,
+  "days": 121,
+  "indexer_peak_daily_prev": 262203.32442715723,
+  "source": "union(chainlog stage2, indexer)",
+  "provenance": {
+   "routes_chain": 39,
+   "routes_indexer": 0,
+   "usd_chain": 17336607.886329908,
+   "usd_indexer": 0,
+   "n_events_chain": 6477,
+   "n_events_indexer": 0
+  }
+ },
+ "base": {
+  "routes_on_default": 57,
+  "failed_routes": 9,
+  "messages": 1329,
+  "priced_events": 7614,
+  "active_routes": 20,
+  "total_usd": 2932000.3030280867,
+  "mean_daily": 24231.40746304204,
+  "peak_daily": 149319.29373487498,
+  "days": 121,
+  "provenance": {
+   "routes_chain": 20,
+   "routes_indexer": 0,
+   "usd_chain": 2932000.3030280867,
+   "usd_indexer": 0,
+   "n_events_chain": 7614,
+   "n_events_indexer": 0
+  },
+  "source": "union(chainlog stage2, indexer)"
+ },
+ "arbitrum": {
+  "routes_on_default": 40,
+  "failed_routes": 7,
+  "messages": 387,
+  "priced_events": 3134,
+  "active_routes": 14,
+  "total_usd": 10194615.971161155,
+  "mean_daily": 84253.02455505087,
+  "peak_daily": 825238.5999585605,
+  "days": 121,
+  "provenance": {
+   "routes_chain": 14,
+   "routes_indexer": 0,
+   "usd_chain": 10194615.971161155,
+   "usd_indexer": 0,
+   "n_events_chain": 3134,
+   "n_events_indexer": 0
+  },
+  "source": "union(chainlog stage2, indexer)"
+ },
+ "bsc": {
+  "routes_on_default": 45,
+  "failed_routes": 0,
+  "messages": 1438,
+  "priced_events": 48202,
+  "active_routes": 10,
+  "total_usd": 22970057.051247172,
+  "mean_daily": 294487.91091342526,
+  "peak_daily": 654914.3275401864,
+  "days": 78,
+  "provenance": {
+   "routes_chain": 10,
+   "routes_indexer": 0,
+   "usd_chain": 22970057.051247172,
+   "usd_indexer": 0,
+   "n_events_chain": 48202,
+   "n_events_indexer": 0
+  },
+  "source": "union(chainlog stage2, indexer)"
+ }
+}

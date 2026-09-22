@@ -1,0 +1,645 @@
+{
+  "scope": "deliveries omitted from the priced trace",
+  "total_unpriced_deliveries": 13036,
+  "total_unpriced_routes": 67,
+  "method": "unpriced iff no collateral address or price source returns no quote (chainlog_xval.py); classes are decidable from those two facts",
+  "classes": {
+    "needs_reference": {
+      "routes": 6,
+      "deliveries": 463,
+      "share": 0.03551702976373121
+    },
+    "no_local_asset": {
+      "routes": 51,
+      "deliveries": 12504,
+      "share": 0.9591899355630562
+    },
+    "onboardable_now": {
+      "routes": 10,
+      "deliveries": 69,
+      "share": 0.005293034673212642
+    }
+  },
+  "exemption_note": "no class is an exemption decision; needs_reference and no_local_asset both remain reject until governance supplies an audited price or an explicit reviewed no-value classification",
+  "routes": [
+    {
+      "chain": "bsc",
+      "route": "3131f6b80c26936ab03f7d9d29eb4ddf36ac3fb5",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 3507,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "eec6574eabba52bac3f0277f2cd5ac7e67197886",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2571,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "230f1e241c621d5af670dad83ebcdd18971e2995",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2044,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "6a2608dabe09bc1128eec7275b92dfb939d5db3f",
+      "symbol": "TOSHI",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 1051,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "306acd0c07c430abbbb2e74ef7bde94f32a898c0",
+      "symbol": "SEDA",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 519,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "365de036a1f7dccb621530d517133521debb2013",
+      "symbol": "NEX",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 392,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 332,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "574134917e3d78705ed865b6ec58fa67f95f9a7e",
+      "symbol": "EXRD",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 279,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "9f6e6d150977dabc82d5d4eaabdb1f1ab0d25f92",
+      "symbol": "STHYPER",
+      "standard": "EvmHypRebaseCollateral",
+      "collateral": "0xa860e01cc4a889bb2917ec97104510a2e1ae0e53",
+      "missing": 267,
+      "source_quote": null,
+      "class": "needs_reference"
+    },
+    {
+      "chain": "base",
+      "route": "ad13bce42394add02e6c215a40e582309b7975c7",
+      "symbol": "KYVE",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 254,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "c210b2cb65ed3484892167f5e05f7ab496ab0598",
+      "symbol": "LYX",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 200,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "3eba6644819546c44eb3e7c3a92f034f921dca80",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 172,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "0bbea6812fb3fcbca126edb558e551b3f1702026",
+      "symbol": "LITKEY",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 122,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "6f0037c79d144d5b8e3e6f04e49fbb5f25fd508f",
+      "symbol": "RCADE",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 113,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "9a4a67721573f2c9209dfff972c52be4e3f6642e",
+      "symbol": "GPS",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 104,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "c2495f3183f043627caecd56daaa726e3b2d9c09",
+      "symbol": "TETH",
+      "standard": "EvmHypCollateral",
+      "collateral": "0x19e099b7aed41fa52718d780dda74678113c0b32",
+      "missing": 93,
+      "source_quote": null,
+      "class": "needs_reference"
+    },
+    {
+      "chain": "base",
+      "route": "885598858b68562fe5001f8ee022522313257c7a",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 88,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "93a2db22b7c736b341c32ff666307f4a9ed910f5",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 87,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "07c747b0d99abe8132f771cf6d2365d19ed1ffba",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 85,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "9a9c33115455a929d3d821cee4a01e38241bf375",
+      "symbol": "XAUT",
+      "standard": "EvmHypXERC20Lockbox",
+      "collateral": "0x0797c6f55f5c9005996a55959a341018cf69a963",
+      "missing": 77,
+      "source_quote": null,
+      "class": "needs_reference"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "d56734d7f9979dd94fae3d67c7e928234e71cd4c",
+      "symbol": "TIA.N",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 72,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 54,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "20d0159c2369d115a7e430516e635267c08ace19",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 50,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "85e9ae52b10f35e3d15264f1e906895b1d7da1a0",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 49,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 47,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "eec6574eabba52bac3f0277f2cd5ac7e67197886",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 46,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "87ea09fe8d9dc6115086f5e0a30ca6750a997f1c",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 42,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "5c8daeabc57e9249606d3bd6d1e097ef492ea3c5",
+      "symbol": "FUEL",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 33,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "7f39bcdca8e0e581c1d43aaa1cb862aa1c8c2047",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 29,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "c4ae629abe0ce3de55b7db8f6bebf97d52afe9f7",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "missing": 26,
+      "source_quote": 0.999497343205747,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "b76eaa8b8779f377248d1e9ca78550b156f5f7fb",
+      "symbol": "IKAS",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 22,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "38d447694f5c1f773ae3132cf93bf30b7ec1fa5a",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 19,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "1fda66fa15a261f01f1e09228d41bd0a806d7529",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "missing": 18,
+      "source_quote": 0.9997531403253349,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "52e96c79dc3a1813577dbfb411b92e8c96cb3d91",
+      "symbol": "USAD",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xc60a7e21a6753ed4305c93034607009faec2a5f3",
+      "missing": 16,
+      "source_quote": null,
+      "class": "needs_reference"
+    },
+    {
+      "chain": "ethereum",
+      "route": "9a3beed38441e8ff8e033043a88b49e035f5a2da",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 16,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "6b8d1f18819daca1fb966cf8cff12feb4c00eb88",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 14,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "d86e6ef14b96d942ef0abf0720c549197ea8c528",
+      "symbol": "RDO",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 14,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "6c58e4a513d3a8062e57f41a1442e003af14ebb5",
+      "symbol": "TGT",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 13,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "5d27225a5d8a756e5655617b22cc03616c3b26c3",
+      "symbol": "TIA",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 12,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "b46930ca998587a95d9ee000fa73a071add56b64",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "collateral": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "missing": 11,
+      "source_quote": 0.9997531403253349,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "69b1a59e98d94e1b9647c08cb295fc52597d20f0",
+      "symbol": "TUSD",
+      "standard": "EvmHypCollateral",
+      "collateral": "0x722a851b6798d65b80526562fc3a36e19b1f883b",
+      "missing": 7,
+      "source_quote": null,
+      "class": "needs_reference"
+    },
+    {
+      "chain": "ethereum",
+      "route": "78ac7fecd1857f5beee98ab39096c9781f976d97",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "missing": 7,
+      "source_quote": 0.9997531403253349,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "b89371d7d6fe8eb98732cecd8fbeef7dbfc3b0bb",
+      "symbol": "ETN",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 7,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "ef9295afcff293956e8b149b33449f246f6f107d",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 6,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "c8a9e4927301ce381a96dd639f154f1a539fd939",
+      "symbol": "ETN",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 6,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "2bbdc933196334c6cd3f16f131b62f7c567bb27d",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 5,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "baaca4e74fcaa430e903ecee46665e4e60ea2d38",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 5,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "53cce6d10e43d1b3d11872ad22ec2acd8d2537b8",
+      "symbol": "SMOL",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 4,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "7d77702f1c7a1662923fd654f904127988caa3fd",
+      "symbol": "RE7LRT",
+      "standard": "EvmHypCollateral",
+      "collateral": "0x84631c0d0081fde56deb72f6de77abbbf6a9f93a",
+      "missing": 3,
+      "source_quote": null,
+      "class": "needs_reference"
+    },
+    {
+      "chain": "bsc",
+      "route": "dd615fcfed0e2be65041053da12c3c95c6a16957",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 3,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "3c2064d78e4578e8f936e3db42aef044e33fbf31",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "missing": 2,
+      "source_quote": 0.999497343205747,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "b8fb4e8512c8272e8986058d0318c8cefcb21aa7",
+      "symbol": "TIA",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "155c68274c5c7729c64cf6b0f21f1e6110fa00d4",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "4e2b1fcc07a8e80736c80bcf53753e8d0b8042f1",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "5155eb1bcd30189915cf84717550acfa537068bf",
+      "symbol": "TRUMP",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "1f36ecf13394712c944805f38d1463cf54c0c2c8",
+      "symbol": "TAIKO",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 2,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "33fbc08bd84e61e04e51ea0f32885aa77f7d5eca",
+      "symbol": "ALEO",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 1,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "679e13780c20bf7a7cc158a76bfd1aff9ba7d09d",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "missing": 1,
+      "source_quote": 0.9997531403253349,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "a901e6974c8f0fcc2f44451b0e788cd6957e02e2",
+      "symbol": "ETH",
+      "standard": "EvmHypNative",
+      "collateral": null,
+      "missing": 1,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "ethereum",
+      "route": "b71183f48f7f7789d40551149be28a51f9a97f9a",
+      "symbol": "NEX",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xf57d49646621f563b0b905afc8336923ac569ec5",
+      "missing": 1,
+      "source_quote": 1.0371123219474702e-06,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "ethereum",
+      "route": "c3f8b34587eb403fc30a161d6a35cb724a3b273e",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "missing": 1,
+      "source_quote": 0.9997531403253349,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "base",
+      "route": "1c3d50450ffa80bcae435ef6e362d507a86924f2",
+      "symbol": "FLT",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 1,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "53c0499e7e4abd3e7994ca161523fd50a12bb8c8",
+      "symbol": "TRUMP",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 1,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "base",
+      "route": "cc5053691ed540c031a725eb03c25c57f5be7117",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "collateral": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "missing": 1,
+      "source_quote": 0.9997531403253349,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "arbitrum",
+      "route": "92637dce7f34b9e9b5741b9203f33eed7f71e5a4",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "collateral": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+      "missing": 1,
+      "source_quote": 0.9994284646114552,
+      "class": "onboardable_now"
+    },
+    {
+      "chain": "bsc",
+      "route": "6e9804a08092d8ba4e69dacf422df12459f2599e",
+      "symbol": "STHYPER",
+      "standard": "EvmHypSyntheticRebase",
+      "collateral": null,
+      "missing": 1,
+      "class": "no_local_asset"
+    },
+    {
+      "chain": "bsc",
+      "route": "dce63e8cc7f1e2ed25a226166abe3217c19d0bf1",
+      "symbol": "PNDR",
+      "standard": "EvmHypSynthetic",
+      "collateral": null,
+      "missing": 1,
+      "class": "no_local_asset"
+    }
+  ]
+}

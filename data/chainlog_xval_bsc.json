@@ -1,0 +1,656 @@
+{
+  "generated_at": "2026-08-24T01:45:11Z",
+  "chain": "bsc",
+  "rpc": "https://bsc.rpc.blxrbdn.com",
+  "mailbox": "0x2971b9Aec44bE4eb673DF1B88cDB57b96eefe8a4",
+  "mailbox_verify": {
+    "address": "0x2971b9Aec44bE4eb673DF1B88cDB57b96eefe8a4",
+    "expected_domain": 56,
+    "source": "hyperlane-registry chains/<chain>/addresses.yaml mailbox",
+    "code_len": 5112,
+    "code_ok": true,
+    "localDomain_raw": "[\n  56\n]",
+    "defaultIsm_raw": "[\n  \"0xc218eC17757200EA8d40f78d265dc3D2862142A5\"\n]",
+    "localDomain": 56,
+    "defaultIsm": "0xc218eC17757200EA8d40f78d265dc3D2862142A5",
+    "domain_ok": true,
+    "ism_ok": true,
+    "ok": true
+  },
+  "window": {
+    "t_min": "2026-04-24T16:10:24",
+    "t_max": "2026-08-22T10:29:28",
+    "start_block": 102684503,
+    "end_block": 117408524
+  },
+  "process_discovery": {
+    "signature": "Process(uint32,bytes32,address)",
+    "topic0": "0x0d381c2a574ae8f04e213db7cfb4df8df712cdbd427d9868ffef380660ca6574",
+    "confirmed_via": "eth_getLogs Mailbox last 1000 blocks, n=1",
+    "sample_tx": "0x3d1ad12490b5d2e193070f57530f8947dc3d31968e0b143ed12a6fe3aa6a162f",
+    "sample_recipient": "0xc05617bc2490cb57a8db163b5551bb7e532695e3",
+    "sample_block": 117683483
+  },
+  "coverage": {
+    "blocks_ok": 14724022,
+    "blocks_total": 14724022,
+    "fraction": 1.0,
+    "unresolved_ranges": 0,
+    "unresolved_span": 0
+  },
+  "unresolved": [],
+  "totals": {
+    "routes_default": 45,
+    "chain_msgs_default_routes": 56216,
+    "indexer_priced_msgs": 461,
+    "indexer_summary_messages": 1438,
+    "indexer_peak_daily": 44139.05217181825,
+    "indexer_mean_daily": 1674.678903933144,
+    "process_logs_other_recipients": 5819,
+    "ratio_indexer_priced_over_chain": 0.00820051230966273
+  },
+  "indexer_miss_routes": [
+    {
+      "route": "0bbea6812fb3fcbca126edb558e551b3f1702026",
+      "symbol": "LITKEY",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 122,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "1f36ecf13394712c944805f38d1463cf54c0c2c8",
+      "symbol": "TAIKO",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 2,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "3131f6b80c26936ab03f7d9d29eb4ddf36ac3fb5",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 3507,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "365de036a1f7dccb621530d517133521debb2013",
+      "symbol": "NEX",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 392,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "5c8daeabc57e9249606d3bd6d1e097ef492ea3c5",
+      "symbol": "FUEL",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 33,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6a2608dabe09bc1128eec7275b92dfb939d5db3f",
+      "symbol": "TOSHI",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1051,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6c58e4a513d3a8062e57f41a1442e003af14ebb5",
+      "symbol": "TGT",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 13,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6e9804a08092d8ba4e69dacf422df12459f2599e",
+      "symbol": "stHYPER",
+      "standard": "EvmHypSyntheticRebase",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6f0037c79d144d5b8e3e6f04e49fbb5f25fd508f",
+      "symbol": "RCADE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 113,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "7f39bcdca8e0e581c1d43aaa1cb862aa1c8c2047",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 29,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "9a4a67721573f2c9209dfff972c52be4e3f6642e",
+      "symbol": "GPS",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 104,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "baaca4e74fcaa430e903ecee46665e4e60ea2d38",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "chain_msgs": 5,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "c8a9e4927301ce381a96dd639f154f1a539fd939",
+      "symbol": "ETN",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 6,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 47,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "d86e6ef14b96d942ef0abf0720c549197ea8c528",
+      "symbol": "RDO",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 14,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "dce63e8cc7f1e2ed25a226166abe3217c19d0bf1",
+      "symbol": "PNDR",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "dd615fcfed0e2be65041053da12c3c95c6a16957",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "chain_msgs": 3,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "eec6574eabba52bac3f0277f2cd5ac7e67197886",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 2571,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    }
+  ],
+  "per_route": [
+    {
+      "route": "0bbea6812fb3fcbca126edb558e551b3f1702026",
+      "symbol": "LITKEY",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 122,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "15366f1a7c71baa6fd1c8fab56b30faf98d56a3b",
+      "symbol": "OORT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 18,
+      "indexer_msgs": 30,
+      "ratio": 1.6666666666666667
+    },
+    {
+      "route": "1c0f11eecdb19df8ee2405e4ebcb90683686bccd",
+      "symbol": "HOLO",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 87,
+      "indexer_msgs": 94,
+      "ratio": 1.0804597701149425
+    },
+    {
+      "route": "1eebf9d94a5e707e30f18b9ab3295d963c111fb7",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 151,
+      "indexer_msgs": 100,
+      "ratio": 0.6622516556291391
+    },
+    {
+      "route": "1f36ecf13394712c944805f38d1463cf54c0c2c8",
+      "symbol": "TAIKO",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 2,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "1fda66fa15a261f01f1e09228d41bd0a806d7529",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 1,
+      "indexer_msgs": 2,
+      "ratio": 2.0
+    },
+    {
+      "route": "29ac114182580d660ba97b1fabf9a94f5c30a6b3",
+      "symbol": "USD1",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "2e3b0f8eb2a98bc4ddf55477cc3b49bdd1da4eaf",
+      "symbol": "BEST",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "3131f6b80c26936ab03f7d9d29eb4ddf36ac3fb5",
+      "symbol": "NES",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 3507,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "3382d9253ee54d49a90cba41cfc7b2704e713cef",
+      "symbol": "USDC",
+      "standard": "EvmHypCrossCollateralRouter",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "365de036a1f7dccb621530d517133521debb2013",
+      "symbol": "NEX",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 392,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "38847cdb99f374dbd5e053cc5306dbca4f5dccbb",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "46d73d6e252ae09efad26e87353302c06184fa82",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 1,
+      "indexer_msgs": 1,
+      "ratio": 1.0
+    },
+    {
+      "route": "5284d803a4563dc5ee83fea80c688b096d70eb75",
+      "symbol": "USDC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 11,
+      "indexer_msgs": 11,
+      "ratio": 1.0
+    },
+    {
+      "route": "5615605eba908eea01225e796c97b9fcda15ac7c",
+      "symbol": "RISE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "5c8daeabc57e9249606d3bd6d1e097ef492ea3c5",
+      "symbol": "FUEL",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 33,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6a2608dabe09bc1128eec7275b92dfb939d5db3f",
+      "symbol": "TOSHI",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1051,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6c58e4a513d3a8062e57f41a1442e003af14ebb5",
+      "symbol": "TGT",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 13,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6e9804a08092d8ba4e69dacf422df12459f2599e",
+      "symbol": "stHYPER",
+      "standard": "EvmHypSyntheticRebase",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "6f0037c79d144d5b8e3e6f04e49fbb5f25fd508f",
+      "symbol": "RCADE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 113,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "7f39bcdca8e0e581c1d43aaa1cb862aa1c8c2047",
+      "symbol": "LUMIA",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 29,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "8b4995442691d2e0a680a7835d86512025de0756",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 88,
+      "indexer_msgs": 100,
+      "ratio": 1.1363636363636365
+    },
+    {
+      "route": "8e64a314034a3089fa8e8cf87fbda9a2e10b7aac",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "9537c772c6092db4b93cfba93659bb5a8c0e133d",
+      "symbol": "HYPERSTAGE",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "9a4a67721573f2c9209dfff972c52be4e3f6642e",
+      "symbol": "GPS",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 104,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "a0b3b527a15218f980ceb33df049dd58d3da8223",
+      "symbol": "stBTC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "ac9e83a1bdbc86a26adf331785d3cacf18963a6c",
+      "symbol": "USDT",
+      "standard": "EvmHypCrossCollateralRouter",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "b11d99ad37872068b14b5b9eeb3ce1a4e2244744",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "b7d28dc6c6eba10ab67255841fa521f83f35c6b2",
+      "symbol": "1Piece",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "ba06d7f285c6b0d5eacc50cea931163b23ab889c",
+      "symbol": "enzoBTC",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "baaca4e74fcaa430e903ecee46665e4e60ea2d38",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "chain_msgs": 5,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "bfd6e8c1afae4c70ac10f7dd1d52515dd77d1b4d",
+      "symbol": "BTCB",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "c05617bc2490cb57a8db163b5551bb7e532695e3",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 47832,
+      "indexer_msgs": 100,
+      "ratio": 0.0020906506104699783
+    },
+    {
+      "route": "c13d466b9e196afde472856923e857cc298edf1b",
+      "symbol": "USDT",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 9,
+      "indexer_msgs": 15,
+      "ratio": 1.6666666666666667
+    },
+    {
+      "route": "c8a9e4927301ce381a96dd639f154f1a539fd939",
+      "symbol": "ETN",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 6,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "c9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "symbol": "HYPER",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 47,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "cb508877ffe5a085b2474641dd3b28f8bc22a57c",
+      "symbol": "MIRAI",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "cf73d7119cd121f02a3dd2cbf8a609279830eb69",
+      "symbol": "CARR",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "d5985ba1c2873e5f5b83f49d7ebe2cb50f1c25fa",
+      "symbol": "ETH",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "d86e6ef14b96d942ef0abf0720c549197ea8c528",
+      "symbol": "RDO",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 14,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "dce63e8cc7f1e2ed25a226166abe3217c19d0bf1",
+      "symbol": "PNDR",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 1,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "dd615fcfed0e2be65041053da12c3c95c6a16957",
+      "symbol": "BNB",
+      "standard": "EvmHypNative",
+      "chain_msgs": 3,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "eec6574eabba52bac3f0277f2cd5ac7e67197886",
+      "symbol": "KII",
+      "standard": "EvmHypSynthetic",
+      "chain_msgs": 2571,
+      "indexer_msgs": 0,
+      "ratio": 0.0
+    },
+    {
+      "route": "f0c8c5fc69fcc3fa49c319fdf422d8279756afe2",
+      "symbol": "stHYPERSTAGE",
+      "standard": "EvmHypSyntheticRebase",
+      "chain_msgs": 0,
+      "indexer_msgs": 0,
+      "ratio": null
+    },
+    {
+      "route": "fc9f3387eb4385785420f661ce7a9e486f404b8f",
+      "symbol": "ETH",
+      "standard": "EvmHypCollateral",
+      "chain_msgs": 4,
+      "indexer_msgs": 8,
+      "ratio": 2.0
+    }
+  ],
+  "negative_control": {
+    "n": 5,
+    "passed": 0,
+    "results": [
+      {
+        "tx": "0x6395cd0cc7f83dd119c84808f43bb4ec7873f2fbd07c3ca21f3a5187b227b024",
+        "ok": false,
+        "err": "null receipt"
+      },
+      {
+        "tx": "0x4af551e7a3d79e743257ef51931bdf0d2acf7269c2bcd3bc8188e0e896219f8f",
+        "ok": false,
+        "err": "null receipt"
+      },
+      {
+        "tx": "0x0b3a5c321c57397fa38b9fbf68ae0fea0554961ba16f223a61746819769cc45d",
+        "ok": false,
+        "err": "null receipt"
+      },
+      {
+        "tx": "0x8f88f65cd96d5a8bb8d95ef1a4181873ae473958272761ecb474af0561a9ffd2",
+        "ok": false,
+        "err": "null receipt"
+      },
+      {
+        "tx": "0xbdca5e3b6440b5c7c7d5dfc8a59129111298f65a740c3a01de5d82370cfb952a",
+        "ok": false,
+        "err": "null receipt"
+      }
+    ]
+  },
+  "stage2": {
+    "attempted": true,
+    "ok": true,
+    "discovery": {
+      "signature": "ReceivedTransferRemote(uint32,bytes32,uint256)",
+      "topic0": "0xba20947a325f450d232530e5f5fce293e7963499d5309a07cee84a269f2f15a6",
+      "confirmed_via": "eth_getLogs 0xC05617bc2490CB57a8db163b5551bb7E532695e3 n=81 sample_tx=0x7380f3411d244b84f3a6f75fec0167b6026cb39cc56516d2548b85b9d7d57c05",
+      "sample_standard": "EvmHypCollateral"
+    },
+    "n_transfer_events": 56216,
+    "n_priced": 48202,
+    "peak_daily": 654914.3275401864,
+    "mean_daily": 294487.91091342526,
+    "indexer_peak_daily": 44139.05217181825,
+    "indexer_mean_daily": 1674.678903933144,
+    "peak_ratio_chain_over_indexer": 14.83752584878417,
+    "unresolved_routes": [],
+    "top_routes_usd": [
+      [
+        "c05617bc2490cb57a8db163b5551bb7e532695e3",
+        22907164.018115103
+      ],
+      [
+        "1c0f11eecdb19df8ee2405e4ebcb90683686bccd",
+        49998.54207783437
+      ],
+      [
+        "8b4995442691d2e0a680a7835d86512025de0756",
+        11622.575917032998
+      ],
+      [
+        "5284d803a4563dc5ee83fea80c688b096d70eb75",
+        858.7233026827672
+      ],
+      [
+        "15366f1a7c71baa6fd1c8fab56b30faf98d56a3b",
+        281.0663415483663
+      ],
+      [
+        "fc9f3387eb4385785420f661ce7a9e486f404b8f",
+        130.92563075450713
+      ],
+      [
+        "46d73d6e252ae09efad26e87353302c06184fa82",
+        0.999891188292479
+      ],
+      [
+        "1fda66fa15a261f01f1e09228d41bd0a806d7529",
+        0.19997076987606577
+      ],
+      [
+        "1eebf9d94a5e707e30f18b9ab3295d963c111fb7",
+        1.364067060651662e-07
+      ],
+      [
+        "c13d466b9e196afde472856923e857cc298edf1b",
+        1.0088116663984536e-08
+      ]
+    ],
+    "stage2_top_n": 28,
+    "routes_with_process": 28,
+    "routes_scanned": 28,
+    "routes_uncovered": [],
+    "coverage_routes": 1.0
+  }
+}

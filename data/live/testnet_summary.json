@@ -1,0 +1,23 @@
+{
+  "schema": 2,
+  "kind": "author_operated_public_testnet",
+  "first_at": "2026-08-25T15:21:04.443923+00:00",
+  "last_at": "2026-09-08T14:44:54.301925+00:00",
+  "elapsed_hours": 335.39718277833333,
+  "completed_observations": 1876,
+  "delivered": 1876,
+  "metered": 1876,
+  "unique_message_ids": 1876,
+  "duplicate_message_ids": 0,
+  "unique_sequences": 1876,
+  "invalid_rows": [],
+  "latency_seconds": {
+    "mean": 15.145039445629,
+    "p50": 12.4495,
+    "p95": 25.32375,
+    "max": 71.318
+  },
+  "process_gas_mean": 149449.9552238806,
+  "failed_rows": [],
+  "paper_ready": true
+}

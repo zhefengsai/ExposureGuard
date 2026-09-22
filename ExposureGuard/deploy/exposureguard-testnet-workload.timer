@@ -1,0 +1,12 @@
+[Unit]
+Description=Run ExposureGuard public-testnet workload every ten minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+RandomizedDelaySec=30
+Persistent=true
+Unit=exposureguard-testnet-workload.service
+
+[Install]
+WantedBy=timers.target

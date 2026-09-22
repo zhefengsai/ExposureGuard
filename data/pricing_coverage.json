@@ -1,0 +1,76 @@
+{
+  "scope": "deliveries to default-module token routes on four chains",
+  "per_chain": {
+    "ethereum": {
+      "onchain_default_route_deliveries": 9616,
+      "aggregator_priced_events": 6477,
+      "aggregator_price_coverage": 0.6735648918469218
+    },
+    "base": {
+      "onchain_default_route_deliveries": 9328,
+      "aggregator_priced_events": 7614,
+      "aggregator_price_coverage": 0.8162521440823327
+    },
+    "arbitrum": {
+      "onchain_default_route_deliveries": 3303,
+      "aggregator_priced_events": 3134,
+      "aggregator_price_coverage": 0.9488343929760823
+    },
+    "bsc": {
+      "onchain_default_route_deliveries": 56216,
+      "aggregator_priced_events": 48202,
+      "aggregator_price_coverage": 0.857442720933542
+    }
+  },
+  "onchain_default_route_deliveries": 78463,
+  "aggregator_priced_events": 65427,
+  "aggregator_price_coverage": 0.8338579967628054,
+  "final_priced_trace_events": 65427,
+  "final_trace_provenance": {
+    "chain": 65427
+  },
+  "lineage_note": "final all-route chainlog_priced files supersede earlier partial stage2 summaries",
+  "budget_deferral_denominator": 65427,
+  "priced_value_usd": 53433281.21176608,
+  "usdc_usdt_value_share": 0.9206978362907388,
+  "per_chain_peak_usdc_usdt_share": {
+    "ethereum": {
+      "peak_day": "2026-05-05",
+      "peak_usd": 1152559.2667991025,
+      "usdc_usdt_share": 0.9983100636684987
+    },
+    "base": {
+      "peak_day": "2026-05-22",
+      "peak_usd": 149319.29373487498,
+      "usdc_usdt_share": 0.9997961819848628
+    },
+    "arbitrum": {
+      "peak_day": "2026-05-05",
+      "peak_usd": 825238.5999585605,
+      "usdc_usdt_share": 0.9999827324927303
+    },
+    "bsc": {
+      "peak_day": "2026-07-10",
+      "peak_usd": 654914.3275401864,
+      "usdc_usdt_share": 1.0
+    }
+  },
+  "omitted_deliveries": 13036,
+  "omitted_deliveries_by_route_type": {
+    "collateral": 532,
+    "native": 335,
+    "synthetic": 12169
+  },
+  "omitted_routes_by_type": {
+    "collateral": 16,
+    "native": 11,
+    "synthetic": 40
+  },
+  "omitted_deliveries_by_observable_reason": {
+    "event_excluded_on_route_with_priced_observations": 27,
+    "route_without_priced_observation": 13009
+  },
+  "omitted_classification_warning": "route type is not an exemption decision; every omitted delivery remains reject pending an audited price or explicit governance classification",
+  "unpriced_policy": "reject until governance supplies an audited price; not simulated as zero value or as exempt",
+  "interpretation": "reported budget deferral is conditional on the priced trace, not all deliveries"
+}

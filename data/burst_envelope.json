@@ -1,0 +1,33 @@
+{
+ "schema": 1,
+ "B_units": 100000,
+ "D_days": 1.0,
+ "note": "units are budget units; the module admits at most burst+refill",
+ "gaps": [
+  {
+   "gap": "30 min",
+   "paper_formula": 2083,
+   "measured": 102083,
+   "burst_refill": 102083
+  },
+  {
+   "gap": "6 h",
+   "paper_formula": 25000,
+   "measured": 124999,
+   "burst_refill": 125000
+  },
+  {
+   "gap": "24 h",
+   "paper_formula": 100000,
+   "measured": 199999,
+   "burst_refill": 200000
+  },
+  {
+   "gap": "7 d",
+   "paper_formula": 700000,
+   "measured": 799999,
+   "burst_refill": 800000
+  }
+ ],
+ "burst_understatement_at_30min": 49.00768122899664
+}

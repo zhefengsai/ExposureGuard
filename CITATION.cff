@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the ExposureGuard paper."
+title: "ExposureGuard: Bounding Aggregate Exposure for Cross-Chain Routes Sharing a Verification Root"
+type: software
+authors:
+  - family-names: Sai
+    given-names: Zhefeng
+    orcid: "https://orcid.org/0009-0002-4424-1714"
+  - family-names: Xu
+    given-names: Shiyuan
+    orcid: "https://orcid.org/0000-0001-9076-1695"
+  - family-names: Chen
+    given-names: Xue
+    orcid: "https://orcid.org/0000-0002-9456-3124"
+  - family-names: Guo
+    given-names: Yu
+    orcid: "https://orcid.org/0000-0002-9078-7462"
+  - family-names: Bie
+    given-names: Rongfang
+    orcid: "https://orcid.org/0000-0002-9971-7698"
+version: 1.0.0
+date-released: 2026-09-22
+license: Apache-2.0

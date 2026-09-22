@@ -1,0 +1,89 @@
+{
+  "stock": 9857090.0,
+  "B_per_root": 1233331.752968037,
+  "matched_headroom": {
+    "multiple_of_own_peak": 1.07,
+    "per_token_cap_sum": 3462611.00097209,
+    "per_token_6h": 4328263.751215112,
+    "per_token_deferral_rate": 0.0,
+    "eg_advantage_6h": 2.807526030720646
+  },
+  "multiplexing": {
+    "tokens": 20,
+    "distinct_peak_days": 20,
+    "sum_of_token_peaks": 3120463.390131205,
+    "aggregate_peak": 1155169.4258914888,
+    "ratio": 2.701303653118263
+  },
+  "active_routes": 39,
+  "distinct_tokens": 20,
+  "routes_per_token_top": {
+    "USDC": 14,
+    "USDT": 6,
+    "WBTC": 2,
+    "SEDA": 1,
+    "OORT": 1,
+    "eXRD": 1,
+    "amphrETH": 1,
+    "FUEL": 1,
+    "RDO": 1,
+    "SUPR": 1
+  },
+  "per_route_cap_sum": 7710963.611762072,
+  "per_token_cap_sum": 6346567.675519582,
+  "per_token_over_B": 5.145872276657471,
+  "per_token_over_per_route": 0.8230576611512883,
+  "sizing": "each bucket at 2x its own measured peak day; no legitimate message is deferred under either baseline",
+  "rows": [
+    {
+      "gap": "30 min",
+      "delta_days": 0.020833333333333332,
+      "per_route": 7871608.687007114,
+      "per_token": 6478787.835426239,
+      "exposureguard": 1259026.1644882043,
+      "eg_vs_per_token": 5.145872276657471,
+      "eg_vs_per_route": 6.25214066953639,
+      "eg_vs_pause": 7.8291383277224575
+    },
+    {
+      "gap": "1 h",
+      "delta_days": 0.041666666666666664,
+      "per_route": 8032253.7622521585,
+      "per_token": 6611007.995332899,
+      "exposureguard": 1284720.576008372,
+      "eg_vs_per_token": 5.145872276657471,
+      "eg_vs_per_route": 6.252140669536389,
+      "eg_vs_pause": 7.672555561168007
+    },
+    {
+      "gap": "6 h",
+      "delta_days": 0.25,
+      "per_route": 9638704.51470259,
+      "per_token": 7933209.594399477,
+      "exposureguard": 1541664.6912100464,
+      "eg_vs_per_token": 5.14587227665747,
+      "eg_vs_per_route": 6.252140669536389,
+      "eg_vs_pause": 6.39379630097334
+    },
+    {
+      "gap": "1 day",
+      "delta_days": 1.0,
+      "per_route": 9857090.0,
+      "per_token": 9857090.0,
+      "exposureguard": 2466663.505936074,
+      "eg_vs_per_token": 3.996122688108337,
+      "eg_vs_per_route": 3.996122688108337,
+      "eg_vs_pause": 3.996122688108337
+    },
+    {
+      "gap": "7 days",
+      "delta_days": 7.0,
+      "per_route": 9857090.0,
+      "per_token": 9857090.0,
+      "exposureguard": 9857090.0,
+      "eg_vs_per_token": 1.0,
+      "eg_vs_per_route": 1.0,
+      "eg_vs_pause": 1.0
+    }
+  ]
+}

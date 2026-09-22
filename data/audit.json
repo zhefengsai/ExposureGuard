@@ -1,0 +1,150 @@
+{
+ "ethereum": {
+  "routes_default": 116,
+  "collateral_routes": 95,
+  "synthetic_routes": 12,
+  "unclassified_routes": 9,
+  "probed": 107,
+  "rpc_ok": 106,
+  "rpc_failed": 1,
+  "price_requested": 56,
+  "price_returned": 32,
+  "priced": 73,
+  "unpriced": 23,
+  "usd_collateral": 9857090.037038079,
+  "usd_synthetic": 66739545.052402265,
+  "usd_total": 76596635.08944035,
+  "usd_bluechip_only": 2029062.8319592455,
+  "rpc_coverage": 0.9906542056074766,
+  "price_coverage": 0.6886792452830188,
+  "route_coverage": 0.9224137931034483,
+  "top3": [
+   [
+    "HYPER",
+    "syn",
+    37529628.25752754
+   ],
+   [
+    "NES",
+    "syn",
+    29015887.718195543
+   ],
+   [
+    "NEX",
+    "coll",
+    6546287.477515758
+   ]
+  ]
+ },
+ "base": {
+  "routes_default": 57,
+  "collateral_routes": 39,
+  "synthetic_routes": 16,
+  "unclassified_routes": 2,
+  "probed": 55,
+  "rpc_ok": 55,
+  "rpc_failed": 0,
+  "price_requested": 33,
+  "price_returned": 17,
+  "priced": 37,
+  "unpriced": 13,
+  "usd_collateral": 4060966.076812488,
+  "usd_synthetic": 1875297.2442693622,
+  "usd_total": 5936263.321081851,
+  "usd_bluechip_only": 681743.7052307524,
+  "rpc_coverage": 1.0,
+  "price_coverage": 0.6727272727272727,
+  "route_coverage": 0.9649122807017544,
+  "top3": [
+   [
+    "GPS",
+    "coll",
+    2804040.7130051516
+   ],
+   [
+    "HYPER",
+    "syn",
+    1159844.4912282215
+   ],
+   [
+    "SEDA",
+    "syn",
+    705219.1031655174
+   ]
+  ]
+ },
+ "arbitrum": {
+  "routes_default": 40,
+  "collateral_routes": 27,
+  "synthetic_routes": 11,
+  "unclassified_routes": 2,
+  "probed": 38,
+  "rpc_ok": 38,
+  "rpc_failed": 0,
+  "price_requested": 19,
+  "price_returned": 9,
+  "priced": 27,
+  "unpriced": 9,
+  "usd_collateral": 637672.7345620185,
+  "usd_synthetic": 102586.14999325224,
+  "usd_total": 740258.8845552708,
+  "usd_bluechip_only": 504634.68367312883,
+  "rpc_coverage": 1.0,
+  "price_coverage": 0.7105263157894737,
+  "route_coverage": 0.95,
+  "top3": [
+   [
+    "USDC",
+    "coll",
+    179906.8689622726
+   ],
+   [
+    "USDC",
+    "coll",
+    93638.99774285867
+   ],
+   [
+    "LITKEY",
+    "coll",
+    91603.36363507411
+   ]
+  ]
+ },
+ "bsc": {
+  "routes_default": 45,
+  "collateral_routes": 20,
+  "synthetic_routes": 21,
+  "unclassified_routes": 4,
+  "probed": 41,
+  "rpc_ok": 41,
+  "rpc_failed": 0,
+  "price_requested": 32,
+  "price_returned": 19,
+  "priced": 27,
+  "unpriced": 12,
+  "usd_collateral": 59544481.88793881,
+  "usd_synthetic": 224095241.69932866,
+  "usd_total": 283639723.58726746,
+  "usd_bluechip_only": 135441.66335814266,
+  "rpc_coverage": 1.0,
+  "price_coverage": 0.6585365853658537,
+  "route_coverage": 0.9111111111111111,
+  "top3": [
+   [
+    "NES",
+    "syn",
+    189379860.71271905
+   ],
+   [
+    "HOLO",
+    "coll",
+    59387689.65525296
+   ],
+   [
+    "KII",
+    "syn",
+    12437196.04014021
+   ]
+  ]
+ }
+}

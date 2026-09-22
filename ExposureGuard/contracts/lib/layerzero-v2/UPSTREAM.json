@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/LayerZero-Labs/LayerZero-v2",
+  "commit": "9c741e7f9790639537b1710a203bcdfd73b0b9ac",
+  "files": [
+    "packages/layerzero-v2/evm/protocol/contracts/interfaces/IMessageLib.sol",
+    "packages/layerzero-v2/evm/protocol/contracts/interfaces/IMessageLibManager.sol"
+  ],
+  "openzeppelin": {
+    "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+    "tag": "v4.8.1",
+    "commit": "0457042d93d9dfd760dbaa06a4d2f1216fdbe297"
+  }
+}

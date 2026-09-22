@@ -1,0 +1,1993 @@
+{
+  "mode": "historical_common_day_calibration_policy_comparison",
+  "live_deployment": false,
+  "common_start": "2026-06-23",
+  "common_end": "2026-08-22",
+  "policies": {
+    "max60_1.07": {
+      "policy": "max60_1.07",
+      "window": 60,
+      "kind": "max",
+      "headroom": 1.07,
+      "evaluation_days": 60,
+      "messages": 47935,
+      "deferred": 103,
+      "deferral_rate": 0.0021487430896005005,
+      "mean_budget_usd_per_day": 2215816.6666666665,
+      "max_budget_usd_per_day": 2846000.0,
+      "mean_abs_budget_churn": 0.007044875143610933,
+      "max_abs_budget_churn": 0.20695713281799016,
+      "daily": [
+        {
+          "date": "2026-06-23",
+          "messages": 509,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": null
+        },
+        {
+          "date": "2026-06-24",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-25",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-26",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-27",
+          "messages": 570,
+          "deferred": 31,
+          "deferred_value_usd": 14360.204769152862,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-28",
+          "messages": 465,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-29",
+          "messages": 530,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-30",
+          "messages": 549,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2784000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-01",
+          "messages": 644,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2846000.0,
+          "abs_budget_churn": 0.022270114942528736
+        },
+        {
+          "date": "2026-07-02",
+          "messages": 616,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2846000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-03",
+          "messages": 661,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2846000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-04",
+          "messages": 575,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.20695713281799016
+        },
+        {
+          "date": "2026-07-05",
+          "messages": 708,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-06",
+          "messages": 623,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-07",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-08",
+          "messages": 713,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-09",
+          "messages": 781,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-10",
+          "messages": 656,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2257000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-11",
+          "messages": 701,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2337000.0,
+          "abs_budget_churn": 0.03544528134692069
+        },
+        {
+          "date": "2026-07-12",
+          "messages": 804,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2337000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-13",
+          "messages": 741,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2335000.0,
+          "abs_budget_churn": 0.0008557980316645272
+        },
+        {
+          "date": "2026-07-14",
+          "messages": 782,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2331000.0,
+          "abs_budget_churn": 0.0017130620985010706
+        },
+        {
+          "date": "2026-07-15",
+          "messages": 753,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2331000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-16",
+          "messages": 646,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2331000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-17",
+          "messages": 1077,
+          "deferred": 72,
+          "deferred_value_usd": 647003.6902768855,
+          "budget_usd_per_day": 2331000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-18",
+          "messages": 851,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2331000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-19",
+          "messages": 832,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2014000.0,
+          "abs_budget_churn": 0.135993135993136
+        },
+        {
+          "date": "2026-07-20",
+          "messages": 776,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2014000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-21",
+          "messages": 898,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.012413108242303872
+        },
+        {
+          "date": "2026-07-22",
+          "messages": 922,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-23",
+          "messages": 866,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-24",
+          "messages": 799,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-25",
+          "messages": 840,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-26",
+          "messages": 935,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-27",
+          "messages": 878,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-28",
+          "messages": 926,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-29",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-30",
+          "messages": 986,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-31",
+          "messages": 733,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-01",
+          "messages": 735,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-02",
+          "messages": 823,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-03",
+          "messages": 897,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-04",
+          "messages": 781,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-05",
+          "messages": 868,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-06",
+          "messages": 765,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-07",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-08",
+          "messages": 843,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-09",
+          "messages": 1068,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-10",
+          "messages": 1039,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-11",
+          "messages": 1137,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-12",
+          "messages": 968,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-13",
+          "messages": 880,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "messages": 1059,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-15",
+          "messages": 1031,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-16",
+          "messages": 1123,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "messages": 948,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-18",
+          "messages": 1115,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "messages": 1001,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "messages": 812,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "messages": 792,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        }
+      ]
+    },
+    "max30_1.07": {
+      "policy": "max30_1.07",
+      "window": 30,
+      "kind": "max",
+      "headroom": 1.07,
+      "evaluation_days": 60,
+      "messages": 47935,
+      "deferred": 211,
+      "deferral_rate": 0.004401794096171899,
+      "mean_budget_usd_per_day": 1706283.3333333333,
+      "max_budget_usd_per_day": 1989000.0,
+      "mean_abs_budget_churn": 0.015285697975722826,
+      "max_abs_budget_churn": 0.20396988364134155,
+      "daily": [
+        {
+          "date": "2026-06-23",
+          "messages": 509,
+          "deferred": 1,
+          "deferred_value_usd": 227531.10905007878,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": null
+        },
+        {
+          "date": "2026-06-24",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-25",
+          "messages": 458,
+          "deferred": 1,
+          "deferred_value_usd": 96983.88803125519,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-26",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-27",
+          "messages": 570,
+          "deferred": 61,
+          "deferred_value_usd": 35976.59140220954,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-28",
+          "messages": 465,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-29",
+          "messages": 530,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-06-30",
+          "messages": 549,
+          "deferred": 1,
+          "deferred_value_usd": 499720.103404289,
+          "budget_usd_per_day": 1353000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-01",
+          "messages": 644,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1599000.0,
+          "abs_budget_churn": 0.18181818181818182
+        },
+        {
+          "date": "2026-07-02",
+          "messages": 616,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1615000.0,
+          "abs_budget_churn": 0.010006253908692933
+        },
+        {
+          "date": "2026-07-03",
+          "messages": 661,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1615000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-04",
+          "messages": 575,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.030959752321981424
+        },
+        {
+          "date": "2026-07-05",
+          "messages": 708,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-06",
+          "messages": 623,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-07",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-08",
+          "messages": 713,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-09",
+          "messages": 781,
+          "deferred": 1,
+          "deferred_value_usd": 147750.30947378383,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-10",
+          "messages": 656,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1665000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-11",
+          "messages": 701,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1745000.0,
+          "abs_budget_churn": 0.04804804804804805
+        },
+        {
+          "date": "2026-07-12",
+          "messages": 804,
+          "deferred": 1,
+          "deferred_value_usd": 407325.0198987167,
+          "budget_usd_per_day": 1745000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-13",
+          "messages": 741,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1816000.0,
+          "abs_budget_churn": 0.040687679083094556
+        },
+        {
+          "date": "2026-07-14",
+          "messages": 782,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1832000.0,
+          "abs_budget_churn": 0.00881057268722467
+        },
+        {
+          "date": "2026-07-15",
+          "messages": 753,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1832000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-16",
+          "messages": 646,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1832000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-17",
+          "messages": 1077,
+          "deferred": 134,
+          "deferred_value_usd": 675456.867117046,
+          "budget_usd_per_day": 1832000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-18",
+          "messages": 851,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1971000.0,
+          "abs_budget_churn": 0.07587336244541484
+        },
+        {
+          "date": "2026-07-19",
+          "messages": 832,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0091324200913242
+        },
+        {
+          "date": "2026-07-20",
+          "messages": 776,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-21",
+          "messages": 898,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-22",
+          "messages": 922,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-23",
+          "messages": 866,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-24",
+          "messages": 799,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-25",
+          "messages": 840,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-26",
+          "messages": 935,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-27",
+          "messages": 878,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-28",
+          "messages": 926,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-29",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-30",
+          "messages": 986,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-31",
+          "messages": 733,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-01",
+          "messages": 735,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-02",
+          "messages": 823,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-03",
+          "messages": 897,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-04",
+          "messages": 781,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-05",
+          "messages": 868,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-06",
+          "messages": 765,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-07",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-08",
+          "messages": 843,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1989000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-09",
+          "messages": 1068,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1744000.0,
+          "abs_budget_churn": 0.1231774761186526
+        },
+        {
+          "date": "2026-08-10",
+          "messages": 1039,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1744000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-11",
+          "messages": 1137,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1744000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-12",
+          "messages": 968,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1546000.0,
+          "abs_budget_churn": 0.11353211009174312
+        },
+        {
+          "date": "2026-08-13",
+          "messages": 880,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1546000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "messages": 1059,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1546000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-15",
+          "messages": 1031,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1546000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-16",
+          "messages": 1123,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1461000.0,
+          "abs_budget_churn": 0.054980595084087966
+        },
+        {
+          "date": "2026-08-17",
+          "messages": 948,
+          "deferred": 2,
+          "deferred_value_usd": 22620.145739731,
+          "budget_usd_per_day": 1163000.0,
+          "abs_budget_churn": 0.20396988364134155
+        },
+        {
+          "date": "2026-08-18",
+          "messages": 1115,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1163000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "messages": 1001,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1164000.0,
+          "abs_budget_churn": 0.0008598452278589854
+        },
+        {
+          "date": "2026-08-20",
+          "messages": 812,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1164000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "messages": 792,
+          "deferred": 9,
+          "deferred_value_usd": 64922.643943809526,
+          "budget_usd_per_day": 1164000.0,
+          "abs_budget_churn": 0.0
+        }
+      ]
+    },
+    "p99_60_1.07": {
+      "policy": "p99_60_1.07",
+      "window": 60,
+      "kind": "p99",
+      "headroom": 1.07,
+      "evaluation_days": 60,
+      "messages": 47935,
+      "deferred": 146,
+      "deferral_rate": 0.003045791175550224,
+      "mean_budget_usd_per_day": 1967833.3333333333,
+      "max_budget_usd_per_day": 2424000.0,
+      "mean_abs_budget_churn": 0.00872552983799382,
+      "max_abs_budget_churn": 0.14232673267326731,
+      "daily": [
+        {
+          "date": "2026-06-23",
+          "messages": 509,
+          "deferred": 1,
+          "deferred_value_usd": 227531.10905007878,
+          "budget_usd_per_day": 2348000.0,
+          "abs_budget_churn": null
+        },
+        {
+          "date": "2026-06-24",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2347000.0,
+          "abs_budget_churn": 0.00042589437819420784
+        },
+        {
+          "date": "2026-06-25",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2345000.0,
+          "abs_budget_churn": 0.0008521516829995739
+        },
+        {
+          "date": "2026-06-26",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2343000.0,
+          "abs_budget_churn": 0.0008528784648187633
+        },
+        {
+          "date": "2026-06-27",
+          "messages": 570,
+          "deferred": 31,
+          "deferred_value_usd": 19766.094864180708,
+          "budget_usd_per_day": 2342000.0,
+          "abs_budget_churn": 0.0004268032437046522
+        },
+        {
+          "date": "2026-06-28",
+          "messages": 465,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2340000.0,
+          "abs_budget_churn": 0.0008539709649871904
+        },
+        {
+          "date": "2026-06-29",
+          "messages": 530,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2338000.0,
+          "abs_budget_churn": 0.0008547008547008547
+        },
+        {
+          "date": "2026-06-30",
+          "messages": 549,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2365000.0,
+          "abs_budget_churn": 0.011548331907613344
+        },
+        {
+          "date": "2026-07-01",
+          "messages": 644,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2423000.0,
+          "abs_budget_churn": 0.02452431289640592
+        },
+        {
+          "date": "2026-07-02",
+          "messages": 616,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2423000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-03",
+          "messages": 661,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2424000.0,
+          "abs_budget_churn": 0.0004127115146512588
+        },
+        {
+          "date": "2026-07-04",
+          "messages": 575,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2079000.0,
+          "abs_budget_churn": 0.14232673267326731
+        },
+        {
+          "date": "2026-07-05",
+          "messages": 708,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2079000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-06",
+          "messages": 623,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2078000.0,
+          "abs_budget_churn": 0.000481000481000481
+        },
+        {
+          "date": "2026-07-07",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2078000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-08",
+          "messages": 713,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2077000.0,
+          "abs_budget_churn": 0.00048123195380173246
+        },
+        {
+          "date": "2026-07-09",
+          "messages": 781,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2077000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-10",
+          "messages": 656,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2076000.0,
+          "abs_budget_churn": 0.00048146364949446316
+        },
+        {
+          "date": "2026-07-11",
+          "messages": 701,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2146000.0,
+          "abs_budget_churn": 0.03371868978805395
+        },
+        {
+          "date": "2026-07-12",
+          "messages": 804,
+          "deferred": 1,
+          "deferred_value_usd": 407325.0198987167,
+          "budget_usd_per_day": 2146000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-13",
+          "messages": 741,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2184000.0,
+          "abs_budget_churn": 0.017707362534948742
+        },
+        {
+          "date": "2026-07-14",
+          "messages": 782,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1952000.0,
+          "abs_budget_churn": 0.10622710622710622
+        },
+        {
+          "date": "2026-07-15",
+          "messages": 753,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1952000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-16",
+          "messages": 646,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1950000.0,
+          "abs_budget_churn": 0.0010245901639344263
+        },
+        {
+          "date": "2026-07-17",
+          "messages": 1077,
+          "deferred": 112,
+          "deferred_value_usd": 665158.3709169582,
+          "budget_usd_per_day": 1950000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-18",
+          "messages": 851,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 2030000.0,
+          "abs_budget_churn": 0.041025641025641026
+        },
+        {
+          "date": "2026-07-19",
+          "messages": 832,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1858000.0,
+          "abs_budget_churn": 0.08472906403940887
+        },
+        {
+          "date": "2026-07-20",
+          "messages": 776,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1857000.0,
+          "abs_budget_churn": 0.0005382131324004305
+        },
+        {
+          "date": "2026-07-21",
+          "messages": 898,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1809000.0,
+          "abs_budget_churn": 0.025848142164781908
+        },
+        {
+          "date": "2026-07-22",
+          "messages": 922,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1809000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-23",
+          "messages": 866,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1808000.0,
+          "abs_budget_churn": 0.000552791597567717
+        },
+        {
+          "date": "2026-07-24",
+          "messages": 799,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1807000.0,
+          "abs_budget_churn": 0.0005530973451327434
+        },
+        {
+          "date": "2026-07-25",
+          "messages": 840,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1806000.0,
+          "abs_budget_churn": 0.0005534034311012728
+        },
+        {
+          "date": "2026-07-26",
+          "messages": 935,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1805000.0,
+          "abs_budget_churn": 0.0005537098560354374
+        },
+        {
+          "date": "2026-07-27",
+          "messages": 878,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1805000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-07-28",
+          "messages": 926,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1804000.0,
+          "abs_budget_churn": 0.000554016620498615
+        },
+        {
+          "date": "2026-07-29",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1803000.0,
+          "abs_budget_churn": 0.0005543237250554324
+        },
+        {
+          "date": "2026-07-30",
+          "messages": 986,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1802000.0,
+          "abs_budget_churn": 0.0005546311702717693
+        },
+        {
+          "date": "2026-07-31",
+          "messages": 733,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1801000.0,
+          "abs_budget_churn": 0.0005549389567147614
+        },
+        {
+          "date": "2026-08-01",
+          "messages": 735,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1801000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-02",
+          "messages": 823,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1800000.0,
+          "abs_budget_churn": 0.000555247084952804
+        },
+        {
+          "date": "2026-08-03",
+          "messages": 897,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1797000.0,
+          "abs_budget_churn": 0.0016666666666666668
+        },
+        {
+          "date": "2026-08-04",
+          "messages": 781,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1796000.0,
+          "abs_budget_churn": 0.0005564830272676684
+        },
+        {
+          "date": "2026-08-05",
+          "messages": 868,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0005567928730512249
+        },
+        {
+          "date": "2026-08-06",
+          "messages": 765,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-07",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-08",
+          "messages": 843,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-09",
+          "messages": 1068,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-10",
+          "messages": 1039,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-11",
+          "messages": 1137,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-12",
+          "messages": 968,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-13",
+          "messages": 880,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "messages": 1059,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-15",
+          "messages": 1031,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-16",
+          "messages": 1123,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1795000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-17",
+          "messages": 948,
+          "deferred": 1,
+          "deferred_value_usd": 10047.430433980066,
+          "budget_usd_per_day": 1774000.0,
+          "abs_budget_churn": 0.0116991643454039
+        },
+        {
+          "date": "2026-08-18",
+          "messages": 1115,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1774000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-19",
+          "messages": 1001,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1774000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "messages": 812,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1774000.0,
+          "abs_budget_churn": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "messages": 792,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1774000.0,
+          "abs_budget_churn": 0.0
+        }
+      ]
+    },
+    "decayed_max60_1.07": {
+      "policy": "decayed_max60_1.07",
+      "window": 60,
+      "kind": "decayed",
+      "headroom": 1.07,
+      "evaluation_days": 60,
+      "messages": 47935,
+      "deferred": 246,
+      "deferral_rate": 0.005131949514968186,
+      "mean_budget_usd_per_day": 1305400.0,
+      "max_budget_usd_per_day": 1761000.0,
+      "mean_abs_budget_churn": 0.031071866608490286,
+      "max_abs_budget_churn": 0.23434856175972926,
+      "daily": [
+        {
+          "date": "2026-06-23",
+          "messages": 509,
+          "deferred": 1,
+          "deferred_value_usd": 227531.10905007878,
+          "budget_usd_per_day": 1212000.0,
+          "abs_budget_churn": null
+        },
+        {
+          "date": "2026-06-24",
+          "messages": 618,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1185000.0,
+          "abs_budget_churn": 0.022277227722772276
+        },
+        {
+          "date": "2026-06-25",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1157000.0,
+          "abs_budget_churn": 0.02362869198312236
+        },
+        {
+          "date": "2026-06-26",
+          "messages": 458,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1131000.0,
+          "abs_budget_churn": 0.02247191011235955
+        },
+        {
+          "date": "2026-06-27",
+          "messages": 570,
+          "deferred": 68,
+          "deferred_value_usd": 38986.47069957946,
+          "budget_usd_per_day": 1105000.0,
+          "abs_budget_churn": 0.022988505747126436
+        },
+        {
+          "date": "2026-06-28",
+          "messages": 465,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1079000.0,
+          "abs_budget_churn": 0.023529411764705882
+        },
+        {
+          "date": "2026-06-29",
+          "messages": 530,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1081000.0,
+          "abs_budget_churn": 0.0018535681186283596
+        },
+        {
+          "date": "2026-06-30",
+          "messages": 549,
+          "deferred": 1,
+          "deferred_value_usd": 499720.103404289,
+          "budget_usd_per_day": 1182000.0,
+          "abs_budget_churn": 0.09343200740055504
+        },
+        {
+          "date": "2026-07-01",
+          "messages": 644,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1459000.0,
+          "abs_budget_churn": 0.23434856175972926
+        },
+        {
+          "date": "2026-07-02",
+          "messages": 616,
+          "deferred": 2,
+          "deferred_value_usd": 3530.2770529446143,
+          "budget_usd_per_day": 1443000.0,
+          "abs_budget_churn": 0.010966415352981495
+        },
+        {
+          "date": "2026-07-03",
+          "messages": 661,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1408000.0,
+          "abs_budget_churn": 0.024255024255024255
+        },
+        {
+          "date": "2026-07-04",
+          "messages": 575,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1465000.0,
+          "abs_budget_churn": 0.040482954545454544
+        },
+        {
+          "date": "2026-07-05",
+          "messages": 708,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1433000.0,
+          "abs_budget_churn": 0.021843003412969283
+        },
+        {
+          "date": "2026-07-06",
+          "messages": 623,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1399000.0,
+          "abs_budget_churn": 0.02372644801116539
+        },
+        {
+          "date": "2026-07-07",
+          "messages": 618,
+          "deferred": 1,
+          "deferred_value_usd": 299945.4884594884,
+          "budget_usd_per_day": 1367000.0,
+          "abs_budget_churn": 0.0228734810578985
+        },
+        {
+          "date": "2026-07-08",
+          "messages": 713,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1431000.0,
+          "abs_budget_churn": 0.04681784930504755
+        },
+        {
+          "date": "2026-07-09",
+          "messages": 781,
+          "deferred": 1,
+          "deferred_value_usd": 147750.30947378383,
+          "budget_usd_per_day": 1398000.0,
+          "abs_budget_churn": 0.023060796645702306
+        },
+        {
+          "date": "2026-07-10",
+          "messages": 656,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1389000.0,
+          "abs_budget_churn": 0.006437768240343348
+        },
+        {
+          "date": "2026-07-11",
+          "messages": 701,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1501000.0,
+          "abs_budget_churn": 0.08063354931605471
+        },
+        {
+          "date": "2026-07-12",
+          "messages": 804,
+          "deferred": 1,
+          "deferred_value_usd": 407325.0198987167,
+          "budget_usd_per_day": 1467000.0,
+          "abs_budget_churn": 0.022651565622918056
+        },
+        {
+          "date": "2026-07-13",
+          "messages": 741,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1582000.0,
+          "abs_budget_churn": 0.07839127471029311
+        },
+        {
+          "date": "2026-07-14",
+          "messages": 782,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1561000.0,
+          "abs_budget_churn": 0.01327433628318584
+        },
+        {
+          "date": "2026-07-15",
+          "messages": 753,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1526000.0,
+          "abs_budget_churn": 0.02242152466367713
+        },
+        {
+          "date": "2026-07-16",
+          "messages": 646,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1491000.0,
+          "abs_budget_churn": 0.022935779816513763
+        },
+        {
+          "date": "2026-07-17",
+          "messages": 1077,
+          "deferred": 168,
+          "deferred_value_usd": 690598.9832622615,
+          "budget_usd_per_day": 1457000.0,
+          "abs_budget_churn": 0.022803487592219986
+        },
+        {
+          "date": "2026-07-18",
+          "messages": 851,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1761000.0,
+          "abs_budget_churn": 0.20864790665751545
+        },
+        {
+          "date": "2026-07-19",
+          "messages": 832,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1739000.0,
+          "abs_budget_churn": 0.01249290176036343
+        },
+        {
+          "date": "2026-07-20",
+          "messages": 776,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1699000.0,
+          "abs_budget_churn": 0.023001725129384705
+        },
+        {
+          "date": "2026-07-21",
+          "messages": 898,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1660000.0,
+          "abs_budget_churn": 0.022954679223072396
+        },
+        {
+          "date": "2026-07-22",
+          "messages": 922,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1623000.0,
+          "abs_budget_churn": 0.022289156626506025
+        },
+        {
+          "date": "2026-07-23",
+          "messages": 866,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1586000.0,
+          "abs_budget_churn": 0.02279728897104128
+        },
+        {
+          "date": "2026-07-24",
+          "messages": 799,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1549000.0,
+          "abs_budget_churn": 0.023329129886506934
+        },
+        {
+          "date": "2026-07-25",
+          "messages": 840,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1514000.0,
+          "abs_budget_churn": 0.022595222724338282
+        },
+        {
+          "date": "2026-07-26",
+          "messages": 935,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1480000.0,
+          "abs_budget_churn": 0.022457067371202115
+        },
+        {
+          "date": "2026-07-27",
+          "messages": 878,
+          "deferred": 1,
+          "deferred_value_usd": 182670.35971636776,
+          "budget_usd_per_day": 1445000.0,
+          "abs_budget_churn": 0.02364864864864865
+        },
+        {
+          "date": "2026-07-28",
+          "messages": 926,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1413000.0,
+          "abs_budget_churn": 0.022145328719723183
+        },
+        {
+          "date": "2026-07-29",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1380000.0,
+          "abs_budget_churn": 0.02335456475583864
+        },
+        {
+          "date": "2026-07-30",
+          "messages": 986,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1349000.0,
+          "abs_budget_churn": 0.02246376811594203
+        },
+        {
+          "date": "2026-07-31",
+          "messages": 733,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1319000.0,
+          "abs_budget_churn": 0.02223869532987398
+        },
+        {
+          "date": "2026-08-01",
+          "messages": 735,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1311000.0,
+          "abs_budget_churn": 0.006065200909780136
+        },
+        {
+          "date": "2026-08-02",
+          "messages": 823,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1282000.0,
+          "abs_budget_churn": 0.02212051868802441
+        },
+        {
+          "date": "2026-08-03",
+          "messages": 897,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1252000.0,
+          "abs_budget_churn": 0.0234009360374415
+        },
+        {
+          "date": "2026-08-04",
+          "messages": 781,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1251000.0,
+          "abs_budget_churn": 0.0007987220447284345
+        },
+        {
+          "date": "2026-08-05",
+          "messages": 868,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1222000.0,
+          "abs_budget_churn": 0.023181454836131096
+        },
+        {
+          "date": "2026-08-06",
+          "messages": 765,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1194000.0,
+          "abs_budget_churn": 0.022913256955810146
+        },
+        {
+          "date": "2026-08-07",
+          "messages": 876,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1167000.0,
+          "abs_budget_churn": 0.022613065326633167
+        },
+        {
+          "date": "2026-08-08",
+          "messages": 843,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1141000.0,
+          "abs_budget_churn": 0.022279348757497857
+        },
+        {
+          "date": "2026-08-09",
+          "messages": 1068,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1114000.0,
+          "abs_budget_churn": 0.02366345311130587
+        },
+        {
+          "date": "2026-08-10",
+          "messages": 1039,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1089000.0,
+          "abs_budget_churn": 0.02244165170556553
+        },
+        {
+          "date": "2026-08-11",
+          "messages": 1137,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1096000.0,
+          "abs_budget_churn": 0.006427915518824609
+        },
+        {
+          "date": "2026-08-12",
+          "messages": 968,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1070000.0,
+          "abs_budget_churn": 0.023722627737226276
+        },
+        {
+          "date": "2026-08-13",
+          "messages": 880,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1059000.0,
+          "abs_budget_churn": 0.010280373831775701
+        },
+        {
+          "date": "2026-08-14",
+          "messages": 1059,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1036000.0,
+          "abs_budget_churn": 0.021718602455146365
+        },
+        {
+          "date": "2026-08-15",
+          "messages": 1031,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 1012000.0,
+          "abs_budget_churn": 0.023166023166023165
+        },
+        {
+          "date": "2026-08-16",
+          "messages": 1123,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 988000.0,
+          "abs_budget_churn": 0.023715415019762844
+        },
+        {
+          "date": "2026-08-17",
+          "messages": 948,
+          "deferred": 1,
+          "deferred_value_usd": 16613.751125562078,
+          "budget_usd_per_day": 966000.0,
+          "abs_budget_churn": 0.022267206477732792
+        },
+        {
+          "date": "2026-08-18",
+          "messages": 1115,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 943000.0,
+          "abs_budget_churn": 0.023809523809523808
+        },
+        {
+          "date": "2026-08-19",
+          "messages": 1001,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 922000.0,
+          "abs_budget_churn": 0.022269353128313893
+        },
+        {
+          "date": "2026-08-20",
+          "messages": 812,
+          "deferred": 0,
+          "deferred_value_usd": 0.0,
+          "budget_usd_per_day": 901000.0,
+          "abs_budget_churn": 0.0227765726681128
+        },
+        {
+          "date": "2026-08-21",
+          "messages": 792,
+          "deferred": 1,
+          "deferred_value_usd": 59980.260623360424,
+          "budget_usd_per_day": 882000.0,
+          "abs_budget_churn": 0.021087680355160933
+        }
+      ]
+    }
+  },
+  "note": "Lower budget strengthens containment; lower deferral and churn improve operability."
+}

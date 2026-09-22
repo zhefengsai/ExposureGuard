@@ -1,0 +1,107 @@
+{
+  "schema": 2,
+  "kind": "prospective_production_data_shadow",
+  "first_date": "2026-08-26",
+  "last_date": "2026-09-08",
+  "daily_configurations": 14,
+  "distinct_utc_days": 14,
+  "budget_usd_per_day": {
+    "first": 2114000.0,
+    "last": 2114000.0,
+    "min": 2114000.0,
+    "max": 2114000.0
+  },
+  "mean_day_to_day_budget_change": 0.0,
+  "audit_passes": 14,
+  "audit_warning_days": 13,
+  "operational_snapshot_days": 0,
+  "collection_age_recorded_days": 12,
+  "collection_age_unrecorded_days": 2,
+  "max_recorded_collection_age_hours": 0.33319253277777783,
+  "duplicate_configuration_days": 0,
+  "input_provenance": "legacy_static_source_hash",
+  "live_enforcement": false,
+  "events": {
+    "rows": 14465,
+    "prospective_rows": 11718,
+    "unique_event_keys": 14465,
+    "duplicate_event_keys": 0,
+    "invalid_rows": [],
+    "first_at": "2026-08-22T10:38:39",
+    "last_at": "2026-09-08T14:00:21",
+    "headroom": {
+      "ethereum": {
+        "frozen_60d_peak_usd": 795961.656248541,
+        "max_prospective_day_usd": 733631.7226525474,
+        "max_prospective_day": "2026-08-31",
+        "fraction_of_frozen_peak": 0.9216922911968376
+      },
+      "base": {
+        "frozen_60d_peak_usd": 113874.70663622337,
+        "max_prospective_day_usd": 96420.50748431186,
+        "max_prospective_day": "2026-09-04",
+        "fraction_of_frozen_peak": 0.8467245302535045
+      },
+      "arbitrum": {
+        "frozen_60d_peak_usd": 431993.6047703949,
+        "max_prospective_day_usd": 90980.39858693763,
+        "max_prospective_day": "2026-09-03",
+        "fraction_of_frozen_peak": 0.21060589226846035
+      },
+      "bsc": {
+        "frozen_60d_peak_usd": 632546.0989875054,
+        "max_prospective_day_usd": 397531.0269662495,
+        "max_prospective_day": "2026-09-05",
+        "fraction_of_frozen_peak": 0.6284617478513639
+      }
+    }
+  },
+  "independent_replica": {
+    "overlapping_days": 14,
+    "dates": [
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29",
+      "2026-08-30",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-05",
+      "2026-09-06",
+      "2026-09-07",
+      "2026-09-08"
+    ],
+    "max_absolute_budget_difference_usd": 1000.0,
+    "identical_budget_days": 0,
+    "chains": {
+      "arbitrum": {
+        "identical_budget_days": 14,
+        "max_absolute_budget_difference_usd": 0.0,
+        "max_absolute_peak_difference_usd": 0.0,
+        "max_relative_peak_difference": 0.0
+      },
+      "base": {
+        "identical_budget_days": 14,
+        "max_absolute_budget_difference_usd": 0.0,
+        "max_absolute_peak_difference_usd": 0.0,
+        "max_relative_peak_difference": 0.0
+      },
+      "bsc": {
+        "identical_budget_days": 14,
+        "max_absolute_budget_difference_usd": 0.0,
+        "max_absolute_peak_difference_usd": 0.0,
+        "max_relative_peak_difference": 0.0
+      },
+      "ethereum": {
+        "identical_budget_days": 0,
+        "max_absolute_budget_difference_usd": 1000.0,
+        "max_absolute_peak_difference_usd": 654.7738295863383,
+        "max_relative_peak_difference": 0.000822619813964862
+      }
+    }
+  },
+  "paper_ready": true
+}

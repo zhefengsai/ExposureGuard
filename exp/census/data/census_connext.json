@@ -1,0 +1,59 @@
+{
+  "stack": "connext",
+  "chain": "ethereum",
+  "chain_id": 1,
+  "block": 25811875,
+  "generated_at": "2026-08-23T13:34:23Z",
+  "measurement_depth": "architectural",
+  "population": {
+    "type": "connext_diamond",
+    "count": 1,
+    "source": "architecture"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "don_shared",
+    "roots": [
+      {
+        "id": "router_watcher_set",
+        "label": "Router network + watchers",
+        "members": 1,
+        "share": 1.0
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": false,
+    "predicate": "N/A",
+    "count": null,
+    "share": null
+  },
+  "controls": [],
+  "detection_gap": {
+    "bound": "unbounded",
+    "dest_auto_per_root_bound": false,
+    "pause_only": true,
+    "note": "NO-POSITION for ExposureGuard hook"
+  },
+  "separability": "NO-POSITION",
+  "value_at_risk_usd": null,
+  "evidence": [
+    "https://github.com/connext/monorepo/blob/7758e62037bba281b8844c37831bde0b838edd36/packages/contracts/contracts/core/connext/facets/DiamondCutFacet.sol",
+    "https://docs.connext.network/concepts/how-it-works"
+  ],
+  "coverage": {
+    "queried": 1,
+    "resolved": 1,
+    "failed": 0,
+    "failed_share": 0.0
+  },
+  "extras": {
+    "contract": "0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6",
+    "contract_label": "ConnextDiamond"
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}

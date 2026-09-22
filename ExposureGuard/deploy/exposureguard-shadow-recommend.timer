@@ -1,0 +1,10 @@
+[Unit]
+Description=Freeze ExposureGuard shadow configuration daily
+
+[Timer]
+OnCalendar=*-*-* 00:20:00 UTC
+Persistent=true
+Unit=exposureguard-shadow-recommend.service
+
+[Install]
+WantedBy=timers.target

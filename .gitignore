@@ -1,0 +1,30 @@
+# Secrets and local configuration
+.env
+.env.*
+*.key
+*.pem
+keystore/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Foundry
+ExposureGuard/contracts/cache/
+ExposureGuard/contracts/out/
+ExposureGuard/contracts/broadcast/
+
+# Local experiment output
+*.log
+*.tmp
+data/live/state.json
+data/live/*.lock
+data/reproduced/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/

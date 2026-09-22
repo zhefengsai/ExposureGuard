@@ -1,0 +1,120 @@
+{
+ "schema": 1,
+ "stacks": 10,
+ "levels": {
+  "chain": 7,
+  "src": 3
+ },
+ "rows": [
+  {
+   "stack": "hyperlane",
+   "contract": "Mailbox",
+   "address": "0xc005dc82818d67AF737725bD4bf75435d065D239",
+   "address_source": "separability",
+   "read": "\\texttt{defaultIsm()}; \\texttt{interchainSecurityModule()} per route; \\texttt{owner()} and \\texttt{getOwners()} on the installing Safe",
+   "verdict": "SEPARABLE",
+   "level": "chain",
+   "block": 25811875,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "wormhole",
+   "contract": "Core Bridge",
+   "address": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B",
+   "address_source": "separability",
+   "read": "\\texttt{getCurrentGuardianSetIndex()}; the \\texttt{submitContractUpgrade} governance path",
+   "verdict": "NON-SEPARABLE",
+   "level": "chain",
+   "block": 25811875,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "layerzero",
+   "contract": "EndpointV2",
+   "address": "0x1a44076050125825900e736c501f859c50fE728c",
+   "address_source": "census_merged",
+   "read": "\\texttt{registerLibrary()} owner; \\texttt{getConfig()} on receiveUln302",
+   "verdict": "SEPARABLE",
+   "level": "chain",
+   "block": 25818187,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "ccip",
+   "contract": "Router",
+   "address": "0x80226fc0Ee2b096224EeAc085Bb9a8cba1146f7D",
+   "address_source": "census_merged",
+   "read": "\\texttt{owner()} on Router and RMN; \\texttt{getCurrentRateLimiterState()} per lane",
+   "verdict": "SEPARABLE",
+   "level": "chain",
+   "block": 25818293,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "axelar",
+   "contract": "Gateway",
+   "address": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+   "address_source": "census_merged",
+   "read": "verified source: upgrades arrive through the network being secured; no per-message hook",
+   "verdict": "NON-SEPARABLE",
+   "level": "src",
+   "block": 25811875,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "across",
+   "contract": "Ethereum\\_SpokePool",
+   "address": "0xFBc81a18EcDa8E6A91275cFDF5FC6d91A7C5AE80",
+   "address_source": "census_merged",
+   "read": "verified source: no configurable per-message admission point",
+   "verdict": "NO-POSITION",
+   "level": "src",
+   "block": 25811875,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "connext",
+   "contract": "ConnextDiamond",
+   "address": "0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6",
+   "address_source": "census_merged",
+   "read": "verified source: verification fixed in the router network",
+   "verdict": "NO-POSITION",
+   "level": "src",
+   "block": 25811875,
+   "date": "2026-08-23"
+  },
+  {
+   "stack": "cctp",
+   "contract": "TokenMessenger",
+   "address": "0xBd3fa81B58Ba92a82136038B25aDec7066af3155",
+   "read": "ERC1967 implementation and admin slots; \\texttt{signatureThreshold}; \\texttt{getNumEnabledAttesters}; \\texttt{burnLimitsPerMessage}",
+   "address_source": "stack_census",
+   "verdict": "NO-POSITION",
+   "level": "chain",
+   "block": null,
+   "date": "2026-08-24"
+  },
+  {
+   "stack": "polygon",
+   "contract": "RootChainManager",
+   "address": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+   "read": "\\texttt{getMinDelay()}; holders of \\texttt{PROPOSER\\_ROLE}, \\texttt{EXECUTOR\\_ROLE} and \\texttt{DEFAULT\\_ADMIN\\_ROLE}",
+   "address_source": "stack_census",
+   "verdict": "NO-POSITION",
+   "level": "chain",
+   "block": null,
+   "date": "2026-08-24"
+  },
+  {
+   "stack": "debridge",
+   "contract": "DeBridgeGate",
+   "address": "0x43dE2d77BF8027e25dBD179B491e8d64f38398aA",
+   "read": "ProxyAdmin \\texttt{owner()}; \\texttt{getOwners()} on the Safe; \\texttt{getOracleInfo()} per signer; \\texttt{excessConfirmations}",
+   "address_source": "stack_census",
+   "verdict": "NO-POSITION",
+   "level": "chain",
+   "block": null,
+   "date": "2026-08-24"
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+  "trace_days": 119.86055555555555,
+  "B": 1233331.752968037,
+  "alpha": 0.8,
+  "gas_per_route_write": 26700,
+  "material_weight_delta": 0.0001,
+  "trailing_window_days": 60.0,
+  "rows": [
+    {
+      "period": "1 d",
+      "period_days": 1,
+      "refreshes": 119,
+      "route_writes": 1234,
+      "gas_total": 32947800,
+      "gas_per_day": 274884.42588378163,
+      "clean_pct": 95.84282245092241,
+      "drain_pct": 81.65697597258448,
+      "flood_capture_pct": 18.211383261199654
+    },
+    {
+      "period": "3 d",
+      "period_days": 3,
+      "refreshes": 39,
+      "route_writes": 543,
+      "gas_total": 14498100,
+      "gas_per_day": 120958.05774302546,
+      "clean_pct": 95.93763638423535,
+      "drain_pct": 81.58209752259089,
+      "flood_capture_pct": 18.15724312064327
+    },
+    {
+      "period": "7 d",
+      "period_days": 7,
+      "refreshes": 17,
+      "route_writes": 278,
+      "gas_total": 7422600,
+      "gas_per_day": 61926.96142276442,
+      "clean_pct": 96.5189403648668,
+      "drain_pct": 79.88772623421303,
+      "flood_capture_pct": 17.827434377658506
+    },
+    {
+      "period": "14 d",
+      "period_days": 14,
+      "refreshes": 8,
+      "route_writes": 145,
+      "gas_total": 3871500,
+      "gas_per_day": 32300.033835614537,
+      "clean_pct": 90.14030278148311,
+      "drain_pct": 70.6240239139295,
+      "flood_capture_pct": 17.52312974807963
+    },
+    {
+      "period": "30 d",
+      "period_days": 30,
+      "refreshes": 3,
+      "route_writes": 62,
+      "gas_total": 1655400,
+      "gas_per_day": 13811.048950400698,
+      "clean_pct": 80.79976957637093,
+      "drain_pct": 53.11497825124643,
+      "flood_capture_pct": 16.754188614636995
+    },
+    {
+      "period": "never",
+      "period_days": null,
+      "refreshes": 0,
+      "route_writes": 0,
+      "gas_total": 0,
+      "gas_per_day": 0.0,
+      "clean_pct": 77.4349757364242,
+      "drain_pct": 22.78560951052552,
+      "flood_capture_pct": 12.644959511500149
+    }
+  ]
+}

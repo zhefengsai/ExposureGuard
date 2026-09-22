@@ -1,0 +1,69 @@
+{
+  "stack": "across",
+  "chain": "ethereum",
+  "chain_id": 1,
+  "block": 25811875,
+  "generated_at": "2026-08-23T13:34:23Z",
+  "measurement_depth": "architectural",
+  "population": {
+    "type": "spoke_pool_intent",
+    "count": 1,
+    "source": "architecture"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "don_shared",
+    "roots": [
+      {
+        "id": "hubpool_merkle",
+        "label": "HubPool merkle root + relayer network",
+        "members": 1,
+        "share": 1.0
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": false,
+    "predicate": "N/A",
+    "count": null,
+    "share": null
+  },
+  "controls": [
+    {
+      "name": "UMA/dispute_window",
+      "placement": "destination",
+      "scope": "stack_wide",
+      "automatic": true,
+      "on_path_under_Fs": false,
+      "active": true,
+      "note": "Optimistic model \u2014 not ISM-class per-root bound"
+    }
+  ],
+  "detection_gap": {
+    "bound": "partial",
+    "dest_auto_per_root_bound": false,
+    "pause_only": false,
+    "note": "NO-POSITION for ExposureGuard hook"
+  },
+  "separability": "NO-POSITION",
+  "value_at_risk_usd": null,
+  "evidence": [
+    "https://github.com/across-protocol/contracts/blob/8be96575b0d4a6bb12decffffd7ff1023b5b2e66/contracts/SpokePool.sol",
+    "https://docs.across.to/concepts/intent-system"
+  ],
+  "coverage": {
+    "queried": 1,
+    "resolved": 1,
+    "failed": 0,
+    "failed_share": 0.0
+  },
+  "extras": {
+    "contract": "0xFBc81a18EcDa8E6A91275cFDF5FC6d91A7C5AE80",
+    "contract_label": "Ethereum_SpokePool"
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}

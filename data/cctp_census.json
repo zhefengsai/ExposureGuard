@@ -1,0 +1,58 @@
+{
+ "generated_at": "2026-08-24T14:18:58.419127Z",
+ "stack": "circle_cctp",
+ "chain_id": 1,
+ "contracts": {
+  "TokenMessenger": {
+   "addr": "0xBd3fa81B58Ba92a82136038B25aDec7066af3155",
+   "code_len": 13497,
+   "erc1967_proxy": false,
+   "owner": "0x6b0b72E63764101Fc4d5BD914B107987041578C4",
+   "owner_is_eoa": true,
+   "localMessageTransmitter": "0x0a992d191DEeC32aFe36203Ad87D7d289a738F81",
+   "localMinter": "0xc4922d64a24675E16e1586e3e3Aa56C06fABe907"
+  },
+  "MessageTransmitter": {
+   "addr": "0x0a992d191DEeC32aFe36203Ad87D7d289a738F81",
+   "code_len": 17562,
+   "erc1967_proxy": false,
+   "owner": "0x4aA5bF962852DcC59695F600d346D3F751B0D920",
+   "owner_is_eoa": true,
+   "attesterManager": "0x358a85e032aA9507a1303683b2B6A1d1cac3c252",
+   "attesterManager_is_eoa": true,
+   "pauser": "0xc809b0216B149cc301Cb203EDD84FCdB8F15C4ed",
+   "pauser_is_eoa": true,
+   "signatureThreshold": 2,
+   "numEnabledAttesters": 2,
+   "paused": false,
+   "maxMessageBodySize": 8192,
+   "attesterManager_is_attester": false,
+   "owner_is_attester": false
+  },
+  "TokenMinter": {
+   "addr": "0xc4922d64a24675E16e1586e3e3Aa56C06fABe907",
+   "tokenController": "0x8a9A13A106cB89E15410B2AB4488135155032169",
+   "pauser": "0x817ae4109dC0f21E437b94c899962690514Ba09f",
+   "pauser_is_eoa": true,
+   "burnLimitsPerMessage_USDC": 1000000000000,
+   "burnLimitsPerMessage_USDC_units": 1000000
+  }
+ },
+ "measured_findings": [
+  "The verification root is a 2-of-2 attester set: signatureThreshold == getNumEnabledAttesters == 2.",
+  "Every governance role we could read is an externally owned account: both contract owners, the attesterManager, and both pausers.",
+  "Neither TokenMessenger nor MessageTransmitter is an ERC1967 proxy; the implementation and admin slots are zero.",
+  "The only value limit we found is burnLimitsPerMessage, 1,000,000 USDC. It caps a single message on the sending side and does not accumulate, so it bounds no aggregate: N messages at the cap pass N million.",
+  "Role separation is real where it matters: isEnabledAttester returns false for both the attesterManager and the owner, so the party that controls the verification root is not part of it.",
+  "TokenMinter.sol mint() has no amount gate; only burn() uses onlyWithinBurnLimit. TokenMessenger mint path calls minter.mint with no aggregate/per-message bound (github.com/circlefin/evm-cctp-contracts).",
+  "Upgrade path without a proxy: bytecode is immutable; owner EOAs can rotate attesters/localMinter pointers but cannot swap implementation in place \u2014 replacement is a migration."
+ ],
+ "verdict_draft": "NO-POSITION",
+ "verdict_reasoning": "On the destination side a message is verified against the attester set and then minted; we found no configurable parameter that gates inbound value per message and can be changed without redeployment. burnLimitsPerMessage sits on the send path. Under the definition fixed in SEPARABILITY-CHECK.md this is no position rather than a removable one. The authority condition of separability is therefore satisfied; what is absent is a position, not independence.",
+ "curated_still_todo": [],
+ "verdict": "NO-POSITION",
+ "source_read": [
+  "https://github.com/circlefin/evm-cctp-contracts/blob/master/src/TokenMinter.sol",
+  "https://github.com/circlefin/evm-cctp-contracts/blob/master/src/TokenMessenger.sol"
+ ]
+}

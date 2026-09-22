@@ -1,0 +1,38 @@
+{
+ "routers_on_default": 116,
+ "routers_with_owner_resolved": 116,
+ "distinct_owner_addresses": 56,
+ "safes_with_signers_read": 44,
+ "signers_shared_across_owners": 12,
+ "independent_parties_after_merge": 50,
+ "largest_party_routes": 18,
+ "largest_party_share": 0.1552,
+ "unresolved": [
+  {
+   "addr": "0xa7eccdb9be08178f896c26b7bbd8c3d4e844d9ba",
+   "sig": "getOwners()(address[])",
+   "err": "Error: server returned an error response: error code 3: execution reverted"
+  },
+  {
+   "addr": "0x3e0a78a330f2b97059a4d507ca9d8292b65b6fb5",
+   "sig": "getOwners()(address[])",
+   "err": "Error: server returned an error response: error code 3: execution reverted"
+  },
+  {
+   "addr": "0x3d079e977d644c914a344dcb5ba54db243cc4863",
+   "sig": "getOwners()(address[])",
+   "err": "Error: server returned an error response: error code 3: execution reverted"
+  },
+  {
+   "addr": "0xf0b850930ede8807e7f472b610b017c187e0e493",
+   "sig": "getOwners()(address[])",
+   "err": "Error: server returned an error response: error code 3: execution reverted"
+  },
+  {
+   "addr": "0x1f6327208f6b682deb1de14b2faf52804ed69692",
+   "sig": "getOwners()(address[])",
+   "err": "Error: server returned an error response: error code 3: execution reverted, data: \"0xbb370b2ba0e67e2b00000000000000000000000000000000000000000000000000000000\""
+  }
+ ],
+ "note": "Merging Safes that share a signer is conservative, so the party count is a lower bound on independence. Routers whose owner could not be read are excluded from the denominator and listed in unresolved."
+}

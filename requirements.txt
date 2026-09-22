@@ -1,0 +1,4 @@
+matplotlib>=3.8
+numpy>=2.0
+PyYAML>=6.0
+

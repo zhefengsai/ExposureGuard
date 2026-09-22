@@ -1,0 +1,562 @@
+{
+ "schema": 1,
+ "total_deliveries": 78463,
+ "priced": 65427,
+ "unpriced": 13036,
+ "unpriced_routes": 67,
+ "baseline_coverage": 0.8338579967628054,
+ "topk": {
+  "10": 0.9768043536443929,
+  "20": 0.9913462396288697,
+  "50": 0.9997068682053962
+ },
+ "mappings_for_target": {
+  "0.9": 2,
+  "0.95": 4,
+  "0.99": 19,
+  "1.0": 67
+ },
+ "top_classes": {
+  "no_local_asset": 40,
+  "needs_reference": 6,
+  "onboardable_now": 4
+ },
+ "curve": [
+  {
+   "mappings": 1,
+   "chain": "bsc",
+   "symbol": "NES",
+   "class": "no_local_asset",
+   "deliveries": 3507,
+   "coverage": 0.8785542230095714
+  },
+  {
+   "mappings": 2,
+   "chain": "bsc",
+   "symbol": "KII",
+   "class": "no_local_asset",
+   "deliveries": 2571,
+   "coverage": 0.9113212597020252
+  },
+  {
+   "mappings": 3,
+   "chain": "ethereum",
+   "symbol": "NES",
+   "class": "no_local_asset",
+   "deliveries": 2044,
+   "coverage": 0.9373717548398608
+  },
+  {
+   "mappings": 4,
+   "chain": "bsc",
+   "symbol": "TOSHI",
+   "class": "no_local_asset",
+   "deliveries": 1051,
+   "coverage": 0.9507666033671922
+  },
+  {
+   "mappings": 5,
+   "chain": "base",
+   "symbol": "SEDA",
+   "class": "no_local_asset",
+   "deliveries": 519,
+   "coverage": 0.9573811860367307
+  },
+  {
+   "mappings": 6,
+   "chain": "bsc",
+   "symbol": "NEX",
+   "class": "no_local_asset",
+   "deliveries": 392,
+   "coverage": 0.9623771714056307
+  },
+  {
+   "mappings": 7,
+   "chain": "base",
+   "symbol": "HYPER",
+   "class": "no_local_asset",
+   "deliveries": 332,
+   "coverage": 0.9666084651364337
+  },
+  {
+   "mappings": 8,
+   "chain": "base",
+   "symbol": "EXRD",
+   "class": "no_local_asset",
+   "deliveries": 279,
+   "coverage": 0.9701642812535844
+  },
+  {
+   "mappings": 9,
+   "chain": "ethereum",
+   "symbol": "STHYPER",
+   "class": "needs_reference",
+   "deliveries": 267,
+   "coverage": 0.9735671590431159
+  },
+  {
+   "mappings": 10,
+   "chain": "base",
+   "symbol": "KYVE",
+   "class": "no_local_asset",
+   "deliveries": 254,
+   "coverage": 0.9768043536443929
+  },
+  {
+   "mappings": 11,
+   "chain": "ethereum",
+   "symbol": "LYX",
+   "class": "no_local_asset",
+   "deliveries": 200,
+   "coverage": 0.9793533257713827
+  },
+  {
+   "mappings": 12,
+   "chain": "base",
+   "symbol": "KII",
+   "class": "no_local_asset",
+   "deliveries": 172,
+   "coverage": 0.9815454418005939
+  },
+  {
+   "mappings": 13,
+   "chain": "bsc",
+   "symbol": "LITKEY",
+   "class": "no_local_asset",
+   "deliveries": 122,
+   "coverage": 0.9831003147980577
+  },
+  {
+   "mappings": 14,
+   "chain": "bsc",
+   "symbol": "RCADE",
+   "class": "no_local_asset",
+   "deliveries": 113,
+   "coverage": 0.9845404840498069
+  },
+  {
+   "mappings": 15,
+   "chain": "bsc",
+   "symbol": "GPS",
+   "class": "no_local_asset",
+   "deliveries": 104,
+   "coverage": 0.9858659495558416
+  },
+  {
+   "mappings": 16,
+   "chain": "ethereum",
+   "symbol": "TETH",
+   "class": "needs_reference",
+   "deliveries": 93,
+   "coverage": 0.9870512215948919
+  },
+  {
+   "mappings": 17,
+   "chain": "base",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 88,
+   "coverage": 0.9881727693307674
+  },
+  {
+   "mappings": 18,
+   "chain": "ethereum",
+   "symbol": "HYPER",
+   "class": "no_local_asset",
+   "deliveries": 87,
+   "coverage": 0.9892815722060079
+  },
+  {
+   "mappings": 19,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 85,
+   "coverage": 0.9903648853599786
+  },
+  {
+   "mappings": 20,
+   "chain": "ethereum",
+   "symbol": "XAUT",
+   "class": "needs_reference",
+   "deliveries": 77,
+   "coverage": 0.9913462396288697
+  },
+  {
+   "mappings": 21,
+   "chain": "arbitrum",
+   "symbol": "TIA.N",
+   "class": "no_local_asset",
+   "deliveries": 72,
+   "coverage": 0.992263869594586
+  },
+  {
+   "mappings": 22,
+   "chain": "arbitrum",
+   "symbol": "HYPER",
+   "class": "no_local_asset",
+   "deliveries": 54,
+   "coverage": 0.9929520920688732
+  },
+  {
+   "mappings": 23,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 50,
+   "coverage": 0.9935893351006206
+  },
+  {
+   "mappings": 24,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 49,
+   "coverage": 0.9942138332717332
+  },
+  {
+   "mappings": 25,
+   "chain": "bsc",
+   "symbol": "HYPER",
+   "class": "no_local_asset",
+   "deliveries": 47,
+   "coverage": 0.9948128417215758
+  },
+  {
+   "mappings": 26,
+   "chain": "ethereum",
+   "symbol": "KII",
+   "class": "no_local_asset",
+   "deliveries": 46,
+   "coverage": 0.9953991053107835
+  },
+  {
+   "mappings": 27,
+   "chain": "base",
+   "symbol": "NES",
+   "class": "no_local_asset",
+   "deliveries": 42,
+   "coverage": 0.9959343894574513
+  },
+  {
+   "mappings": 28,
+   "chain": "bsc",
+   "symbol": "FUEL",
+   "class": "no_local_asset",
+   "deliveries": 33,
+   "coverage": 0.9963549698584045
+  },
+  {
+   "mappings": 29,
+   "chain": "bsc",
+   "symbol": "LUMIA",
+   "class": "no_local_asset",
+   "deliveries": 29,
+   "coverage": 0.9967245708168181
+  },
+  {
+   "mappings": 30,
+   "chain": "ethereum",
+   "symbol": "USDT",
+   "class": "onboardable_now",
+   "deliveries": 26,
+   "coverage": 0.9970559371933267
+  },
+  {
+   "mappings": 31,
+   "chain": "ethereum",
+   "symbol": "IKAS",
+   "class": "no_local_asset",
+   "deliveries": 22,
+   "coverage": 0.9973363241272957
+  },
+  {
+   "mappings": 32,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 19,
+   "coverage": 0.9975784764793597
+  },
+  {
+   "mappings": 33,
+   "chain": "arbitrum",
+   "symbol": "USDC",
+   "class": "onboardable_now",
+   "deliveries": 18,
+   "coverage": 0.9978078839707888
+  },
+  {
+   "mappings": 34,
+   "chain": "ethereum",
+   "symbol": "USAD",
+   "class": "needs_reference",
+   "deliveries": 16,
+   "coverage": 0.998011801740948
+  },
+  {
+   "mappings": 35,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 16,
+   "coverage": 0.9982157195111071
+  },
+  {
+   "mappings": 36,
+   "chain": "arbitrum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 14,
+   "coverage": 0.9983941475599964
+  },
+  {
+   "mappings": 37,
+   "chain": "bsc",
+   "symbol": "RDO",
+   "class": "no_local_asset",
+   "deliveries": 14,
+   "coverage": 0.9985725756088857
+  },
+  {
+   "mappings": 38,
+   "chain": "bsc",
+   "symbol": "TGT",
+   "class": "no_local_asset",
+   "deliveries": 13,
+   "coverage": 0.9987382587971401
+  },
+  {
+   "mappings": 39,
+   "chain": "base",
+   "symbol": "TIA",
+   "class": "no_local_asset",
+   "deliveries": 12,
+   "coverage": 0.9988911971247595
+  },
+  {
+   "mappings": 40,
+   "chain": "base",
+   "symbol": "USDC",
+   "class": "onboardable_now",
+   "deliveries": 11,
+   "coverage": 0.9990313905917438
+  },
+  {
+   "mappings": 41,
+   "chain": "ethereum",
+   "symbol": "TUSD",
+   "class": "needs_reference",
+   "deliveries": 7,
+   "coverage": 0.9991206046161886
+  },
+  {
+   "mappings": 42,
+   "chain": "ethereum",
+   "symbol": "USDC",
+   "class": "onboardable_now",
+   "deliveries": 7,
+   "coverage": 0.9992098186406332
+  },
+  {
+   "mappings": 43,
+   "chain": "ethereum",
+   "symbol": "ETN",
+   "class": "no_local_asset",
+   "deliveries": 7,
+   "coverage": 0.9992990326650778
+  },
+  {
+   "mappings": 44,
+   "chain": "arbitrum",
+   "symbol": "NES",
+   "class": "no_local_asset",
+   "deliveries": 6,
+   "coverage": 0.9993755018288875
+  },
+  {
+   "mappings": 45,
+   "chain": "bsc",
+   "symbol": "ETN",
+   "class": "no_local_asset",
+   "deliveries": 6,
+   "coverage": 0.9994519709926972
+  },
+  {
+   "mappings": 46,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 5,
+   "coverage": 0.9995156952958719
+  },
+  {
+   "mappings": 47,
+   "chain": "bsc",
+   "symbol": "BNB",
+   "class": "no_local_asset",
+   "deliveries": 5,
+   "coverage": 0.9995794195990467
+  },
+  {
+   "mappings": 48,
+   "chain": "ethereum",
+   "symbol": "SMOL",
+   "class": "no_local_asset",
+   "deliveries": 4,
+   "coverage": 0.9996303990415865
+  },
+  {
+   "mappings": 49,
+   "chain": "ethereum",
+   "symbol": "RE7LRT",
+   "class": "needs_reference",
+   "deliveries": 3,
+   "coverage": 0.9996686336234913
+  },
+  {
+   "mappings": 50,
+   "chain": "bsc",
+   "symbol": "BNB",
+   "class": "no_local_asset",
+   "deliveries": 3,
+   "coverage": 0.9997068682053962
+  },
+  {
+   "mappings": 51,
+   "chain": "ethereum",
+   "symbol": "USDT",
+   "class": "onboardable_now",
+   "deliveries": 2,
+   "coverage": 0.999732357926666
+  },
+  {
+   "mappings": 52,
+   "chain": "ethereum",
+   "symbol": "TIA",
+   "class": "no_local_asset",
+   "deliveries": 2,
+   "coverage": 0.999757847647936
+  },
+  {
+   "mappings": 53,
+   "chain": "base",
+   "symbol": "LUMIA",
+   "class": "no_local_asset",
+   "deliveries": 2,
+   "coverage": 0.9997833373692059
+  },
+  {
+   "mappings": 54,
+   "chain": "arbitrum",
+   "symbol": "LUMIA",
+   "class": "no_local_asset",
+   "deliveries": 2,
+   "coverage": 0.9998088270904758
+  },
+  {
+   "mappings": 55,
+   "chain": "arbitrum",
+   "symbol": "TRUMP",
+   "class": "no_local_asset",
+   "deliveries": 2,
+   "coverage": 0.9998343168117456
+  },
+  {
+   "mappings": 56,
+   "chain": "bsc",
+   "symbol": "TAIKO",
+   "class": "no_local_asset",
+   "deliveries": 2,
+   "coverage": 0.9998598065330155
+  },
+  {
+   "mappings": 57,
+   "chain": "ethereum",
+   "symbol": "ALEO",
+   "class": "no_local_asset",
+   "deliveries": 1,
+   "coverage": 0.9998725513936505
+  },
+  {
+   "mappings": 58,
+   "chain": "ethereum",
+   "symbol": "USDC",
+   "class": "onboardable_now",
+   "deliveries": 1,
+   "coverage": 0.9998852962542855
+  },
+  {
+   "mappings": 59,
+   "chain": "ethereum",
+   "symbol": "ETH",
+   "class": "no_local_asset",
+   "deliveries": 1,
+   "coverage": 0.9998980411149204
+  },
+  {
+   "mappings": 60,
+   "chain": "ethereum",
+   "symbol": "NEX",
+   "class": "onboardable_now",
+   "deliveries": 1,
+   "coverage": 0.9999107859755554
+  },
+  {
+   "mappings": 61,
+   "chain": "ethereum",
+   "symbol": "USDC",
+   "class": "onboardable_now",
+   "deliveries": 1,
+   "coverage": 0.9999235308361903
+  },
+  {
+   "mappings": 62,
+   "chain": "base",
+   "symbol": "FLT",
+   "class": "no_local_asset",
+   "deliveries": 1,
+   "coverage": 0.9999362756968253
+  },
+  {
+   "mappings": 63,
+   "chain": "base",
+   "symbol": "TRUMP",
+   "class": "no_local_asset",
+   "deliveries": 1,
+   "coverage": 0.9999490205574602
+  },
+  {
+   "mappings": 64,
+   "chain": "base",
+   "symbol": "USDC",
+   "class": "onboardable_now",
+   "deliveries": 1,
+   "coverage": 0.9999617654180951
+  },
+  {
+   "mappings": 65,
+   "chain": "arbitrum",
+   "symbol": "USDT",
+   "class": "onboardable_now",
+   "deliveries": 1,
+   "coverage": 0.9999745102787301
+  },
+  {
+   "mappings": 66,
+   "chain": "bsc",
+   "symbol": "STHYPER",
+   "class": "no_local_asset",
+   "deliveries": 1,
+   "coverage": 0.999987255139365
+  },
+  {
+   "mappings": 67,
+   "chain": "bsc",
+   "symbol": "PNDR",
+   "class": "no_local_asset",
+   "deliveries": 1,
+   "coverage": 1.0
+  }
+ ]
+}

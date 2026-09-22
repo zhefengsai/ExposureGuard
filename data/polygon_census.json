@@ -1,0 +1,57 @@
+{
+ "generated_at": "2026-08-24T14:25:44.805932Z",
+ "stack": "polygon_pos",
+ "chain_id": 1,
+ "contracts": {
+  "RootChainManagerProxy": {
+   "addr": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+   "code_len": 2949,
+   "erc1967_proxy": false,
+   "proxy_pattern": "custom: implementation() / proxyOwner()",
+   "implementation": "0xF0235dCa8fb0D3999685724dCBB9DD00c5d62DFa",
+   "proxy_owner": "0xCaf0aa768A3AE1297DF20072419Db8Bb8b5C8cEf",
+   "checkpoint_manager": "0x86E4Dc95c7FBdBf52e33D563BbDB00823894C287",
+   "state_sender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
+   "access_control": [
+    "DEFAULT_ADMIN_ROLE",
+    "MAPPER_ROLE"
+   ],
+   "has_paused": false
+  }
+ },
+ "proxy_owner_detail": {
+  "addr": "0xCaf0aa768A3AE1297DF20072419Db8Bb8b5C8cEf",
+  "code_len": 11395,
+  "is_openzeppelin_timelock": true,
+  "roles_present": [
+   "PROPOSER_ROLE",
+   "EXECUTOR_ROLE",
+   "TIMELOCK_ADMIN_ROLE"
+  ],
+  "roles_absent": [
+   "CANCELLER_ROLE"
+  ],
+  "getMinDelay": 0,
+  "proposer_executor": {
+   "addr": "0xFa7D2a996aC6350f4b56C043112Da0366a59b74c",
+   "kind": "Safe",
+   "threshold": 5,
+   "owners_n": 9,
+   "has_PROPOSER_ROLE": true,
+   "has_EXECUTOR_ROLE": true
+  },
+  "timelock_admin_is_self": true
+ },
+ "measured_findings": [
+  "The upgrade path runs through a real OpenZeppelin TimelockController -- the three role constants are present -- whose getMinDelay() is zero. The delay a timelock exists to impose is not configured, so a queued upgrade can execute in the same block.",
+  "The bridge exposes no pause and no per-message admission parameter; the access-control surface is DEFAULT_ADMIN_ROLE and MAPPER_ROLE.",
+  "Verification is by checkpoint: the RootChainManager reads a checkpoint manager fed by the validator set, and exits are proven against it.",
+  "PROPOSER_ROLE and EXECUTOR_ROLE are both held by Safe 0xFa7D2a99\u2026 (5-of-9). TIMELOCK_ADMIN_ROLE is the Timelock itself (standard OZ). CheckpointManager.owner() is the same Timelock.",
+  "getMinDelay()=0 is current live configuration (read 2026-08-24), not merely an unset storage slot \u2014 a queued upgrade can execute in the same block."
+ ],
+ "verdict_draft": "NO-POSITION",
+ "verdict_reasoning": "No configurable parameter gates inbound value per message, so there is nowhere to install a graduated bound. The zero-delay timelock is a separate observation about the upgrade path rather than the reason for the verdict.",
+ "curated_still_todo": [],
+ "verdict": "NO-POSITION",
+ "caveat": "Validator/Safe party-level overlap not address-tested (Heimdall set not on L1 as EOAs)."
+}

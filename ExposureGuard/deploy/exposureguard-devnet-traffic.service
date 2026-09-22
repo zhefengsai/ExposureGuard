@@ -1,0 +1,12 @@
+[Unit]
+Description=Exercise one ExposureGuard message on the local operational devnet
+After=exposureguard-devnet.service
+Requires=exposureguard-devnet.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/exposureguard/ExposureGuard/control
+ExecStart=/usr/bin/python3 devnet_traffic.py
+TimeoutStartSec=2min
+NoNewPrivileges=true
+PrivateTmp=true

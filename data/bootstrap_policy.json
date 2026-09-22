@@ -1,0 +1,216 @@
+{
+ "schema": 1,
+ "B_usd": 1233000.0,
+ "universe_routes": 116,
+ "cold_route": "bc808c98bea0a097346273a9fd7a5b231fc2d889",
+ "cold_usd": 615034.0,
+ "cold_train_usd": 6715.439807557187,
+ "cold_train_share": 0.0005923255920339162,
+ "cold_collateral_share": 0.0,
+ "alpha_reserved_needed_share": 0.6235137875101379,
+ "sybil_count": 10,
+ "gap_hours": 6.0,
+ "total_collateral_usd": 9868141.611746829,
+ "clean_admitted_pct": {
+  "0.0": 100.0,
+  "0.4": 100.0,
+  "0.8": 96.5
+ },
+ "drain_admitted_pct": {
+  "0.0": 50.7,
+  "0.4": 75.8,
+  "0.8": 84.4
+ },
+ "mint_cost": {
+  "0.05": {
+   "flat_floor_usd": 391.4285714285715,
+   "collateral_to_match_usd": 78318.58422021293
+  },
+  "0.25": {
+   "flat_floor_usd": 1957.142857142857,
+   "collateral_to_match_usd": 78318.58422021293
+  }
+ },
+ "rows": [
+  {
+   "policy": "earned",
+   "kind": "earned",
+   "beta": 0.0,
+   "alpha": 0.0,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 1.25
+  },
+  {
+   "policy": "earned",
+   "kind": "earned",
+   "beta": 0.0,
+   "alpha": 0.4,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 0.75
+  },
+  {
+   "policy": "earned",
+   "kind": "earned",
+   "beta": 0.0,
+   "alpha": 0.8,
+   "cold_wait_h": null,
+   "cold_settles": false,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 1,
+   "sybil_reachable_x_B": 0.24999999999999994
+  },
+  {
+   "policy": "flat 0.05",
+   "kind": "flat",
+   "beta": 0.05,
+   "alpha": 0.0,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 1.25
+  },
+  {
+   "policy": "flat 0.05",
+   "kind": "flat",
+   "beta": 0.05,
+   "alpha": 0.4,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 0.751984126984127
+  },
+  {
+   "policy": "flat 0.05",
+   "kind": "flat",
+   "beta": 0.05,
+   "alpha": 0.8,
+   "cold_wait_h": null,
+   "cold_settles": false,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 1,
+   "sybil_reachable_x_B": 0.2539682539682539
+  },
+  {
+   "policy": "flat 0.25",
+   "kind": "flat",
+   "beta": 0.25,
+   "alpha": 0.0,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 1.25
+  },
+  {
+   "policy": "flat 0.25",
+   "kind": "flat",
+   "beta": 0.25,
+   "alpha": 0.4,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 0.759920634920635
+  },
+  {
+   "policy": "flat 0.25",
+   "kind": "flat",
+   "beta": 0.25,
+   "alpha": 0.8,
+   "cold_wait_h": null,
+   "cold_settles": false,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 1,
+   "sybil_reachable_x_B": 0.2698412698412698
+  },
+  {
+   "policy": "collateral 0.05",
+   "kind": "collateral",
+   "beta": 0.05,
+   "alpha": 0.0,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 1.25
+  },
+  {
+   "policy": "collateral 0.05",
+   "kind": "collateral",
+   "beta": 0.05,
+   "alpha": 0.4,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 0.75
+  },
+  {
+   "policy": "collateral 0.05",
+   "kind": "collateral",
+   "beta": 0.05,
+   "alpha": 0.8,
+   "cold_wait_h": null,
+   "cold_settles": false,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 1,
+   "sybil_reachable_x_B": 0.24999999999999994
+  },
+  {
+   "policy": "collateral 0.25",
+   "kind": "collateral",
+   "beta": 0.25,
+   "alpha": 0.0,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 1.25
+  },
+  {
+   "policy": "collateral 0.25",
+   "kind": "collateral",
+   "beta": 0.25,
+   "alpha": 0.4,
+   "cold_wait_h": 0.0,
+   "cold_settles": true,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 0,
+   "sybil_reachable_x_B": 0.75
+  },
+  {
+   "policy": "collateral 0.25",
+   "kind": "collateral",
+   "beta": 0.25,
+   "alpha": 0.8,
+   "cold_wait_h": null,
+   "cold_settles": false,
+   "deferral_rate": 0.0,
+   "p95_delay_h": 0.0,
+   "undelivered_7d": 1,
+   "sybil_reachable_x_B": 0.24999999999999994
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "completed_at": "2026-08-26T01:29:52.922033+00:00",
+  "network": "sepolia_to_base_sepolia",
+  "workload": "author_operated_fault_sequence",
+  "fresh_destination_route": "0x2d3720dfd0c3f37896be4a206838382e419bc032",
+  "checks": {
+    "metered_but_unpriced_rejected": true,
+    "budget_overflow_rejected": true,
+    "same_message_admitted_after_refill": true,
+    "delivered_message_replay_rejected": true
+  },
+  "refill_wait_seconds": 210,
+  "message_ids": {
+    "unpriced": "0xbccc9a85cd01bbc45e2cae482f859b80c1bae26c0e5bbbb485eb7dde9ac27684",
+    "overflow_refill": "0xb85551d5bf2eb3e6584f5719d78b17bec12b3d06b7db0206ebb41319cf35be65"
+  },
+  "transactions": {
+    "unpriced_revert": "0x7460ca90a3eb247a5a6274e97bf9f4d33e32eae74ea60105f4c0deb671575a8d",
+    "overflow_revert": "0x2039a14d4975d4d04a14077b0daee584f3bdf2c1e195b0662f107b91c7034808",
+    "refill_success": "0xb7cd007607b7040301ddd4852dd88f008aa28d3362df348e9b92059075111c11",
+    "replay_revert": "0xbc66bf4938a6f598f5c7ac8762541212c9493181a53bdf2d32563ce0745531b6"
+  }
+}

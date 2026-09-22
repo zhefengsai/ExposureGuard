@@ -1,0 +1,9 @@
+{
+ "baseline_gas": 156641,
+ "with_guard_gas": 194640,
+ "overhead_gas": 37999,
+ "overhead_pct": 24,
+ "fork_block": 25137902,
+ "default_ism": "0xDd46ED0818EC4823BAf4f8F190B400f73F51e6Cc",
+ "baseline": "deployed Hyperlane default ISM"
+}

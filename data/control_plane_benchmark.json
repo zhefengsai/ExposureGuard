@@ -1,0 +1,170 @@
+{
+  "generated_at": "2026-08-26T21:34:29.444127+00:00",
+  "benchmark": "frozen four-chain trace -> recommend -> offline audit",
+  "runs": 20,
+  "warmup_runs": 2,
+  "events": 65427,
+  "chains": 4,
+  "covered_routes": 258,
+  "parameters": {
+    "alpha": 0.8,
+    "headroom": 1.07,
+    "lookback_days": 60
+  },
+  "host": {
+    "cpu": "Apple M2 Pro",
+    "model": "Mac14,9",
+    "memory_bytes": 17179869184,
+    "machine": "arm64",
+    "python": "3.14.6"
+  },
+  "timing": {
+    "load_ms": {
+      "median_ms": 333.864,
+      "p95_ms": 404.528,
+      "min_ms": 312.835,
+      "max_ms": 456.119
+    },
+    "recommend_ms": {
+      "median_ms": 30.303,
+      "p95_ms": 32.817,
+      "min_ms": 27.766,
+      "max_ms": 38.776
+    },
+    "audit_ms": {
+      "median_ms": 0.04,
+      "p95_ms": 0.048,
+      "min_ms": 0.033,
+      "max_ms": 0.049
+    },
+    "end_to_end_ms": {
+      "median_ms": 365.147,
+      "p95_ms": 435.199,
+      "min_ms": 341.891,
+      "max_ms": 488.297
+    }
+  },
+  "audit_scope": "offline recommendation invariants; no deployment snapshot",
+  "samples_ms": [
+    {
+      "load_ms": 456.119,
+      "recommend_ms": 32.139,
+      "audit_ms": 0.039,
+      "end_to_end_ms": 488.297
+    },
+    {
+      "load_ms": 349.926,
+      "recommend_ms": 29.66,
+      "audit_ms": 0.043,
+      "end_to_end_ms": 379.629
+    },
+    {
+      "load_ms": 326.853,
+      "recommend_ms": 28.938,
+      "audit_ms": 0.036,
+      "end_to_end_ms": 355.827
+    },
+    {
+      "load_ms": 327.227,
+      "recommend_ms": 28.298,
+      "audit_ms": 0.035,
+      "end_to_end_ms": 355.56
+    },
+    {
+      "load_ms": 325.034,
+      "recommend_ms": 27.766,
+      "audit_ms": 0.033,
+      "end_to_end_ms": 352.834
+    },
+    {
+      "load_ms": 351.89,
+      "recommend_ms": 29.115,
+      "audit_ms": 0.049,
+      "end_to_end_ms": 381.054
+    },
+    {
+      "load_ms": 316.658,
+      "recommend_ms": 28.404,
+      "audit_ms": 0.035,
+      "end_to_end_ms": 345.097
+    },
+    {
+      "load_ms": 329.765,
+      "recommend_ms": 30.357,
+      "audit_ms": 0.036,
+      "end_to_end_ms": 360.157
+    },
+    {
+      "load_ms": 315.714,
+      "recommend_ms": 30.548,
+      "audit_ms": 0.043,
+      "end_to_end_ms": 346.305
+    },
+    {
+      "load_ms": 339.098,
+      "recommend_ms": 32.083,
+      "audit_ms": 0.04,
+      "end_to_end_ms": 371.222
+    },
+    {
+      "load_ms": 345.501,
+      "recommend_ms": 32.152,
+      "audit_ms": 0.04,
+      "end_to_end_ms": 377.693
+    },
+    {
+      "load_ms": 373.481,
+      "recommend_ms": 31.039,
+      "audit_ms": 0.042,
+      "end_to_end_ms": 404.562
+    },
+    {
+      "load_ms": 404.528,
+      "recommend_ms": 30.629,
+      "audit_ms": 0.042,
+      "end_to_end_ms": 435.199
+    },
+    {
+      "load_ms": 333.526,
+      "recommend_ms": 32.817,
+      "audit_ms": 0.037,
+      "end_to_end_ms": 366.379
+    },
+    {
+      "load_ms": 331.111,
+      "recommend_ms": 30.019,
+      "audit_ms": 0.036,
+      "end_to_end_ms": 361.167
+    },
+    {
+      "load_ms": 352.941,
+      "recommend_ms": 31.423,
+      "audit_ms": 0.041,
+      "end_to_end_ms": 384.405
+    },
+    {
+      "load_ms": 334.202,
+      "recommend_ms": 29.67,
+      "audit_ms": 0.042,
+      "end_to_end_ms": 363.915
+    },
+    {
+      "load_ms": 338.921,
+      "recommend_ms": 38.776,
+      "audit_ms": 0.048,
+      "end_to_end_ms": 377.745
+    },
+    {
+      "load_ms": 330.092,
+      "recommend_ms": 30.25,
+      "audit_ms": 0.035,
+      "end_to_end_ms": 360.377
+    },
+    {
+      "load_ms": 312.835,
+      "recommend_ms": 29.018,
+      "audit_ms": 0.037,
+      "end_to_end_ms": 341.891
+    }
+  ]
+}

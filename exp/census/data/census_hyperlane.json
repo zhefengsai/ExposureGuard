@@ -1,0 +1,270 @@
+{
+  "stack": "hyperlane",
+  "chain": "ethereum",
+  "chain_id": 1,
+  "block": 25811875,
+  "generated_at": "2026-08-23T13:34:23Z",
+  "measurement_depth": "imported",
+  "population": {
+    "type": "warp_route_router",
+    "count": 152,
+    "source": "data/hl_ism_ethereum.json",
+    "note": "Unique routers from hyperlane registry; ISM via interchainSecurityModule()"
+  },
+  "shared_verification_root": {
+    "present": true,
+    "mode": "default_inheritance",
+    "roots": [
+      {
+        "id": "mailbox_default_ism",
+        "label": "Mailbox defaultIsm (0x10cf42691db303ff44f35c9ced2cd1283a93e046)",
+        "members": 116,
+        "share": 0.7837837837837838
+      },
+      {
+        "id": "0xee3a7cbf5a28faa173d346a4b7dd4904218710d4",
+        "label": "0xee3a7cbf5a28faa173d346a4b7dd4904218710d4",
+        "members": 5,
+        "share": 0.033783783783783786
+      },
+      {
+        "id": "0xcb0407ec7004e9017ead0975d2358c7acb862a08",
+        "label": "0xcb0407ec7004e9017ead0975d2358c7acb862a08",
+        "members": 2,
+        "share": 0.013513513513513514
+      },
+      {
+        "id": "0xe5072fc58d92adc51f966961bc193a3c06f8df9d",
+        "label": "0xe5072fc58d92adc51f966961bc193a3c06f8df9d",
+        "members": 2,
+        "share": 0.013513513513513514
+      },
+      {
+        "id": "0xd26e884f265f2b692cdfaf5ad42f37036b0d0b7e",
+        "label": "0xd26e884f265f2b692cdfaf5ad42f37036b0d0b7e",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x3299285f78c0f3223c2ca016ae496210c3fb78ab",
+        "label": "0x3299285f78c0f3223c2ca016ae496210c3fb78ab",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x02ec3649bb81ce42879ecf98c68f3ae9015124b8",
+        "label": "0x02ec3649bb81ce42879ecf98c68f3ae9015124b8",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x640887a9ba3a9c53ed27d0f7e8246a4f933f3424",
+        "label": "0x640887a9ba3a9c53ed27d0f7e8246a4f933f3424",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0xf2044cf2cf21cc0213201bc1e6a031c71c425971",
+        "label": "0xf2044cf2cf21cc0213201bc1e6a031c71c425971",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x3883cfdba5458475440da5968a564e4bdea86f78",
+        "label": "0x3883cfdba5458475440da5968a564e4bdea86f78",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x6912d467fb123425045f9e967efd7ade19695739",
+        "label": "0x6912d467fb123425045f9e967efd7ade19695739",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x3dc99b9a3803a39b1f8689b2acc7187580c0d78f",
+        "label": "0x3dc99b9a3803a39b1f8689b2acc7187580c0d78f",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x45d883250de9d510ee2d674e621bf5636d90fe7d",
+        "label": "0x45d883250de9d510ee2d674e621bf5636d90fe7d",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0xa09c22474a13b5299050b92d489fbc930954678c",
+        "label": "0xa09c22474a13b5299050b92d489fbc930954678c",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x84f19416c7e73983406bf23d2958118a99ae412a",
+        "label": "0x84f19416c7e73983406bf23d2958118a99ae412a",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x69d39cd0b60d47460f30f0bd5200f9c46e924ce1",
+        "label": "0x69d39cd0b60d47460f30f0bd5200f9c46e924ce1",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x9c764df6bdd6b716cfadeaa348e1db146694f67f",
+        "label": "0x9c764df6bdd6b716cfadeaa348e1db146694f67f",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0xa23b481b609cbb4c2589d32c4d3080a90926d95f",
+        "label": "0xa23b481b609cbb4c2589d32c4d3080a90926d95f",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0xedcbaa585fd0f80f20073f9958246476466205b8",
+        "label": "0xedcbaa585fd0f80f20073f9958246476466205b8",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x7a576bb5291567cfdbb4585b1911cf7c9891ea07",
+        "label": "0x7a576bb5291567cfdbb4585b1911cf7c9891ea07",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x8c8d831e1e879604b4b304a2c951b8aee3ab3a23",
+        "label": "0x8c8d831e1e879604b4b304a2c951b8aee3ab3a23",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x103f0364b4b397808003eff122e1003eb850a357",
+        "label": "0x103f0364b4b397808003eff122e1003eb850a357",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x331f7e25c43be7705535e9784360ac900870938e",
+        "label": "0x331f7e25c43be7705535e9784360ac900870938e",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x02f02a24dd6135d7d4ad15f42b16d7f5f3a16421",
+        "label": "0x02f02a24dd6135d7d4ad15f42b16d7f5f3a16421",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x10eddcdde26c705b3d79b60286836485b8df9d8c",
+        "label": "0x10eddcdde26c705b3d79b60286836485b8df9d8c",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0xa4854a28039ea176fbe80158ab400e717c36539c",
+        "label": "0xa4854a28039ea176fbe80158ab400e717c36539c",
+        "members": 1,
+        "share": 0.006756756756756757
+      },
+      {
+        "id": "0x2dbe8ac257192a3bc72c448ba434ce11dde8c83a",
+        "label": "0x2dbe8ac257192a3bc72c448ba434ce11dde8c83a",
+        "members": 1,
+        "share": 0.006756756756756757
+      }
+    ]
+  },
+  "silent_inheritance": {
+    "applicable": true,
+    "predicate": "interchainSecurityModule() == address(0)",
+    "count": 116,
+    "share": 0.7837837837837838,
+    "note": "4 RPC failures excluded from denominator"
+  },
+  "controls": [
+    {
+      "name": "PausableIsm",
+      "placement": "destination",
+      "scope": "per_root",
+      "automatic": false,
+      "on_path_under_Fs": true,
+      "active": true,
+      "note": "Binary manual pause on default ISM aggregation"
+    },
+    {
+      "name": "HyperlaneRateLimitIsm",
+      "placement": "destination",
+      "scope": "per_route",
+      "automatic": true,
+      "on_path_under_Fs": true,
+      "active": false,
+      "note": "0/89 ISMs with token bucket on ethereum"
+    }
+  ],
+  "detection_gap": {
+    "bound": "unbounded",
+    "dest_auto_per_root_bound": false,
+    "pause_only": true,
+    "formula": "Under default ISM: admit = full stock during [t0,t1] if operator does not pause",
+    "note": "Per-route automatic limits do not compose to per-root bound"
+  },
+  "separability": "SEPARABLE",
+  "value_at_risk_usd": {
+    "strict": 14551184.85012184,
+    "source": "data/stock_multi.json (4-chain collateral on default ISM routes)",
+    "note": "ethereum slice $9,868,142"
+  },
+  "evidence": [
+    "data/hl_ism_ethereum.json",
+    "data/stock_multi.json",
+    "exp/separability.json"
+  ],
+  "coverage": {
+    "queried": 152,
+    "resolved": 148,
+    "failed": 4,
+    "failed_share": 0.02631578947368421
+  },
+  "extras": {
+    "chains_measured": [
+      "ethereum",
+      "base",
+      "arbitrum",
+      "bsc"
+    ],
+    "default_ism": "0x10cf42691db303ff44f35c9ced2cd1283a93e046",
+    "distinct_custom_isms": 26,
+    "ism_cluster_top5": [
+      {
+        "ism": "0xee3a7cbf5a28faa173d346a4b7dd4904218710d4",
+        "routes": 5
+      },
+      {
+        "ism": "0xcb0407ec7004e9017ead0975d2358c7acb862a08",
+        "routes": 2
+      },
+      {
+        "ism": "0xe5072fc58d92adc51f966961bc193a3c06f8df9d",
+        "routes": 2
+      },
+      {
+        "ism": "0xd26e884f265f2b692cdfaf5ad42f37036b0d0b7e",
+        "routes": 1
+      },
+      {
+        "ism": "0x3299285f78c0f3223c2ca016ae496210c3fb78ab",
+        "routes": 1
+      }
+    ]
+  },
+  "pattern_match": {
+    "SR": true,
+    "SI_or_mandatory": true,
+    "no_dest_auto_per_root_bound": true
+  }
+}
