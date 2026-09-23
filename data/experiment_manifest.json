@@ -29,6 +29,7 @@
     "price_coverage_curve.json": "c846c9cfbabda6d10fabc153f8dbfdeecd01af503600a58513b2334228fdc2b2",
     "burst_envelope.json": "a0197ffeceaaa79b98ae877a4e6277ae0860375390647f7ca7f390723897bc96",
     "pertoken_baseline.json": "49b3cc9edb1286e08bf0ff38a6121cc6c1be9b7e408faf3dc993851bc8d45108",
-    "matched_availability.json": "fab685235c0518ff90c78c4588e5a7458e4cc989263ab5a6329db513b3ea7f0f"
+    "matched_availability.json": "adadce284492ce09aac56f0034a6eb9b3b9fc1f6516b53f89ac55338fd5a2022",
+    "rolling_matched.json": "bc9cedbefd29144dec5cdb5d3731913abd6ed19dd9f4dbf51436a888c14f74a9"
   }
 }

@@ -66,7 +66,8 @@ correlated demand removes the benefit of aggregation.
 |---|---|---|
 | Aggregate budget and pause comparison | `sim3.py`, `fig1.py` | `sim3.json`, `fig/fig_gap_*.{png,pdf}` |
 | Per-route and per-token baselines | `baselines.py`, `pertoken_baseline.py` | `baselines.json`, `pertoken_baseline.json` |
-| Common training availability targets with atomic held-out replay | `matched_availability.py` | `matched_availability.json`, `fig/fig_matched_availability.{png,pdf}` |
+| Common training availability targets, including coordinated token partitions | `matched_availability.py` | `matched_availability.json`, `fig/fig_matched_availability.{png,pdf}` |
+| Rolling-origin matched training targets | `rolling_matched.py` | `rolling_matched.json` |
 | Oracle detector crossover | `detector_baseline.py` | `detector_baseline.json`, `fig/fig_detector.*` |
 | Correlated-demand generalization | `synth_generalization.py` | `synth_generalization.json`, `fig/fig_synth_*.{png,pdf}` |
 | Peak and cold-route sensitivity | `peak_bootstrap.py`, `bootstrap_policy.py` | `peak_bootstrap.json`, `bootstrap_policy.json` |
@@ -98,6 +99,14 @@ groups use frozen symbol labels. The older `pertoken_baseline.py` reports
 full-trace peak-sizing diagnostics with legacy partial-credit semantics;
 its availability fields must not be interpreted as the new atomic replay.
 The fixed-grid study is retrospective and was not preregistered.
+The coordinated per-token policies divide one chosen root budget by training
+token usage or peak, without borrowing capacity across tokens. At the guard's
+$2.16M six-hour envelope, peak-proportional token caps serve only 93.7% of
+training value immediately. They need a $2.88M envelope to meet the same
+100% training target. Four overlapping rolling-origin checks temper this
+result: independent per-token caps select a smaller envelope in the last two
+windows. These are not independent trials or a population confidence bound.
+Run `python3 exp/rolling_matched.py` to reproduce them.
 
 ### RQ2: What availability does containment cost?
 
@@ -194,7 +203,8 @@ make data-check
 
 The final `data-check` detects accidental drift in paper-critical artifacts.
 The calibration order and frozen settings are documented in
-`exp/oos_calibrate.py` and `exp/matched_availability.py`.
+`exp/oos_calibrate.py`, `exp/matched_availability.py`, and
+`exp/rolling_matched.py`.
 
 ## Optional network-dependent reproduction
 
@@ -238,10 +248,10 @@ machine-specific path is included in this repository.
 - Cross-stack results distinguish on-chain evidence from verified-source
   architecture and do not estimate industry prevalence.
 
-The revised paper corresponds to release `v1.1.0-paper`; the earlier
+The revised paper corresponds to release `v1.2.0-paper`; the earlier
 `v1.0.0-paper` remains available for comparison. The experiment manifest now
-includes 29 artifacts, including both the historical sizing baseline and the
-new common-target comparison.
+includes 30 artifacts, including the historical sizing baseline, common-target
+comparison, and rolling-origin check.
 
 Run `make data-check` before and after regeneration. Recollecting external
 price quotes can produce small differences because the quoted price is fetched

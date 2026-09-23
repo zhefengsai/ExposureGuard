@@ -25,6 +25,7 @@ FILES = [
     "peak_bootstrap.json", "census_evidence.json",
     "price_coverage_curve.json", "burst_envelope.json",
     "pertoken_baseline.json", "matched_availability.json",
+    "rolling_matched.json",
 ]
 
 

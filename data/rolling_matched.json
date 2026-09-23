@@ -1,0 +1,332 @@
+{
+  "schema": 1,
+  "input_sha256": "09a379c69e32570f90a16ed21263352788c53d236c4c959f23600fc99f3a3b65",
+  "windows": [
+    {
+      "start_day": 0,
+      "train_start_utc": "2026-04-24T16:58:11+00:00",
+      "test_start_utc": "2026-06-23T16:58:11+00:00",
+      "train_messages": 4422,
+      "test_messages": 606,
+      "policies": {
+        "guard": {
+          "feasible_on_grid": true,
+          "multiple": 1.25,
+          "six_hour_envelope_usd": 1800873.8543735978,
+          "heldout": {
+            "messages": 606,
+            "value_usd": 1787403.6447226303,
+            "immediate_messages": 606,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.000000000000001,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "per_token": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 2814021.5786680896,
+          "heldout": {
+            "messages": 606,
+            "value_usd": 1787403.6447226303,
+            "immediate_messages": 600,
+            "deferred_on_arrival": 6,
+            "immediate_message_fraction": 0.9900990099009901,
+            "immediate_value_fraction": 0.9975951570250335,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 6,
+            "oversized_messages": 6,
+            "delivered_value_fraction": 0.9975951570250323,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "coordinated_token_peak": {
+          "feasible_on_grid": true,
+          "multiple": 2.0,
+          "six_hour_envelope_usd": 2881398.1669977563,
+          "heldout": {
+            "messages": 606,
+            "value_usd": 1787403.6447226303,
+            "immediate_messages": 600,
+            "deferred_on_arrival": 6,
+            "immediate_message_fraction": 0.9900990099009901,
+            "immediate_value_fraction": 0.9975951570250335,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 6,
+            "oversized_messages": 6,
+            "delivered_value_fraction": 0.9975951570250323,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "pooled": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 1440699.0834988782,
+          "heldout": {
+            "messages": 606,
+            "value_usd": 1787403.6447226303,
+            "immediate_messages": 606,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.000000000000001,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "start_day": 14,
+      "train_start_utc": "2026-05-08T16:58:11+00:00",
+      "test_start_utc": "2026-07-07T16:58:11+00:00",
+      "train_messages": 4711,
+      "test_messages": 341,
+      "policies": {
+        "guard": {
+          "feasible_on_grid": true,
+          "multiple": 1.25,
+          "six_hour_envelope_usd": 1470005.623516603,
+          "heldout": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 340,
+            "deferred_on_arrival": 1,
+            "immediate_message_fraction": 0.9970674486803519,
+            "immediate_value_fraction": 0.6053447349689691,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.6053447349689693,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "per_token": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 2380370.548635829,
+          "heldout": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 315,
+            "deferred_on_arrival": 26,
+            "immediate_message_fraction": 0.9237536656891495,
+            "immediate_value_fraction": 0.4758303981447865,
+            "delayed_then_delivered": 19,
+            "undelivered_tail": 7,
+            "oversized_messages": 7,
+            "delivered_value_fraction": 0.4777917120131402,
+            "p95_positive_delay_h": 120.29666666666667
+          }
+        },
+        "coordinated_token_peak": {
+          "feasible_on_grid": true,
+          "multiple": 2.0,
+          "six_hour_envelope_usd": 2352008.9976265645,
+          "heldout": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 315,
+            "deferred_on_arrival": 26,
+            "immediate_message_fraction": 0.9237536656891495,
+            "immediate_value_fraction": 0.4758303981447865,
+            "delayed_then_delivered": 19,
+            "undelivered_tail": 7,
+            "oversized_messages": 7,
+            "delivered_value_fraction": 0.4777917120131402,
+            "p95_positive_delay_h": 122.13
+          }
+        },
+        "pooled": {
+          "feasible_on_grid": true,
+          "multiple": 0.75,
+          "six_hour_envelope_usd": 882003.3741099618,
+          "heldout": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 341,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000004,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "start_day": 28,
+      "train_start_utc": "2026-05-22T16:58:11+00:00",
+      "test_start_utc": "2026-07-21T16:58:11+00:00",
+      "train_messages": 2839,
+      "test_messages": 437,
+      "policies": {
+        "guard": {
+          "feasible_on_grid": true,
+          "multiple": 4.0,
+          "six_hour_envelope_usd": 3224264.453314331,
+          "heldout": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 437,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999994,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "per_token": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 2571558.733768114,
+          "heldout": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 422,
+            "deferred_on_arrival": 15,
+            "immediate_message_fraction": 0.965675057208238,
+            "immediate_value_fraction": 0.9921450287443413,
+            "delayed_then_delivered": 12,
+            "undelivered_tail": 3,
+            "oversized_messages": 3,
+            "delivered_value_fraction": 0.9946913639419751,
+            "p95_positive_delay_h": 17.21
+          }
+        },
+        "coordinated_token_peak": {
+          "feasible_on_grid": true,
+          "multiple": 4.0,
+          "six_hour_envelope_usd": 3224264.453314331,
+          "heldout": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 427,
+            "deferred_on_arrival": 10,
+            "immediate_message_fraction": 0.977116704805492,
+            "immediate_value_fraction": 0.9941027233800347,
+            "delayed_then_delivered": 8,
+            "undelivered_tail": 2,
+            "oversized_messages": 2,
+            "delivered_value_fraction": 0.9968115609938681,
+            "p95_positive_delay_h": 45.833333333333336
+          }
+        },
+        "pooled": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 806066.1133285827,
+          "heldout": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 437,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999994,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "start_day": 42,
+      "train_start_utc": "2026-06-05T16:58:11+00:00",
+      "test_start_utc": "2026-08-04T16:58:11+00:00",
+      "train_messages": 2012,
+      "test_messages": 462,
+      "policies": {
+        "guard": {
+          "feasible_on_grid": true,
+          "multiple": 4.0,
+          "six_hour_envelope_usd": 3224264.453314331,
+          "heldout": {
+            "messages": 462,
+            "value_usd": 1017303.7168675079,
+            "immediate_messages": 462,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000002,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "per_token": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 2254680.025267926,
+          "heldout": {
+            "messages": 462,
+            "value_usd": 1017303.7168675079,
+            "immediate_messages": 460,
+            "deferred_on_arrival": 2,
+            "immediate_message_fraction": 0.9956709956709957,
+            "immediate_value_fraction": 0.999902011707063,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 2,
+            "oversized_messages": 2,
+            "delivered_value_fraction": 0.9999020117070628,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "coordinated_token_peak": {
+          "feasible_on_grid": true,
+          "multiple": 3.0,
+          "six_hour_envelope_usd": 2418198.3399857483,
+          "heldout": {
+            "messages": 462,
+            "value_usd": 1017303.7168675079,
+            "immediate_messages": 460,
+            "deferred_on_arrival": 2,
+            "immediate_message_fraction": 0.9956709956709957,
+            "immediate_value_fraction": 0.999902011707063,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 2,
+            "oversized_messages": 2,
+            "delivered_value_fraction": 0.9999020117070628,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "pooled": {
+          "feasible_on_grid": true,
+          "multiple": 1.0,
+          "six_hour_envelope_usd": 806066.1133285827,
+          "heldout": {
+            "messages": 462,
+            "value_usd": 1017303.7168675079,
+            "immediate_messages": 462,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000002,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "policy": "smallest fixed-grid multiple attaining 99% immediate message and value service on each training prefix; no held-out selection",
+  "limits": "overlapping rolling windows on one chain; historical, not prospective; token symbol groups; 7-day retry tail; no causal or population interval"
+}

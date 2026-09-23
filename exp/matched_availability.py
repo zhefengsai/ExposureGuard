@@ -23,7 +23,8 @@ HERE = Path(__file__).resolve().parent
 D = 86400.0
 GRID = (0.25, 0.5, 0.75, 1.0, 1.07, 1.25, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0)
 TARGETS = (0.95, 0.99, 1.0)
-POLICIES = ("guard", "per_token", "per_route", "pooled")
+POLICIES = ("guard", "per_token", "per_route", "pooled",
+            "coordinated_token_usage", "coordinated_token_peak")
 
 
 def load(chain):
@@ -38,13 +39,26 @@ def load(chain):
 def fit(events, policy, multiple):
     daily = defaultdict(lambda: defaultdict(float))
     use = defaultdict(float)
+    root_daily = defaultdict(float)
     for e in events:
-        group = e["symbol"] if policy == "per_token" else e["route"]
+        group = e["symbol"] if policy in ("per_token", "coordinated_token_usage",
+                                          "coordinated_token_peak") else e["route"]
         if policy in ("guard", "pooled"):
             group = "root"
         daily[group][int(e["ts"] // D)] += e["usd"]
+        root_daily[int(e["ts"] // D)] += e["usd"]
         use[e["route"]] += e["usd"]
     caps = {g: multiple * max(days.values()) for g, days in daily.items()}
+    if policy.startswith("coordinated_token_"):
+        budget = multiple * max(root_daily.values())
+        basis = ({g: sum(days.values()) for g, days in daily.items()}
+                 if policy.endswith("usage") else
+                 {g: max(days.values()) for g, days in daily.items()})
+        denominator = sum(basis.values())
+        caps = {g: budget * v / denominator for g, v in basis.items()}
+        # Keep the intended common envelope exact despite floating-point sums.
+        last = next(reversed(caps))
+        caps[last] += budget - sum(caps.values())
     total = sum(use.values())
     # Match the contract's basis-point weights, rounding down, not floating
     # renormalization. Unallocated reservation is not given to surplus.
@@ -69,7 +83,8 @@ class Ledger:
             return (e["route"], "__surplus__")
         if self.policy == "pooled":
             return ("root",)
-        return (e["symbol"] if self.policy == "per_token" else e["route"],)
+        return (e["symbol"] if self.policy == "per_token" or
+                self.policy.startswith("coordinated_token_") else e["route"],)
 
     def possible(self, e):
         return sum(self.caps.get(g, 0.0) for g in self.groups(e)) + 1e-8 >= e["usd"]
@@ -199,7 +214,7 @@ def plot(result):
     import matplotlib.pyplot as plt
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.55), constrained_layout=True)
     names = {"guard": "ExposureGuard", "per_token": "Per-token", "per_route": "Per-route", "pooled": "Pooled (no floors)"}
-    for policy, color in zip(POLICIES, ("#1764ab", "#b24b16", "#755299", "#39794b")):
+    for policy, color in zip(POLICIES[:4], ("#1764ab", "#b24b16", "#755299", "#39794b")):
         curve = result["curves"][policy]
         for ax, metric in zip(axes, ("immediate_value_fraction", "immediate_message_fraction")):
             ax.plot([100*r["test"][metric] for r in curve],

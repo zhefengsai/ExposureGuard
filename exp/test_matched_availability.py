@@ -40,6 +40,23 @@ class AtomicReplayTests(unittest.TestCase):
         self.assertTrue(ledger.admit(event(0, 20, route="b", symbol="U"), 0))
         self.assertFalse(ledger.admit(event(0, 1), 0))
 
+    def test_coordinated_partitions_share_the_same_total_bound(self):
+        events = [event(0, 10), event(0, 5, route="b", symbol="U"),
+                  event(D, 4), event(D, 20, route="b", symbol="U")]
+        for policy in ("coordinated_token_usage", "coordinated_token_peak"):
+            cfg = fit(events, policy, 1.5)
+            self.assertAlmostEqual(cfg["budget"], 1.5 * 24)
+            self.assertAlmostEqual(sum(cfg["caps"].values()), cfg["budget"])
+            self.assertEqual(set(cfg["caps"]), {"T", "U"})
+
+    def test_coordinated_partition_does_not_borrow_from_other_token(self):
+        cfg = fit([event(0, 10), event(0, 10, route="b", symbol="U")],
+                  "coordinated_token_peak", 1)
+        ledger = Ledger(cfg, 0)
+        self.assertTrue(ledger.admit(event(0, 10), 0))
+        self.assertFalse(ledger.admit(event(0, 1), 0))
+        self.assertTrue(ledger.admit(event(0, 10, route="b", symbol="U"), 0))
+
 
 if __name__ == "__main__":
     unittest.main()

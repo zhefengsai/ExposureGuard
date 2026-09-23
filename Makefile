@@ -22,6 +22,7 @@ rq1:
 	cd exp && $(PYTHON) baselines.py
 	cd exp && $(PYTHON) pertoken_baseline.py
 	cd exp && $(PYTHON) matched_availability.py
+	cd exp && $(PYTHON) rolling_matched.py
 	cd exp && $(PYTHON) detector_baseline.py
 	cd exp && $(PYTHON) synth_generalization.py
 	cd exp && $(PYTHON) peak_bootstrap.py
