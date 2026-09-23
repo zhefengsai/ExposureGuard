@@ -31,7 +31,6 @@ ExposureGuard/
 ├── data/
 │   ├── live/             Frozen testnet and prospective-shadow observations
 │   └── *.json            Frozen traces, configurations, and derived results
-├── docs/                 Calibration, contract, fault, and separability notes
 ├── Makefile              Reproduction shortcuts
 ├── requirements.txt      Python dependencies
 ├── CITATION.cff          Citation metadata
@@ -194,8 +193,8 @@ make data-check
 ```
 
 The final `data-check` detects accidental drift in paper-critical artifacts.
-Detailed calibration dependencies are documented in
-`docs/CALIBRATION.md`.
+The calibration order and frozen settings are documented in
+`exp/oos_calibrate.py` and `exp/matched_availability.py`.
 
 ## Optional network-dependent reproduction
 
