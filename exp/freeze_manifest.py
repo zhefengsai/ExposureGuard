@@ -24,6 +24,7 @@ FILES = [
     "bootstrap_policy.json", "capacity_recovery.json",
     "peak_bootstrap.json", "census_evidence.json",
     "price_coverage_curve.json", "burst_envelope.json",
+    "pertoken_baseline.json", "matched_availability.json",
 ]
 
 

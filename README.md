@@ -67,6 +67,7 @@ correlated demand removes the benefit of aggregation.
 |---|---|---|
 | Aggregate budget and pause comparison | `sim3.py`, `fig1.py` | `sim3.json`, `fig/fig_gap_*.{png,pdf}` |
 | Per-route and per-token baselines | `baselines.py`, `pertoken_baseline.py` | `baselines.json`, `pertoken_baseline.json` |
+| Common training availability targets with atomic held-out replay | `matched_availability.py` | `matched_availability.json`, `fig/fig_matched_availability.{png,pdf}` |
 | Oracle detector crossover | `detector_baseline.py` | `detector_baseline.json`, `fig/fig_detector.*` |
 | Correlated-demand generalization | `synth_generalization.py` | `synth_generalization.json`, `fig/fig_synth_*.{png,pdf}` |
 | Peak and cold-route sensitivity | `peak_bootstrap.py`, `bootstrap_policy.py` | `peak_bootstrap.json`, `bootstrap_policy.json` |
@@ -77,6 +78,27 @@ Run the offline RQ1 pipeline with:
 ```bash
 make rq1
 ```
+
+The revised common-target comparison is reproduced independently with
+`python3 exp/matched_availability.py`. It calibrates on the first 60 Ethereum
+days and freezes policies for 2,055 later messages. Both message-count and
+value service on arrival must meet the chosen training target. At the 100%
+target, the six-hour envelopes are $2.16M for ExposureGuard, $2.81M for
+per-token caps, and $3.64M for per-route caps. This yields a 1.30x per-token
+comparison, not the 5.1x unequal-headroom comparison in the earlier release.
+Matched training targets do not imply equal held-out availability: one $615k
+transfer remains unsettled under ExposureGuard. A pooled bucket without
+floors serves all held-out traffic with a smaller envelope, but provides no
+reserved capacity against surplus drain.
+
+The new replay debits a message only if it can be admitted in full, uses
+600-second retries, and runs through seven days after the final arrival.
+It includes never-delivered messages in arrival-failure counts. Independent
+caps receive no automatic capacity for groups absent from training. Token
+groups use frozen symbol labels. The older `pertoken_baseline.py` reports
+full-trace peak-sizing diagnostics with legacy partial-credit semantics;
+its availability fields must not be interpreted as the new atomic replay.
+The fixed-grid study is retrospective and was not preregistered.
 
 ### RQ2: What availability does containment cost?
 
@@ -216,6 +238,11 @@ machine-specific path is included in this repository.
   fourteen-day read-only prospective shadow result.
 - Cross-stack results distinguish on-chain evidence from verified-source
   architecture and do not estimate industry prevalence.
+
+The revised paper corresponds to release `v1.1.0-paper`; the earlier
+`v1.0.0-paper` remains available for comparison. The experiment manifest now
+includes 29 artifacts, including both the historical sizing baseline and the
+new common-target comparison.
 
 Run `make data-check` before and after regeneration. Recollecting external
 price quotes can produce small differences because the quoted price is fetched

@@ -27,6 +27,8 @@
     "peak_bootstrap.json": "1295b061bfe9cf7a6e184e470c99d8c4c9a5570df8ec96430d3bf8a9050d5f6f",
     "census_evidence.json": "1c23214264b06e072c54901ba43a7404acd06ea438d055d18917fdeec56eb2f6",
     "price_coverage_curve.json": "c846c9cfbabda6d10fabc153f8dbfdeecd01af503600a58513b2334228fdc2b2",
-    "burst_envelope.json": "a0197ffeceaaa79b98ae877a4e6277ae0860375390647f7ca7f390723897bc96"
+    "burst_envelope.json": "a0197ffeceaaa79b98ae877a4e6277ae0860375390647f7ca7f390723897bc96",
+    "pertoken_baseline.json": "49b3cc9edb1286e08bf0ff38a6121cc6c1be9b7e408faf3dc993851bc8d45108",
+    "matched_availability.json": "fab685235c0518ff90c78c4588e5a7458e4cc989263ab5a6329db513b3ea7f0f"
   }
 }
