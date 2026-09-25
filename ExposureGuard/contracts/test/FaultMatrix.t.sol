@@ -8,7 +8,23 @@ import {ExposureBudgetIsm} from "../src/ExposureBudgetIsm.sol";
 /// @dev Mailbox stand-in: delivery record only.
 contract FaultMatrixMailbox {
     mapping(bytes32 => bool) public delivered;
-    function markDelivered(bytes32 id) external { delivered[id] = true; }
+    /// Mirrors Mailbox.process(): the delivery record is written before the
+    /// ISM runs, so a module can tell a live delivery from a historical one.
+    mapping(bytes32 => uint48) public processedAt;
+    address public defaultIsm = address(this);
+    mapping(address => address) internal _recipientIsm;
+
+    function setDefaultIsm(address a) external { defaultIsm = a; }
+    function setRecipientIsm(address r, address a) external { _recipientIsm[r] = a; }
+    function recipientIsm(address r) external view returns (address) {
+        address a = _recipientIsm[r];
+        return a == address(0) ? defaultIsm : a;
+    }
+
+    function markDelivered(bytes32 id) external {
+        delivered[id] = true;
+        processedAt[id] = uint48(block.number);
+    }
 }
 
 /**
@@ -63,6 +79,9 @@ contract FaultMatrixTest is Test {
         ism = new ExposureBudgetIsm(
             address(mailbox), gov, guard, B, P.alphaBps, P.window, P.raiseDelay
         );
+        mailbox.setDefaultIsm(address(ism));
+        vm.prank(gov);
+        ism.setInstalledUnder(address(ism));
         _classify(routeA);
         _classify(routeB);
     }

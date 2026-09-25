@@ -6,7 +6,23 @@ import {ExposureBudgetIsm} from "../src/ExposureBudgetIsm.sol";
 
 contract MockMailbox {
     mapping(bytes32 => bool) public delivered;
-    function markDelivered(bytes32 id) external { delivered[id] = true; }
+    /// Mirrors Mailbox.process(): the delivery record is written before the
+    /// ISM runs, so a module can tell a live delivery from a historical one.
+    mapping(bytes32 => uint48) public processedAt;
+    address public defaultIsm = address(this);
+    mapping(address => address) internal _recipientIsm;
+
+    function setDefaultIsm(address a) external { defaultIsm = a; }
+    function setRecipientIsm(address r, address a) external { _recipientIsm[r] = a; }
+    function recipientIsm(address r) external view returns (address) {
+        address a = _recipientIsm[r];
+        return a == address(0) ? defaultIsm : a;
+    }
+
+    function markDelivered(bytes32 id) external {
+        delivered[id] = true;
+        processedAt[id] = uint48(block.number);
+    }
 }
 
 /// Settles what the module actually admits over a detection gap [t0, t1].
@@ -26,6 +42,9 @@ contract BurstEnvelopeTest is Test {
         mailbox = new MockMailbox();
         // alpha = 0: the whole budget is surplus, so one route can draw all of it
         ism = new ExposureBudgetIsm(address(mailbox), gov, gov, B, 0, D, 2 days);
+        mailbox.setDefaultIsm(address(ism));
+        vm.prank(gov);
+        ism.setInstalledUnder(address(ism));
         address[] memory rs = new address[](1);
         uint256[] memory v = new uint256[](1);
         ExposureBudgetIsm.Mode[] memory m = new ExposureBudgetIsm.Mode[](1);

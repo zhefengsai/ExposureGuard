@@ -7,9 +7,22 @@ import {ExposureBudgetIsm} from "../src/ExposureBudgetIsm.sol";
 /// Minimal stand-in for the Hyperlane Mailbox delivery record.
 contract MockMailbox {
     mapping(bytes32 => bool) public delivered;
+    /// Mirrors Mailbox.process(): the delivery record is written before the
+    /// ISM runs, so a module can tell a live delivery from a historical one.
+    mapping(bytes32 => uint48) public processedAt;
+    address public defaultIsm = address(this);
+    mapping(address => address) internal _recipientIsm;
+
+    function setDefaultIsm(address a) external { defaultIsm = a; }
+    function setRecipientIsm(address r, address a) external { _recipientIsm[r] = a; }
+    function recipientIsm(address r) external view returns (address) {
+        address a = _recipientIsm[r];
+        return a == address(0) ? defaultIsm : a;
+    }
 
     function markDelivered(bytes32 id) external {
         delivered[id] = true;
+        processedAt[id] = uint48(block.number);
     }
 }
 
@@ -33,6 +46,9 @@ contract ExposureBudgetIsmTest is Test {
         mailbox = new MockMailbox();
         ism = new ExposureBudgetIsm(address(mailbox), gov, guard, BUDGET, ALPHA,
                                     WINDOW, RAISE_DELAY);
+        mailbox.setDefaultIsm(address(ism));
+        vm.prank(gov);
+        ism.setInstalledUnder(address(ism));
 
         // Floors are provisioned from measured history as weights over the
         // reserved pool alpha*B = 120k. A gets 75%, B gets 25%; the adversary
@@ -136,10 +152,12 @@ contract ExposureBudgetIsmTest is Test {
 
     /// An undelivered message must not be meterable: otherwise anyone can
     /// fabricate one and zero the shared budget for the price of gas.
+    /// A message the Mailbox is not currently processing must not be
+    /// meterable, whether it was never delivered or was delivered earlier.
     function test_UndeliveredMessageCannotMeter() public {
         bytes memory m = _msg(routeA, 50_000e18);
         vm.expectRevert(abi.encodeWithSelector(
-            ExposureBudgetIsm.MessageNotDelivered.selector, keccak256(m)));
+            ExposureBudgetIsm.NotCurrentDelivery.selector, keccak256(m)));
         ism.verify("", m);
     }
 

@@ -5,7 +5,13 @@ import {IInterchainSecurityModule} from "./IInterchainSecurityModule.sol";
 
 interface IMailbox {
     function delivered(bytes32 messageId) external view returns (bool);
+    /// @notice Block in which `messageId` was processed, written by the
+    ///         Mailbox before it invokes the ISM. Zero when never processed.
+    function processedAt(bytes32 messageId) external view returns (uint48);
     function defaultIsm() external view returns (address);
+    /// @notice ISM that governs `recipient`, resolving to the default when the
+    ///         recipient configures none.
+    function recipientIsm(address recipient) external view returns (address);
 }
 
 interface IAggregationIsm {
@@ -131,6 +137,15 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     /// @notice Earliest time a queued EXEMPT classification may be applied.
     mapping(address recipient => uint64) public exemptEta;
 
+    /// @notice The module this contract is composed into, as the Mailbox
+    ///         resolves it for an inheriting recipient. On the primary
+    ///         deployment this is the chain default; a route-scoped
+    ///         composition resolves to its own aggregation instead, which is
+    ///         why the binding cannot simply compare against defaultIsm().
+    ///         Zero until governance sets it, and admission fails closed
+    ///         until then.
+    address public installedUnder;
+
     /// @notice Pending budget increase; increases are timelocked.
     uint96 public pendingBudget;
     uint64 public pendingEta;
@@ -147,6 +162,7 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     event ModeSet(address indexed recipient, Mode mode);
     event ExemptQueued(address indexed recipient, uint64 eta);
     event PausedSet(bool paused);
+    event InstalledUnderSet(address module);
 
     // --------------------------------------------------------------- errors
 
@@ -154,6 +170,11 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     error NotGuardianOrGovernance();
     error Paused();
     error BudgetExceeded(uint256 need, uint256 available);
+    /// @notice The message is not being processed by the Mailbox in this block.
+    error NotCurrentDelivery(bytes32 id);
+    /// @notice The recipient does not inherit the module tree this contract
+    ///         is installed in, so this contract is not on its delivery path.
+    error NotInheritedRoute(address recipient);
     error NotAnIncrease();
     error TimelockPending();
     error NothingQueued();
@@ -163,7 +184,6 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     error LengthMismatch();
     error UnclassifiedRecipient(address recipient);
     error UnpricedRoute(address route);
-    error MessageNotDelivered(bytes32 messageId);
     error AlreadyMetered(bytes32 messageId);
     error ExemptMustBeQueued();
     error ExemptNotReady(address recipient);
@@ -218,16 +238,38 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     {
         if (paused) revert Paused();
 
-        // Two guards, both mirroring the deployed RateLimitedIsm. Without them
-        // `verify` is world-callable: anyone could fabricate a message, meter an
-        // arbitrary amount and zero the shared budget for the cost of gas, with
-        // no capital at risk and no root compromise required.
+        // `verify` is world-callable, so a budget charge must correspond to a
+        // delivery the Mailbox is performing right now. Three guards together
+        // establish that; each one alone is insufficient.
+        //
+        //  (1) processedAt == block.number binds the charge to the current
+        //      block's processing. The Mailbox writes this before invoking the
+        //      ISM, so a genuine delivery satisfies it. `delivered()` does not:
+        //      it stays true forever, so every message ever processed before
+        //      this module was installed would otherwise be replayable by any
+        //      caller, with no capital at risk.
+        //
+        //  (2) the per-message flag prevents a second charge for a message the
+        //      Mailbox really is processing in this block.
+        //
+        //  (3) the recipient's ISM must resolve to the module this contract
+        //      is composed into. Without it, a message delivered in this block
+        //      through some other ISM -- which never reaches this contract, so
+        //      (2) cannot have been set -- could still be charged here. The
+        //      comparison is against `installedUnder` rather than the chain
+        //      default because a route-scoped composition resolves to its own
+        //      aggregation.
         bytes32 id = keccak256(message);
+        if (IMailbox(MAILBOX).processedAt(id) != uint48(block.number)) {
+            revert NotCurrentDelivery(id);
+        }
         if (messageMetered[id]) revert AlreadyMetered(id);
-        if (!IMailbox(MAILBOX).delivered(id)) revert MessageNotDelivered(id);
-        messageMetered[id] = true;
 
         address recipient = _recipient(message);
+        if (IMailbox(MAILBOX).recipientIsm(recipient) != installedUnder) {
+            revert NotInheritedRoute(recipient);
+        }
+        messageMetered[id] = true;
         Mode m = mode[recipient];
 
         // Fail closed. An unclassified recipient is the one thing an adversary
@@ -472,6 +514,14 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     }
 
     /// @notice Pausing is immediate and available to the guardian.
+    /// @notice Record the module this contract is composed into. Admission
+    ///         fails closed until it is set and whenever it is wrong, so a
+    ///         mistake here cannot admit value; it can only refuse it.
+    function setInstalledUnder(address module) external onlyGovernance {
+        installedUnder = module;
+        emit InstalledUnderSet(module);
+    }
+
     function setPaused(bool p) external {
         if (msg.sender != governance && msg.sender != guardian) {
             revert NotGuardianOrGovernance();

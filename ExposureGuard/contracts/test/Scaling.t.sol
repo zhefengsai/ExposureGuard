@@ -7,7 +7,23 @@ import {ExposureBudgetIsm} from "../src/ExposureBudgetIsm.sol";
 
 contract MockMailbox {
     mapping(bytes32 => bool) public delivered;
-    function markDelivered(bytes32 id) external { delivered[id] = true; }
+    /// Mirrors Mailbox.process(): the delivery record is written before the
+    /// ISM runs, so a module can tell a live delivery from a historical one.
+    mapping(bytes32 => uint48) public processedAt;
+    address public defaultIsm = address(this);
+    mapping(address => address) internal _recipientIsm;
+
+    function setDefaultIsm(address a) external { defaultIsm = a; }
+    function setRecipientIsm(address r, address a) external { _recipientIsm[r] = a; }
+    function recipientIsm(address r) external view returns (address) {
+        address a = _recipientIsm[r];
+        return a == address(0) ? defaultIsm : a;
+    }
+
+    function markDelivered(bytes32 id) external {
+        delivered[id] = true;
+        processedAt[id] = uint48(block.number);
+    }
 }
 
 /// Does cost grow with the number of routes sharing the root?
@@ -45,6 +61,9 @@ contract ScalingTest is Test {
         mb = new MockMailbox();
         ism = new ExposureBudgetIsm(address(mb), gov, gov, _budget(),
                                     P.alphaBps, P.window, P.raiseDelay);
+        mb.setDefaultIsm(address(ism));
+        vm.prank(gov);
+        ism.setInstalledUnder(address(ism));
         address[] memory rs = new address[](n);
         uint256[] memory vs = new uint256[](n);
         uint16[] memory ws = new uint16[](n);
