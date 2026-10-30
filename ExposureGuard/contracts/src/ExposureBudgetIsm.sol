@@ -53,13 +53,16 @@ interface IAggregationIsm {
  *    change prices and weights immediately, so governance compromise remains
  *    outside the guarantee. The guardian may lower the budget and toggle pause.
  *
- * Accounting envelope: with fixed budget B, refill window D, complete guard
+ * Accounting envelope: with fixed budget B, refill window D, floor weights,
+ * and reservation fraction, complete guard
  * coverage, and full charging of every admitted metered message, value admitted
- * over any interval of length delta is at most B + B*delta/D.
+ * over any interval of length delta is at most B + B*delta/D. Reassigning a
+ * floor may initialize fresh credit, so intervals spanning capacity updates
+ * require separate accounting for each configuration.
  *
  * SCOPE. The bound is on value declared in the message, i.e. value crossing the
  * bridge. It is NOT a bound on realised loss: a forged mint that is subsequently
- * used as collateral downstream can extract more than it declared. Loss is
+ * used as collateral downstream can extract more than it declared. Loss
  * cannot be bounded from this accounting envelope without independently
  * bounding price error and downstream amplification. EXEMPT recipients are outside the bound
  * entirely, which is why classification is a governance act and not a default.
@@ -214,7 +217,7 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
 
         uint96 surplusCap = uint96((uint256(_budget) * (10_000 - _alphaBps)) / 10_000);
         _surplus = Bucket({cap: surplusCap, level: surplusCap, updatedAt: uint64(block.timestamp)});
-        // Invariant: surplus cap + sum of floor caps == budget, because floor
+        // Invariant: surplus cap + sum of floor caps <= budget, because floor
         // weights are capped at 10_000 bps of alphaBps * budget.
     }
 
@@ -422,9 +425,9 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
             total = total - old + weightsBps[i];
             f.weightBps = weightsBps[i];
             // A newly reserved floor starts full, matching the convention of
-            // the deployed RateLimited library. This cannot mint capacity
-            // beyond the budget because the weights are capped at 10_000 bps
-            // of the reserved pool, which is itself carved out of the budget.
+            // the deployed RateLimited library. The weight limit bounds
+            // instantaneous capacity, but initialization adds fresh credit.
+            // The fixed-configuration envelope does not span this update.
             if (old == 0 && weightsBps[i] != 0) {
                 f.level = uint96(_floorCap(weightsBps[i]));
             }

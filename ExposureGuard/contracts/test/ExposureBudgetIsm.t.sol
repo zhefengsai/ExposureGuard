@@ -76,6 +76,32 @@ contract ExposureBudgetIsmTest is Test {
         ism.setModes(rs3, ms);
     }
 
+    /// Reallocation may initialize fresh credit even with an unchanged budget.
+    /// The paper's single-configuration bound excludes this update sequence.
+    function test_FloorReallocationCanReinitializeCredit() public {
+        uint256 started = block.timestamp;
+        _verify(routeA, 120_000e18);
+        _verify(routeB, 30_000e18);
+        assertEq(ism.surplusAvailable(), 0);
+        assertEq(ism.floorAvailable(routeA), 0);
+        assertEq(ism.floorAvailable(routeB), 0);
+        address[] memory routes = new address[](2);
+        routes[0] = routeA;
+        routes[1] = routeB;
+        uint16[] memory weights = new uint16[](2);
+        vm.startPrank(gov);
+        ism.setFloors(routes, weights);
+        weights[1] = 10_000;
+        ism.setFloors(routes, weights);
+        vm.stopPrank();
+        assertEq(ism.totalWeightBps(), 10_000);
+        assertEq(ism.budget(), BUDGET);
+        assertEq(block.timestamp, started);
+        assertEq(ism.floorAvailable(routeB), 120_000e18);
+        _verify(routeB, 120_000e18);
+        assertGt(270_000e18, uint256(BUDGET));
+    }
+
     function _classify(address[] memory rs, uint256[] memory vals) internal {
         ExposureBudgetIsm.Mode[] memory ms = new ExposureBudgetIsm.Mode[](rs.length);
         for (uint256 i; i < rs.length; ++i) ms[i] = ExposureBudgetIsm.Mode.METERED;

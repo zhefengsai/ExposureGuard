@@ -3,7 +3,7 @@
 Artifact for the paper **"ExposureGuard: Bounding Aggregate Exposure in
 Cross-Chain Messaging Networks with Shared Verification Roots."**
 
-The revised experiment artifact is tagged `v1.3.0-paper`. Earlier tags retain
+The revised experiment artifact is tagged `v1.3.1-paper`. Earlier tags retain
 the original submission inputs and comparison conventions.
 
 ExposureGuard is a destination-side admission control for cross-chain routes
@@ -330,7 +330,7 @@ machine-specific path is included in this repository.
 - Cross-stack results distinguish on-chain evidence from verified-source
   architecture and do not estimate industry prevalence.
 
-The revised artifact is published as `v1.3.0-paper`; it includes the missing-
+The revised artifact is published as `v1.3.1-paper`; it includes the missing-
 value audit, historical recovery, optimized static comparison, and 40 hashed
 paper-critical artifacts. Earlier releases remain available for comparison.
 
@@ -344,6 +344,15 @@ ExposureGuard does not detect a verifier compromise. It limits the value that
 can be admitted after a shared verification root fails and before operators
 respond. The bound depends on correct installation, conservative prices, and
 governance keys that are operationally independent of the failed verifier.
+
+The accounting envelope assumes fixed bucket capacities and floor weights
+during the interval. Assigning a floor whose weight was zero initializes it
+with full credit, so ordinary reallocation can add credit without raising the
+global budget. The regression `test_FloorReallocationCanReinitializeCredit`
+records $270k of admission with a $150k unchanged budget across such an
+update. Intervals spanning capacity changes require the sum of the bounds
+for the separate configurations. Frozen replay results do not test continuous
+enforcement through these updates.
 
 The `data/live/` observations are evidence of operational behavior, not an
 organic workload or a production enforcement deployment. LayerZero support is
