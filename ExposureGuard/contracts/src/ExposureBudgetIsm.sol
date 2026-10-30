@@ -27,10 +27,10 @@ interface IAggregationIsm {
  *
  * Every route that inherits a Mailbox's default ISM shares one verification
  * root, so a single root failure exposes all of them at once. Deployed limiters
- * are scoped per route (`RateLimitedIsm` binds `recipient` at construction and
- * is therefore unshareable), which bounds each route but leaves the aggregate
- * unbounded and growing with the route count. This module meters the shared
- * root instead.
+ * are scoped per route (`RateLimitedIsm` binds `recipient` at construction).
+ * Their capacities and refill rates can set an aggregate bound when they are
+ * coordinated. This module instead places one policy at the shared root and
+ * lets covered routes borrow unused capacity from one another.
  *
  * Design decisions, each forced by a measured constraint:
  *
@@ -38,26 +38,30 @@ interface IAggregationIsm {
  *    (Gini 0.93) equal floors are strictly worse than no reservation at all,
  *    and they are Sybil-mintable: a freshly deployed route would be granted a
  *    floor on arrival. Usage-weighted floors are earned from history, so
- *    deploying N Sybil routes yields nothing.
+ *    deploying zero-history Sybil routes yields no reserved capacity. Paid
+ *    adversarial history can still change the allocation.
  *
  *  - Value is priced from a GOVERNANCE-SET table, not an oracle. Most routes
  *    carry micro-cap tokens with no feed, and DEX spot for those is cheap to
- *    push. Accounting prices are policy parameters like the budget itself, so
- *    they add no new trust assumption and expose no manipulable price source.
- *    Over-pricing is safe (it consumes more budget); under-pricing is not.
+ *    push. Accounting prices are governance-controlled policy parameters.
+ *    The contract rejects a zero price but does not expire a positive price;
+ *    a stale or understated price weakens the economic interpretation of the
+ *    accounted-value bound. The read-only auditor can report policy drift.
  *
- *  - Budget changes are ASYMMETRIC. Lowering the budget or pausing takes effect
- *    immediately; raising it must sit in a timelock. A compromised governance
- *    key can then only make the system more conservative, not quickly relax it.
+ *  - Budget changes are ASYMMETRIC. Lowering the budget is immediate; raising
+ *    it requires a timelock. Exemptions are also delayed. Governance can
+ *    change prices and weights immediately, so governance compromise remains
+ *    outside the guarantee. The guardian may lower the budget and toggle pause.
  *
- * Aggregate invariant: over any window `D`, the accounted value admitted across
- * all METERED routes sharing this module is at most `budget`.
+ * Accounting envelope: with fixed budget B, refill window D, complete guard
+ * coverage, and full charging of every admitted metered message, value admitted
+ * over any interval of length delta is at most B + B*delta/D.
  *
  * SCOPE. The bound is on value declared in the message, i.e. value crossing the
  * bridge. It is NOT a bound on realised loss: a forged mint that is subsequently
  * used as collateral downstream can extract more than it declared. Loss is
- * therefore bounded by `budget * A`, where `A` is the downstream amplification
- * available to the minted asset. EXEMPT recipients are outside the bound
+ * cannot be bounded from this accounting envelope without independently
+ * bounding price error and downstream amplification. EXEMPT recipients are outside the bound
  * entirely, which is why classification is a governance act and not a default.
  */
 contract ExposureBudgetIsm is IInterchainSecurityModule {
@@ -110,7 +114,7 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     // -------------------------------------------------------------- storage
 
     address public governance;
-    address public guardian; // may pause and lower, may not raise
+    address public guardian; // may lower the budget and toggle pause, may not raise
 
     /// @notice Total per-root budget per window, in budget units.
     uint96 public budget;
@@ -123,7 +127,7 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
 
     /// @notice Reserved floor per route. The weight is set from measured
     ///         history; a route with no history gets zero, which is what makes
-    ///         Sybil deployment worthless.
+    ///         zero-history Sybil routes unable to claim a reserved floor.
     mapping(address route => Floor) internal _floor;
     /// @notice Sum of floor weights; capped at 10_000 so the floors can never
     ///         claim more than `alphaBps` of the budget.
@@ -405,7 +409,7 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
     // -------------------------------------------------------- governance
 
     /// @notice Floors are provisioned from measured history; a route with no
-    ///         history gets none, which is what makes Sybil deployment useless.
+    ///         history gets none, though paid history can earn a floor.
     function setFloors(address[] calldata routes, uint16[] calldata weightsBps)
         external
         onlyGovernance
@@ -513,7 +517,8 @@ contract ExposureBudgetIsm is IInterchainSecurityModule {
         emit BudgetRaised(old, budget);
     }
 
-    /// @notice Pausing is immediate and available to the guardian.
+    /// @notice The guardian can change pause state immediately, including
+    ///         resuming delivery. It cannot increase the budget.
     /// @notice Record the module this contract is composed into. Admission
     ///         fails closed until it is set and whenever it is wrong, so a
     ///         mistake here cannot admit value; it can only refuse it.

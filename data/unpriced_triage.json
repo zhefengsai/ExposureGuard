@@ -2,7 +2,7 @@
   "scope": "deliveries omitted from the priced trace",
   "total_unpriced_deliveries": 13036,
   "total_unpriced_routes": 67,
-  "method": "unpriced iff no collateral address or price source returns no quote (chainlog_xval.py); classes are decidable from those two facts",
+  "method": "route-level observations of local collateral address and later current quote; not a historical-price or event-level exclusion-cause audit",
   "classes": {
     "needs_reference": {
       "routes": 6,

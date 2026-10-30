@@ -23,6 +23,7 @@ ExposureGuard/contracts/broadcast/
 data/live/state.json
 data/live/*.lock
 data/reproduced/
+data/a2_http_cache/
 
 # Editors and operating systems
 .DS_Store

@@ -1,0 +1,707 @@
+{
+  "schema": 1,
+  "input_sha256": {
+    "a2_ethereum_event_audit.json": "374669a74853f14bbb479cfdd94f319ca301641323b18f292abadbdd15bac987",
+    "a2_recovery_sensitivity.json": "8cf6c199b4a797d33e5c66bc22f001fa8f671716fc6f6bc9446dad86a4e0bd51"
+  },
+  "cohort": "historical Ethereum reconstruction; unresolved values excluded",
+  "fixed_cutoff_utc": "2026-06-23T16:58:11+00:00",
+  "train_messages": 4753,
+  "test_messages": 2233,
+  "anchor_budget_usd": 3215274.64,
+  "anchor_rule": "minimum guard training budget at alpha=0.8",
+  "common_budget_rule": "predeclared multipliers; frozen train-only weights and static-token capacity proportions; no test tuning",
+  "attack": {
+    "zero_history_route": "__zero_history_attacker__",
+    "step_s": 600.0,
+    "chunks_per_step": 10,
+    "initial_offered_usd": 3215274.64,
+    "offered_refill_usd_per_day": 3215274.64,
+    "tie_order": "attacker, pending retry, legitimate arrival",
+    "retry_step_s": 600.0,
+    "retry_tail_days": 7
+  },
+  "limits": "offline atomic replay, not EVM execution or production attack; historical daily quotes are not a causal governance-price-update policy; static proportions follow training minima, not all possible partitions; no static-token drain comparison; attacker is assumed explicitly metered with a valid price policy and no paid training history; original full-trace divisible-value sweep is separate",
+  "common_budget": [
+    {
+      "multiple": 0.5,
+      "budget_usd": 1607637.32,
+      "six_hour_envelope_usd": 2009546.6500000001,
+      "rows": {
+        "guard": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4370,
+            "deferred_on_arrival": 383,
+            "immediate_message_fraction": 0.9194193141173995,
+            "immediate_value_fraction": 0.8306278422052363,
+            "delayed_then_delivered": 382,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.9630261815421592,
+            "p95_positive_delay_h": 49.71666666666667
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4240,
+            "deferred_on_arrival": 513,
+            "immediate_message_fraction": 0.8920681674731749,
+            "immediate_value_fraction": 0.6454272117207365,
+            "delayed_then_delivered": 489,
+            "undelivered_tail": 24,
+            "oversized_messages": 24,
+            "delivered_value_fraction": 0.8022732648666395,
+            "p95_positive_delay_h": 71.55333333333333
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2109,
+            "deferred_on_arrival": 124,
+            "immediate_message_fraction": 0.9444693237796686,
+            "immediate_value_fraction": 0.8562336849674838,
+            "delayed_then_delivered": 94,
+            "undelivered_tail": 30,
+            "oversized_messages": 30,
+            "delivered_value_fraction": 0.8649165381270868,
+            "p95_positive_delay_h": 205.69
+          }
+        },
+        "pooled": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "multiple": 0.75,
+      "budget_usd": 2411455.98,
+      "six_hour_envelope_usd": 3014319.975,
+      "rows": {
+        "guard": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4644,
+            "deferred_on_arrival": 109,
+            "immediate_message_fraction": 0.9770671155059962,
+            "immediate_value_fraction": 0.9058061022061901,
+            "delayed_then_delivered": 109,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 18.143333333333334
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4503,
+            "deferred_on_arrival": 250,
+            "immediate_message_fraction": 0.9474016410687987,
+            "immediate_value_fraction": 0.8199930083410291,
+            "delayed_then_delivered": 235,
+            "undelivered_tail": 15,
+            "oversized_messages": 15,
+            "delivered_value_fraction": 0.9294557856499361,
+            "p95_positive_delay_h": 26.94
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2157,
+            "deferred_on_arrival": 76,
+            "immediate_message_fraction": 0.9659650694133453,
+            "immediate_value_fraction": 0.9458443342690882,
+            "delayed_then_delivered": 53,
+            "undelivered_tail": 23,
+            "oversized_messages": 23,
+            "delivered_value_fraction": 0.9493314393589934,
+            "p95_positive_delay_h": 139.67666666666668
+          }
+        },
+        "pooled": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "multiple": 1.0,
+      "budget_usd": 3215274.64,
+      "six_hour_envelope_usd": 4019093.3000000003,
+      "rows": {
+        "guard": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4670,
+            "deferred_on_arrival": 83,
+            "immediate_message_fraction": 0.9825373448348411,
+            "immediate_value_fraction": 0.8775321027623212,
+            "delayed_then_delivered": 72,
+            "undelivered_tail": 11,
+            "oversized_messages": 11,
+            "delivered_value_fraction": 0.9735960569015808,
+            "p95_positive_delay_h": 7.316666666666666
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2164,
+            "deferred_on_arrival": 69,
+            "immediate_message_fraction": 0.9690998656515898,
+            "immediate_value_fraction": 0.9459237725078155,
+            "delayed_then_delivered": 49,
+            "undelivered_tail": 20,
+            "oversized_messages": 20,
+            "delivered_value_fraction": 0.9561159748963233,
+            "p95_positive_delay_h": 91.51
+          }
+        },
+        "pooled": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "multiple": 1.25,
+      "budget_usd": 4019093.3000000003,
+      "six_hour_envelope_usd": 5023866.625,
+      "rows": {
+        "guard": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2178,
+            "deferred_on_arrival": 55,
+            "immediate_message_fraction": 0.9753694581280788,
+            "immediate_value_fraction": 0.9486144098906749,
+            "delayed_then_delivered": 37,
+            "undelivered_tail": 18,
+            "oversized_messages": 18,
+            "delivered_value_fraction": 0.9605750509197852,
+            "p95_positive_delay_h": 83.67
+          }
+        },
+        "pooled": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "multiple": 1.5,
+      "budget_usd": 4822911.96,
+      "six_hour_envelope_usd": 6028639.95,
+      "rows": {
+        "guard": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2185,
+            "deferred_on_arrival": 48,
+            "immediate_message_fraction": 0.9785042543663234,
+            "immediate_value_fraction": 0.951244492541961,
+            "delayed_then_delivered": 31,
+            "undelivered_tail": 17,
+            "oversized_messages": 17,
+            "delivered_value_fraction": 0.9609381256544324,
+            "p95_positive_delay_h": 61.35666666666667
+          }
+        },
+        "pooled": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    },
+    {
+      "multiple": 2.0,
+      "budget_usd": 6430549.28,
+      "six_hour_envelope_usd": 8038186.600000001,
+      "rows": {
+        "guard": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2200,
+            "deferred_on_arrival": 33,
+            "immediate_message_fraction": 0.9852216748768473,
+            "immediate_value_fraction": 0.9573446460950711,
+            "delayed_then_delivered": 17,
+            "undelivered_tail": 16,
+            "oversized_messages": 16,
+            "delivered_value_fraction": 0.9613678595384412,
+            "p95_positive_delay_h": 37.96666666666667
+          }
+        },
+        "pooled": {
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "reservation_ablation": [
+    {
+      "alpha": 0.0,
+      "budget_usd": 3215274.64,
+      "clean": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2233,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 0.9999999999999997,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "drain": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2074,
+        "immediate_value_fraction": 0.3509491541040833,
+        "immediate_message_fraction": 0.928795342588446,
+        "delayed_then_delivered": 30,
+        "undelivered_tail": 129,
+        "delivered_value_fraction": 0.3603884953276337,
+        "attacker_admitted_usd": 215979375.4534383,
+        "attacker_offered_usd": 218147453.00583836,
+        "elapsed_s": 5775624.0,
+        "total_admitted_usd": 218145257.99579346,
+        "accounting_envelope_usd": 218148346.1374
+      },
+      "drain_immediate_over_clean_immediate": 0.3509491541040834
+    },
+    {
+      "alpha": 0.4,
+      "budget_usd": 3215274.64,
+      "clean": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2233,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 0.9999999999999997,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "drain": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2209,
+        "immediate_value_fraction": 0.8936624455228446,
+        "immediate_message_fraction": 0.9892521271831617,
+        "delayed_then_delivered": 3,
+        "undelivered_tail": 21,
+        "delivered_value_fraction": 0.895561047243979,
+        "attacker_admitted_usd": 130741105.04885596,
+        "attacker_offered_usd": 218147453.00583836,
+        "elapsed_s": 5775648.0,
+        "total_admitted_usd": 136123296.94173437,
+        "accounting_envelope_usd": 218149239.26924446
+      },
+      "drain_immediate_over_clean_immediate": 0.8936624455228449
+    },
+    {
+      "alpha": 0.8,
+      "budget_usd": 3215274.64,
+      "clean": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2233,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 0.9999999999999997,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "drain": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2205,
+        "immediate_value_fraction": 0.8984922020884144,
+        "immediate_message_fraction": 0.987460815047022,
+        "delayed_then_delivered": 13,
+        "undelivered_tail": 15,
+        "delivered_value_fraction": 0.9149659877924121,
+        "attacker_admitted_usd": 43524547.60937781,
+        "attacker_offered_usd": 218147453.00583836,
+        "elapsed_s": 5775600.0,
+        "total_admitted_usd": 49023360.378100455,
+        "accounting_envelope_usd": 218147453.00555557
+      },
+      "drain_immediate_over_clean_immediate": 0.8984922020884147
+    },
+    {
+      "alpha": 1.0,
+      "budget_usd": 3215274.64,
+      "clean": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 1960,
+        "deferred_on_arrival": 273,
+        "immediate_message_fraction": 0.877742946708464,
+        "immediate_value_fraction": 0.8858514141282238,
+        "delayed_then_delivered": 144,
+        "undelivered_tail": 129,
+        "oversized_messages": 129,
+        "delivered_value_fraction": 0.9030666952336124,
+        "p95_positive_delay_h": 302.74666666666667
+      },
+      "drain": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 1960,
+        "immediate_value_fraction": 0.8858514141282238,
+        "immediate_message_fraction": 0.877742946708464,
+        "delayed_then_delivered": 144,
+        "undelivered_tail": 129,
+        "delivered_value_fraction": 0.9030666952336124,
+        "attacker_admitted_usd": 0.0,
+        "attacker_offered_usd": 212297439.42469713,
+        "elapsed_s": 5618652.0,
+        "total_admitted_usd": 5427299.747764384,
+        "accounting_envelope_usd": 212306817.30881113
+      },
+      "drain_immediate_over_clean_immediate": 1.0
+    }
+  ]
+}

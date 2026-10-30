@@ -111,6 +111,30 @@ contract ExposureBudgetIsmTest is Test {
         ism.verify("", m);
     }
 
+    /// A positive quote has no on-chain expiry. The auditor may report it as
+    /// stale, but the ISM itself still charges against that configured value.
+    function test_PositivePriceDoesNotExpireOnChain() public {
+        vm.warp(block.timestamp + 365 days);
+        uint256 before = ism.floorAvailable(routeA);
+        _verify(routeA, 1_000e18);
+        assertEq(ism.floorAvailable(routeA), before - 1_000e18);
+    }
+
+    /// Price reductions are governance writes, unlike budget increases and
+    /// exemptions. This test fixes the limitation stated in the paper.
+    function test_GovernanceCanReducePriceWithoutDelay() public {
+        address[] memory rs = new address[](1);
+        uint256[] memory vals = new uint256[](1);
+        rs[0] = routeA;
+        vals[0] = 0.1e18;
+        vm.prank(gov);
+        ism.setUnitValues(rs, vals);
+        assertEq(ism.unitValue(routeA), 0.1e18);
+        uint256 before = ism.floorAvailable(routeA);
+        _verify(routeA, 10_000e18);
+        assertEq(ism.floorAvailable(routeA), before - 1_000e18);
+    }
+
     /// Plain GMP carries no amount in the body. It must pass through rather
     /// than revert, otherwise installing this module in the default ISM would
     /// break every non-token message on the chain.
@@ -376,6 +400,15 @@ contract ExposureBudgetIsmTest is Test {
         bytes memory m = _deliver(routeA, 1e18);
         vm.expectRevert(ExposureBudgetIsm.Paused.selector);
         ism.verify("", m);
+    }
+
+    function test_GuardianCanResumeAfterPause() public {
+        vm.prank(guard);
+        ism.setPaused(true);
+        vm.prank(guard);
+        ism.setPaused(false);
+        assertFalse(ism.paused());
+        assertEq(ism.budget(), BUDGET);
     }
 
     // ------------------------------------------------------------------ gas

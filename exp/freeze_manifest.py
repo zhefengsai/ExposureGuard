@@ -14,7 +14,11 @@ FILES = [
     "events_multi.json", "sim3.json", "sim_results.json", "oos_calibrate.json",
     "controller_config.json", "shadow_controller.json",
     "robustness_sensitivity.json", "calibration_compare.json",
-    "pricing_coverage.json",
+    "pricing_coverage.json", "a2_missing_price_audit.json",
+    "a2_historical_recovery.json",
+    "a2_ethereum_event_audit.json", "a2_recovery_sensitivity.json",
+    "a2_http_cache.tar.gz", "a4_optimized_static.json", "a4_historical_service.json",
+    "a2_unknown_inventory.json", "a2_unknown_inventory.csv",
     "gas_deployed.json", "scaling.json",
     "fault_matrix.json", "baselines.json", "partition_cost.json",
     "owner_independence.json", "audit.json",
@@ -24,8 +28,8 @@ FILES = [
     "bootstrap_policy.json", "capacity_recovery.json",
     "peak_bootstrap.json", "census_evidence.json",
     "price_coverage_curve.json", "burst_envelope.json",
+    "p0_regression.json", "testnet_patched.json",
     "pertoken_baseline.json", "matched_availability.json",
-    "rolling_matched.json",
 ]
 
 

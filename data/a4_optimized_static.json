@@ -1,0 +1,2124 @@
+{
+  "schema": 1,
+  "target": "100% immediate training messages and value",
+  "selection": "first 60 days only; optimized configs frozen before suffix; initially full buckets",
+  "policy_class": "static per-group C with refill C/D, D=one day; guard alpha=0.8 with fixed training usage weights",
+  "limits": "frozen symbol grouping; no new-group capacity in static policies; floating-point USD rather than bit-exact EVM; rolling windows overlap",
+  "train_messages": 4422,
+  "test_messages": 2055,
+  "rows": {
+    "guard": {
+      "config": {
+        "policy": "guard",
+        "multiple": 1.2575892986617636,
+        "caps": {
+          "root": 1449446.2
+        },
+        "weights": {
+          "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0337,
+          "6912088890254e69970baedb03284fb3d8fbcda0": 0.6411,
+          "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+          "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0375,
+          "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+          "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+          "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.001,
+          "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0497,
+          "e15f7d93f761c35b5d692224418099409c749011": 0.0299,
+          "67899664446ccfadf75e0d3f5668be262acd1069": 0.0187,
+          "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0217,
+          "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+          "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+          "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0005,
+          "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0168,
+          "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0025,
+          "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0001,
+          "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0004,
+          "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.0,
+          "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+          "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+          "0e993e49df1b7412ded493eaaf806730b74378b9": 0.022,
+          "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0007,
+          "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1164,
+          "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+          "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0032,
+          "647c621ceb36853ef6a907e397adf18568e70543": 0.0006,
+          "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+          "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0011
+        },
+        "budget": 1449446.2,
+        "optimization": {
+          "method": "bisection on all-arrival training feasibility; upward cent rounding",
+          "infeasible_lower_budget_usd": 1449446.1963633455,
+          "feasible_upper_budget_usd": 1449446.2,
+          "absolute_search_tolerance_usd": 0.01
+        }
+      },
+      "budget_usd": 1449446.2,
+      "six_hour_envelope_usd": 1811807.75,
+      "training": {
+        "messages": 4422,
+        "value_usd": 11337412.8990406,
+        "immediate_messages": 4422,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 1.0000000000000022,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "test": {
+        "messages": 2055,
+        "value_usd": 5999194.987289309,
+        "immediate_messages": 2054,
+        "deferred_on_arrival": 1,
+        "immediate_message_fraction": 0.9995133819951338,
+        "immediate_value_fraction": 0.8974805227225141,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 1,
+        "oversized_messages": 1,
+        "delivered_value_fraction": 0.8974805227225146,
+        "p95_positive_delay_h": 0.0
+      },
+      "known_symbol_only_test": {
+        "messages": 2048,
+        "value_usd": 5851359.9501983365,
+        "immediate_messages": 2047,
+        "deferred_on_arrival": 1,
+        "immediate_message_fraction": 0.99951171875,
+        "immediate_value_fraction": 0.8948903606311616,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 1,
+        "oversized_messages": 1,
+        "delivered_value_fraction": 0.8948903606311617,
+        "p95_positive_delay_h": 0.0
+      }
+    },
+    "optimized_static_token": {
+      "config": {
+        "policy": "per_token",
+        "caps": {
+          "DIME": 214.3,
+          "ES": 21963.57,
+          "FUEL": 2278.98,
+          "LUMIA": 2039.03,
+          "NEX": 389448.24,
+          "OORT": 88.59,
+          "RDO": 2616.2400000000002,
+          "SEDA": 40185.86,
+          "SUPR": 6509.79,
+          "USDC": 1027295.74,
+          "USDT": 233978.6,
+          "USDe": 0.01,
+          "WBTC": 228584.7,
+          "amphrETH": 1367.24,
+          "cbBTC": 69.05,
+          "eXRD": 657.94
+        },
+        "budget": 1957297.88,
+        "weights": {},
+        "optimization": {
+          "method": "per-group interval maximum; upward cent rounding",
+          "lower_bound_budget_usd": 1957297.8001156286,
+          "max_rounding_gap_usd": 0.16,
+          "certificates": {
+            "DIME": {
+              "lower_bound_usd": 214.2997036700608,
+              "interval": {
+                "start": 7,
+                "end": 9,
+                "value_usd": 228.4970590382023,
+                "duration_s": 5724.0
+              }
+            },
+            "ES": {
+              "lower_bound_usd": 21963.56856749366,
+              "interval": {
+                "start": 127,
+                "end": 129,
+                "value_usd": 22052.03294089051,
+                "duration_s": 348.0
+              }
+            },
+            "FUEL": {
+              "lower_bound_usd": 2278.972769308113,
+              "interval": {
+                "start": 34,
+                "end": 34,
+                "value_usd": 2278.972769308113,
+                "duration_s": 0.0
+              }
+            },
+            "LUMIA": {
+              "lower_bound_usd": 2039.0255765375734,
+              "interval": {
+                "start": 2,
+                "end": 2,
+                "value_usd": 2039.0255765375734,
+                "duration_s": 0.0
+              }
+            },
+            "NEX": {
+              "lower_bound_usd": 389448.2392475561,
+              "interval": {
+                "start": 24,
+                "end": 1199,
+                "value_usd": 602887.5103685083,
+                "duration_s": 47352.0
+              }
+            },
+            "OORT": {
+              "lower_bound_usd": 88.58443978513908,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 88.58443978513908,
+                "duration_s": 0.0
+              }
+            },
+            "RDO": {
+              "lower_bound_usd": 2616.234914413881,
+              "interval": {
+                "start": 0,
+                "end": 1,
+                "value_usd": 2629.31608898595,
+                "duration_s": 432.0
+              }
+            },
+            "SEDA": {
+              "lower_bound_usd": 40185.85273876751,
+              "interval": {
+                "start": 148,
+                "end": 165,
+                "value_usd": 46827.68117753603,
+                "duration_s": 14280.0
+              }
+            },
+            "SUPR": {
+              "lower_bound_usd": 6509.781390475959,
+              "interval": {
+                "start": 6,
+                "end": 7,
+                "value_usd": 6520.631026126752,
+                "duration_s": 144.0
+              }
+            },
+            "USDC": {
+              "lower_bound_usd": 1027295.736012842,
+              "interval": {
+                "start": 179,
+                "end": 186,
+                "value_usd": 1119895.032217333,
+                "duration_s": 7788.0
+              }
+            },
+            "USDT": {
+              "lower_bound_usd": 233978.59142403322,
+              "interval": {
+                "start": 86,
+                "end": 87,
+                "value_usd": 234985.99924822003,
+                "duration_s": 372.0
+              }
+            },
+            "USDe": {
+              "lower_bound_usd": 9.647442463241556e-15,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 9.647442463241556e-15,
+                "duration_s": 0.0
+              }
+            },
+            "WBTC": {
+              "lower_bound_usd": 228584.6902973133,
+              "interval": {
+                "start": 19,
+                "end": 20,
+                "value_usd": 232045.20852542538,
+                "duration_s": 1308.0
+              }
+            },
+            "amphrETH": {
+              "lower_bound_usd": 1367.2376403826643,
+              "interval": {
+                "start": 1,
+                "end": 1,
+                "value_usd": 1367.2376403826643,
+                "duration_s": 0.0
+              }
+            },
+            "cbBTC": {
+              "lower_bound_usd": 69.04767919428468,
+              "interval": {
+                "start": 0,
+                "end": 2,
+                "value_usd": 70.0929843376426,
+                "duration_s": 1308.0
+              }
+            },
+            "eXRD": {
+              "lower_bound_usd": 657.9377138550741,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 657.9377138550741,
+                "duration_s": 0.0
+              }
+            }
+          }
+        }
+      },
+      "budget_usd": 1957297.88,
+      "six_hour_envelope_usd": 2446622.3499999996,
+      "training": {
+        "messages": 4422,
+        "value_usd": 11337412.8990406,
+        "immediate_messages": 4422,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 1.0000000000000022,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "test": {
+        "messages": 2055,
+        "value_usd": 5999194.987289309,
+        "immediate_messages": 1983,
+        "deferred_on_arrival": 72,
+        "immediate_message_fraction": 0.964963503649635,
+        "immediate_value_fraction": 0.8590015047899058,
+        "delayed_then_delivered": 51,
+        "undelivered_tail": 21,
+        "oversized_messages": 21,
+        "delivered_value_fraction": 0.860595864671008,
+        "p95_positive_delay_h": 126.01
+      },
+      "known_symbol_only_test": {
+        "messages": 2048,
+        "value_usd": 5851359.9501983365,
+        "immediate_messages": 1983,
+        "deferred_on_arrival": 65,
+        "immediate_message_fraction": 0.96826171875,
+        "immediate_value_fraction": 0.8807042406329659,
+        "delayed_then_delivered": 51,
+        "undelivered_tail": 14,
+        "oversized_messages": 14,
+        "delivered_value_fraction": 0.8823388821330704,
+        "p95_positive_delay_h": 126.01
+      }
+    },
+    "optimized_static_route": {
+      "config": {
+        "policy": "per_route",
+        "caps": {
+          "066abc14c59cf7681b4b66844500733d2258032a": 11.26,
+          "0e993e49df1b7412ded493eaaf806730b74378b9": 228584.7,
+          "11a483d69cc67140fb98a0082837aec11246a0ba": 18710.04,
+          "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 12997.48,
+          "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 2278.98,
+          "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 21963.57,
+          "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.01,
+          "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 1651.8,
+          "647c621ceb36853ef6a907e397adf18568e70543": 4266.09,
+          "67899664446ccfadf75e0d3f5668be262acd1069": 59990.53,
+          "6912088890254e69970baedb03284fb3d8fbcda0": 1027261.09,
+          "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 59990.53,
+          "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 88.59,
+          "7396b724a43c1d654a89b44996da84d1e1a9b568": 214.3,
+          "7710d2fc9a2e0452b28a2cbf550429b579347199": 69.05,
+          "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 53867.44,
+          "8e1c6992621f1f647c79a297035b5484b9fb6864": 40185.86,
+          "94a766ebdfbbff21428b6c504be7405e74c02774": 657.94,
+          "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 316.23,
+          "b71183f48f7f7789d40551149be28a51f9a97f9a": 389448.24,
+          "bc808c98bea0a097346273a9fd7a5b231fc2d889": 6509.79,
+          "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 278447.55,
+          "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 2117.67,
+          "d86e6ef14b96d942ef0abf0720c549197ea8c528": 2616.2400000000002,
+          "dc89990a6fdc1c922b841f1d977835628a24ed57": 1367.24,
+          "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 2039.03,
+          "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 2288.98,
+          "e15f7d93f761c35b5d692224418099409c749011": 233978.6,
+          "e1de9910fe71cc216490ac7fcf019e13a34481d7": 77694.15000000001
+        },
+        "budget": 2529612.98,
+        "weights": {},
+        "optimization": {
+          "method": "per-group interval maximum; upward cent rounding",
+          "lower_bound_budget_usd": 2529612.8406969197,
+          "max_rounding_gap_usd": 0.29,
+          "certificates": {
+            "066abc14c59cf7681b4b66844500733d2258032a": {
+              "lower_bound_usd": 11.256222849836606,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 11.256222849836606,
+                "duration_s": 0.0
+              }
+            },
+            "0e993e49df1b7412ded493eaaf806730b74378b9": {
+              "lower_bound_usd": 228584.6902973133,
+              "interval": {
+                "start": 9,
+                "end": 10,
+                "value_usd": 232045.20852542538,
+                "duration_s": 1308.0
+              }
+            },
+            "11a483d69cc67140fb98a0082837aec11246a0ba": {
+              "lower_bound_usd": 18710.039153599933,
+              "interval": {
+                "start": 0,
+                "end": 5,
+                "value_usd": 19531.20198311904,
+                "duration_s": 3792.0
+              }
+            },
+            "2dc9a39d934f52e0f28e52e8d32ce810fc685247": {
+              "lower_bound_usd": 12997.471270216334,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 12997.471270216334,
+                "duration_s": 0.0
+              }
+            },
+            "3cf30c1d8decbf45cd36c9492f6395d47357b91c": {
+              "lower_bound_usd": 2278.972769308113,
+              "interval": {
+                "start": 34,
+                "end": 34,
+                "value_usd": 2278.972769308113,
+                "duration_s": 0.0
+              }
+            },
+            "3ee1bea3a10f7508b76219f109ebe19419b3dd85": {
+              "lower_bound_usd": 21963.56856749366,
+              "interval": {
+                "start": 127,
+                "end": 129,
+                "value_usd": 22052.03294089051,
+                "duration_s": 348.0
+              }
+            },
+            "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": {
+              "lower_bound_usd": 9.647442463241556e-15,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 9.647442463241556e-15,
+                "duration_s": 0.0
+              }
+            },
+            "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": {
+              "lower_bound_usd": 1651.7963180345016,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 1651.7963180345016,
+                "duration_s": 0.0
+              }
+            },
+            "647c621ceb36853ef6a907e397adf18568e70543": {
+              "lower_bound_usd": 4266.083710864612,
+              "interval": {
+                "start": 7,
+                "end": 7,
+                "value_usd": 4266.083710864612,
+                "duration_s": 0.0
+              }
+            },
+            "67899664446ccfadf75e0d3f5668be262acd1069": {
+              "lower_bound_usd": 59990.52860101229,
+              "interval": {
+                "start": 4,
+                "end": 4,
+                "value_usd": 59990.52860101229,
+                "duration_s": 0.0
+              }
+            },
+            "6912088890254e69970baedb03284fb3d8fbcda0": {
+              "lower_bound_usd": 1027261.0825919923,
+              "interval": {
+                "start": 97,
+                "end": 103,
+                "value_usd": 1119857.2551756317,
+                "duration_s": 7788.0
+              }
+            },
+            "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": {
+              "lower_bound_usd": 59990.52860101229,
+              "interval": {
+                "start": 42,
+                "end": 42,
+                "value_usd": 59990.52860101229,
+                "duration_s": 0.0
+              }
+            },
+            "70f34d5cc2527cd81de9f6e7c9208f26f7252697": {
+              "lower_bound_usd": 88.58443978513908,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 88.58443978513908,
+                "duration_s": 0.0
+              }
+            },
+            "7396b724a43c1d654a89b44996da84d1e1a9b568": {
+              "lower_bound_usd": 214.2997036700608,
+              "interval": {
+                "start": 7,
+                "end": 9,
+                "value_usd": 228.4970590382023,
+                "duration_s": 5724.0
+              }
+            },
+            "7710d2fc9a2e0452b28a2cbf550429b579347199": {
+              "lower_bound_usd": 69.04767919428468,
+              "interval": {
+                "start": 0,
+                "end": 2,
+                "value_usd": 70.0929843376426,
+                "duration_s": 1308.0
+              }
+            },
+            "7e5db36f762a3eae5d6ef18f16dee9df619bb539": {
+              "lower_bound_usd": 53867.430702636215,
+              "interval": {
+                "start": 37,
+                "end": 47,
+                "value_usd": 59785.36649232861,
+                "duration_s": 9492.0
+              }
+            },
+            "8e1c6992621f1f647c79a297035b5484b9fb6864": {
+              "lower_bound_usd": 40185.85273876751,
+              "interval": {
+                "start": 148,
+                "end": 165,
+                "value_usd": 46827.68117753603,
+                "duration_s": 14280.0
+              }
+            },
+            "94a766ebdfbbff21428b6c504be7405e74c02774": {
+              "lower_bound_usd": 657.9377138550741,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 657.9377138550741,
+                "duration_s": 0.0
+              }
+            },
+            "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": {
+              "lower_bound_usd": 316.2289759071046,
+              "interval": {
+                "start": 0,
+                "end": 0,
+                "value_usd": 316.2289759071046,
+                "duration_s": 0.0
+              }
+            },
+            "b71183f48f7f7789d40551149be28a51f9a97f9a": {
+              "lower_bound_usd": 389448.2392475561,
+              "interval": {
+                "start": 24,
+                "end": 1199,
+                "value_usd": 602887.5103685083,
+                "duration_s": 47352.0
+              }
+            },
+            "bc808c98bea0a097346273a9fd7a5b231fc2d889": {
+              "lower_bound_usd": 6509.781390475959,
+              "interval": {
+                "start": 6,
+                "end": 7,
+                "value_usd": 6520.631026126752,
+                "duration_s": 144.0
+              }
+            },
+            "c3f8b34587eb403fc30a161d6a35cb724a3b273e": {
+              "lower_bound_usd": 278447.5426155564,
+              "interval": {
+                "start": 117,
+                "end": 118,
+                "value_usd": 279955.8001380573,
+                "duration_s": 468.0
+              }
+            },
+            "c927767cf7bddc5e8b996a0f957e5f22250a2f67": {
+              "lower_bound_usd": 2117.662991205858,
+              "interval": {
+                "start": 0,
+                "end": 1,
+                "value_usd": 2174.1340043046807,
+                "duration_s": 2304.0
+              }
+            },
+            "d86e6ef14b96d942ef0abf0720c549197ea8c528": {
+              "lower_bound_usd": 2616.234914413881,
+              "interval": {
+                "start": 0,
+                "end": 1,
+                "value_usd": 2629.31608898595,
+                "duration_s": 432.0
+              }
+            },
+            "dc89990a6fdc1c922b841f1d977835628a24ed57": {
+              "lower_bound_usd": 1367.2376403826643,
+              "interval": {
+                "start": 1,
+                "end": 1,
+                "value_usd": 1367.2376403826643,
+                "duration_s": 0.0
+              }
+            },
+            "dd313d475f8a9d81cbe2ea953a357f52e10ba357": {
+              "lower_bound_usd": 2039.0255765375734,
+              "interval": {
+                "start": 2,
+                "end": 2,
+                "value_usd": 2039.0255765375734,
+                "duration_s": 0.0
+              }
+            },
+            "e0c2e4f894d4cd33626e33b24582559f3156e1ab": {
+              "lower_bound_usd": 2288.9782060511775,
+              "interval": {
+                "start": 13,
+                "end": 14,
+                "value_usd": 2299.4693561622457,
+                "duration_s": 396.0
+              }
+            },
+            "e15f7d93f761c35b5d692224418099409c749011": {
+              "lower_bound_usd": 233978.59142403322,
+              "interval": {
+                "start": 80,
+                "end": 81,
+                "value_usd": 234985.99924822003,
+                "duration_s": 372.0
+              }
+            },
+            "e1de9910fe71cc216490ac7fcf019e13a34481d7": {
+              "lower_bound_usd": 77694.14663319453,
+              "interval": {
+                "start": 80,
+                "end": 85,
+                "value_usd": 123490.52973198307,
+                "duration_s": 50928.0
+              }
+            }
+          }
+        }
+      },
+      "budget_usd": 2529612.98,
+      "six_hour_envelope_usd": 3162016.225,
+      "training": {
+        "messages": 4422,
+        "value_usd": 11337412.8990406,
+        "immediate_messages": 4422,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 1.0000000000000022,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "test": {
+        "messages": 2055,
+        "value_usd": 5999194.987289309,
+        "immediate_messages": 1926,
+        "deferred_on_arrival": 129,
+        "immediate_message_fraction": 0.9372262773722628,
+        "immediate_value_fraction": 0.8353075078923047,
+        "delayed_then_delivered": 85,
+        "undelivered_tail": 44,
+        "oversized_messages": 44,
+        "delivered_value_fraction": 0.8395918327484687,
+        "p95_positive_delay_h": 153.70333333333335
+      },
+      "known_symbol_only_test": {
+        "messages": 2048,
+        "value_usd": 5851359.9501983365,
+        "immediate_messages": 1926,
+        "deferred_on_arrival": 122,
+        "immediate_message_fraction": 0.9404296875,
+        "immediate_value_fraction": 0.856411613170846,
+        "delayed_then_delivered": 85,
+        "undelivered_tail": 37,
+        "oversized_messages": 37,
+        "delivered_value_fraction": 0.8608041818078425,
+        "p95_positive_delay_h": 153.70333333333335
+      }
+    },
+    "pooled": {
+      "config": {
+        "policy": "pooled",
+        "multiple": 0.8913170624648349,
+        "caps": {
+          "root": 1027295.74
+        },
+        "weights": {
+          "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0337,
+          "6912088890254e69970baedb03284fb3d8fbcda0": 0.6411,
+          "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+          "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0375,
+          "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+          "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+          "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.001,
+          "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0497,
+          "e15f7d93f761c35b5d692224418099409c749011": 0.0299,
+          "67899664446ccfadf75e0d3f5668be262acd1069": 0.0187,
+          "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0217,
+          "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+          "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+          "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0005,
+          "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0168,
+          "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0025,
+          "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0001,
+          "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0004,
+          "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.0,
+          "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+          "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+          "0e993e49df1b7412ded493eaaf806730b74378b9": 0.022,
+          "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0007,
+          "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1164,
+          "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+          "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0032,
+          "647c621ceb36853ef6a907e397adf18568e70543": 0.0006,
+          "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+          "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0011
+        },
+        "budget": 1027295.74,
+        "optimization": {
+          "method": "bisection on all-arrival training feasibility; upward cent rounding",
+          "infeasible_lower_budget_usd": 1027295.7352627291,
+          "feasible_upper_budget_usd": 1027295.74,
+          "absolute_search_tolerance_usd": 0.01
+        }
+      },
+      "budget_usd": 1027295.74,
+      "six_hour_envelope_usd": 1284119.675,
+      "training": {
+        "messages": 4422,
+        "value_usd": 11337412.8990406,
+        "immediate_messages": 4422,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 1.0000000000000022,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "test": {
+        "messages": 2055,
+        "value_usd": 5999194.987289309,
+        "immediate_messages": 2055,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 0.9999999999999986,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "known_symbol_only_test": {
+        "messages": 2048,
+        "value_usd": 5851359.9501983365,
+        "immediate_messages": 2048,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 0.9999999999999989,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      }
+    }
+  },
+  "static_token_over_guard": 1.3503763575357262,
+  "new_symbol_test_messages": 7,
+  "new_symbol_test_value_usd": 147835.03709097212,
+  "rolling_windows": [
+    {
+      "start_day": 0,
+      "train_messages": 4422,
+      "test_messages": 606,
+      "rows": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 1.2575892986617636,
+            "caps": {
+              "root": 1449446.2
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0337,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.6411,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0375,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.001,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0497,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0299,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0187,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0217,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0005,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0168,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0025,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0001,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0004,
+              "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.0,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.022,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0007,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1164,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0032,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0006,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0011
+            },
+            "budget": 1449446.2,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 1449446.1963633455,
+              "feasible_upper_budget_usd": 1449446.2,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 1449446.2,
+          "six_hour_envelope_usd": 1811807.75,
+          "training": {
+            "messages": 4422,
+            "value_usd": 11337412.8990406,
+            "immediate_messages": 4422,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000022,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 606,
+            "value_usd": 1787403.6447226303,
+            "immediate_messages": 606,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.000000000000001,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 602,
+            "value_usd": 1787353.2318900898,
+            "immediate_messages": 602,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.000000000000001,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 214.3,
+              "ES": 21963.57,
+              "FUEL": 2278.98,
+              "LUMIA": 2039.03,
+              "NEX": 389448.24,
+              "OORT": 88.59,
+              "RDO": 2616.2400000000002,
+              "SEDA": 40185.86,
+              "SUPR": 6509.79,
+              "USDC": 1027295.74,
+              "USDT": 233978.6,
+              "USDe": 0.01,
+              "WBTC": 228584.7,
+              "amphrETH": 1367.24,
+              "cbBTC": 69.05,
+              "eXRD": 657.94
+            },
+            "budget": 1957297.88,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 1957297.8001156286,
+              "max_rounding_gap_usd": 0.16,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 214.2997036700608,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 228.4970590382023,
+                    "duration_s": 5724.0
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 21963.56856749366,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 22052.03294089051,
+                    "duration_s": 348.0
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 2278.972769308113,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 2278.972769308113,
+                    "duration_s": 0.0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 2039.0255765375734,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 2039.0255765375734,
+                    "duration_s": 0.0
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 389448.2392475561,
+                  "interval": {
+                    "start": 24,
+                    "end": 1199,
+                    "value_usd": 602887.5103685083,
+                    "duration_s": 47352.0
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 88.58443978513908,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 88.58443978513908,
+                    "duration_s": 0.0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 2616.234914413881,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 2629.31608898595,
+                    "duration_s": 432.0
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 40185.85273876751,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 46827.68117753603,
+                    "duration_s": 14280.0
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 6509.781390475959,
+                  "interval": {
+                    "start": 6,
+                    "end": 7,
+                    "value_usd": 6520.631026126752,
+                    "duration_s": 144.0
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 1027295.736012842,
+                  "interval": {
+                    "start": 179,
+                    "end": 186,
+                    "value_usd": 1119895.032217333,
+                    "duration_s": 7788.0
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 233978.59142403322,
+                  "interval": {
+                    "start": 86,
+                    "end": 87,
+                    "value_usd": 234985.99924822003,
+                    "duration_s": 372.0
+                  }
+                },
+                "USDe": {
+                  "lower_bound_usd": 9.647442463241556e-15,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 9.647442463241556e-15,
+                    "duration_s": 0.0
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 228584.6902973133,
+                  "interval": {
+                    "start": 19,
+                    "end": 20,
+                    "value_usd": 232045.20852542538,
+                    "duration_s": 1308.0
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 1367.2376403826643,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1367.2376403826643,
+                    "duration_s": 0.0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 69.04767919428468,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 70.0929843376426,
+                    "duration_s": 1308.0
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 657.9377138550741,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 657.9377138550741,
+                    "duration_s": 0.0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 1957297.88,
+          "six_hour_envelope_usd": 2446622.3499999996,
+          "training": {
+            "messages": 4422,
+            "value_usd": 11337412.8990406,
+            "immediate_messages": 4422,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000022,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 606,
+            "value_usd": 1787403.6447226303,
+            "immediate_messages": 600,
+            "deferred_on_arrival": 6,
+            "immediate_message_fraction": 0.9900990099009901,
+            "immediate_value_fraction": 0.9975951570250335,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 6,
+            "oversized_messages": 6,
+            "delivered_value_fraction": 0.9975951570250323,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 602,
+            "value_usd": 1787353.2318900898,
+            "immediate_messages": 600,
+            "deferred_on_arrival": 2,
+            "immediate_message_fraction": 0.9966777408637874,
+            "immediate_value_fraction": 0.9976232944948392,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 2,
+            "oversized_messages": 2,
+            "delivered_value_fraction": 0.9976232944948379,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      },
+      "configuration_changes_from_previous": null
+    },
+    {
+      "start_day": 14,
+      "train_messages": 4711,
+      "test_messages": 341,
+      "rows": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 1.3181728590871031,
+            "caps": {
+              "root": 1240141.77
+            },
+            "weights": {
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0004,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.5773,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.002,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0332,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0429,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0029,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0239,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0578,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0147,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0239,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0008,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0133,
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0394,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0006,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1591,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0006,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0041,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0006,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0012,
+              "733bc1f0d76ab8f0ab7c1c8044ecc4720cd402ad": 0.0,
+              "ef899e92da472e014be795ecce948308958e25a2": 0.0,
+              "6cf5640464be070157d3173c69ca8f294c7595df": 0.0,
+              "32ff31ffeb04070e9e34c345965c1bb9b5c1f787": 0.0,
+              "b20524c700879620d921c5eb4435517a0549ad75": 0.0
+            },
+            "budget": 1240141.77,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 1240141.761182462,
+              "feasible_upper_budget_usd": 1240141.77,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 1240141.77,
+          "six_hour_envelope_usd": 1550177.2125,
+          "training": {
+            "messages": 4711,
+            "value_usd": 10461997.826559473,
+            "immediate_messages": 4711,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000013,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 340,
+            "deferred_on_arrival": 1,
+            "immediate_message_fraction": 0.9970674486803519,
+            "immediate_value_fraction": 0.6053447349689691,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.6053447349689693,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 340,
+            "deferred_on_arrival": 1,
+            "immediate_message_fraction": 0.9970674486803519,
+            "immediate_value_fraction": 0.6053447349689691,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.6053447349689693,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 214.3,
+              "ES": 21963.57,
+              "FUEL": 4109.18,
+              "LITKEY": 2.6,
+              "LUMIA": 971.1,
+              "NEX": 389448.24,
+              "OORT": 139.89000000000001,
+              "RDO": 27.42,
+              "SEDA": 40185.86,
+              "SUPR": 6509.79,
+              "TAIKO": 44.94,
+              "USDC": 558775.92,
+              "USDT": 233978.6,
+              "WBTC": 228584.7,
+              "amphrETH": 1367.24,
+              "cbBTC": 69.05,
+              "eXRD": 584.87,
+              "weETHs": 2.7800000000000002
+            },
+            "budget": 1486980.05,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 1486979.9668835017,
+              "max_rounding_gap_usd": 0.18,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 214.2997036700608,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 228.4970590382023,
+                    "duration_s": 5724.0
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 21963.56856749366,
+                  "interval": {
+                    "start": 114,
+                    "end": 116,
+                    "value_usd": 22052.03294089051,
+                    "duration_s": 348.0
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 4109.17772463578,
+                  "interval": {
+                    "start": 35,
+                    "end": 35,
+                    "value_usd": 4109.17772463578,
+                    "duration_s": 0.0
+                  }
+                },
+                "LITKEY": {
+                  "lower_bound_usd": 2.591836042172529,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 2.591836042172529,
+                    "duration_s": 0.0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 971.0941094493157,
+                  "interval": {
+                    "start": 18,
+                    "end": 19,
+                    "value_usd": 973.1172221773353,
+                    "duration_s": 180.0
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 389448.2392475561,
+                  "interval": {
+                    "start": 24,
+                    "end": 1199,
+                    "value_usd": 602887.5103685083,
+                    "duration_s": 47352.0
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 139.88352670931377,
+                  "interval": {
+                    "start": 8,
+                    "end": 9,
+                    "value_usd": 140.31094859648113,
+                    "duration_s": 264.0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 27.417040659859776,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 27.417040659859776,
+                    "duration_s": 0.0
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 40185.85273876751,
+                  "interval": {
+                    "start": 116,
+                    "end": 133,
+                    "value_usd": 46827.68117753603,
+                    "duration_s": 14280.0
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 6509.781390475959,
+                  "interval": {
+                    "start": 4,
+                    "end": 5,
+                    "value_usd": 6520.631026126752,
+                    "duration_s": 144.0
+                  }
+                },
+                "TAIKO": {
+                  "lower_bound_usd": 44.93494594140203,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 45.04728330625553,
+                    "duration_s": 216.0
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 558775.9160830276,
+                  "interval": {
+                    "start": 71,
+                    "end": 108,
+                    "value_usd": 915305.9936504483,
+                    "duration_s": 55128.0
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 233978.59142403322,
+                  "interval": {
+                    "start": 68,
+                    "end": 69,
+                    "value_usd": 234985.99924822003,
+                    "duration_s": 372.0
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 228584.6902973133,
+                  "interval": {
+                    "start": 18,
+                    "end": 19,
+                    "value_usd": 232045.20852542538,
+                    "duration_s": 1308.0
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 1367.2376403826643,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1367.2376403826643,
+                    "duration_s": 0.0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 69.04767919428468,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 70.0929843376426,
+                    "duration_s": 1308.0
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 584.8692149574376,
+                  "interval": {
+                    "start": 10,
+                    "end": 12,
+                    "value_usd": 585.1941422990807,
+                    "duration_s": 48.0
+                  }
+                },
+                "weETHs": {
+                  "lower_bound_usd": 2.7737131920243825,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 2.7737131920243825,
+                    "duration_s": 0.0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 1486980.05,
+          "six_hour_envelope_usd": 1858725.0625,
+          "training": {
+            "messages": 4711,
+            "value_usd": 10461997.826559473,
+            "immediate_messages": 4711,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000013,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 315,
+            "deferred_on_arrival": 26,
+            "immediate_message_fraction": 0.9237536656891495,
+            "immediate_value_fraction": 0.4758303981447865,
+            "delayed_then_delivered": 19,
+            "undelivered_tail": 7,
+            "oversized_messages": 7,
+            "delivered_value_fraction": 0.4777917120131402,
+            "p95_positive_delay_h": 120.46333333333334
+          },
+          "known_symbol_only_test": {
+            "messages": 341,
+            "value_usd": 1558409.0437365712,
+            "immediate_messages": 315,
+            "deferred_on_arrival": 26,
+            "immediate_message_fraction": 0.9237536656891495,
+            "immediate_value_fraction": 0.4758303981447865,
+            "delayed_then_delivered": 19,
+            "undelivered_tail": 7,
+            "oversized_messages": 7,
+            "delivered_value_fraction": 0.4777917120131402,
+            "p95_positive_delay_h": 120.46333333333334
+          }
+        }
+      },
+      "configuration_changes_from_previous": {
+        "guard": {
+          "parameters_after": 32,
+          "changed_parameters": 28,
+          "changed_over_one_percent": 21,
+          "added_parameters": 5,
+          "removed_parameters": 3
+        },
+        "optimized_static_token": {
+          "parameters_after": 18,
+          "changed_parameters": 10,
+          "changed_over_one_percent": 10,
+          "added_parameters": 3,
+          "removed_parameters": 1
+        }
+      }
+    },
+    {
+      "start_day": 28,
+      "train_messages": 2839,
+      "test_messages": 437,
+      "rows": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 3.5758848931105307,
+            "caps": {
+              "root": 2305919.71
+            },
+            "weights": {
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1242,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.4191,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0146,
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.049,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0442,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.048,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.077,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0008,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0562,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0006,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0001,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0045,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0037,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0316,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0111,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.0029,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.003,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0003,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0008,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0017,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0863,
+              "733bc1f0d76ab8f0ab7c1c8044ecc4720cd402ad": 0.0188,
+              "ef899e92da472e014be795ecce948308958e25a2": 0.0,
+              "6cf5640464be070157d3173c69ca8f294c7595df": 0.0,
+              "32ff31ffeb04070e9e34c345965c1bb9b5c1f787": 0.0,
+              "b20524c700879620d921c5eb4435517a0549ad75": 0.0,
+              "78ac7fecd1857f5beee98ab39096c9781f976d97": 0.0
+            },
+            "budget": 2305919.71,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 2305919.69826341,
+              "feasible_upper_budget_usd": 2305919.71,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 2305919.71,
+          "six_hour_envelope_usd": 2882399.6375,
+          "training": {
+            "messages": 2839,
+            "value_usd": 7836521.547268036,
+            "immediate_messages": 2839,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000024,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 437,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999994,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 437,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999994,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 214.3,
+              "ES": 21963.57,
+              "FUEL": 4109.18,
+              "LITKEY": 147750.31,
+              "LUMIA": 971.1,
+              "NEX": 135114.52,
+              "OORT": 139.89000000000001,
+              "RDO": 30.41,
+              "SEDA": 40185.86,
+              "SUPR": 615034.34,
+              "TAIKO": 44.94,
+              "USDC": 499720.11,
+              "USDT": 233978.6,
+              "WBTC": 228584.7,
+              "amphrETH": 1367.24,
+              "cbBTC": 69.05,
+              "eXRD": 2531.2000000000003,
+              "weETHs": 2.7800000000000002
+            },
+            "budget": 1931812.0999999999,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 1931812.016346212,
+              "max_rounding_gap_usd": 0.18,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 214.2997036700608,
+                  "interval": {
+                    "start": 4,
+                    "end": 6,
+                    "value_usd": 228.4970590382023,
+                    "duration_s": 5724.0
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 21963.56856749366,
+                  "interval": {
+                    "start": 64,
+                    "end": 66,
+                    "value_usd": 22052.03294089051,
+                    "duration_s": 348.0
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 4109.17772463578,
+                  "interval": {
+                    "start": 18,
+                    "end": 18,
+                    "value_usd": 4109.17772463578,
+                    "duration_s": 0.0
+                  }
+                },
+                "LITKEY": {
+                  "lower_bound_usd": 147750.30947378383,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 147750.30947378383,
+                    "duration_s": 0.0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 971.0941094493157,
+                  "interval": {
+                    "start": 6,
+                    "end": 7,
+                    "value_usd": 973.1172221773353,
+                    "duration_s": 180.0
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 135114.5160179178,
+                  "interval": {
+                    "start": 757,
+                    "end": 806,
+                    "value_usd": 152341.6168102023,
+                    "duration_s": 11016.0
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 139.88352670931377,
+                  "interval": {
+                    "start": 7,
+                    "end": 8,
+                    "value_usd": 140.31094859648113,
+                    "duration_s": 264.0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 30.407126143501525,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 30.407126143501525,
+                    "duration_s": 0.0
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 40185.85273876751,
+                  "interval": {
+                    "start": 53,
+                    "end": 70,
+                    "value_usd": 46827.68117753603,
+                    "duration_s": 14280.0
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 615034.3341826116,
+                  "interval": {
+                    "start": 9,
+                    "end": 9,
+                    "value_usd": 615034.3341826116,
+                    "duration_s": 0.0
+                  }
+                },
+                "TAIKO": {
+                  "lower_bound_usd": 44.93494594140203,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 45.04728330625553,
+                    "duration_s": 216.0
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 499720.103404289,
+                  "interval": {
+                    "start": 650,
+                    "end": 650,
+                    "value_usd": 499720.103404289,
+                    "duration_s": 0.0
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 233978.59142403322,
+                  "interval": {
+                    "start": 30,
+                    "end": 31,
+                    "value_usd": 234985.99924822003,
+                    "duration_s": 372.0
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 228584.6902973133,
+                  "interval": {
+                    "start": 9,
+                    "end": 10,
+                    "value_usd": 232045.20852542538,
+                    "duration_s": 1308.0
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 1367.2376403826643,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1367.2376403826643,
+                    "duration_s": 0.0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 69.04767919428468,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 70.0929843376426,
+                    "duration_s": 1308.0
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 2531.194070683863,
+                  "interval": {
+                    "start": 12,
+                    "end": 32,
+                    "value_usd": 2917.552721195191,
+                    "duration_s": 13188.0
+                  }
+                },
+                "weETHs": {
+                  "lower_bound_usd": 2.7737131920243825,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 2.7737131920243825,
+                    "duration_s": 0.0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 1931812.0999999999,
+          "six_hour_envelope_usd": 2414765.125,
+          "training": {
+            "messages": 2839,
+            "value_usd": 7836521.547268036,
+            "immediate_messages": 2839,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000024,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 423,
+            "deferred_on_arrival": 14,
+            "immediate_message_fraction": 0.9679633867276888,
+            "immediate_value_fraction": 0.9922902657730549,
+            "delayed_then_delivered": 11,
+            "undelivered_tail": 3,
+            "oversized_messages": 3,
+            "delivered_value_fraction": 0.9946913639419751,
+            "p95_positive_delay_h": 18.3
+          },
+          "known_symbol_only_test": {
+            "messages": 437,
+            "value_usd": 1285473.796086023,
+            "immediate_messages": 423,
+            "deferred_on_arrival": 14,
+            "immediate_message_fraction": 0.9679633867276888,
+            "immediate_value_fraction": 0.9922902657730549,
+            "delayed_then_delivered": 11,
+            "undelivered_tail": 3,
+            "oversized_messages": 3,
+            "delivered_value_fraction": 0.9946913639419751,
+            "p95_positive_delay_h": 18.3
+          }
+        }
+      },
+      "configuration_changes_from_previous": {
+        "guard": {
+          "parameters_after": 33,
+          "changed_parameters": 23,
+          "changed_over_one_percent": 22,
+          "added_parameters": 1,
+          "removed_parameters": 0
+        },
+        "optimized_static_token": {
+          "parameters_after": 18,
+          "changed_parameters": 6,
+          "changed_over_one_percent": 6,
+          "added_parameters": 0,
+          "removed_parameters": 0
+        }
+      }
+    },
+    {
+      "start_day": 42,
+      "train_messages": 2012,
+      "test_messages": 462,
+      "rows": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 3.4574648920440807,
+            "caps": {
+              "root": 2229556.23
+            },
+            "weights": {
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0355,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.0905,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.5189,
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0304,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0527,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0043,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0039,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0096,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0512,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0019,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0134,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.0036,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0165,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0977,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0353,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0049,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0002,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0028,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0006,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0008,
+              "733bc1f0d76ab8f0ab7c1c8044ecc4720cd402ad": 0.0211,
+              "ef899e92da472e014be795ecce948308958e25a2": 0.0,
+              "6cf5640464be070157d3173c69ca8f294c7595df": 0.0,
+              "32ff31ffeb04070e9e34c345965c1bb9b5c1f787": 0.0,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0023,
+              "b20524c700879620d921c5eb4435517a0549ad75": 0.0,
+              "78ac7fecd1857f5beee98ab39096c9781f976d97": 0.0,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0,
+              "fc2944e9f1d57ce82aed05922887dd660404e50b": 0.0,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0005,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0
+            },
+            "budget": 2229556.23,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 2229556.2182292817,
+              "feasible_upper_budget_usd": 2229556.23,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 2229556.23,
+          "six_hour_envelope_usd": 2786945.2875,
+          "training": {
+            "messages": 2012,
+            "value_usd": 6990561.38125523,
+            "immediate_messages": 2012,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 462,
+            "value_usd": 1017303.7168675079,
+            "immediate_messages": 462,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000002,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 461,
+            "value_usd": 1017269.9929831638,
+            "immediate_messages": 461,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000002,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 214.3,
+              "ES": 21963.57,
+              "FUEL": 4109.18,
+              "LITKEY": 147750.31,
+              "LUMIA": 1175.1100000000001,
+              "NEX": 135114.52,
+              "OORT": 139.89000000000001,
+              "RDO": 44.300000000000004,
+              "SEDA": 18950.46,
+              "SUPR": 615034.34,
+              "TAIKO": 44.94,
+              "USDC": 499720.11,
+              "USDT": 28303.71,
+              "WBTC": 228584.7,
+              "amphrETH": 118.52,
+              "cbBTC": 4098.66,
+              "eXRD": 4971.12,
+              "weETHs": 2.7800000000000002
+            },
+            "budget": 1710340.52,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 1710340.439815735,
+              "max_rounding_gap_usd": 0.18,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 214.2997036700608,
+                  "interval": {
+                    "start": 1,
+                    "end": 3,
+                    "value_usd": 228.4970590382023,
+                    "duration_s": 5724.0
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 21963.56856749366,
+                  "interval": {
+                    "start": 39,
+                    "end": 41,
+                    "value_usd": 22052.03294089051,
+                    "duration_s": 348.0
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 4109.17772463578,
+                  "interval": {
+                    "start": 14,
+                    "end": 14,
+                    "value_usd": 4109.17772463578,
+                    "duration_s": 0.0
+                  }
+                },
+                "LITKEY": {
+                  "lower_bound_usd": 147750.30947378383,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 147750.30947378383,
+                    "duration_s": 0.0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 1175.1084888361463,
+                  "interval": {
+                    "start": 26,
+                    "end": 29,
+                    "value_usd": 1340.4397248348987,
+                    "duration_s": 12156.0
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 135114.5160179178,
+                  "interval": {
+                    "start": 175,
+                    "end": 224,
+                    "value_usd": 152341.6168102023,
+                    "duration_s": 11016.0
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 139.88352670931377,
+                  "interval": {
+                    "start": 6,
+                    "end": 7,
+                    "value_usd": 140.31094859648113,
+                    "duration_s": 264.0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 44.2940514878434,
+                  "interval": {
+                    "start": 2,
+                    "end": 3,
+                    "value_usd": 44.30020343943893,
+                    "duration_s": 12.0
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 18950.45875128419,
+                  "interval": {
+                    "start": 55,
+                    "end": 85,
+                    "value_usd": 35279.4373753074,
+                    "duration_s": 74448.0
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 615034.3341826116,
+                  "interval": {
+                    "start": 9,
+                    "end": 9,
+                    "value_usd": 615034.3341826116,
+                    "duration_s": 0.0
+                  }
+                },
+                "TAIKO": {
+                  "lower_bound_usd": 44.93494594140203,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 45.04728330625553,
+                    "duration_s": 216.0
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 499720.103404289,
+                  "interval": {
+                    "start": 339,
+                    "end": 339,
+                    "value_usd": 499720.103404289,
+                    "duration_s": 0.0
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 28303.701556621363,
+                  "interval": {
+                    "start": 80,
+                    "end": 80,
+                    "value_usd": 28303.701556621363,
+                    "duration_s": 0.0
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 228584.6902973133,
+                  "interval": {
+                    "start": 5,
+                    "end": 6,
+                    "value_usd": 232045.20852542538,
+                    "duration_s": 1308.0
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 118.51091490557633,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 118.51091490557633,
+                    "duration_s": 0.0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 4098.654792801101,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 4098.654792801101,
+                    "duration_s": 0.0
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 4971.119702241046,
+                  "interval": {
+                    "start": 44,
+                    "end": 65,
+                    "value_usd": 8646.98654873151,
+                    "duration_s": 63888.0
+                  }
+                },
+                "weETHs": {
+                  "lower_bound_usd": 2.7737131920243825,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 2.7737131920243825,
+                    "duration_s": 0.0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 1710340.52,
+          "six_hour_envelope_usd": 2137925.65,
+          "training": {
+            "messages": 2012,
+            "value_usd": 6990561.38125523,
+            "immediate_messages": 2012,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 462,
+            "value_usd": 1017303.7168675079,
+            "immediate_messages": 460,
+            "deferred_on_arrival": 2,
+            "immediate_message_fraction": 0.9956709956709957,
+            "immediate_value_fraction": 0.999902011707063,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 2,
+            "oversized_messages": 2,
+            "delivered_value_fraction": 0.9999020117070628,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 461,
+            "value_usd": 1017269.9929831638,
+            "immediate_messages": 460,
+            "deferred_on_arrival": 1,
+            "immediate_message_fraction": 0.9978308026030369,
+            "immediate_value_fraction": 0.9999351598191973,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.9999351598191971,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      },
+      "configuration_changes_from_previous": {
+        "guard": {
+          "parameters_after": 35,
+          "changed_parameters": 26,
+          "changed_over_one_percent": 24,
+          "added_parameters": 2,
+          "removed_parameters": 0
+        },
+        "optimized_static_token": {
+          "parameters_after": 18,
+          "changed_parameters": 7,
+          "changed_over_one_percent": 7,
+          "added_parameters": 0,
+          "removed_parameters": 0
+        }
+      }
+    }
+  ],
+  "input_sha256": "09a379c69e32570f90a16ed21263352788c53d236c4c959f23600fc99f3a3b65"
+}

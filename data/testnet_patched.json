@@ -1,0 +1,189 @@
+{
+ "schema": 1,
+ "build": "delivery-binding fix (processedAt + installedUnder + once-only meter)",
+ "chain": "sepolia -> base_sepolia",
+ "guard": "0xc129ece8eb1fdb82f5697fd1a8b202682ff56ce1",
+ "aggregation_ism": "0xa96F1e5d1Ec6c0642E625Ad494C4Ec5B236b526D",
+ "window_utc": [
+  "2026-09-24T17:15:40Z",
+  "2026-09-24T17:46:49Z"
+ ],
+ "run_minutes": 31,
+ "dispatched": 32,
+ "delivered_and_metered": 32,
+ "harness_note": "the workload harness recorded 7 of these; the rest raised because it read destination state immediately after the process transaction and hit a lagging RPC node. Reconciliation afterwards reads processedAt and messageMetered for every dispatched message; both persist only for a successful process().",
+ "recorded_latency_s": {
+  "n": 7,
+  "median": 14.17,
+  "max": 28.46
+ },
+ "direct_call_replay": {
+  "message_id": "0x32a4339d7d8bd1a4489357082422c24b9cd8bc40a2019a5909d80e51c3bac12f",
+  "old_build_guard": "0x3c6c8d6ac90ca7491af7381e8a9ccd755cf29a81",
+  "old_build_result": "accepted (verify returned true)",
+  "patched_guard_result": "reverted NotCurrentDelivery",
+  "method": "eth_call from an unprivileged address; no state change"
+ },
+ "messages": [
+  {
+   "message_id": "0x32a4339d7d8bd1a4489357082422c24b9cd8bc40a2019a5909d80e51c3bac12f",
+   "processed_at": 47250926,
+   "metered": true
+  },
+  {
+   "message_id": "0xf4356f190c4e3965fefc0a436893651a094876c24c275b6656ccd81066d4a8a1",
+   "processed_at": 47250938,
+   "metered": true
+  },
+  {
+   "message_id": "0xd440758a08392f29491f47aff20f1cda96dfd028141914e76bf1c07c49f33357",
+   "processed_at": 47250967,
+   "metered": true
+  },
+  {
+   "message_id": "0xda3d909bb80f19e9c2994399566954fa50c4808b28dfbe43067a055eac52087d",
+   "processed_at": 47250998,
+   "metered": true
+  },
+  {
+   "message_id": "0x1d6097edd244cd4529e4d22d2ec7c9476775a5f3c53076fae7e6037d48c43262",
+   "processed_at": 47251028,
+   "metered": true
+  },
+  {
+   "message_id": "0xed225fc3d3f990ff101a1dc7f35e6d5c14752b4a14c7e7db5493fba0c8b52956",
+   "processed_at": 47251058,
+   "metered": true
+  },
+  {
+   "message_id": "0x865725352f01f258f5ad29e6bdd6e3cdd2b8da52dcb484f6f91366cfab367b9c",
+   "processed_at": 47251088,
+   "metered": true
+  },
+  {
+   "message_id": "0xb31798f6c452dea791c35348b4cd57f1c71373dcec4ebaee186a2929dd10d100",
+   "processed_at": 47251117,
+   "metered": true
+  },
+  {
+   "message_id": "0x2163f108878f518918f6040f788707e97c28fc3a7fed8a6fcd63ebf375be7b16",
+   "processed_at": 47251148,
+   "metered": true
+  },
+  {
+   "message_id": "0xc356c20b9d8f91fddd9f2c6535e96d024381462161fd6a44256ae94318b48051",
+   "processed_at": 47251178,
+   "metered": true
+  },
+  {
+   "message_id": "0xac9efd7d941a462bf1addd138837d12de48a6fd926ac3bca56873a43c6ace4ee",
+   "processed_at": 47251207,
+   "metered": true
+  },
+  {
+   "message_id": "0x755754dc76648f64d88069a03f8dfe126df7e7838e7b5447017d5183640e26ed",
+   "processed_at": 47251232,
+   "metered": true
+  },
+  {
+   "message_id": "0xe94c0e79bba42fa607d002c6540a51165b468c2fad8f0c838aa80ded8cc1d797",
+   "processed_at": 47251261,
+   "metered": true
+  },
+  {
+   "message_id": "0xcd6893a92d6e7b89a3cbadd6fac28ff5b6b20b5bbcc4eee86b2b28932f125c8e",
+   "processed_at": 47251292,
+   "metered": true
+  },
+  {
+   "message_id": "0x8e35069feca2bd5c249d5876aef3d9ac7a868ae36f1b74eb0d6bed104329de0e",
+   "processed_at": 47251321,
+   "metered": true
+  },
+  {
+   "message_id": "0x05855fdaa4242b77292cb275ce27fc2fbf05d814a7b2454f74b5b6587ea95d1a",
+   "processed_at": 47251352,
+   "metered": true
+  },
+  {
+   "message_id": "0xdddc4b1dec138fbbd9042c7602e626ae0d1176a24d6b3b5a3b1e04320fef4243",
+   "processed_at": 47251383,
+   "metered": true
+  },
+  {
+   "message_id": "0xdc9066beb1316b9c7150aa4e2a47f13713b727a1470cfb4470dc74622ddbb37a",
+   "processed_at": 47251411,
+   "metered": true
+  },
+  {
+   "message_id": "0x0f005c8f1fa453d46ace4f9a57b78ec34901158bd7342f18d165cf4d8ccfb35b",
+   "processed_at": 47251448,
+   "metered": true
+  },
+  {
+   "message_id": "0xcc6b67a8f5e66238b33cf28c04354f703883db440ea26cc7229e47883a87f72b",
+   "processed_at": 47251477,
+   "metered": true
+  },
+  {
+   "message_id": "0xe3ccf2222c627d58a804d4b9e79d00ccd7178da1ee799ddd7aeb20a7a2bf4231",
+   "processed_at": 47251502,
+   "metered": true
+  },
+  {
+   "message_id": "0x17896c71f309f53bf2ef7477fb0cc4f1576f610904865f291f4cc2176dd1a67e",
+   "processed_at": 47251531,
+   "metered": true
+  },
+  {
+   "message_id": "0x0c8bb80c0241fd03c2926513ceb303abfd2888bfd1dabc342e7c75d6527e79c8",
+   "processed_at": 47251556,
+   "metered": true
+  },
+  {
+   "message_id": "0x119f198ea752a40b9963e0eecc94ffcfa653f00ffb4e3b66b5d3b221387f4c33",
+   "processed_at": 47251586,
+   "metered": true
+  },
+  {
+   "message_id": "0x3399d9677627614fe51ac272da8dd12069904375d94ea4760be181a3ca1dda11",
+   "processed_at": 47251610,
+   "metered": true
+  },
+  {
+   "message_id": "0x4f79a2877a05b617c3ae6a57af61bd4adfbe75f5b95da1ea7b2fb0f155585c09",
+   "processed_at": 47251640,
+   "metered": true
+  },
+  {
+   "message_id": "0xb4d64341fbbce4c915a3ca84c8abc8d231192294e67501a792e74ca6325927ee",
+   "processed_at": 47251669,
+   "metered": true
+  },
+  {
+   "message_id": "0x60aa3cb08e389c17bd9c3bdd0afe4bd5596741a31d88247043346538eb5b39aa",
+   "processed_at": 47251700,
+   "metered": true
+  },
+  {
+   "message_id": "0xe1a75b23c6363f455623efb4a71faf791df9ff802754f9260ed33d0e7b43a364",
+   "processed_at": 47251736,
+   "metered": true
+  },
+  {
+   "message_id": "0x5f7b9c4a72a1139886a17b86c686e2d9ce6fd6971d123fd4d515d1360801c642",
+   "processed_at": 47251772,
+   "metered": true
+  },
+  {
+   "message_id": "0x7990a7f4afeb60356266fa39325946842053dfbe0c5f4a1b92470b3a3aacafdf",
+   "processed_at": 47251808,
+   "metered": true
+  },
+  {
+   "message_id": "0xbab64efc3a41fc9287749674e1fff4a10296f26c7ded3353cc0e7f12a494595b",
+   "processed_at": 47251838,
+   "metered": true
+  }
+ ]
+}

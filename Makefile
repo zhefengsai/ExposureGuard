@@ -2,7 +2,7 @@ PYTHON ?= python3
 ROOT := $(CURDIR)
 export PYTHONPATH := $(ROOT)/ExposureGuard/control:$(ROOT)/exp
 
-.PHONY: verify data-check python-tests contract-tests rq1 rq2 rq3 figures
+.PHONY: verify data-check python-tests contract-tests rq1 rq2 rq3 figures revision-audit
 
 verify: data-check python-tests contract-tests
 
@@ -22,6 +22,7 @@ rq1:
 	cd exp && $(PYTHON) baselines.py
 	cd exp && $(PYTHON) pertoken_baseline.py
 	cd exp && $(PYTHON) matched_availability.py
+	cd exp && $(PYTHON) a4_optimized_static.py
 	cd exp && $(PYTHON) rolling_matched.py
 	cd exp && $(PYTHON) detector_baseline.py
 	cd exp && $(PYTHON) synth_generalization.py
@@ -47,3 +48,10 @@ figures:
 	cd exp && $(PYTHON) fig1.py
 	cd exp && $(PYTHON) fig_cn.py
 	cd exp && $(PYTHON) incidents.py
+
+revision-audit:
+	cd exp && $(PYTHON) a4_optimized_static.py
+	cd exp && $(PYTHON) a2_ethereum_event_audit.py --offline
+	cd exp && $(PYTHON) a2_unknown_inventory.py
+	cd exp && $(PYTHON) a2_recovery_sensitivity.py
+	cd exp && $(PYTHON) a4_historical_service.py

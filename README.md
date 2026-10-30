@@ -1,7 +1,10 @@
 # ExposureGuard
 
-Artifact for the paper **"ExposureGuard: Bounding Aggregate Exposure for
-Cross-Chain Routes Sharing a Verification Root."**
+Artifact for the paper **"ExposureGuard: Bounding Aggregate Exposure in
+Cross-Chain Messaging Networks with Shared Verification Roots."**
+
+The revised experiment artifact is tagged `v1.3.0-paper`. Earlier tags retain
+the original submission inputs and comparison conventions.
 
 ExposureGuard is a destination-side admission control for cross-chain routes
 that inherit the same verification root. Instead of assigning an independent
@@ -53,8 +56,48 @@ and measurement bias used by all three research questions.
 |---|---|---|
 | Shared-root routes and owner clusters | `hl_ism.py`, `owner_independence.py` | `hl_ism_*.json`, `owner_independence.json` |
 | Chain-log reconstruction and indexer cross-check | `chainlog_xval.py`, `apply_chainlog_flow.py` | `events_multi.json`, `chainlog_xval_*.json` |
-| Pricing coverage and unpriced-route triage | `pricing_coverage.py`, `price_coverage_curve.py`, `unpriced_triage.py` | `pricing_coverage.json`, `price_coverage_curve.json` |
+| Pricing coverage and unpriced-route triage | `pricing_coverage.py`, `price_coverage_curve.py`, `unpriced_triage.py` | `pricing_coverage.json`, `price_coverage_curve.json`, `unpriced_triage.json` |
+| Missing-value audit and historical recovery | `a2_missing_price_audit.py`, `a2_historical_recovery.py` | `a2_missing_price_audit.json`, `a2_historical_recovery.json` |
+| Full Ethereum event audit and valuation sensitivity | `a2_ethereum_event_audit.py`, `a2_recovery_sensitivity.py` | `a2_ethereum_event_audit.json`, `a2_recovery_sensitivity.json` |
+| Unresolved historical messages by route, contract key, and reason | `a2_unknown_inventory.py` | `a2_unknown_inventory.json`, `a2_unknown_inventory.csv` |
 | Cross-stack placement study | `census/run.py`, `separability_check.py`, `census_evidence.py` | `census_evidence.json`, `separability.json` |
+
+The missing-value audit joins frozen delivery counts to the final priced trace;
+it does not assign dollar values to omitted messages. Run
+`python3 exp/a2_missing_price_audit.py` to reconstruct the by-chain and
+by-route-type counts. The narrow historical recovery records 36 messages.
+The full event audit examines all 9,616 Ethereum deliveries and recovers 630
+original omissions, estimated at $575.9k. It identifies actual transfers,
+mint logs, and successful native calls, including underlying assets paid by
+registered vaults. Of the original omissions, 2,509 remain unknown. Another
+121 originally priced messages fail the stricter rules; the uniform
+historical cohort contains 6,986 messages. An accepted historical daily quote
+must be within 24 hours of delivery.
+
+The remaining 2,509 original Ethereum omissions comprise 2,508 messages
+without an accepted historical quote and one unmatched receive event. Labels
+on the unquoted routes are NES (2,044), stHYPER (267), tETH (93), KII (46),
+iKAS (22), USAD (16), tUSD (7), ETN (7), Re7LRT (3), TIA (2), and ALEO (1).
+The unmatched receive is labelled USDC. These names do not establish asset
+identity. `data/a2_unknown_inventory.csv` gives route addresses and contract
+price keys where known. It also distinguishes the 121 originally priced
+messages that do not pass the reconstruction rules. Missing historical
+quotes are not evidence of zero value or of unavailable quotes elsewhere.
+
+The reconstructed daily peak is $1.945M rather than $1.153M. With the same
+fixed $9.857M inventory reference, the default six-hour ratio changes from
+6.40 to 3.79. This is a valuation sensitivity, not historical inventory or
+actual loss reconstruction. Unknown USD values are never assigned zero.
+
+Offline reproduction uses the frozen public-response cache:
+
+```bash
+tar -xzf data/a2_http_cache.tar.gz -C data
+make revision-audit
+```
+
+Omitting `--offline` from the event-audit command populates or resumes its
+URL-keyed cache. Current exchange-rate fields in explorer responses are not used.
 
 ### RQ1: How much exposure does the aggregate bound remove?
 
@@ -67,6 +110,7 @@ correlated demand removes the benefit of aggregation.
 | Aggregate budget and pause comparison | `sim3.py`, `fig1.py` | `sim3.json`, `fig/fig_gap_*.{png,pdf}` |
 | Per-route and per-token baselines | `baselines.py`, `pertoken_baseline.py` | `baselines.json`, `pertoken_baseline.json` |
 | Common training availability targets, including coordinated token partitions | `matched_availability.py` | `matched_availability.json`, `fig/fig_matched_availability.{png,pdf}` |
+| Optimized static token/route capacities and refined shared budgets | `a4_optimized_static.py` | `a4_optimized_static.json` |
 | Rolling-origin matched training targets | `rolling_matched.py` | `rolling_matched.json` |
 | Oracle detector crossover | `detector_baseline.py` | `detector_baseline.json`, `fig/fig_detector.*` |
 | Correlated-demand generalization | `synth_generalization.py` | `synth_generalization.json`, `fig/fig_synth_*.{png,pdf}` |
@@ -79,7 +123,7 @@ Run the offline RQ1 pipeline with:
 make rq1
 ```
 
-The revised common-target comparison is reproduced independently with
+The earlier fixed-grid comparison is reproduced independently with
 `python3 exp/matched_availability.py`. It calibrates on the first 60 Ethereum
 days and freezes policies for 2,055 later messages. Both message-count and
 value service on arrival must meet the chosen training target. At the 100%
@@ -107,6 +151,41 @@ training value immediately. They need a $2.88M envelope to meet the same
 result: independent per-token caps select a smaller envelope in the last two
 windows. These are not independent trials or a population confidence bound.
 Run `python3 exp/rolling_matched.py` to reproduce them.
+
+The revised comparison uses `a4_optimized_static.py` and
+`a2_recovery_sensitivity.py`. Each static bucket is minimized against its
+most demanding training interval; the sum is the minimum budget in this
+fixed-refill static class. ExposureGuard keeps alpha=0.8 and training weights
+while its budget is bisected. Upward cent rounding removes the grid-selection
+gap. On the historical cohort, six-hour envelopes are $4.019M for ExposureGuard
+and $4.581M for static token limits (ratio 1.14). Held-out immediate value
+admission is 100% versus 94.71%, with zero versus 18 pending messages.
+
+`a4_historical_service.py` adds a common-budget service sweep and an atomic
+reservation ablation on this historical cohort. At a common $4.019M six-hour
+envelope, immediate held-out value service is 100% for ExposureGuard and
+94.59% for static token capacities scaled in proportion to their training
+minima. This fixes the exposure budget, not a common training-service target.
+All six budget multipliers are reported, with no held-out tuning.
+
+The ablation keeps the budget and train-only weights fixed. An explicitly
+metered zero-history attacker offers the same initial burst and finite-rate
+drain for every reservation fraction. At alpha=0.8, legitimate value
+admitted immediately under drain is 89.85%, versus 35.09% without floors;
+both serve all clean held-out value. At alpha=1, clean and drain service
+are both 88.59%, so 100% retention is not full demand service. The output
+records the attack and retry schedule. These are offline atomic replays,
+not production attacks, and do not include transaction fees, blockspace,
+paid training history, or a static-token drain comparison. The original
+full-trace divisible-value sweep remains a separate experiment.
+On the original snapshot cohort, envelopes are $1.812M and $2.447M (ratio 1.35).
+These are separate from the default peak-sized pause comparison.
+
+Frozen-trace rolling checks include the cases favoring static limits.
+Updates change 23–28 guard budget/weight entries versus 6–10 token capacities.
+This proxy favors the static policy; it does not measure operator time or
+write gas. Excluding new token groups does not eliminate the historical
+cohort's service difference. Token grouping still uses frozen symbol labels.
 
 ### RQ2: What availability does containment cost?
 
@@ -251,10 +330,9 @@ machine-specific path is included in this repository.
 - Cross-stack results distinguish on-chain evidence from verified-source
   architecture and do not estimate industry prevalence.
 
-The revised paper corresponds to release `v1.2.0-paper`; the earlier
-`v1.0.0-paper` remains available for comparison. The experiment manifest now
-includes 30 artifacts, including the historical sizing baseline, common-target
-comparison, and rolling-origin check.
+The revised artifact is published as `v1.3.0-paper`; it includes the missing-
+value audit, historical recovery, optimized static comparison, and 40 hashed
+paper-critical artifacts. Earlier releases remain available for comparison.
 
 Run `make data-check` before and after regeneration. Recollecting external
 price quotes can produce small differences because the quoted price is fetched

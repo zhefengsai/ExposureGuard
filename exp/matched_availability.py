@@ -73,8 +73,12 @@ class Ledger:
         self.caps = dict(config["caps"])
         if self.policy == "guard":
             budget = config["budget"]
-            self.caps = {r: 0.8 * budget * w for r, w in config["weights"].items()}
-            self.caps["__surplus__"] = 0.2 * budget
+            alpha = config.get("alpha", 0.8)
+            if not 0 <= alpha <= 1:
+                raise ValueError("reservation fraction must be between zero and one")
+            self.caps = {r: alpha * budget * w for r, w in config["weights"].items()}
+            # Preserve the frozen default's floating-point arithmetic.
+            self.caps["__surplus__"] = (0.2 if alpha == 0.8 else 1 - alpha) * budget
         self.level = dict(self.caps)
         self.last = {g: t for g in self.caps}
 
@@ -212,6 +216,7 @@ def plot(result):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    plt.rcParams.update({"pdf.fonttype": 42, "ps.fonttype": 42})
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.55), constrained_layout=True)
     names = {"guard": "ExposureGuard", "per_token": "Per-token", "per_route": "Per-route", "pooled": "Pooled (no floors)"}
     for policy, color in zip(POLICIES[:4], ("#1764ab", "#b24b16", "#755299", "#39794b")):

@@ -22,6 +22,7 @@ import os
 from collections import defaultdict
 
 import oos_calibrate as O
+from matched_availability import load as load_utc
 from sim import Bucket
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -29,8 +30,9 @@ ZERO = "0x" + "0" * 40
 
 BLOCK_GAS = 36_000_000
 BLOCK_S = 12.0
-GAS_BASE = 156_641                 # deployed default ISM      (gas_deployed.json)
-GAS_GUARD = 194_640                # + ExposureGuard in aggregation
+_GAS = json.load(open(f"{HERE}/data/gas_deployed.json"))
+GAS_BASE = _GAS["baseline_gas"]
+GAS_GUARD = _GAS["with_guard_gas"]
 AGG_METADATA_BYTES = 16            # 4B table + 3 x 4B offsets (GasDeployed.t.sol)
 
 ALPHA = 0.8
@@ -46,6 +48,7 @@ def capacity():
     return {
         "block_gas": BLOCK_GAS, "block_seconds": BLOCK_S,
         "gas_base": GAS_BASE, "gas_guard": GAS_GUARD,
+        "overhead_gas": GAS_GUARD - GAS_BASE,
         "deliveries_per_block_base": per_block_base,
         "deliveries_per_block_guard": per_block_guard,
         "msgs_per_s_base": per_block_base / BLOCK_S,
@@ -164,7 +167,7 @@ def main() -> None:
     print(f"   added calldata {cap['added_calldata_bytes']} B/delivery, "
           f"message unchanged\n")
 
-    ev = O.load_chain("ethereum")
+    ev = load_utc("ethereum")
     t0 = ev[0]["ts"]
     cut = t0 + O.TRAIN_DAYS * O.D
     train = [e for e in ev if e["ts"] < cut]

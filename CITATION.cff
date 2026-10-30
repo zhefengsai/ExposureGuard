@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the ExposureGuard paper."
-title: "ExposureGuard: Bounding Aggregate Exposure for Cross-Chain Routes Sharing a Verification Root"
+title: "ExposureGuard: Bounding Aggregate Exposure in Cross-Chain Messaging Networks with Shared Verification Roots"
 type: software
 authors:
   - family-names: Sai

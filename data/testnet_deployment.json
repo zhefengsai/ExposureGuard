@@ -1,26 +1,49 @@
 {
-  "deployed_at": "2026-08-25",
-  "workload": "author-generated",
-  "relayer": "author-operated testnet relayer; not the production validator set",
-  "sepolia": {
-    "domain": 11155111,
-    "mailbox": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
-    "route": "0xdec7ba3037f639bb307672a2d365dc6c8e2e3e93",
-    "guard": "0xa66b81340263749d273c03ae536a636d9537b315",
-    "author_relayer_ism": "0x5e53863fabbe426d6383651f3b5b836ee06740e6",
-    "aggregation_ism": "0xA375A3ae1630acf5D2867Dc1ABd5ac32a7F23BEb"
-  },
-  "base_sepolia": {
-    "domain": 84532,
-    "mailbox": "0x6966b0E55883d49BFB24539356a2f8A673E02039",
-    "route": "0xa88e45709f717c546667c650526b34c54c7c0f4f",
-    "guard": "0x3c6c8d6ac90ca7491af7381e8a9ccd755cf29a81",
-    "author_relayer_ism": "0xfe08a3b00fd5b5628cecbe3dfb79ee64e7c2b3ea",
-    "aggregation_ism": "0x5B0a2b70ec51401D73f01f0C074C8eA1253B8555"
-  },
+ "deployed_at": "2026-08-25",
+ "workload": "author-generated",
+ "relayer": "author-operated testnet relayer; not the production validator set",
+ "sepolia": {
+  "domain": 11155111,
+  "mailbox": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+  "route": "0xdec7ba3037f639bb307672a2d365dc6c8e2e3e93",
+  "guard": "0xa66b81340263749d273c03ae536a636d9537b315",
+  "author_relayer_ism": "0x5e53863fabbe426d6383651f3b5b836ee06740e6",
+  "aggregation_ism": "0xA375A3ae1630acf5D2867Dc1ABd5ac32a7F23BEb"
+ },
+ "base_sepolia": {
+  "domain": 84532,
+  "mailbox": "0x6966b0E55883d49BFB24539356a2f8A673E02039",
+  "route": "0xa88e45709f717c546667c650526b34c54c7c0f4f",
+  "guard": "0x3c6c8d6ac90ca7491af7381e8a9ccd755cf29a81",
+  "author_relayer_ism": "0xfe08a3b00fd5b5628cecbe3dfb79ee64e7c2b3ea",
+  "aggregation_ism": "0x5B0a2b70ec51401D73f01f0C074C8eA1253B8555"
+ },
+ "first_success": {
+  "message_id": "0xc46eb80b047ed956215d4c26d4f990c80df7241f6ffd1400b39ebe70aaef918f",
+  "dispatch_tx": "0x2dbc6d4cb30d8127a460eca1085aea76d528cd43fc905bbc22873ab601c6f58d",
+  "process_tx": "0x071c8cbe44f696aeae2aba296a65031a2e5bf5c49246c3c04ad6a9212a9bf08c"
+ },
+ "patched_build": {
+  "note": "Redeployment of the delivery-binding fix. The original 335-hour run used the build whose guard was a persistent delivered() predicate; this record covers the final build with current-block binding, installed-module binding, and once-only metering.",
+  "deployed_at": "2026-09-24",
+  "chain": "base_sepolia",
+  "guard": "0xc129ece8eb1fdb82f5697fd1a8b202682ff56ce1",
+  "deploy_tx": "0x281277376305fb1669cc99acd346e54bb24bf62741342381d613ed8888d3461d",
+  "aggregation_ism": "0xa96F1e5d1Ec6c0642E625Ad494C4Ec5B236b526D",
+  "aggregation_members": [
+   "0xfe08a3B00Fd5B5628CECBe3DFb79EE64E7C2B3eA",
+   "0xc129ece8eb1fdb82f5697fd1a8b202682ff56ce1"
+  ],
+  "aggregation_threshold": 2,
+  "installed_under": "0xa96F1e5d1Ec6c0642E625Ad494C4Ec5B236b526D",
+  "route_ism_repointed": true,
   "first_success": {
-    "message_id": "0xc46eb80b047ed956215d4c26d4f990c80df7241f6ffd1400b39ebe70aaef918f",
-    "dispatch_tx": "0x2dbc6d4cb30d8127a460eca1085aea76d528cd43fc905bbc22873ab601c6f58d",
-    "process_tx": "0x071c8cbe44f696aeae2aba296a65031a2e5bf5c49246c3c04ad6a9212a9bf08c"
+   "message_id": "0x32a4339d7d8bd1a4489357082422c24b9cd8bc40a2019a5909d80e51c3bac12f",
+   "dispatch_tx": "0xe130068fde8cc5791d56b143355c6c94622bdef67272b5bddd19e6f57d974cf0",
+   "process_tx": "0x52f7afd04d8cb3097db0ab6a663be0804dae497b82b3ca2e5e7976fea5f4e804",
+   "end_to_end_seconds": 6.803,
+   "delivered": true,
+   "metered": true
   }
+ }
 }

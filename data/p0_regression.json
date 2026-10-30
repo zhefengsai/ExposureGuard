@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "property": "budget may be charged only for a message the Mailbox is processing in the current block, whose recipient resolves to the installed module tree, and at most once",
+ "replaced": "persistent delivered(id) predicate",
+ "tests": {
+  "test_HistoricalMessagesDrainSurplusByDirectCall": {
+   "verdict": "PASS",
+   "asserts": "a message processed in an earlier block cannot be charged"
+  },
+  "test_CurrentDeliveryChargedExactlyOnce": {
+   "verdict": "PASS",
+   "asserts": "a live delivery is charged exactly once"
+  },
+  "test_SameBlockForeignIsmPathRejected": {
+   "verdict": "PASS",
+   "asserts": "a same-block delivery through another module cannot be charged"
+  },
+  "test_FabricatedMessageRejected": {
+   "verdict": "PASS",
+   "asserts": "a message the Mailbox never saw cannot be charged"
+  },
+  "test_OverBudgetRevertsThenSucceedsAfterRefill": {
+   "verdict": "PASS",
+   "asserts": "an over-budget rejection rolls back and stays replayable"
+  }
+ }
+}

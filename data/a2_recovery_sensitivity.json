@@ -1,0 +1,2528 @@
+{
+  "schema": 1,
+  "fixed_cutoff_utc": "2026-06-23T16:58:11+00:00",
+  "price_conventions": {
+    "frozen_snapshot": "original scan-time quotes",
+    "historical_original_cohort": "daily-noon UTC reference; quote timestamp within 24h of event",
+    "historical_expanded": "daily-noon UTC reference; quote timestamp within 24h of event"
+  },
+  "fixed_stock_reference_usd": 9857090.0,
+  "limits": "reconstructed cohorts exclude unresolved events; fixed stock reference is a sizing sensitivity, not historical loss; unknown message value is never set to zero",
+  "audit_sha256": "374669a74853f14bbb479cfdd94f319ca301641323b18f292abadbdd15bac987",
+  "variants": {
+    "frozen_snapshot": {
+      "messages": 6477,
+      "train_messages": 4422,
+      "test_messages": 2055,
+      "value_usd": 17336607.886329908,
+      "peak": {
+        "value_usd": 1152559.2667991025,
+        "day": "2026-05-05"
+      },
+      "training_peak": {
+        "value_usd": 1152559.2667991025,
+        "day": "2026-05-05"
+      },
+      "default_budget_usd": 1233000.0,
+      "default_six_hour_envelope_usd": 1541250.0,
+      "fixed_stock_reference_over_default": 6.395516626115167,
+      "default_test": {
+        "messages": 2055,
+        "value_usd": 5999194.987289309,
+        "immediate_messages": 2054,
+        "deferred_on_arrival": 1,
+        "immediate_message_fraction": 0.9995133819951338,
+        "immediate_value_fraction": 0.8974805227225141,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 1,
+        "oversized_messages": 1,
+        "delivered_value_fraction": 0.8974805227225146,
+        "p95_positive_delay_h": 0.0
+      },
+      "optimized_policies": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 1.2575892986617636,
+            "caps": {
+              "root": 1449446.2
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0337,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.6411,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0375,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.001,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0497,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0299,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0187,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0217,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0005,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0168,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0025,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0001,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0004,
+              "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.0,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.022,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0007,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1164,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0032,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0006,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0011
+            },
+            "budget": 1449446.2,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 1449446.1963633455,
+              "feasible_upper_budget_usd": 1449446.2,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 1449446.2,
+          "six_hour_envelope_usd": 1811807.75,
+          "training": {
+            "messages": 4422,
+            "value_usd": 11337412.8990406,
+            "immediate_messages": 4422,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000022,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2055,
+            "value_usd": 5999194.987289309,
+            "immediate_messages": 2054,
+            "deferred_on_arrival": 1,
+            "immediate_message_fraction": 0.9995133819951338,
+            "immediate_value_fraction": 0.8974805227225141,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.8974805227225146,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 2048,
+            "value_usd": 5851359.9501983365,
+            "immediate_messages": 2047,
+            "deferred_on_arrival": 1,
+            "immediate_message_fraction": 0.99951171875,
+            "immediate_value_fraction": 0.8948903606311616,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 1,
+            "oversized_messages": 1,
+            "delivered_value_fraction": 0.8948903606311617,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 214.3,
+              "ES": 21963.57,
+              "FUEL": 2278.98,
+              "LUMIA": 2039.03,
+              "NEX": 389448.24,
+              "OORT": 88.59,
+              "RDO": 2616.2400000000002,
+              "SEDA": 40185.86,
+              "SUPR": 6509.79,
+              "USDC": 1027295.74,
+              "USDT": 233978.6,
+              "USDe": 0.01,
+              "WBTC": 228584.7,
+              "amphrETH": 1367.24,
+              "cbBTC": 69.05,
+              "eXRD": 657.94
+            },
+            "budget": 1957297.88,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 1957297.8001156286,
+              "max_rounding_gap_usd": 0.16,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 214.2997036700608,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 228.4970590382023,
+                    "duration_s": 5724.0
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 21963.56856749366,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 22052.03294089051,
+                    "duration_s": 348.0
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 2278.972769308113,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 2278.972769308113,
+                    "duration_s": 0.0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 2039.0255765375734,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 2039.0255765375734,
+                    "duration_s": 0.0
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 389448.2392475561,
+                  "interval": {
+                    "start": 24,
+                    "end": 1199,
+                    "value_usd": 602887.5103685083,
+                    "duration_s": 47352.0
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 88.58443978513908,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 88.58443978513908,
+                    "duration_s": 0.0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 2616.234914413881,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 2629.31608898595,
+                    "duration_s": 432.0
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 40185.85273876751,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 46827.68117753603,
+                    "duration_s": 14280.0
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 6509.781390475959,
+                  "interval": {
+                    "start": 6,
+                    "end": 7,
+                    "value_usd": 6520.631026126752,
+                    "duration_s": 144.0
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 1027295.736012842,
+                  "interval": {
+                    "start": 179,
+                    "end": 186,
+                    "value_usd": 1119895.032217333,
+                    "duration_s": 7788.0
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 233978.59142403322,
+                  "interval": {
+                    "start": 86,
+                    "end": 87,
+                    "value_usd": 234985.99924822003,
+                    "duration_s": 372.0
+                  }
+                },
+                "USDe": {
+                  "lower_bound_usd": 9.647442463241556e-15,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 9.647442463241556e-15,
+                    "duration_s": 0.0
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 228584.6902973133,
+                  "interval": {
+                    "start": 19,
+                    "end": 20,
+                    "value_usd": 232045.20852542538,
+                    "duration_s": 1308.0
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 1367.2376403826643,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1367.2376403826643,
+                    "duration_s": 0.0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 69.04767919428468,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 70.0929843376426,
+                    "duration_s": 1308.0
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 657.9377138550741,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 657.9377138550741,
+                    "duration_s": 0.0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 1957297.88,
+          "six_hour_envelope_usd": 2446622.3499999996,
+          "training": {
+            "messages": 4422,
+            "value_usd": 11337412.8990406,
+            "immediate_messages": 4422,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000022,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2055,
+            "value_usd": 5999194.987289309,
+            "immediate_messages": 1983,
+            "deferred_on_arrival": 72,
+            "immediate_message_fraction": 0.964963503649635,
+            "immediate_value_fraction": 0.8590015047899058,
+            "delayed_then_delivered": 51,
+            "undelivered_tail": 21,
+            "oversized_messages": 21,
+            "delivered_value_fraction": 0.860595864671008,
+            "p95_positive_delay_h": 126.01
+          },
+          "known_symbol_only_test": {
+            "messages": 2048,
+            "value_usd": 5851359.9501983365,
+            "immediate_messages": 1983,
+            "deferred_on_arrival": 65,
+            "immediate_message_fraction": 0.96826171875,
+            "immediate_value_fraction": 0.8807042406329659,
+            "delayed_then_delivered": 51,
+            "undelivered_tail": 14,
+            "oversized_messages": 14,
+            "delivered_value_fraction": 0.8823388821330704,
+            "p95_positive_delay_h": 126.01
+          }
+        },
+        "optimized_static_route": {
+          "config": {
+            "policy": "per_route",
+            "caps": {
+              "066abc14c59cf7681b4b66844500733d2258032a": 11.26,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 228584.7,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 18710.04,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 12997.48,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 2278.98,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 21963.57,
+              "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.01,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 1651.8,
+              "647c621ceb36853ef6a907e397adf18568e70543": 4266.09,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 59990.53,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 1027261.09,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 59990.53,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 88.59,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 214.3,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 69.05,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 53867.44,
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 40185.86,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 657.94,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 316.23,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 389448.24,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 6509.79,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 278447.55,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 2117.67,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 2616.2400000000002,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 1367.24,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 2039.03,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 2288.98,
+              "e15f7d93f761c35b5d692224418099409c749011": 233978.6,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 77694.15000000001
+            },
+            "budget": 2529612.98,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 2529612.8406969197,
+              "max_rounding_gap_usd": 0.29,
+              "certificates": {
+                "066abc14c59cf7681b4b66844500733d2258032a": {
+                  "lower_bound_usd": 11.256222849836606,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 11.256222849836606,
+                    "duration_s": 0.0
+                  }
+                },
+                "0e993e49df1b7412ded493eaaf806730b74378b9": {
+                  "lower_bound_usd": 228584.6902973133,
+                  "interval": {
+                    "start": 9,
+                    "end": 10,
+                    "value_usd": 232045.20852542538,
+                    "duration_s": 1308.0
+                  }
+                },
+                "11a483d69cc67140fb98a0082837aec11246a0ba": {
+                  "lower_bound_usd": 18710.039153599933,
+                  "interval": {
+                    "start": 0,
+                    "end": 5,
+                    "value_usd": 19531.20198311904,
+                    "duration_s": 3792.0
+                  }
+                },
+                "2dc9a39d934f52e0f28e52e8d32ce810fc685247": {
+                  "lower_bound_usd": 12997.471270216334,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 12997.471270216334,
+                    "duration_s": 0.0
+                  }
+                },
+                "3cf30c1d8decbf45cd36c9492f6395d47357b91c": {
+                  "lower_bound_usd": 2278.972769308113,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 2278.972769308113,
+                    "duration_s": 0.0
+                  }
+                },
+                "3ee1bea3a10f7508b76219f109ebe19419b3dd85": {
+                  "lower_bound_usd": 21963.56856749366,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 22052.03294089051,
+                    "duration_s": 348.0
+                  }
+                },
+                "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": {
+                  "lower_bound_usd": 9.647442463241556e-15,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 9.647442463241556e-15,
+                    "duration_s": 0.0
+                  }
+                },
+                "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": {
+                  "lower_bound_usd": 1651.7963180345016,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1651.7963180345016,
+                    "duration_s": 0.0
+                  }
+                },
+                "647c621ceb36853ef6a907e397adf18568e70543": {
+                  "lower_bound_usd": 4266.083710864612,
+                  "interval": {
+                    "start": 7,
+                    "end": 7,
+                    "value_usd": 4266.083710864612,
+                    "duration_s": 0.0
+                  }
+                },
+                "67899664446ccfadf75e0d3f5668be262acd1069": {
+                  "lower_bound_usd": 59990.52860101229,
+                  "interval": {
+                    "start": 4,
+                    "end": 4,
+                    "value_usd": 59990.52860101229,
+                    "duration_s": 0.0
+                  }
+                },
+                "6912088890254e69970baedb03284fb3d8fbcda0": {
+                  "lower_bound_usd": 1027261.0825919923,
+                  "interval": {
+                    "start": 97,
+                    "end": 103,
+                    "value_usd": 1119857.2551756317,
+                    "duration_s": 7788.0
+                  }
+                },
+                "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": {
+                  "lower_bound_usd": 59990.52860101229,
+                  "interval": {
+                    "start": 42,
+                    "end": 42,
+                    "value_usd": 59990.52860101229,
+                    "duration_s": 0.0
+                  }
+                },
+                "70f34d5cc2527cd81de9f6e7c9208f26f7252697": {
+                  "lower_bound_usd": 88.58443978513908,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 88.58443978513908,
+                    "duration_s": 0.0
+                  }
+                },
+                "7396b724a43c1d654a89b44996da84d1e1a9b568": {
+                  "lower_bound_usd": 214.2997036700608,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 228.4970590382023,
+                    "duration_s": 5724.0
+                  }
+                },
+                "7710d2fc9a2e0452b28a2cbf550429b579347199": {
+                  "lower_bound_usd": 69.04767919428468,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 70.0929843376426,
+                    "duration_s": 1308.0
+                  }
+                },
+                "7e5db36f762a3eae5d6ef18f16dee9df619bb539": {
+                  "lower_bound_usd": 53867.430702636215,
+                  "interval": {
+                    "start": 37,
+                    "end": 47,
+                    "value_usd": 59785.36649232861,
+                    "duration_s": 9492.0
+                  }
+                },
+                "8e1c6992621f1f647c79a297035b5484b9fb6864": {
+                  "lower_bound_usd": 40185.85273876751,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 46827.68117753603,
+                    "duration_s": 14280.0
+                  }
+                },
+                "94a766ebdfbbff21428b6c504be7405e74c02774": {
+                  "lower_bound_usd": 657.9377138550741,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 657.9377138550741,
+                    "duration_s": 0.0
+                  }
+                },
+                "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": {
+                  "lower_bound_usd": 316.2289759071046,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 316.2289759071046,
+                    "duration_s": 0.0
+                  }
+                },
+                "b71183f48f7f7789d40551149be28a51f9a97f9a": {
+                  "lower_bound_usd": 389448.2392475561,
+                  "interval": {
+                    "start": 24,
+                    "end": 1199,
+                    "value_usd": 602887.5103685083,
+                    "duration_s": 47352.0
+                  }
+                },
+                "bc808c98bea0a097346273a9fd7a5b231fc2d889": {
+                  "lower_bound_usd": 6509.781390475959,
+                  "interval": {
+                    "start": 6,
+                    "end": 7,
+                    "value_usd": 6520.631026126752,
+                    "duration_s": 144.0
+                  }
+                },
+                "c3f8b34587eb403fc30a161d6a35cb724a3b273e": {
+                  "lower_bound_usd": 278447.5426155564,
+                  "interval": {
+                    "start": 117,
+                    "end": 118,
+                    "value_usd": 279955.8001380573,
+                    "duration_s": 468.0
+                  }
+                },
+                "c927767cf7bddc5e8b996a0f957e5f22250a2f67": {
+                  "lower_bound_usd": 2117.662991205858,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 2174.1340043046807,
+                    "duration_s": 2304.0
+                  }
+                },
+                "d86e6ef14b96d942ef0abf0720c549197ea8c528": {
+                  "lower_bound_usd": 2616.234914413881,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 2629.31608898595,
+                    "duration_s": 432.0
+                  }
+                },
+                "dc89990a6fdc1c922b841f1d977835628a24ed57": {
+                  "lower_bound_usd": 1367.2376403826643,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1367.2376403826643,
+                    "duration_s": 0.0
+                  }
+                },
+                "dd313d475f8a9d81cbe2ea953a357f52e10ba357": {
+                  "lower_bound_usd": 2039.0255765375734,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 2039.0255765375734,
+                    "duration_s": 0.0
+                  }
+                },
+                "e0c2e4f894d4cd33626e33b24582559f3156e1ab": {
+                  "lower_bound_usd": 2288.9782060511775,
+                  "interval": {
+                    "start": 13,
+                    "end": 14,
+                    "value_usd": 2299.4693561622457,
+                    "duration_s": 396.0
+                  }
+                },
+                "e15f7d93f761c35b5d692224418099409c749011": {
+                  "lower_bound_usd": 233978.59142403322,
+                  "interval": {
+                    "start": 80,
+                    "end": 81,
+                    "value_usd": 234985.99924822003,
+                    "duration_s": 372.0
+                  }
+                },
+                "e1de9910fe71cc216490ac7fcf019e13a34481d7": {
+                  "lower_bound_usd": 77694.14663319453,
+                  "interval": {
+                    "start": 80,
+                    "end": 85,
+                    "value_usd": 123490.52973198307,
+                    "duration_s": 50928.0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 2529612.98,
+          "six_hour_envelope_usd": 3162016.225,
+          "training": {
+            "messages": 4422,
+            "value_usd": 11337412.8990406,
+            "immediate_messages": 4422,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000022,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2055,
+            "value_usd": 5999194.987289309,
+            "immediate_messages": 1926,
+            "deferred_on_arrival": 129,
+            "immediate_message_fraction": 0.9372262773722628,
+            "immediate_value_fraction": 0.8353075078923047,
+            "delayed_then_delivered": 85,
+            "undelivered_tail": 44,
+            "oversized_messages": 44,
+            "delivered_value_fraction": 0.8395918327484687,
+            "p95_positive_delay_h": 153.70333333333335
+          },
+          "known_symbol_only_test": {
+            "messages": 2048,
+            "value_usd": 5851359.9501983365,
+            "immediate_messages": 1926,
+            "deferred_on_arrival": 122,
+            "immediate_message_fraction": 0.9404296875,
+            "immediate_value_fraction": 0.856411613170846,
+            "delayed_then_delivered": 85,
+            "undelivered_tail": 37,
+            "oversized_messages": 37,
+            "delivered_value_fraction": 0.8608041818078425,
+            "p95_positive_delay_h": 153.70333333333335
+          }
+        },
+        "pooled": {
+          "config": {
+            "policy": "pooled",
+            "multiple": 0.8913170624648349,
+            "caps": {
+              "root": 1027295.74
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0337,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.6411,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0375,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0001,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.001,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0497,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0299,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0187,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0217,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0005,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0168,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0025,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0001,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0004,
+              "54b904c3cb5c6aa19a5292acc72ece1c285e7eab": 0.0,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.022,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0007,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.1164,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0032,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0006,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0011
+            },
+            "budget": 1027295.74,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 1027295.7352627291,
+              "feasible_upper_budget_usd": 1027295.74,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 1027295.74,
+          "six_hour_envelope_usd": 1284119.675,
+          "training": {
+            "messages": 4422,
+            "value_usd": 11337412.8990406,
+            "immediate_messages": 4422,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000022,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2055,
+            "value_usd": 5999194.987289309,
+            "immediate_messages": 2055,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999986,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 2048,
+            "value_usd": 5851359.9501983365,
+            "immediate_messages": 2048,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999989,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      },
+      "optimized_static_token_over_guard": 1.3503763575357264
+    },
+    "historical_original_cohort": {
+      "messages": 6356,
+      "train_messages": 4412,
+      "test_messages": 1944,
+      "value_usd": 21160472.362043478,
+      "peak": {
+        "value_usd": 1899388.4116089817,
+        "day": "2026-05-20"
+      },
+      "training_peak": {
+        "value_usd": 1899388.4116089817,
+        "day": "2026-05-20"
+      },
+      "default_budget_usd": 2032000.0,
+      "default_six_hour_envelope_usd": 2540000.0,
+      "fixed_stock_reference_over_default": 3.880744094488189,
+      "default_test": {
+        "messages": 1944,
+        "value_usd": 5693579.193593535,
+        "immediate_messages": 1944,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 1.000000000000001,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "optimized_policies": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 1.6853088764969186,
+            "caps": {
+              "root": 3201056.15
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0486,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.4698,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0275,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.0006,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0364,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0195,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0137,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0159,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0003,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0123,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0892,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0005,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0133,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0005,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0023,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0004,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.246,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0008
+            },
+            "budget": 3201056.15,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 3201056.1410611905,
+              "feasible_upper_budget_usd": 3201056.15,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 3201056.15,
+          "six_hour_envelope_usd": 4001320.1875,
+          "training": {
+            "messages": 4412,
+            "value_usd": 15466893.168449942,
+            "immediate_messages": 4412,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999987,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 1944,
+            "value_usd": 5693579.193593535,
+            "immediate_messages": 1944,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.000000000000001,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 1937,
+            "value_usd": 5586430.036095034,
+            "immediate_messages": 1937,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000018,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 293.18,
+              "ES": 868638.6,
+              "FUEL": 1795.48,
+              "LUMIA": 4115.43,
+              "NEX": 1174838.18,
+              "OORT": 1208.95,
+              "RDO": 4092.6600000000003,
+              "SEDA": 111788.19,
+              "SUPR": 8626.84,
+              "USDC": 1027230.05,
+              "USDT": 207800.68,
+              "WBTC": 187167.79,
+              "amphrETH": 1071.3,
+              "cbBTC": 62.910000000000004,
+              "eXRD": 1016.99
+            },
+            "budget": 3599747.23,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 3599747.154880298,
+              "max_rounding_gap_usd": 0.15,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 293.17622547522274,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 312.5991504129562,
+                    "duration_s": 5724
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 868638.5947275803,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 872137.2779563442,
+                    "duration_s": 348
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 1795.4739628387697,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 1795.4739628387697,
+                    "duration_s": 0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 4115.423538063976,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 4115.423538063976,
+                    "duration_s": 0
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 1174838.1708699884,
+                  "interval": {
+                    "start": 17,
+                    "end": 1192,
+                    "value_usd": 1818714.7572940125,
+                    "duration_s": 47352
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 1208.944855260555,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1208.944855260555,
+                    "duration_s": 0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 4092.656728979085,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 4113.12001262398,
+                    "duration_s": 432
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 111788.18068693229,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 130264.28277268917,
+                    "duration_s": 14280
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 8626.83933254482,
+                  "interval": {
+                    "start": 5,
+                    "end": 6,
+                    "value_usd": 8641.217398099061,
+                    "duration_s": 144
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 1027230.0442172367,
+                  "interval": {
+                    "start": 179,
+                    "end": 186,
+                    "value_usd": 1119823.4190362627,
+                    "duration_s": 7788
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 207800.67251399398,
+                  "interval": {
+                    "start": 86,
+                    "end": 87,
+                    "value_usd": 208695.3698539848,
+                    "duration_s": 372
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 187167.78311062718,
+                  "interval": {
+                    "start": 19,
+                    "end": 20,
+                    "value_usd": 190001.2953827186,
+                    "duration_s": 1308
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 1071.2969577069655,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1071.2969577069655,
+                    "duration_s": 0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 62.909764769984434,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 63.86214870886336,
+                    "duration_s": 1308
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 1016.9873882995419,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1016.9873882995419,
+                    "duration_s": 0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 3599747.23,
+          "six_hour_envelope_usd": 4499684.0375,
+          "training": {
+            "messages": 4412,
+            "value_usd": 15466893.168449942,
+            "immediate_messages": 4412,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999987,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 1944,
+            "value_usd": 5693579.193593535,
+            "immediate_messages": 1890,
+            "deferred_on_arrival": 54,
+            "immediate_message_fraction": 0.9722222222222222,
+            "immediate_value_fraction": 0.97309248663909,
+            "delayed_then_delivered": 38,
+            "undelivered_tail": 16,
+            "oversized_messages": 16,
+            "delivered_value_fraction": 0.9747524912141401,
+            "p95_positive_delay_h": 96.49
+          },
+          "known_symbol_only_test": {
+            "messages": 1937,
+            "value_usd": 5586430.036095034,
+            "immediate_messages": 1890,
+            "deferred_on_arrival": 47,
+            "immediate_message_fraction": 0.9757356737222509,
+            "immediate_value_fraction": 0.9917566495191074,
+            "delayed_then_delivered": 38,
+            "undelivered_tail": 9,
+            "oversized_messages": 9,
+            "delivered_value_fraction": 0.9934484934066542,
+            "p95_positive_delay_h": 96.49
+          }
+        },
+        "optimized_static_route": {
+          "config": {
+            "policy": "per_route",
+            "caps": {
+              "066abc14c59cf7681b4b66844500733d2258032a": 11.26,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 187167.79,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 18709.04,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 12994.1,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 1795.48,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 868638.6,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 1682.63,
+              "647c621ceb36853ef6a907e397adf18568e70543": 4262.27,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 59989.340000000004,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 1027195.4,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 59984.950000000004,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 1208.95,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 293.18,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 62.910000000000004,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 53863.69,
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 111788.19,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 1016.99,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 316.24,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 1174838.18,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 8626.84,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 278409.69,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 2117.59,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 4092.6600000000003,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 1071.3,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 4115.43,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 2288.89,
+              "e15f7d93f761c35b5d692224418099409c749011": 207800.68,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 77684.38
+            },
+            "budget": 4172026.65,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 4172026.5177050135,
+              "max_rounding_gap_usd": 0.28,
+              "certificates": {
+                "066abc14c59cf7681b4b66844500733d2258032a": {
+                  "lower_bound_usd": 11.255503055657753,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 11.255503055657753,
+                    "duration_s": 0
+                  }
+                },
+                "0e993e49df1b7412ded493eaaf806730b74378b9": {
+                  "lower_bound_usd": 187167.78311062718,
+                  "interval": {
+                    "start": 9,
+                    "end": 10,
+                    "value_usd": 190001.2953827186,
+                    "duration_s": 1308
+                  }
+                },
+                "11a483d69cc67140fb98a0082837aec11246a0ba": {
+                  "lower_bound_usd": 18709.03007118313,
+                  "interval": {
+                    "start": 0,
+                    "end": 5,
+                    "value_usd": 19530.148613196165,
+                    "duration_s": 3792
+                  }
+                },
+                "2dc9a39d934f52e0f28e52e8d32ce810fc685247": {
+                  "lower_bound_usd": 12994.09671645314,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 12994.09671645314,
+                    "duration_s": 0
+                  }
+                },
+                "3cf30c1d8decbf45cd36c9492f6395d47357b91c": {
+                  "lower_bound_usd": 1795.4739628387697,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 1795.4739628387697,
+                    "duration_s": 0
+                  }
+                },
+                "3ee1bea3a10f7508b76219f109ebe19419b3dd85": {
+                  "lower_bound_usd": 868638.5947275803,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 872137.2779563442,
+                    "duration_s": 348
+                  }
+                },
+                "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": {
+                  "lower_bound_usd": 1682.623752153093,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1682.623752153093,
+                    "duration_s": 0
+                  }
+                },
+                "647c621ceb36853ef6a907e397adf18568e70543": {
+                  "lower_bound_usd": 4262.269051736332,
+                  "interval": {
+                    "start": 7,
+                    "end": 7,
+                    "value_usd": 4262.269051736332,
+                    "duration_s": 0
+                  }
+                },
+                "67899664446ccfadf75e0d3f5668be262acd1069": {
+                  "lower_bound_usd": 59989.33961357693,
+                  "interval": {
+                    "start": 4,
+                    "end": 4,
+                    "value_usd": 59989.33961357693,
+                    "duration_s": 0
+                  }
+                },
+                "6912088890254e69970baedb03284fb3d8fbcda0": {
+                  "lower_bound_usd": 1027195.3930123461,
+                  "interval": {
+                    "start": 97,
+                    "end": 103,
+                    "value_usd": 1119785.6444102647,
+                    "duration_s": 7788
+                  }
+                },
+                "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": {
+                  "lower_bound_usd": 59984.94982145416,
+                  "interval": {
+                    "start": 42,
+                    "end": 42,
+                    "value_usd": 59984.94982145416,
+                    "duration_s": 0
+                  }
+                },
+                "70f34d5cc2527cd81de9f6e7c9208f26f7252697": {
+                  "lower_bound_usd": 1208.944855260555,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1208.944855260555,
+                    "duration_s": 0
+                  }
+                },
+                "7396b724a43c1d654a89b44996da84d1e1a9b568": {
+                  "lower_bound_usd": 293.17622547522274,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 312.5991504129562,
+                    "duration_s": 5724
+                  }
+                },
+                "7710d2fc9a2e0452b28a2cbf550429b579347199": {
+                  "lower_bound_usd": 62.909764769984434,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 63.86214870886336,
+                    "duration_s": 1308
+                  }
+                },
+                "7e5db36f762a3eae5d6ef18f16dee9df619bb539": {
+                  "lower_bound_usd": 53863.68662857587,
+                  "interval": {
+                    "start": 37,
+                    "end": 47,
+                    "value_usd": 59781.21109013192,
+                    "duration_s": 9492
+                  }
+                },
+                "8e1c6992621f1f647c79a297035b5484b9fb6864": {
+                  "lower_bound_usd": 111788.18068693229,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 130264.28277268917,
+                    "duration_s": 14280
+                  }
+                },
+                "94a766ebdfbbff21428b6c504be7405e74c02774": {
+                  "lower_bound_usd": 1016.9873882995419,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1016.9873882995419,
+                    "duration_s": 0
+                  }
+                },
+                "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": {
+                  "lower_bound_usd": 316.2349435161283,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 316.2349435161283,
+                    "duration_s": 0
+                  }
+                },
+                "b71183f48f7f7789d40551149be28a51f9a97f9a": {
+                  "lower_bound_usd": 1174838.1708699884,
+                  "interval": {
+                    "start": 17,
+                    "end": 1192,
+                    "value_usd": 1818714.7572940125,
+                    "duration_s": 47352
+                  }
+                },
+                "bc808c98bea0a097346273a9fd7a5b231fc2d889": {
+                  "lower_bound_usd": 8626.83933254482,
+                  "interval": {
+                    "start": 5,
+                    "end": 6,
+                    "value_usd": 8641.217398099061,
+                    "duration_s": 144
+                  }
+                },
+                "c3f8b34587eb403fc30a161d6a35cb724a3b273e": {
+                  "lower_bound_usd": 278409.6893886764,
+                  "interval": {
+                    "start": 117,
+                    "end": 118,
+                    "value_usd": 279917.741872865,
+                    "duration_s": 468
+                  }
+                },
+                "c927767cf7bddc5e8b996a0f957e5f22250a2f67": {
+                  "lower_bound_usd": 2117.5833968345337,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 2174.0522874167877,
+                    "duration_s": 2304
+                  }
+                },
+                "d86e6ef14b96d942ef0abf0720c549197ea8c528": {
+                  "lower_bound_usd": 4092.656728979085,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 4113.12001262398,
+                    "duration_s": 432
+                  }
+                },
+                "dc89990a6fdc1c922b841f1d977835628a24ed57": {
+                  "lower_bound_usd": 1071.2969577069655,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1071.2969577069655,
+                    "duration_s": 0
+                  }
+                },
+                "dd313d475f8a9d81cbe2ea953a357f52e10ba357": {
+                  "lower_bound_usd": 4115.423538063976,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 4115.423538063976,
+                    "duration_s": 0
+                  }
+                },
+                "e0c2e4f894d4cd33626e33b24582559f3156e1ab": {
+                  "lower_bound_usd": 2288.8820787144537,
+                  "interval": {
+                    "start": 13,
+                    "end": 14,
+                    "value_usd": 2299.372788241895,
+                    "duration_s": 396
+                  }
+                },
+                "e15f7d93f761c35b5d692224418099409c749011": {
+                  "lower_bound_usd": 207800.67251399398,
+                  "interval": {
+                    "start": 80,
+                    "end": 81,
+                    "value_usd": 208695.3698539848,
+                    "duration_s": 372
+                  }
+                },
+                "e1de9910fe71cc216490ac7fcf019e13a34481d7": {
+                  "lower_bound_usd": 77684.37306367673,
+                  "interval": {
+                    "start": 80,
+                    "end": 85,
+                    "value_usd": 123474.99518621062,
+                    "duration_s": 50928
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 4172026.65,
+          "six_hour_envelope_usd": 5215033.3125,
+          "training": {
+            "messages": 4412,
+            "value_usd": 15466893.168449942,
+            "immediate_messages": 4412,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999987,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 1944,
+            "value_usd": 5693579.193593535,
+            "immediate_messages": 1840,
+            "deferred_on_arrival": 104,
+            "immediate_message_fraction": 0.9465020576131687,
+            "immediate_value_fraction": 0.9488934870349481,
+            "delayed_then_delivered": 68,
+            "undelivered_tail": 36,
+            "oversized_messages": 36,
+            "delivered_value_fraction": 0.952714181979589,
+            "p95_positive_delay_h": 96.49
+          },
+          "known_symbol_only_test": {
+            "messages": 1937,
+            "value_usd": 5586430.036095034,
+            "immediate_messages": 1840,
+            "deferred_on_arrival": 97,
+            "immediate_message_fraction": 0.9499225606608157,
+            "immediate_value_fraction": 0.9670935069107326,
+            "delayed_then_delivered": 68,
+            "undelivered_tail": 29,
+            "oversized_messages": 29,
+            "delivered_value_fraction": 0.9709874837620172,
+            "p95_positive_delay_h": 96.49
+          }
+        },
+        "pooled": {
+          "config": {
+            "policy": "pooled",
+            "multiple": 0.6210933386714054,
+            "caps": {
+              "root": 1179697.49
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0486,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.4698,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.0275,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.0006,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0364,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0195,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0137,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0159,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0003,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0123,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0892,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0005,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0133,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0005,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0023,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0004,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.246,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0008
+            },
+            "budget": 1179697.49,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 1179697.485861938,
+              "feasible_upper_budget_usd": 1179697.49,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 1179697.49,
+          "six_hour_envelope_usd": 1474621.8625,
+          "training": {
+            "messages": 4412,
+            "value_usd": 15466893.168449942,
+            "immediate_messages": 4412,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999987,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 1944,
+            "value_usd": 5693579.193593535,
+            "immediate_messages": 1944,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.000000000000001,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 1937,
+            "value_usd": 5586430.036095034,
+            "immediate_messages": 1937,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 1.0000000000000018,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      },
+      "optimized_static_token_over_guard": 1.1245498552095063
+    },
+    "historical_expanded": {
+      "messages": 6986,
+      "train_messages": 4753,
+      "test_messages": 2233,
+      "value_usd": 21736366.048457786,
+      "peak": {
+        "value_usd": 1945390.2368082248,
+        "day": "2026-05-20"
+      },
+      "training_peak": {
+        "value_usd": 1945390.2368082248,
+        "day": "2026-05-20"
+      },
+      "default_budget_usd": 2082000.0,
+      "default_six_hour_envelope_usd": 2602500.0,
+      "fixed_stock_reference_over_default": 3.787546589817483,
+      "default_test": {
+        "messages": 2233,
+        "value_usd": 6009854.83841856,
+        "immediate_messages": 2233,
+        "deferred_on_arrival": 0,
+        "immediate_message_fraction": 1.0,
+        "immediate_value_fraction": 0.9999999999999997,
+        "delayed_then_delivered": 0,
+        "undelivered_tail": 0,
+        "oversized_messages": 0,
+        "delivered_value_fraction": 1.0,
+        "p95_positive_delay_h": 0.0
+      },
+      "optimized_policies": {
+        "guard": {
+          "config": {
+            "policy": "guard",
+            "multiple": 1.6527658971267674,
+            "caps": {
+              "root": 3215274.64
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0478,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.4621,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "9a3beed38441e8ff8e033043a88b49e035f5a2da": 0.0003,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.027,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0,
+              "9a9c33115455a929d3d821cee4a01e38241bf375": 0.0006,
+              "93a2db22b7c736b341c32ff666307f4a9ed910f5": 0.001,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.0006,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0359,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0192,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0134,
+              "c210b2cb65ed3484892167f5e05f7ab496ab0598": 0.009,
+              "2bbdc933196334c6cd3f16f131b62f7c567bb27d": 0.0,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0156,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0003,
+              "85e9ae52b10f35e3d15264f1e906895b1d7da1a0": 0.0002,
+              "20d0159c2369d115a7e430516e635267c08ace19": 0.0033,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0121,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0877,
+              "07c747b0d99abe8132f771cf6d2365d19ed1ffba": 0.0014,
+              "3c2064d78e4578e8f936e3db42aef044e33fbf31": 0.0,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0005,
+              "c4ae629abe0ce3de55b7db8f6bebf97d52afe9f7": 0.0001,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "a901e6974c8f0fcc2f44451b0e788cd6957e02e2": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0131,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0005,
+              "53cce6d10e43d1b3d11872ad22ec2acd8d2537b8": 0.0,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0023,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0004,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.242,
+              "679e13780c20bf7a7cc158a76bfd1aff9ba7d09d": 0.0,
+              "78ac7fecd1857f5beee98ab39096c9781f976d97": 0.0,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0008
+            },
+            "budget": 3215274.64,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 3215274.6308941618,
+              "feasible_upper_budget_usd": 3215274.64,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 3215274.64,
+          "six_hour_envelope_usd": 4019093.3000000003,
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 2226,
+            "value_usd": 5902705.68092006,
+            "immediate_messages": 2226,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999999,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        },
+        "optimized_static_token": {
+          "config": {
+            "policy": "per_token",
+            "caps": {
+              "DIME": 293.18,
+              "ES": 868638.6,
+              "ETH": 28305.3,
+              "FUEL": 1795.48,
+              "HYPER": 7402.360000000001,
+              "LUMIA": 4115.43,
+              "LYX": 26891.99,
+              "NEX": 1174969.35,
+              "OORT": 1208.95,
+              "RDO": 4092.6600000000003,
+              "SEDA": 111788.19,
+              "SMOL": 25.26,
+              "SUPR": 8626.84,
+              "USDC": 1027230.05,
+              "USDT": 207800.68,
+              "WBTC": 187167.79,
+              "XAUt": 2062.21,
+              "amphrETH": 1071.3,
+              "cbBTC": 62.910000000000004,
+              "eXRD": 1016.99
+            },
+            "budget": 3664565.52,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 3664565.422610042,
+              "max_rounding_gap_usd": 0.2,
+              "certificates": {
+                "DIME": {
+                  "lower_bound_usd": 293.17622547522274,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 312.5991504129562,
+                    "duration_s": 5724
+                  }
+                },
+                "ES": {
+                  "lower_bound_usd": 868638.5947275803,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 872137.2779563442,
+                    "duration_s": 348
+                  }
+                },
+                "ETH": {
+                  "lower_bound_usd": 28305.294020254092,
+                  "interval": {
+                    "start": 71,
+                    "end": 72,
+                    "value_usd": 29162.31542253401,
+                    "duration_s": 2616
+                  }
+                },
+                "FUEL": {
+                  "lower_bound_usd": 1795.4739628387697,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 1795.4739628387697,
+                    "duration_s": 0
+                  }
+                },
+                "HYPER": {
+                  "lower_bound_usd": 7402.354835905929,
+                  "interval": {
+                    "start": 42,
+                    "end": 42,
+                    "value_usd": 7402.354835905929,
+                    "duration_s": 0
+                  }
+                },
+                "LUMIA": {
+                  "lower_bound_usd": 4115.423538063976,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 4115.423538063976,
+                    "duration_s": 0
+                  }
+                },
+                "LYX": {
+                  "lower_bound_usd": 26891.984699777087,
+                  "interval": {
+                    "start": 81,
+                    "end": 108,
+                    "value_usd": 44304.54479288275,
+                    "duration_s": 55944
+                  }
+                },
+                "NEX": {
+                  "lower_bound_usd": 1174969.3463950576,
+                  "interval": {
+                    "start": 17,
+                    "end": 1193,
+                    "value_usd": 1818917.8242943487,
+                    "duration_s": 47352
+                  }
+                },
+                "OORT": {
+                  "lower_bound_usd": 1208.944855260555,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1208.944855260555,
+                    "duration_s": 0
+                  }
+                },
+                "RDO": {
+                  "lower_bound_usd": 4092.656728979085,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 4113.12001262398,
+                    "duration_s": 432
+                  }
+                },
+                "SEDA": {
+                  "lower_bound_usd": 111788.18068693229,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 130264.28277268917,
+                    "duration_s": 14280
+                  }
+                },
+                "SMOL": {
+                  "lower_bound_usd": 25.25611325474781,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 25.25611325474781,
+                    "duration_s": 0
+                  }
+                },
+                "SUPR": {
+                  "lower_bound_usd": 8626.83933254482,
+                  "interval": {
+                    "start": 5,
+                    "end": 6,
+                    "value_usd": 8641.217398099061,
+                    "duration_s": 144
+                  }
+                },
+                "USDC": {
+                  "lower_bound_usd": 1027230.0442172367,
+                  "interval": {
+                    "start": 179,
+                    "end": 186,
+                    "value_usd": 1119823.4190362627,
+                    "duration_s": 7788
+                  }
+                },
+                "USDT": {
+                  "lower_bound_usd": 207800.67251399398,
+                  "interval": {
+                    "start": 95,
+                    "end": 96,
+                    "value_usd": 208695.3698539848,
+                    "duration_s": 372
+                  }
+                },
+                "WBTC": {
+                  "lower_bound_usd": 187167.78311062718,
+                  "interval": {
+                    "start": 19,
+                    "end": 20,
+                    "value_usd": 190001.2953827186,
+                    "duration_s": 1308
+                  }
+                },
+                "XAUt": {
+                  "lower_bound_usd": 2062.202535483513,
+                  "interval": {
+                    "start": 30,
+                    "end": 34,
+                    "value_usd": 2667.974530281795,
+                    "duration_s": 25380
+                  }
+                },
+                "amphrETH": {
+                  "lower_bound_usd": 1071.2969577069655,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1071.2969577069655,
+                    "duration_s": 0
+                  }
+                },
+                "cbBTC": {
+                  "lower_bound_usd": 62.909764769984434,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 63.86214870886336,
+                    "duration_s": 1308
+                  }
+                },
+                "eXRD": {
+                  "lower_bound_usd": 1016.9873882995419,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1016.9873882995419,
+                    "duration_s": 0
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 3664565.52,
+          "six_hour_envelope_usd": 4580706.9,
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2173,
+            "deferred_on_arrival": 60,
+            "immediate_message_fraction": 0.9731303179579042,
+            "immediate_value_fraction": 0.9471133988549616,
+            "delayed_then_delivered": 42,
+            "undelivered_tail": 18,
+            "oversized_messages": 18,
+            "delivered_value_fraction": 0.9605750509197852,
+            "p95_positive_delay_h": 73.70333333333333
+          },
+          "known_symbol_only_test": {
+            "messages": 2226,
+            "value_usd": 5902705.68092006,
+            "immediate_messages": 2173,
+            "deferred_on_arrival": 53,
+            "immediate_message_fraction": 0.9761904761904762,
+            "immediate_value_fraction": 0.964305921780657,
+            "delayed_then_delivered": 42,
+            "undelivered_tail": 11,
+            "oversized_messages": 11,
+            "delivered_value_fraction": 0.9780119371519463,
+            "p95_positive_delay_h": 73.70333333333333
+          }
+        },
+        "optimized_static_route": {
+          "config": {
+            "policy": "per_route",
+            "caps": {
+              "066abc14c59cf7681b4b66844500733d2258032a": 11.26,
+              "07c747b0d99abe8132f771cf6d2365d19ed1ffba": 7741.71,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 187167.79,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 18709.04,
+              "20d0159c2369d115a7e430516e635267c08ace19": 28305.3,
+              "2bbdc933196334c6cd3f16f131b62f7c567bb27d": 33.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 12994.1,
+              "3c2064d78e4578e8f936e3db42aef044e33fbf31": 28.77,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 1795.48,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 868638.6,
+              "53cce6d10e43d1b3d11872ad22ec2acd8d2537b8": 25.26,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 1682.63,
+              "647c621ceb36853ef6a907e397adf18568e70543": 4262.27,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 59989.340000000004,
+              "679e13780c20bf7a7cc158a76bfd1aff9ba7d09d": 2.0,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 1027195.4,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 59984.950000000004,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 1208.95,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 293.18,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 62.910000000000004,
+              "78ac7fecd1857f5beee98ab39096c9781f976d97": 0.92,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 53863.69,
+              "85e9ae52b10f35e3d15264f1e906895b1d7da1a0": 3041.53,
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 111788.19,
+              "93a2db22b7c736b341c32ff666307f4a9ed910f5": 7402.360000000001,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 1016.99,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 316.24,
+              "9a3beed38441e8ff8e033043a88b49e035f5a2da": 3716.79,
+              "9a9c33115455a929d3d821cee4a01e38241bf375": 2062.21,
+              "a901e6974c8f0fcc2f44451b0e788cd6957e02e2": 0.93,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 1174969.35,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 8626.84,
+              "c210b2cb65ed3484892167f5e05f7ab496ab0598": 26891.99,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 278409.69,
+              "c4ae629abe0ce3de55b7db8f6bebf97d52afe9f7": 2737.02,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 2117.59,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 4092.6600000000003,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 1071.3,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 4115.43,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 2288.89,
+              "e15f7d93f761c35b5d692224418099409c749011": 207800.68,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 77684.38
+            },
+            "budget": 4254147.61,
+            "weights": {},
+            "optimization": {
+              "method": "per-group interval maximum; upward cent rounding",
+              "lower_bound_budget_usd": 4254147.4170427015,
+              "max_rounding_gap_usd": 0.42,
+              "certificates": {
+                "066abc14c59cf7681b4b66844500733d2258032a": {
+                  "lower_bound_usd": 11.255503055657753,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 11.255503055657753,
+                    "duration_s": 0
+                  }
+                },
+                "07c747b0d99abe8132f771cf6d2365d19ed1ffba": {
+                  "lower_bound_usd": 7741.70033521828,
+                  "interval": {
+                    "start": 4,
+                    "end": 6,
+                    "value_usd": 7749.226988321964,
+                    "duration_s": 84
+                  }
+                },
+                "0e993e49df1b7412ded493eaaf806730b74378b9": {
+                  "lower_bound_usd": 187167.78311062718,
+                  "interval": {
+                    "start": 9,
+                    "end": 10,
+                    "value_usd": 190001.2953827186,
+                    "duration_s": 1308
+                  }
+                },
+                "11a483d69cc67140fb98a0082837aec11246a0ba": {
+                  "lower_bound_usd": 18709.03007118313,
+                  "interval": {
+                    "start": 0,
+                    "end": 5,
+                    "value_usd": 19530.148613196165,
+                    "duration_s": 3792
+                  }
+                },
+                "20d0159c2369d115a7e430516e635267c08ace19": {
+                  "lower_bound_usd": 28305.294020254092,
+                  "interval": {
+                    "start": 16,
+                    "end": 17,
+                    "value_usd": 29162.31542253401,
+                    "duration_s": 2616
+                  }
+                },
+                "2bbdc933196334c6cd3f16f131b62f7c567bb27d": {
+                  "lower_bound_usd": 32.995410115361636,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 32.995410115361636,
+                    "duration_s": 0
+                  }
+                },
+                "2dc9a39d934f52e0f28e52e8d32ce810fc685247": {
+                  "lower_bound_usd": 12994.09671645314,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 12994.09671645314,
+                    "duration_s": 0
+                  }
+                },
+                "3c2064d78e4578e8f936e3db42aef044e33fbf31": {
+                  "lower_bound_usd": 28.76331672753455,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 28.76331672753455,
+                    "duration_s": 0
+                  }
+                },
+                "3cf30c1d8decbf45cd36c9492f6395d47357b91c": {
+                  "lower_bound_usd": 1795.4739628387697,
+                  "interval": {
+                    "start": 34,
+                    "end": 34,
+                    "value_usd": 1795.4739628387697,
+                    "duration_s": 0
+                  }
+                },
+                "3ee1bea3a10f7508b76219f109ebe19419b3dd85": {
+                  "lower_bound_usd": 868638.5947275803,
+                  "interval": {
+                    "start": 127,
+                    "end": 129,
+                    "value_usd": 872137.2779563442,
+                    "duration_s": 348
+                  }
+                },
+                "53cce6d10e43d1b3d11872ad22ec2acd8d2537b8": {
+                  "lower_bound_usd": 25.25611325474781,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 25.25611325474781,
+                    "duration_s": 0
+                  }
+                },
+                "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": {
+                  "lower_bound_usd": 1682.623752153093,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1682.623752153093,
+                    "duration_s": 0
+                  }
+                },
+                "647c621ceb36853ef6a907e397adf18568e70543": {
+                  "lower_bound_usd": 4262.269051736332,
+                  "interval": {
+                    "start": 7,
+                    "end": 7,
+                    "value_usd": 4262.269051736332,
+                    "duration_s": 0
+                  }
+                },
+                "67899664446ccfadf75e0d3f5668be262acd1069": {
+                  "lower_bound_usd": 59989.33961357693,
+                  "interval": {
+                    "start": 4,
+                    "end": 4,
+                    "value_usd": 59989.33961357693,
+                    "duration_s": 0
+                  }
+                },
+                "679e13780c20bf7a7cc158a76bfd1aff9ba7d09d": {
+                  "lower_bound_usd": 1.999337800661466,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1.999337800661466,
+                    "duration_s": 0
+                  }
+                },
+                "6912088890254e69970baedb03284fb3d8fbcda0": {
+                  "lower_bound_usd": 1027195.3930123461,
+                  "interval": {
+                    "start": 97,
+                    "end": 103,
+                    "value_usd": 1119785.6444102647,
+                    "duration_s": 7788
+                  }
+                },
+                "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": {
+                  "lower_bound_usd": 59984.94982145416,
+                  "interval": {
+                    "start": 42,
+                    "end": 42,
+                    "value_usd": 59984.94982145416,
+                    "duration_s": 0
+                  }
+                },
+                "70f34d5cc2527cd81de9f6e7c9208f26f7252697": {
+                  "lower_bound_usd": 1208.944855260555,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1208.944855260555,
+                    "duration_s": 0
+                  }
+                },
+                "7396b724a43c1d654a89b44996da84d1e1a9b568": {
+                  "lower_bound_usd": 293.17622547522274,
+                  "interval": {
+                    "start": 7,
+                    "end": 9,
+                    "value_usd": 312.5991504129562,
+                    "duration_s": 5724
+                  }
+                },
+                "7710d2fc9a2e0452b28a2cbf550429b579347199": {
+                  "lower_bound_usd": 62.909764769984434,
+                  "interval": {
+                    "start": 0,
+                    "end": 2,
+                    "value_usd": 63.86214870886336,
+                    "duration_s": 1308
+                  }
+                },
+                "78ac7fecd1857f5beee98ab39096c9781f976d97": {
+                  "lower_bound_usd": 0.9191516997491003,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 0.9191516997491003,
+                    "duration_s": 0
+                  }
+                },
+                "7e5db36f762a3eae5d6ef18f16dee9df619bb539": {
+                  "lower_bound_usd": 53863.68662857587,
+                  "interval": {
+                    "start": 37,
+                    "end": 47,
+                    "value_usd": 59781.21109013192,
+                    "duration_s": 9492
+                  }
+                },
+                "85e9ae52b10f35e3d15264f1e906895b1d7da1a0": {
+                  "lower_bound_usd": 3041.524665853161,
+                  "interval": {
+                    "start": 2,
+                    "end": 18,
+                    "value_usd": 4254.755060343477,
+                    "duration_s": 34464
+                  }
+                },
+                "8e1c6992621f1f647c79a297035b5484b9fb6864": {
+                  "lower_bound_usd": 111788.18068693229,
+                  "interval": {
+                    "start": 148,
+                    "end": 165,
+                    "value_usd": 130264.28277268917,
+                    "duration_s": 14280
+                  }
+                },
+                "93a2db22b7c736b341c32ff666307f4a9ed910f5": {
+                  "lower_bound_usd": 7402.354835905929,
+                  "interval": {
+                    "start": 42,
+                    "end": 42,
+                    "value_usd": 7402.354835905929,
+                    "duration_s": 0
+                  }
+                },
+                "94a766ebdfbbff21428b6c504be7405e74c02774": {
+                  "lower_bound_usd": 1016.9873882995419,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 1016.9873882995419,
+                    "duration_s": 0
+                  }
+                },
+                "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": {
+                  "lower_bound_usd": 316.2349435161283,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 316.2349435161283,
+                    "duration_s": 0
+                  }
+                },
+                "9a3beed38441e8ff8e033043a88b49e035f5a2da": {
+                  "lower_bound_usd": 3716.783383117541,
+                  "interval": {
+                    "start": 5,
+                    "end": 5,
+                    "value_usd": 3716.783383117541,
+                    "duration_s": 0
+                  }
+                },
+                "9a9c33115455a929d3d821cee4a01e38241bf375": {
+                  "lower_bound_usd": 2062.202535483513,
+                  "interval": {
+                    "start": 30,
+                    "end": 34,
+                    "value_usd": 2667.974530281795,
+                    "duration_s": 25380
+                  }
+                },
+                "a901e6974c8f0fcc2f44451b0e788cd6957e02e2": {
+                  "lower_bound_usd": 0.928745359264414,
+                  "interval": {
+                    "start": 0,
+                    "end": 0,
+                    "value_usd": 0.928745359264414,
+                    "duration_s": 0
+                  }
+                },
+                "b71183f48f7f7789d40551149be28a51f9a97f9a": {
+                  "lower_bound_usd": 1174969.3463950576,
+                  "interval": {
+                    "start": 17,
+                    "end": 1193,
+                    "value_usd": 1818917.8242943487,
+                    "duration_s": 47352
+                  }
+                },
+                "bc808c98bea0a097346273a9fd7a5b231fc2d889": {
+                  "lower_bound_usd": 8626.83933254482,
+                  "interval": {
+                    "start": 5,
+                    "end": 6,
+                    "value_usd": 8641.217398099061,
+                    "duration_s": 144
+                  }
+                },
+                "c210b2cb65ed3484892167f5e05f7ab496ab0598": {
+                  "lower_bound_usd": 26891.984699777087,
+                  "interval": {
+                    "start": 81,
+                    "end": 108,
+                    "value_usd": 44304.54479288275,
+                    "duration_s": 55944
+                  }
+                },
+                "c3f8b34587eb403fc30a161d6a35cb724a3b273e": {
+                  "lower_bound_usd": 278409.6893886764,
+                  "interval": {
+                    "start": 118,
+                    "end": 119,
+                    "value_usd": 279917.741872865,
+                    "duration_s": 468
+                  }
+                },
+                "c4ae629abe0ce3de55b7db8f6bebf97d52afe9f7": {
+                  "lower_bound_usd": 2737.0172620519293,
+                  "interval": {
+                    "start": 0,
+                    "end": 3,
+                    "value_usd": 2753.363337366962,
+                    "duration_s": 516
+                  }
+                },
+                "c927767cf7bddc5e8b996a0f957e5f22250a2f67": {
+                  "lower_bound_usd": 2117.5833968345337,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 2174.0522874167877,
+                    "duration_s": 2304
+                  }
+                },
+                "d86e6ef14b96d942ef0abf0720c549197ea8c528": {
+                  "lower_bound_usd": 4092.656728979085,
+                  "interval": {
+                    "start": 0,
+                    "end": 1,
+                    "value_usd": 4113.12001262398,
+                    "duration_s": 432
+                  }
+                },
+                "dc89990a6fdc1c922b841f1d977835628a24ed57": {
+                  "lower_bound_usd": 1071.2969577069655,
+                  "interval": {
+                    "start": 1,
+                    "end": 1,
+                    "value_usd": 1071.2969577069655,
+                    "duration_s": 0
+                  }
+                },
+                "dd313d475f8a9d81cbe2ea953a357f52e10ba357": {
+                  "lower_bound_usd": 4115.423538063976,
+                  "interval": {
+                    "start": 2,
+                    "end": 2,
+                    "value_usd": 4115.423538063976,
+                    "duration_s": 0
+                  }
+                },
+                "e0c2e4f894d4cd33626e33b24582559f3156e1ab": {
+                  "lower_bound_usd": 2288.8820787144537,
+                  "interval": {
+                    "start": 13,
+                    "end": 14,
+                    "value_usd": 2299.372788241895,
+                    "duration_s": 396
+                  }
+                },
+                "e15f7d93f761c35b5d692224418099409c749011": {
+                  "lower_bound_usd": 207800.67251399398,
+                  "interval": {
+                    "start": 80,
+                    "end": 81,
+                    "value_usd": 208695.3698539848,
+                    "duration_s": 372
+                  }
+                },
+                "e1de9910fe71cc216490ac7fcf019e13a34481d7": {
+                  "lower_bound_usd": 77684.37306367673,
+                  "interval": {
+                    "start": 80,
+                    "end": 85,
+                    "value_usd": 123474.99518621062,
+                    "duration_s": 50928
+                  }
+                }
+              }
+            }
+          },
+          "budget_usd": 4254147.61,
+          "six_hour_envelope_usd": 5317684.5125,
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2107,
+            "deferred_on_arrival": 126,
+            "immediate_message_fraction": 0.9435736677115988,
+            "immediate_value_fraction": 0.9183653680730319,
+            "delayed_then_delivered": 68,
+            "undelivered_tail": 58,
+            "oversized_messages": 58,
+            "delivered_value_fraction": 0.9219849944744575,
+            "p95_positive_delay_h": 96.49
+          },
+          "known_symbol_only_test": {
+            "messages": 2226,
+            "value_usd": 5902705.68092006,
+            "immediate_messages": 2107,
+            "deferred_on_arrival": 119,
+            "immediate_message_fraction": 0.9465408805031447,
+            "immediate_value_fraction": 0.9350360409447797,
+            "delayed_then_delivered": 68,
+            "undelivered_tail": 51,
+            "oversized_messages": 51,
+            "delivered_value_fraction": 0.9387213727938996,
+            "p95_positive_delay_h": 96.49
+          }
+        },
+        "pooled": {
+          "config": {
+            "policy": "pooled",
+            "multiple": 0.6119678907987448,
+            "caps": {
+              "root": 1190516.36
+            },
+            "weights": {
+              "8e1c6992621f1f647c79a297035b5484b9fb6864": 0.0478,
+              "6912088890254e69970baedb03284fb3d8fbcda0": 0.4621,
+              "70f34d5cc2527cd81de9f6e7c9208f26f7252697": 0.0,
+              "9a3beed38441e8ff8e033043a88b49e035f5a2da": 0.0003,
+              "7e5db36f762a3eae5d6ef18f16dee9df619bb539": 0.027,
+              "94a766ebdfbbff21428b6c504be7405e74c02774": 0.0001,
+              "dc89990a6fdc1c922b841f1d977835628a24ed57": 0.0,
+              "9a9c33115455a929d3d821cee4a01e38241bf375": 0.0006,
+              "93a2db22b7c736b341c32ff666307f4a9ed910f5": 0.001,
+              "3cf30c1d8decbf45cd36c9492f6395d47357b91c": 0.0006,
+              "c3f8b34587eb403fc30a161d6a35cb724a3b273e": 0.0359,
+              "e15f7d93f761c35b5d692224418099409c749011": 0.0192,
+              "67899664446ccfadf75e0d3f5668be262acd1069": 0.0134,
+              "c210b2cb65ed3484892167f5e05f7ab496ab0598": 0.009,
+              "2bbdc933196334c6cd3f16f131b62f7c567bb27d": 0.0,
+              "e1de9910fe71cc216490ac7fcf019e13a34481d7": 0.0156,
+              "d86e6ef14b96d942ef0abf0720c549197ea8c528": 0.0002,
+              "5c43f06ef93bb0a2cd3c0f7b832aba1f4d6575ea": 0.0003,
+              "85e9ae52b10f35e3d15264f1e906895b1d7da1a0": 0.0002,
+              "20d0159c2369d115a7e430516e635267c08ace19": 0.0033,
+              "6de5fabc6b4663bd6bdbc064bbb183e61af1dade": 0.0121,
+              "3ee1bea3a10f7508b76219f109ebe19419b3dd85": 0.0877,
+              "07c747b0d99abe8132f771cf6d2365d19ed1ffba": 0.0014,
+              "3c2064d78e4578e8f936e3db42aef044e33fbf31": 0.0,
+              "97b80b1d89d10e5d2c9396b0ea0ba2daf917dc96": 0.0,
+              "dd313d475f8a9d81cbe2ea953a357f52e10ba357": 0.0005,
+              "c4ae629abe0ce3de55b7db8f6bebf97d52afe9f7": 0.0001,
+              "c927767cf7bddc5e8b996a0f957e5f22250a2f67": 0.0001,
+              "bc808c98bea0a097346273a9fd7a5b231fc2d889": 0.0005,
+              "066abc14c59cf7681b4b66844500733d2258032a": 0.0,
+              "a901e6974c8f0fcc2f44451b0e788cd6957e02e2": 0.0,
+              "0e993e49df1b7412ded493eaaf806730b74378b9": 0.0131,
+              "e0c2e4f894d4cd33626e33b24582559f3156e1ab": 0.0005,
+              "53cce6d10e43d1b3d11872ad22ec2acd8d2537b8": 0.0,
+              "7396b724a43c1d654a89b44996da84d1e1a9b568": 0.0,
+              "11a483d69cc67140fb98a0082837aec11246a0ba": 0.0023,
+              "647c621ceb36853ef6a907e397adf18568e70543": 0.0004,
+              "b71183f48f7f7789d40551149be28a51f9a97f9a": 0.242,
+              "679e13780c20bf7a7cc158a76bfd1aff9ba7d09d": 0.0,
+              "78ac7fecd1857f5beee98ab39096c9781f976d97": 0.0,
+              "7710d2fc9a2e0452b28a2cbf550429b579347199": 0.0,
+              "2dc9a39d934f52e0f28e52e8d32ce810fc685247": 0.0008
+            },
+            "budget": 1190516.36,
+            "optimization": {
+              "method": "bisection on all-arrival training feasibility; upward cent rounding",
+              "infeasible_lower_budget_usd": 1190516.350405367,
+              "feasible_upper_budget_usd": 1190516.36,
+              "absolute_search_tolerance_usd": 0.01
+            }
+          },
+          "budget_usd": 1190516.36,
+          "six_hour_envelope_usd": 1488145.4500000002,
+          "training": {
+            "messages": 4753,
+            "value_usd": 15726511.210039226,
+            "immediate_messages": 4753,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999996,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "test": {
+            "messages": 2233,
+            "value_usd": 6009854.83841856,
+            "immediate_messages": 2233,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999997,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          },
+          "known_symbol_only_test": {
+            "messages": 2226,
+            "value_usd": 5902705.68092006,
+            "immediate_messages": 2226,
+            "deferred_on_arrival": 0,
+            "immediate_message_fraction": 1.0,
+            "immediate_value_fraction": 0.9999999999999999,
+            "delayed_then_delivered": 0,
+            "undelivered_tail": 0,
+            "oversized_messages": 0,
+            "delivered_value_fraction": 1.0,
+            "p95_positive_delay_h": 0.0
+          }
+        }
+      },
+      "optimized_static_token_over_guard": 1.1397363927829194
+    }
+  },
+  "unresolved_messages": 2630,
+  "amount_scale_audit": {
+    "comparable_messages": 6986,
+    "different_raw_amounts": 37,
+    "different_originally_priced": 2,
+    "original_50m_filter_crossings": 35
+  },
+  "paired_revaluation": {
+    "messages": 6356,
+    "selection": "only complete matched transaction-route groups",
+    "snapshot_peak": {
+      "value_usd": 1152559.2667991028,
+      "day": "2026-05-05"
+    },
+    "historical_peak": {
+      "value_usd": 1899388.4116089817,
+      "day": "2026-05-20"
+    },
+    "snapshot_value_usd": 16655867.97507738,
+    "historical_value_usd": 21160472.362043478
+  }
+}
